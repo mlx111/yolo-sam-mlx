@@ -17,7 +17,7 @@ pydantic
 aiofiles
 httpx
 python-multipart
-volcenginesdkarkruntime
+volcengine-python-sdk[ark]
 openai
 tensorboard
 supervision>=0.22.0
