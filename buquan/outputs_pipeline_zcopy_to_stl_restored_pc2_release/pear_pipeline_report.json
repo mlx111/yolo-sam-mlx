@@ -1,0 +1,235 @@
+{
+  "timestamp_utc": "2026-03-23T13:07:43.742543Z",
+  "config": {
+    "object_name": "pear",
+    "input_root": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs",
+    "calib_pdf": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/双ob(1)/双ob/标定.pdf",
+    "extrinsics_json": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/calib/refined_stereo_extrinsics.json",
+    "camera": "left",
+    "left_depth_rel": "dleft001.png",
+    "left_mask_tpl": "left_mask_{obj}.png",
+    "right_depth_rel": "dright001.png",
+    "right_mask_tpl": "right_mask_{obj}.png",
+    "depth_scale": 1000.0,
+    "depth_trunc_m": 6.0,
+    "voxel_size_m": 0.0015,
+    "stat_k": 20,
+    "stat_std_ratio": 2.0,
+    "radius_m": 0.006,
+    "radius_min_neighbors": 6,
+    "cluster_radius_m": 0.005,
+    "tail_bin_m": 0.0012,
+    "tail_min_support": 8,
+    "tail_max_remove_ratio": 0.03,
+    "center_mode": "mean",
+    "align_axis": "minor",
+    "copy_source": "cleaned_raw",
+    "copy_times": 10,
+    "copy_step_m": 0.0025,
+    "copy_direction": "both",
+    "copy_voxel_m": 0.0008,
+    "output_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release",
+    "save_report": true
+  },
+  "inputs": {
+    "camera_selected": "left",
+    "selected_depth": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/dleft001.png",
+    "selected_color": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/cleft001.png",
+    "selected_mask": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/left_mask_pear.png",
+    "left_depth": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/dleft001.png",
+    "left_mask": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/left_mask_pear.png",
+    "right_depth": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/dright001.png",
+    "right_mask": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/right_mask_pear.png",
+    "calib_pdf": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/双ob(1)/双ob/标定.pdf",
+    "refined_extrinsics_json": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/calib/refined_stereo_extrinsics.json"
+  },
+  "calibration": {
+    "k_left": [
+      [
+        1129.8136,
+        0.0,
+        961.0022
+      ],
+      [
+        0.0,
+        1128.6075,
+        546.8298
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "k_right": [
+      [
+        1126.8856,
+        0.0,
+        954.9412
+      ],
+      [
+        0.0,
+        1126.4037,
+        536.3848
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "selected_intrinsics_name": "pointcloud_v2_left_intrinsics",
+    "selected_intrinsics": [
+      [
+        1129.8136,
+        0.0,
+        961.0022
+      ],
+      [
+        0.0,
+        1128.6075,
+        546.8298
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "raw_points_source": "pointcloud_v2.point_cloud_cam",
+    "r_pdf": [
+      [
+        0.64348702,
+        -0.24681324,
+        0.72457414
+      ],
+      [
+        0.17130231,
+        0.96901536,
+        0.17794592
+      ],
+      [
+        -0.74604288,
+        0.00961534,
+        0.66582848
+      ]
+    ],
+    "t_pdf_m": [
+      -0.89021218409,
+      -0.12198498635,
+      0.87198401914
+    ],
+    "refined_transform_right_to_left_4x4": [
+      [
+        0.6429587715099456,
+        0.1566302154588371,
+        0.7497139378452353,
+        -1.2382756021427639
+      ],
+      [
+        -0.2281537342796397,
+        0.9735943753482525,
+        -0.00773741723212712,
+        0.1124578480538955
+      ],
+      [
+        -0.7311291862373982,
+        -0.1660751881638335,
+        0.6617168166474587,
+        0.08498370173982081
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "counts": {
+    "mask_pixels": 4333,
+    "raw_points": 4333,
+    "raw_after_stat_radius": 4318,
+    "raw_largest_cluster_points": 4315,
+    "raw_tail_trimmed_points": 4313,
+    "preprocessed_points": 2579,
+    "aligned_raw_points": 4333,
+    "aligned_cleaned_raw_points": 4313,
+    "aligned_processed_points": 2579,
+    "copy_base_points": 4313,
+    "filled_points": 90573
+  },
+  "outlier_filter": {
+    "cluster_filter": {
+      "applied": true,
+      "largest_component_size": 4315,
+      "input_points": 4318
+    },
+    "tail_trim": {
+      "applied": true,
+      "input_points": 4315,
+      "output_points": 4313,
+      "removed_points": 2,
+      "removed_ratio": 0.0004634994206257242,
+      "left_trim_mm": 0.0,
+      "right_trim_mm": 0.42941378180123835,
+      "tail_bin_mm": 1.2,
+      "tail_min_support": 8
+    }
+  },
+  "geometry": {
+    "center_translation_xyz_m": [
+      0.09135749244983174,
+      0.011211266798743923,
+      1.2669398991857257
+    ],
+    "rotation_to_z_3x3": [
+      [
+        0.9999109149375951,
+        0.00016749098139574284,
+        -0.013346690030526059
+      ],
+      [
+        0.00016749098139574284,
+        0.9996850961531416,
+        0.02509343487282175
+      ],
+      [
+        0.013346690030526059,
+        -0.02509343487282175,
+        0.9995960110907368
+      ]
+    ],
+    "pca_eigenvalues": [
+      0.0005571584269844421,
+      0.0003595077734101326,
+      2.1138579941161737e-05
+    ],
+    "copy_shifts_z_m": [
+      0.0,
+      0.0025,
+      -0.0025,
+      0.005,
+      -0.005,
+      0.0075,
+      -0.0075,
+      0.01,
+      -0.01,
+      0.0125,
+      -0.0125,
+      0.015,
+      -0.015,
+      0.0175,
+      -0.0175,
+      0.02,
+      -0.02,
+      0.0225,
+      -0.0225,
+      0.025,
+      -0.025
+    ]
+  },
+  "outputs": {
+    "zcopy_filled_aligned_ply": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/pear_zcopy_filled_aligned.ply"
+  }
+}

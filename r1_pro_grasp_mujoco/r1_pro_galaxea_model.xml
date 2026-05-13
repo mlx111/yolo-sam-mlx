@@ -1,0 +1,268 @@
+<mujoco model="r1_pro_with_gripper">
+  <compiler angle="radian" meshdir="/home/mlx/mujoco/YOLO_World-SAM-GraspNet/GalaxeaManipSim/galaxea_sim/assets/r1_pro/meshes/"/>
+
+  <asset>
+    <mesh name="base_link" content_type="model/obj" file="base_link.obj"/>
+    <mesh name="base_link_collision" content_type="model/stl" file="base_link_collision.STL"/>
+    <mesh name="steer_motor_link1" content_type="model/obj" file="steer_motor_link1.obj"/>
+    <mesh name="steer_motor_link1_collision" content_type="model/stl" file="steer_motor_link1_collision.STL"/>
+    <mesh name="wheel_motor_link1" content_type="model/obj" file="wheel_motor_link1.obj"/>
+    <mesh name="wheel_motor_link1_collision" content_type="model/stl" file="wheel_motor_link1_collision.STL"/>
+    <mesh name="steer_motor_link2" content_type="model/obj" file="steer_motor_link2.obj"/>
+    <mesh name="steer_motor_link2_collision" content_type="model/stl" file="steer_motor_link2_collision.STL"/>
+    <mesh name="wheel_motor_link2" content_type="model/obj" file="wheel_motor_link2.obj"/>
+    <mesh name="wheel_motor_link2_collision" content_type="model/stl" file="wheel_motor_link2_collision.STL"/>
+    <mesh name="steer_motor_link3" content_type="model/obj" file="steer_motor_link3.obj"/>
+    <mesh name="steer_motor_link3_collision" content_type="model/stl" file="steer_motor_link3_collision.STL"/>
+    <mesh name="wheel_motor_link3" content_type="model/obj" file="wheel_motor_link3.obj"/>
+    <mesh name="wheel_motor_link3_collision" content_type="model/stl" file="wheel_motor_link3_collision.STL"/>
+    <mesh name="torso_link1" content_type="model/obj" file="torso_link1.obj"/>
+    <mesh name="torso_link1_collision" content_type="model/stl" file="torso_link1_collision.STL"/>
+    <mesh name="torso_link2" content_type="model/obj" file="torso_link2.obj"/>
+    <mesh name="torso_link2_collision" content_type="model/stl" file="torso_link2_collision.STL"/>
+    <mesh name="torso_link3" content_type="model/obj" file="torso_link3.obj"/>
+    <mesh name="torso_link3_collision" content_type="model/stl" file="torso_link3_collision.STL"/>
+    <mesh name="torso_link4" content_type="model/obj" file="torso_link4.obj"/>
+    <mesh name="torso_link4_collision" content_type="model/stl" file="torso_link4_collision.STL"/>
+    <mesh name="zed_link" content_type="model/obj" file="zed_link.obj"/>
+    <mesh name="zed_link_collision" content_type="model/stl" file="zed_link_collision.STL"/>
+    <mesh name="left_arm_base_link" content_type="model/obj" file="left_arm_base_link.obj"/>
+    <mesh name="left_arm_base_link_collision" content_type="model/stl" file="left_arm_base_link_collision.STL"/>
+    <mesh name="left_arm_link1" content_type="model/obj" file="left_arm_link1.obj"/>
+    <mesh name="left_arm_link1_collision" content_type="model/stl" file="left_arm_link1_collision.STL"/>
+    <mesh name="left_arm_link2" content_type="model/obj" file="left_arm_link2.obj"/>
+    <mesh name="left_arm_link2_collision" content_type="model/stl" file="left_arm_link2_collision.STL"/>
+    <mesh name="left_arm_link3" content_type="model/obj" file="left_arm_link3.obj"/>
+    <mesh name="left_arm_link3_collision" content_type="model/stl" file="left_arm_link3_collision.STL"/>
+    <mesh name="left_arm_link4" content_type="model/obj" file="left_arm_link4.obj"/>
+    <mesh name="left_arm_link4_collision" content_type="model/stl" file="left_arm_link4_collision.STL"/>
+    <mesh name="left_arm_link5" content_type="model/obj" file="left_arm_link5.obj"/>
+    <mesh name="left_arm_link5_collision" content_type="model/stl" file="left_arm_link5_collision.STL"/>
+    <mesh name="left_arm_link6" content_type="model/obj" file="left_arm_link6.obj"/>
+    <mesh name="left_arm_link6_collision" content_type="model/stl" file="left_arm_link6_collision.STL"/>
+    <mesh name="left_arm_link7" content_type="model/obj" file="left_arm_link7.obj"/>
+    <mesh name="left_arm_link7_collision" content_type="model/stl" file="left_arm_link7_collision.STL"/>
+    <mesh name="left_gripper_link" content_type="model/obj" file="left_gripper_link.obj"/>
+    <mesh name="left_gripper_link_collision" content_type="model/stl" file="left_gripper_link_collision.STL"/>
+    <mesh name="left_realsense_link" content_type="model/obj" file="left_realsense_link.obj"/>
+    <mesh name="left_realsense_link_collision" content_type="model/stl" file="left_realsense_link_collision.STL"/>
+    <mesh name="left_gripper_finger_link1" content_type="model/obj" file="left_gripper_finger_link1.obj"/>
+    <mesh name="left_gripper_finger_link2" content_type="model/obj" file="left_gripper_finger_link2.obj"/>
+    <mesh name="right_arm_base_link" content_type="model/obj" file="right_arm_base_link.obj"/>
+    <mesh name="right_arm_base_link_collision" content_type="model/stl" file="right_arm_base_link_collision.STL"/>
+    <mesh name="right_arm_link1" content_type="model/obj" file="right_arm_link1.obj"/>
+    <mesh name="right_arm_link1_collision" content_type="model/stl" file="right_arm_link1_collision.STL"/>
+    <mesh name="right_arm_link2" content_type="model/obj" file="right_arm_link2.obj"/>
+    <mesh name="right_arm_link2_collision" content_type="model/stl" file="right_arm_link2_collision.STL"/>
+    <mesh name="right_arm_link3" content_type="model/obj" file="right_arm_link3.obj"/>
+    <mesh name="right_arm_link3_collision" content_type="model/stl" file="right_arm_link3_collision.STL"/>
+    <mesh name="right_arm_link4" content_type="model/obj" file="right_arm_link4.obj"/>
+    <mesh name="right_arm_link4_collision" content_type="model/stl" file="right_arm_link4_collision.STL"/>
+    <mesh name="right_arm_link5" content_type="model/obj" file="right_arm_link5.obj"/>
+    <mesh name="right_arm_link5_collision" content_type="model/stl" file="right_arm_link5_collision.STL"/>
+    <mesh name="right_arm_link6" content_type="model/obj" file="right_arm_link6.obj"/>
+    <mesh name="right_arm_link6_collision" content_type="model/stl" file="right_arm_link6_collision.STL"/>
+    <mesh name="right_arm_link7" content_type="model/obj" file="right_arm_link7.obj"/>
+    <mesh name="right_arm_link7_collision" content_type="model/stl" file="right_arm_link7_collision.STL"/>
+    <mesh name="right_gripper_link" content_type="model/obj" file="right_gripper_link.obj"/>
+    <mesh name="right_gripper_link_collision" content_type="model/stl" file="right_gripper_link_collision.STL"/>
+    <mesh name="right_realsense_link" content_type="model/obj" file="right_realsense_link.obj"/>
+    <mesh name="right_realsense_link_collision" content_type="model/stl" file="right_realsense_link_collision.STL"/>
+    <mesh name="right_gripper_finger_link1" content_type="model/obj" file="right_gripper_finger_link1.obj"/>
+    <mesh name="right_gripper_finger_link2" content_type="model/obj" file="right_gripper_finger_link2.obj"/>
+  </asset>
+
+  <worldbody>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="base_link"/>
+    <geom type="mesh" mesh="base_link_collision"/>
+    <geom pos="0.16897 0.28 0.15765" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="steer_motor_link1"/>
+    <geom pos="0.16897 0.28 0.15765" quat="1 0 0 0" type="mesh" mesh="steer_motor_link1_collision"/>
+    <geom pos="0.16897 0.28 0.07" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="wheel_motor_link1"/>
+    <geom pos="0.16897 0.28 0.07" quat="1 0 0 0" type="mesh" mesh="wheel_motor_link1_collision"/>
+    <geom pos="0.16897 -0.28 0.15765" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="steer_motor_link2"/>
+    <geom pos="0.16897 -0.28 0.15765" quat="1 0 0 0" type="mesh" mesh="steer_motor_link2_collision"/>
+    <geom pos="0.16897 -0.28 0.07" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="wheel_motor_link2"/>
+    <geom pos="0.16897 -0.28 0.07" quat="1 0 0 0" type="mesh" mesh="wheel_motor_link2_collision"/>
+    <geom pos="-0.32703 0 0.15765" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="steer_motor_link3"/>
+    <geom pos="-0.32703 0 0.15765" quat="1 0 0 0" type="mesh" mesh="steer_motor_link3_collision"/>
+    <geom pos="-0.32703 0 0.07" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="wheel_motor_link3"/>
+    <geom pos="-0.32703 0 0.07" quat="1 0 0 0" type="mesh" mesh="wheel_motor_link3_collision"/>
+    <body name="torso_link1" pos="-0.079032 0 0.34265">
+      <inertial pos="0.00065636 0.0032244 0.23142" quat="0.999998 0.000695924 0.000862045 0.00193552" mass="5.72" diaginertia="0.10931 0.10736 0.00812171"/>
+      <joint name="torso_joint1" pos="0 0 0" axis="0 1 0" range="-1.1345 1.8326" actuatorfrcrange="-100 100"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="torso_link1"/>
+      <geom type="mesh" mesh="torso_link1_collision"/>
+      <body name="torso_link2" pos="0 0 0.4">
+        <inertial pos="0.0052517 0.014411 0.15711" quat="0.707019 -0.00357502 -0.00358594 0.707176" mass="3.5" diaginertia="0.027574 0.0260835 0.00184901"/>
+        <joint name="torso_joint2" pos="0 0 0" axis="0 1 0" range="-2.7925 2.5307" actuatorfrcrange="-100 100"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="torso_link2"/>
+        <geom type="mesh" mesh="torso_link2_collision"/>
+        <body name="torso_link3" pos="0 0.0001005 0.3">
+          <inertial pos="-9.8337e-07 -0.0055146 0.020182" quat="0.493716 0.506467 0.494804 0.504882" mass="3.4" diaginertia="0.00230141 0.00170239 0.0016099"/>
+          <joint name="torso_joint3" pos="0 0 0" axis="0 -1 0" range="-1.8326 1.5708" actuatorfrcrange="-100 100"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="torso_link3"/>
+          <geom type="mesh" mesh="torso_link3_collision"/>
+          <body name="torso_link4" pos="0 -0.00010015 0.09962">
+            <inertial pos="0.112243 0.0149664 0.195822" quat="0.224742 0.718429 0.438283 0.49118" mass="10.01" diaginertia="0.644244 0.633616 0.0615982"/>
+            <joint name="torso_joint4" pos="0 0 0" axis="0 0 1" range="-3.0543 3.0543" actuatorfrcrange="-100 100"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="torso_link4"/>
+            <geom type="mesh" mesh="torso_link4_collision"/>
+            <geom pos="0.065511 0.060003 0.47598" quat="0.405568 -0.579235 0.579237 -0.40557" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="zed_link"/>
+            <geom pos="0.065511 0.060003 0.47598" quat="0.405568 -0.579235 0.579237 -0.40557" type="mesh" mesh="zed_link_collision"/>
+            <geom pos="-0.00048618 0.097234 0.30302" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_arm_base_link"/>
+            <geom pos="-0.00048618 0.097234 0.30302" quat="1 0 0 0" type="mesh" mesh="left_arm_base_link_collision"/>
+            <geom pos="-0.00048706 -0.097236 0.30302" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_arm_base_link"/>
+            <geom pos="-0.00048706 -0.097236 0.30302" quat="1 0 0 0" type="mesh" mesh="right_arm_base_link_collision"/>
+            <body name="left_arm_link1" pos="-0.00048618 0.170734 0.30302">
+              <inertial pos="0.00042258 0.074131 7.9156e-05" quat="0.705776 0.708428 0.000383566 -0.00300782" mass="1.135" diaginertia="0.000616038 0.000471359 0.000302583"/>
+              <joint name="left_arm_joint1" pos="0 0 0" axis="0 1 0" range="-4.4506 1.309" actuatorfrcrange="-55 55"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_arm_link1"/>
+              <geom type="mesh" mesh="left_arm_link1_collision"/>
+              <body name="left_arm_link2" pos="0.025012 0.081265 0">
+                <inertial pos="-0.026826 -0.0040392 -0.031835" quat="0.967826 0.24999 -0.0279104 0.00629583" mass="0.92" diaginertia="0.000373948 0.000345466 0.000316696"/>
+                <joint name="left_arm_joint2" pos="0 0 0" axis="1 0 0" range="-0.1745 3.1416" actuatorfrcrange="-55 55"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_arm_link2"/>
+                <geom type="mesh" mesh="left_arm_link2_collision"/>
+                <body name="left_arm_link3" pos="-0.025012 0 -0.1155">
+                  <inertial pos="0.0053849 -0.00086892 -0.1126" quat="0.987419 -0.0126124 0.157363 -0.00905809" mass="1.245" diaginertia="0.000765373 0.000738745 0.000331352"/>
+                  <joint name="left_arm_joint3" pos="0 0 0" axis="0 0 1" range="-2.3562 2.3562" actuatorfrcrange="-25 25"/>
+                  <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_arm_link3"/>
+                  <geom type="mesh" mesh="left_arm_link3_collision"/>
+                  <body name="left_arm_link4" pos="0 0.035065 -0.1945">
+                    <inertial pos="-0.0011018 -0.036243 -0.042164" quat="0.70731 -0.0289938 -0.0395261 0.705202" mass="0.827" diaginertia="0.000197532 0.000139189 0.000101919"/>
+                    <joint name="left_arm_joint4" pos="0 0 0" axis="0 1 0" range="-1.7453 0.3491" actuatorfrcrange="-25 25"/>
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_arm_link4"/>
+                    <geom type="mesh" mesh="left_arm_link4_collision"/>
+                    <body name="left_arm_link5" pos="0 -0.035065 -0.095">
+                      <inertial pos="3.7881e-07 -0.0028035 -0.062981" quat="0.997254 -0.074061 2.09046e-05 0.000268168" mass="0.939" diaginertia="0.00070496 0.000677819 0.000322221"/>
+                      <joint name="left_arm_joint5" pos="0 0 0" axis="0 0 1" range="-2.3562 2.3562" actuatorfrcrange="-18 18"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_arm_link5"/>
+                      <geom type="mesh" mesh="left_arm_link5_collision"/>
+                      <body name="left_arm_link6" pos="0 -0.028 -0.16305">
+                        <inertial pos="0.0017919 0.027487 0.00025471" quat="0.704102 0.696344 -0.110248 0.0847966" mass="0.527" diaginertia="8.56857e-05 8.24979e-05 8.11804e-05"/>
+                        <joint name="left_arm_joint6" pos="0 0 0" axis="0 1 0" range="-1.0472 1.0472" actuatorfrcrange="-18 18"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_arm_link6"/>
+                        <geom type="mesh" mesh="left_arm_link6_collision"/>
+                        <body name="left_arm_link7" pos="0.0295 0.028 0">
+                          <inertial pos="-0.00830836 0.0952721 -0.0201167" quat="0.302651 0.327505 -0.750401 0.487894" mass="0.473853" diaginertia="0.00352313 0.00345956 0.000202021"/>
+                          <joint name="left_arm_joint7" pos="0 0 0" axis="1 0 0" range="-1.5708 1.5708" actuatorfrcrange="-18 18"/>
+                          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_arm_link7"/>
+                          <geom type="mesh" mesh="left_arm_link7_collision"/>
+                          <geom pos="-0.0295 0 -0.16065" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_gripper_link"/>
+                          <geom pos="-0.0295 0 -0.16065" quat="1 0 0 0" type="mesh" mesh="left_gripper_link_collision"/>
+                          <geom pos="0.02101 0.0028934 -0.155518" quat="0.21643 -0.000394204 -0.976296 0.00176584" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_realsense_link"/>
+                          <geom pos="0.02101 0.0028934 -0.155518" quat="0.21643 -0.000394204 -0.976296 0.00176584" type="mesh" mesh="left_realsense_link_collision"/>
+                          <site name="left_hand_tcp" pos="-0.0295 0 -0.220" quat="1 0 0 0" size="0.006" rgba="1 0.2 0.2 1"/>
+                          <body name="left_gripper_finger_link1" pos="-0.0295887 0.013453 -0.19754">
+                            <inertial pos="0.0056571 -0.015027 0.01959" quat="0.996815 -0.0588415 0.00751429 0.0532934" mass="0.020196" diaginertia="6.4915e-06 5.75204e-06 2.35776e-06"/>
+                            <joint name="left_gripper_finger_joint1" pos="0 0 0" axis="-0.0077873 0.99997 0" type="slide" range="0 0.05" actuatorfrcrange="-100 100"/>
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_gripper_finger_link1"/>
+                            <geom size="0.03 0.005 0.02" pos="0 -0.01 0" type="box"/>
+                          </body>
+                          <body name="left_gripper_finger_link2" pos="-0.029411 -0.013453 -0.19754">
+                            <inertial pos="-0.0056573 0.015027 0.01959" quat="0.996815 0.0588425 -0.00751885 0.0532936" mass="0.020196" diaginertia="6.4915e-06 5.75204e-06 2.35776e-06"/>
+                            <joint name="left_gripper_finger_joint2" pos="0 0 0" axis="0.0077873 -0.99997 0" type="slide" range="0 0.05" actuatorfrcrange="-100 100"/>
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="left_gripper_finger_link2"/>
+                            <geom size="0.03 0.005 0.02" pos="0 0.01 0" type="box"/>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+            <body name="right_arm_link1" pos="-0.00048706 -0.170736 0.30302">
+              <inertial pos="-0.00042261 -0.074132 7.8365e-05" quat="0.708417 0.705787 -0.00300924 0.000384982" mass="1.135" diaginertia="0.000616038 0.000471349 0.000302583"/>
+              <joint name="right_arm_joint1" pos="0 0 0" axis="0 1 0" range="-4.4506 1.309" actuatorfrcrange="-55 55"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_arm_link1"/>
+              <geom type="mesh" mesh="right_arm_link1_collision"/>
+              <body name="right_arm_link2" pos="0.023988 -0.081265 0">
+                <inertial pos="-0.022361 0.0049527 -0.032732" quat="0.973837 -0.224135 0.0325444 0.0186079" mass="0.92" diaginertia="0.000382057 0.000345953 0.00032461"/>
+                <joint name="right_arm_joint2" pos="0 0 0" axis="1 0 0" range="-3.1416 0.1745" actuatorfrcrange="-55 55"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_arm_link2"/>
+                <geom type="mesh" mesh="right_arm_link2_collision"/>
+                <body name="right_arm_link3" pos="-0.023988 0 -0.1155">
+                  <inertial pos="0.0053839 -0.00087109 -0.11261" quat="0.987422 -0.0126678 0.15733 -0.00924199" mass="1.245" diaginertia="0.000765324 0.000738726 0.00033133"/>
+                  <joint name="right_arm_joint3" pos="0 0 0" axis="0 0 1" range="-2.3562 2.3562" actuatorfrcrange="-25 25"/>
+                  <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_arm_link3"/>
+                  <geom type="mesh" mesh="right_arm_link3_collision"/>
+                  <body name="right_arm_link4" pos="0 0.035058 -0.1945">
+                    <inertial pos="-0.00058877 -0.035687 -0.057422" quat="0.707245 -0.0306329 -0.0413532 0.705093" mass="0.827" diaginertia="0.000220262 0.000161937 0.000126441"/>
+                    <joint name="right_arm_joint4" pos="0 0 0" axis="0 1 0" range="-1.7453 0.3491" actuatorfrcrange="-25 25"/>
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_arm_link4"/>
+                    <geom type="mesh" mesh="right_arm_link4_collision"/>
+                    <body name="right_arm_link5" pos="0 -0.035058 -0.095">
+                      <inertial pos="-2.2815e-07 0.0031762 -0.07334" quat="0.997325 0.0730935 -2.18067e-05 0.000267049" mass="0.63" diaginertia="0.00069134 0.000664096 0.000303914"/>
+                      <joint name="right_arm_joint5" pos="0 0 0" axis="0 0 1" range="-2.3562 2.3562" actuatorfrcrange="-18 18"/>
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_arm_link5"/>
+                      <geom type="mesh" mesh="right_arm_link5_collision"/>
+                      <body name="right_arm_link6" pos="0 0.028001 -0.16305">
+                        <inertial pos="0.0017914 -0.027486 0.00025485" quat="0.696434 0.70404 -0.0847037 0.110151" mass="0.527" diaginertia="8.56852e-05 8.24984e-05 8.11794e-05"/>
+                        <joint name="right_arm_joint6" pos="0 0 0" axis="0 1 0" range="-1.0472 1.0472" actuatorfrcrange="-18 18"/>
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_arm_link6"/>
+                        <geom type="mesh" mesh="right_arm_link6_collision"/>
+                        <body name="right_arm_link7" pos="0.0295 -0.028001 0">
+                          <inertial pos="-0.00830836 0.0952719 -0.0201159" quat="0.507465 0.774604 0.268973 -0.264806" mass="0.473853" diaginertia="0.00356855 0.00346978 0.000244679"/>
+                          <joint name="right_arm_joint7" pos="0 0 0" axis="1 0 0" range="-1.5708 1.5708" actuatorfrcrange="-18 18"/>
+                          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_arm_link7"/>
+                          <geom type="mesh" mesh="right_arm_link7_collision"/>
+                          <geom pos="-0.0295 0 -0.16065" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_gripper_link"/>
+                          <geom pos="-0.0295 0 -0.16065" quat="1 0 0 0" type="mesh" mesh="right_gripper_link_collision"/>
+                          <geom pos="0.02101 0.0028934 -0.155518" quat="0.21643 -0.000394204 -0.976296 0.00176584" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_realsense_link"/>
+                          <geom pos="0.02101 0.0028934 -0.155518" quat="0.21643 -0.000394204 -0.976296 0.00176584" type="mesh" mesh="right_realsense_link_collision"/>
+                          <site name="right_hand_tcp" pos="-0.0295 0 -0.220" quat="1 0 0 0" size="0.006" rgba="1 0.2 0.2 1"/>
+                          <body name="right_gripper_finger_link1" pos="-0.0295887 0.013453 -0.19754">
+                            <inertial pos="0.0056571 -0.015027 0.01959" quat="0.996815 -0.0588415 0.00751429 0.0532934" mass="0.020196" diaginertia="6.4915e-06 5.75204e-06 2.35776e-06"/>
+                            <joint name="right_gripper_finger_joint1" pos="0 0 0" axis="-0.0077873 0.99997 0" type="slide" range="0 0.05" actuatorfrcrange="-100 100"/>
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_gripper_finger_link1"/>
+                            <geom size="0.03 0.005 0.02" pos="0 -0.01 0" type="box"/>
+                          </body>
+                          <body name="right_gripper_finger_link2" pos="-0.029411 -0.013453 -0.19754">
+                            <inertial pos="-0.0056573 0.015027 0.01959" quat="0.996815 0.0588425 -0.00751885 0.0532936" mass="0.020196" diaginertia="6.4915e-06 5.75204e-06 2.35776e-06"/>
+                            <joint name="right_gripper_finger_joint2" pos="0 0 0" axis="0.0077873 -0.99997 0" type="slide" range="0 0.05" actuatorfrcrange="-100 100"/>
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="right_gripper_finger_link2"/>
+                            <geom size="0.03 0.005 0.02" pos="0 0.01 0" type="box"/>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <general name="torso_joint1_pos" joint="torso_joint1" gaintype="fixed" biastype="affine" gainprm="2500" biasprm="0 -2500 -250" ctrllimited="true" ctrlrange="-1.1345 1.8326" forcelimited="true" forcerange="-120 120"/>
+    <general name="torso_joint2_pos" joint="torso_joint2" gaintype="fixed" biastype="affine" gainprm="2500" biasprm="0 -2500 -250" ctrllimited="true" ctrlrange="-2.7925 2.5307" forcelimited="true" forcerange="-120 120"/>
+    <general name="torso_joint3_pos" joint="torso_joint3" gaintype="fixed" biastype="affine" gainprm="2500" biasprm="0 -2500 -250" ctrllimited="true" ctrlrange="-1.8326 1.5708" forcelimited="true" forcerange="-120 120"/>
+    <general name="torso_joint4_pos" joint="torso_joint4" gaintype="fixed" biastype="affine" gainprm="2500" biasprm="0 -2500 -250" ctrllimited="true" ctrlrange="-3.0543 3.0543" forcelimited="true" forcerange="-120 120"/>
+
+    <general name="left_arm_joint1_pos" joint="left_arm_joint1" gaintype="fixed" biastype="affine" gainprm="2500" biasprm="0 -2500 -250" ctrllimited="true" ctrlrange="-4.4506 1.3090" forcelimited="true" forcerange="-80 80"/>
+    <general name="left_arm_joint2_pos" joint="left_arm_joint2" gaintype="fixed" biastype="affine" gainprm="2500" biasprm="0 -2500 -250" ctrllimited="true" ctrlrange="-0.1745 3.1416" forcelimited="true" forcerange="-80 80"/>
+    <general name="left_arm_joint3_pos" joint="left_arm_joint3" gaintype="fixed" biastype="affine" gainprm="1800" biasprm="0 -1800 -180" ctrllimited="true" ctrlrange="-2.3562 2.3562" forcelimited="true" forcerange="-60 60"/>
+    <general name="left_arm_joint4_pos" joint="left_arm_joint4" gaintype="fixed" biastype="affine" gainprm="1800" biasprm="0 -1800 -180" ctrllimited="true" ctrlrange="-1.7453 0.3491" forcelimited="true" forcerange="-60 60"/>
+    <general name="left_arm_joint5_pos" joint="left_arm_joint5" gaintype="fixed" biastype="affine" gainprm="1200" biasprm="0 -1200 -120" ctrllimited="true" ctrlrange="-2.3562 2.3562" forcelimited="true" forcerange="-40 40"/>
+    <general name="left_arm_joint6_pos" joint="left_arm_joint6" gaintype="fixed" biastype="affine" gainprm="1200" biasprm="0 -1200 -120" ctrllimited="true" ctrlrange="-1.0472 1.0472" forcelimited="true" forcerange="-40 40"/>
+    <general name="left_arm_joint7_pos" joint="left_arm_joint7" gaintype="fixed" biastype="affine" gainprm="1200" biasprm="0 -1200 -120" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-40 40"/>
+
+    <general name="left_gripper_finger_joint1_pos" joint="left_gripper_finger_joint1" gaintype="fixed" biastype="affine" gainprm="300" biasprm="0 -300 -30" ctrllimited="true" ctrlrange="0 0.05" forcelimited="true" forcerange="-15 15"/>
+    <general name="left_gripper_finger_joint2_pos" joint="left_gripper_finger_joint2" gaintype="fixed" biastype="affine" gainprm="300" biasprm="0 -300 -30" ctrllimited="true" ctrlrange="0 0.05" forcelimited="true" forcerange="-15 15"/>
+
+    <general name="right_arm_joint1_pos" joint="right_arm_joint1" gaintype="fixed" biastype="affine" gainprm="2500" biasprm="0 -2500 -250" ctrllimited="true" ctrlrange="-4.4506 1.3090" forcelimited="true" forcerange="-80 80"/>
+    <general name="right_arm_joint2_pos" joint="right_arm_joint2" gaintype="fixed" biastype="affine" gainprm="2500" biasprm="0 -2500 -250" ctrllimited="true" ctrlrange="-3.1416 0.1745" forcelimited="true" forcerange="-80 80"/>
+    <general name="right_arm_joint3_pos" joint="right_arm_joint3" gaintype="fixed" biastype="affine" gainprm="1800" biasprm="0 -1800 -180" ctrllimited="true" ctrlrange="-2.3562 2.3562" forcelimited="true" forcerange="-60 60"/>
+    <general name="right_arm_joint4_pos" joint="right_arm_joint4" gaintype="fixed" biastype="affine" gainprm="1800" biasprm="0 -1800 -180" ctrllimited="true" ctrlrange="-1.7453 0.3491" forcelimited="true" forcerange="-60 60"/>
+    <general name="right_arm_joint5_pos" joint="right_arm_joint5" gaintype="fixed" biastype="affine" gainprm="1200" biasprm="0 -1200 -120" ctrllimited="true" ctrlrange="-2.3562 2.3562" forcelimited="true" forcerange="-40 40"/>
+    <general name="right_arm_joint6_pos" joint="right_arm_joint6" gaintype="fixed" biastype="affine" gainprm="1200" biasprm="0 -1200 -120" ctrllimited="true" ctrlrange="-1.0472 1.0472" forcelimited="true" forcerange="-40 40"/>
+    <general name="right_arm_joint7_pos" joint="right_arm_joint7" gaintype="fixed" biastype="affine" gainprm="1200" biasprm="0 -1200 -120" ctrllimited="true" ctrlrange="-1.5708 1.5708" forcelimited="true" forcerange="-40 40"/>
+
+    <general name="right_gripper_finger_joint1_pos" joint="right_gripper_finger_joint1" gaintype="fixed" biastype="affine" gainprm="300" biasprm="0 -300 -30" ctrllimited="true" ctrlrange="0 0.05" forcelimited="true" forcerange="-15 15"/>
+    <general name="right_gripper_finger_joint2_pos" joint="right_gripper_finger_joint2" gaintype="fixed" biastype="affine" gainprm="300" biasprm="0 -300 -30" ctrllimited="true" ctrlrange="0 0.05" forcelimited="true" forcerange="-15 15"/>
+  </actuator>
+</mujoco>

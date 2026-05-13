@@ -1,0 +1,92 @@
+{
+  "calibration_path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_pose_calibration.json",
+  "camera_poses": {
+    "cam1": {
+      "pos": [
+        1.18885,
+        -0.874942,
+        0.269345
+      ],
+      "quat": [
+        0.6598597613330566,
+        0.6727867566574472,
+        0.23886691360340562,
+        0.2342769152635779
+      ]
+    },
+    "cam2": {
+      "pos": [
+        2.22608,
+        -0.10649,
+        0.403204
+      ],
+      "quat": [
+        0.4873560248746522,
+        0.5123320261494273,
+        0.5123320261494273,
+        0.4873560248746522
+      ]
+    }
+  },
+  "position_refined": false,
+  "camera_facing_local_axis": {
+    "refined": {
+      "apple": {
+        "front_axis_local": "-Z",
+        "hinge_axis_local": "+Y",
+        "delta_computed_deg": -3.1805546814635168e-15,
+        "residual_deg": 0.0,
+        "applied": true,
+        "delta_used_deg": 5.264285389512732e-32,
+        "top_axis_local": "-Y",
+        "top_upright_delta_deg": 3.555968236953806e-15,
+        "top_residual_deg": 0.0,
+        "top_front_horizontal_residual_deg": 0.0,
+        "top_constraint_applied": true,
+        "delta_source_object": "pear"
+      },
+      "pear": {
+        "front_axis_local": "-Z",
+        "hinge_axis_local": "+Y",
+        "delta_computed_deg": 5.264285389512732e-32,
+        "residual_deg": 8.537736462515939e-07,
+        "applied": true,
+        "delta_used_deg": 5.264285389512732e-32,
+        "top_axis_local": "-Y",
+        "top_upright_delta_deg": 1.0056682455776759e-14,
+        "top_residual_deg": 0.0,
+        "top_front_horizontal_residual_deg": 0.0,
+        "top_constraint_applied": true,
+        "delta_source_object": "pear"
+      }
+    }
+  },
+  "refined": {
+    "apple": {
+      "quat_wxyz": [
+        -0.6870361013249379,
+        0.6870361013249379,
+        0.16727640442163308,
+        -0.16727640442163308
+      ],
+      "pos": [
+        0.6059479307248762,
+        0.2511418306899159,
+        0.0
+      ]
+    },
+    "pear": {
+      "quat_wxyz": [
+        -0.6674172510995275,
+        0.6674172510995275,
+        0.2335684330870722,
+        -0.2335684330870722
+      ],
+      "pos": [
+        0.4196827482346619,
+        0.08940986254014119,
+        0.0
+      ]
+    }
+  }
+}

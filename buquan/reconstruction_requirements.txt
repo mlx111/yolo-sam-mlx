@@ -1,0 +1,6 @@
+# Stereo gravity completion runtime dependencies.
+# Pin NumPy<2 to avoid SciPy/Open3D binary ABI mismatch.
+numpy>=1.26,<2.0
+scipy>=1.10,<1.13
+open3d>=0.18,<0.20
+opencv-python>=4.8,<4.11

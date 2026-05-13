@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-03-23T13:07:44.203725Z",
+  "object": "apple",
+  "returncode": 0,
+  "inputs": {
+    "source_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel.stl",
+    "pipeline_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_pipeline_report.json"
+  },
+  "geometry": {
+    "inverse_rotation_3x3": [
+      [
+        0.9812293452467616,
+        -0.0006405997209264241,
+        0.19284336041358252
+      ],
+      [
+        -0.0006405997209264241,
+        0.9999781377896592,
+        0.006581304940475868
+      ],
+      [
+        -0.19284336041358252,
+        -0.006581304940475868,
+        0.9812074830364207
+      ]
+    ]
+  },
+  "outputs": {
+    "restored_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel_restored.stl",
+    "runner_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_runner_report.json"
+  }
+}

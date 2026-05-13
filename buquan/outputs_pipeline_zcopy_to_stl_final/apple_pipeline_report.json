@@ -1,0 +1,207 @@
+{
+  "timestamp_utc": "2026-03-07T06:29:10.122838Z",
+  "config": {
+    "object_name": "apple",
+    "input_root": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/inputs",
+    "calib_pdf": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/inputs/双ob(1)/双ob/标定.pdf",
+    "extrinsics_json": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/calib/refined_stereo_extrinsics.json",
+    "left_depth_rel": "dleft001.png",
+    "left_mask_tpl": "left_mask_{obj}.png",
+    "depth_scale": 1000.0,
+    "depth_trunc_m": 6.0,
+    "voxel_size_m": 0.0015,
+    "stat_k": 20,
+    "stat_std_ratio": 2.0,
+    "radius_m": 0.006,
+    "radius_min_neighbors": 6,
+    "cluster_radius_m": 0.005,
+    "tail_bin_m": 0.0012,
+    "tail_min_support": 8,
+    "tail_max_remove_ratio": 0.03,
+    "center_mode": "mean",
+    "align_axis": "minor",
+    "copy_source": "cleaned_raw",
+    "copy_times": 10,
+    "copy_step_m": 0.0025,
+    "copy_direction": "both",
+    "copy_voxel_m": 0.0008,
+    "output_dir": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final",
+    "save_report": true
+  },
+  "inputs": {
+    "left_depth": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/inputs/dleft001.png",
+    "left_mask": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/inputs/left_mask_apple.png",
+    "calib_pdf": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/inputs/双ob(1)/双ob/标定.pdf",
+    "refined_extrinsics_json": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/calib/refined_stereo_extrinsics.json"
+  },
+  "calibration": {
+    "k_left": [
+      [
+        1129.8136,
+        0.0,
+        961.0022
+      ],
+      [
+        0.0,
+        1128.6075,
+        546.8298
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "k_right": [
+      [
+        1126.8856,
+        0.0,
+        954.9412
+      ],
+      [
+        0.0,
+        1126.4037,
+        536.3848
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "r_pdf": [
+      [
+        0.64348702,
+        -0.24681324,
+        0.72457414
+      ],
+      [
+        0.17130231,
+        0.96901536,
+        0.17794592
+      ],
+      [
+        -0.74604288,
+        0.00961534,
+        0.66582848
+      ]
+    ],
+    "t_pdf_m": [
+      -0.89021218409,
+      -0.12198498635,
+      0.87198401914
+    ],
+    "refined_transform_right_to_left_4x4": [
+      [
+        0.6429587715099456,
+        0.1566302154588371,
+        0.7497139378452353,
+        -1.2382756021427639
+      ],
+      [
+        -0.2281537342796397,
+        0.9735943753482525,
+        -0.00773741723212712,
+        0.1124578480538955
+      ],
+      [
+        -0.7311291862373982,
+        -0.1660751881638335,
+        0.6617168166474587,
+        0.08498370173982081
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "counts": {
+    "mask_pixels": 3837,
+    "raw_points": 3837,
+    "raw_after_stat_radius": 3743,
+    "raw_largest_cluster_points": 3743,
+    "raw_tail_trimmed_points": 3734,
+    "preprocessed_points": 2564,
+    "aligned_raw_points": 3837,
+    "aligned_cleaned_raw_points": 3734,
+    "aligned_processed_points": 2564,
+    "copy_base_points": 3734,
+    "filled_points": 78414
+  },
+  "outlier_filter": {
+    "cluster_filter": {
+      "applied": true,
+      "largest_component_size": 3743,
+      "input_points": 3743
+    },
+    "tail_trim": {
+      "applied": true,
+      "input_points": 3743,
+      "output_points": 3734,
+      "removed_points": 9,
+      "removed_ratio": 0.0024044883783061713,
+      "left_trim_mm": 1.1999999999999997,
+      "right_trim_mm": 0.5407735505714093,
+      "tail_bin_mm": 1.2,
+      "tail_min_support": 8
+    }
+  },
+  "geometry": {
+    "center_translation_xyz_m": [
+      0.2817934704376485,
+      -0.02344866316572107,
+      1.3513459438377609
+    ],
+    "rotation_to_z_3x3": [
+      [
+        0.9812293452467616,
+        -0.0006405997209264561,
+        -0.19284336041358263
+      ],
+      [
+        -0.0006405997209264561,
+        0.9999781377896592,
+        -0.006581304940476201
+      ],
+      [
+        0.19284336041358263,
+        0.006581304940476201,
+        0.9812074830364207
+      ]
+    ],
+    "pca_eigenvalues": [
+      0.00041304909820324146,
+      0.0004097229502216573,
+      7.018505867256646e-05
+    ],
+    "copy_shifts_z_m": [
+      0.0,
+      0.0025,
+      -0.0025,
+      0.005,
+      -0.005,
+      0.0075,
+      -0.0075,
+      0.01,
+      -0.01,
+      0.0125,
+      -0.0125,
+      0.015,
+      -0.015,
+      0.0175,
+      -0.0175,
+      0.02,
+      -0.02,
+      0.0225,
+      -0.0225,
+      0.025,
+      -0.025
+    ]
+  },
+  "outputs": {
+    "zcopy_filled_aligned_ply": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_zcopy_filled_aligned.ply"
+  }
+}

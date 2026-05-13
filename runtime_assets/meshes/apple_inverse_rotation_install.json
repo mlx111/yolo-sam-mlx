@@ -1,0 +1,6 @@
+{
+  "inverse_rotation_applied": true,
+  "installed_mesh": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/manipulator_grasp/assets/fruit/stl/apple.stl",
+  "runner_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_runner_report.json",
+  "pipeline_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_pipeline_report.json"
+}

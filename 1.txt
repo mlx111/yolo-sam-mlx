@@ -1,0 +1,46 @@
+<class 'dict'>
+<class 'open3d.cuda.pybind.geometry.PointCloud'>
+这是fastapi的gg
+
+curl -X 'POST' \
+  'http://127.0.0.1:8080/camera-image' \
+  -H 'accept: application/json' \
+  -d ''
+  
+curl -X 'POST' \
+  'http://127.0.0.1:8080/detect-object?target_class=apple' \
+  -H 'accept: application/json' \
+  -d ''
+  
+curl -X 'POST' \
+  'http://127.0.0.1:8080/create-cloud' \
+  -H 'accept: application/json' \
+  -d ''
+
+curl -X 'POST' \
+  'http://127.0.0.1:8080/create-grasp' \
+  -H 'accept: application/json' \
+  -d ''
+  
+  
+curl -X 'POST' \
+  'http://127.0.0.1:8080/execute-grasp1' \
+  -H 'accept: application/json' \
+  -d ''
+  
+curl -X 'POST' \
+  'http://127.0.0.1:8080/gripper-action?flag=0' \
+  -H 'accept: application/json' \
+  -d ''
+
+
+curl -X 'POST' \
+  'http://127.0.0.1:8080/execute-grasp2?x=1.5&y=0.1' \
+  -H 'accept: application/json' \
+  -d ''
+  
+ curl -X 'POST' \
+  'http://127.0.0.1:8080/execute-init' \
+  -H 'accept: application/json' \
+  -d ''
+  <camera name="ee_camera" pos="0 0 0.05" quat="0 0 1 0" fovy="60" mode="fixed"/>

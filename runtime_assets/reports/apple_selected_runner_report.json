@@ -1,0 +1,68 @@
+{
+  "timestamp_utc": "2026-05-03T12:41:48.522454Z",
+  "object": "apple",
+  "returncode": 0,
+  "inputs": {
+    "input_root": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs",
+    "calib_pdf": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/双ob(1)/双ob/标定.pdf",
+    "camera": "left",
+    "camera_model": "sim",
+    "sim_intrinsics_json": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/sim_camera_intrinsics.json",
+    "left_depth_rel": "dleft001.png",
+    "left_mask_tpl": "left_mask_{obj}.png",
+    "right_depth_rel": "dright001.png",
+    "right_mask_tpl": "right_mask_{obj}.png",
+    "pear_y_canonical": "on",
+    "pear_tip_percentile": 0.1
+  },
+  "stage1": {
+    "script": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/pipeline_inputs_to_zcopy_robust_stereo_switch_pointcloud_v2.py",
+    "returncode": 0,
+    "zcopy_ply": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_zcopy_filled_aligned.ply",
+    "zcopy_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_pipeline_report.json",
+    "stdout": "[INFO] counts: {'mask_pixels': 2525, 'raw_points': 2525, 'raw_after_stat_radius': 2362, 'raw_largest_cluster_points': 2237, 'raw_tail_trimmed_points': 2232, 'preprocessed_points': 2099, 'aligned_raw_points': 2525, 'aligned_cleaned_raw_points': 2232, 'aligned_processed_points': 2099, 'copy_base_points': 2232, 'filled_points': 46730}\n[INFO] outputs: {'zcopy_filled_aligned_ply': '/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_zcopy_filled_aligned.ply'}\n[INFO] report: /home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_pipeline_report.json\n",
+    "stderr": ""
+  },
+  "stage2": {
+    "script": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/zcopy_ply_to_stl_watertight_stereo_switch.py",
+    "returncode": 0,
+    "stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_watertight_voxel.stl",
+    "stl_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_watertight_voxel_report.json",
+    "stdout": "[INFO] stl: /home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_watertight_voxel.stl\n[INFO] report: /home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_watertight_voxel_report.json\n[INFO] watertight=True volume=True faces=762 fit_mean_mm=None\n",
+    "stderr": "",
+    "max_split_faces": 300000,
+    "force_convex_hull": "on"
+  },
+  "stage3": {
+    "script": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/pipeline_zcopy_to_stl_runner_stereo_switch_restore_rotation_pointcloud_v2.py",
+    "returncode": 0,
+    "source_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_watertight_voxel.stl",
+    "pipeline_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_pipeline_report.json",
+    "restored_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_watertight_voxel_restored.stl",
+    "restored_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_restored_rotation_report.json",
+    "inverse_rotation_3x3": [
+      [
+        0.9656934296474609,
+        -0.005890032803145909,
+        0.2596180029319435
+      ],
+      [
+        -0.005890032803145909,
+        0.9989887509574513,
+        0.04457334376017563
+      ],
+      [
+        -0.2596180029319435,
+        -0.04457334376017563,
+        0.9646821806049122
+      ]
+    ]
+  },
+  "outputs": {
+    "zcopy_ply": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_zcopy_filled_aligned.ply",
+    "stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_watertight_voxel.stl",
+    "restored_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_watertight_voxel_restored.stl",
+    "runner_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_runner_report.json",
+    "restored_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_restored_rotation_report.json"
+  }
+}

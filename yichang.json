@@ -1,0 +1,1 @@
+[{"action": "gripper-action", "parameters": {"state": 0}}, {"action": "move-grasp", "parameters": {}}, {"action": "gripper-action", "parameters": {"state": 1}}, {"action": "vertical-grasp", "parameters": {}}]

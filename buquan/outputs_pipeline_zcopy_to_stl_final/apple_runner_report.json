@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-03-07T06:29:16.618630Z",
+  "object": "apple",
+  "returncode": 0,
+  "inputs": {
+    "input_root": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/inputs",
+    "calib_pdf": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/inputs/双ob(1)/双ob/标定.pdf",
+    "left_depth_rel": "dleft001.png",
+    "left_mask_tpl": "left_mask_{obj}.png"
+  },
+  "stage1": {
+    "script": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/pipeline_inputs_to_zcopy_robust.py",
+    "returncode": 0,
+    "zcopy_ply": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_zcopy_filled_aligned.ply",
+    "zcopy_report": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_pipeline_report.json",
+    "stdout": "[INFO] counts: {'mask_pixels': 3837, 'raw_points': 3837, 'raw_after_stat_radius': 3743, 'raw_largest_cluster_points': 3743, 'raw_tail_trimmed_points': 3734, 'preprocessed_points': 2564, 'aligned_raw_points': 3837, 'aligned_cleaned_raw_points': 3734, 'aligned_processed_points': 2564, 'copy_base_points': 3734, 'filled_points': 78414}\n[INFO] outputs: {'zcopy_filled_aligned_ply': '/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_zcopy_filled_aligned.ply'}\n[INFO] report: /mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_pipeline_report.json\n",
+    "stderr": ""
+  },
+  "stage2": {
+    "script": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/zcopy_ply_to_stl_watertight.py",
+    "returncode": 0,
+    "stl": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_watertight_voxel.stl",
+    "stl_report": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_watertight_voxel_report.json",
+    "stdout": "[INFO] stl: /mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_watertight_voxel.stl\n[INFO] report: /mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_watertight_voxel_report.json\n[INFO] watertight=True volume=True faces=346 fit_mean_mm=8.537486759210456\n",
+    "stderr": ""
+  },
+  "outputs": {
+    "zcopy_ply": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_zcopy_filled_aligned.ply",
+    "stl": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_watertight_voxel.stl",
+    "runner_report": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/apple_runner_report.json"
+  }
+}

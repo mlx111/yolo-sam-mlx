@@ -1,0 +1,66 @@
+{
+  "timestamp_utc": "2026-03-23T13:07:44.199907Z",
+  "object": "apple",
+  "returncode": 0,
+  "inputs": {
+    "input_root": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs",
+    "calib_pdf": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/双ob(1)/双ob/标定.pdf",
+    "camera": "left",
+    "left_depth_rel": "dleft001.png",
+    "left_mask_tpl": "left_mask_{obj}.png",
+    "right_depth_rel": "dright001.png",
+    "right_mask_tpl": "right_mask_{obj}.png",
+    "pear_y_canonical": "on",
+    "pear_tip_percentile": 0.1
+  },
+  "stage1": {
+    "script": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/pipeline_inputs_to_zcopy_robust_stereo_switch_pointcloud_v2.py",
+    "returncode": 0,
+    "zcopy_ply": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_zcopy_filled_aligned.ply",
+    "zcopy_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_pipeline_report.json",
+    "stdout": "[INFO] counts: {'mask_pixels': 3837, 'raw_points': 3837, 'raw_after_stat_radius': 3743, 'raw_largest_cluster_points': 3743, 'raw_tail_trimmed_points': 3734, 'preprocessed_points': 2564, 'aligned_raw_points': 3837, 'aligned_cleaned_raw_points': 3734, 'aligned_processed_points': 2564, 'copy_base_points': 3734, 'filled_points': 78414}\n[INFO] outputs: {'zcopy_filled_aligned_ply': '/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_zcopy_filled_aligned.ply'}\n[INFO] report: /home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_pipeline_report.json\n",
+    "stderr": ""
+  },
+  "stage2": {
+    "script": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/zcopy_ply_to_stl_watertight_stereo_switch.py",
+    "returncode": 0,
+    "stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel.stl",
+    "stl_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel_report.json",
+    "stdout": "[INFO] stl: /home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel.stl\n[INFO] report: /home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel_report.json\n[INFO] watertight=True volume=True faces=346 fit_mean_mm=None\n",
+    "stderr": "",
+    "max_split_faces": 300000,
+    "force_convex_hull": "on"
+  },
+  "stage3": {
+    "script": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/pipeline_zcopy_to_stl_runner_stereo_switch_restore_rotation_pointcloud_v2.py",
+    "returncode": 0,
+    "source_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel.stl",
+    "pipeline_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_pipeline_report.json",
+    "restored_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel_restored.stl",
+    "restored_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_restored_rotation_report.json",
+    "inverse_rotation_3x3": [
+      [
+        0.9812293452467616,
+        -0.0006405997209264241,
+        0.19284336041358252
+      ],
+      [
+        -0.0006405997209264241,
+        0.9999781377896592,
+        0.006581304940475868
+      ],
+      [
+        -0.19284336041358252,
+        -0.006581304940475868,
+        0.9812074830364207
+      ]
+    ]
+  },
+  "outputs": {
+    "zcopy_ply": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_zcopy_filled_aligned.ply",
+    "stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel.stl",
+    "restored_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_watertight_voxel_restored.stl",
+    "runner_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_runner_report.json",
+    "restored_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/apple_restored_rotation_report.json"
+  }
+}

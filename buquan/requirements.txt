@@ -1,0 +1,18 @@
+# stereo_gravity_complete_to_mujoco.py 环境清单
+
+## 1) Python 版本
+
+## 2) 系统依赖（非 pip）
+## 3) Python 包（pip）
+# 说明：NumPy 必须 <2.0，否则会和 SciPy/Open3D 出现 ABI 不兼容
+numpy==1.26.4
+scipy==1.12.0
+open3d==0.18.0
+opencv-python==4.10.0.84
+
+## 4) 可选建议
+
+## 5) 快速自检命令
+# 进入环境后执行
+# python -c "import numpy, scipy, open3d, cv2; print(numpy.__version__, scipy.__version__, open3d.__version__, cv2.__version__)"
+# which pdftotext

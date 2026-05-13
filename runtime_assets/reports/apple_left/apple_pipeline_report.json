@@ -1,0 +1,240 @@
+{
+  "timestamp_utc": "2026-05-03T12:41:47.319484Z",
+  "config": {
+    "object_name": "apple",
+    "input_root": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs",
+    "calib_pdf": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/双ob(1)/双ob/标定.pdf",
+    "extrinsics_json": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/calib/refined_stereo_extrinsics.json",
+    "camera": "left",
+    "camera_model": "sim",
+    "sim_intrinsics_json": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/sim_camera_intrinsics.json",
+    "left_depth_rel": "dleft001.png",
+    "left_mask_tpl": "left_mask_{obj}.png",
+    "right_depth_rel": "dright001.png",
+    "right_mask_tpl": "right_mask_{obj}.png",
+    "depth_scale": 1000.0,
+    "depth_trunc_m": 6.0,
+    "voxel_size_m": 0.0015,
+    "stat_k": 20,
+    "stat_std_ratio": 2.0,
+    "radius_m": 0.006,
+    "radius_min_neighbors": 6,
+    "cluster_radius_m": 0.005,
+    "tail_bin_m": 0.0012,
+    "tail_min_support": 8,
+    "tail_max_remove_ratio": 0.03,
+    "center_mode": "mean",
+    "align_axis": "minor",
+    "copy_source": "cleaned_raw",
+    "copy_times": 10,
+    "copy_step_m": 0.0025,
+    "copy_direction": "both",
+    "copy_voxel_m": 0.0008,
+    "output_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left",
+    "save_report": true
+  },
+  "inputs": {
+    "input_root": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs",
+    "camera_selected": "left",
+    "selected_depth": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs/dleft001.png",
+    "selected_color": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs/cleft001.png",
+    "selected_mask": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs/left_mask_apple.png",
+    "left_depth": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs/dleft001.png",
+    "left_mask": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs/left_mask_apple.png",
+    "right_depth": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs/dright001.png",
+    "right_mask": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/inputs/right_mask_apple.png",
+    "calib_pdf": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/inputs/双ob(1)/双ob/标定.pdf",
+    "refined_extrinsics_json": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/calib/refined_stereo_extrinsics.json",
+    "camera_model": "sim",
+    "sim_intrinsics_json": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/sim_camera_intrinsics.json"
+  },
+  "calibration": {
+    "k_left": [
+      [
+        1129.8136,
+        0.0,
+        961.0022
+      ],
+      [
+        0.0,
+        1128.6075,
+        546.8298
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "k_right": [
+      [
+        1126.8856,
+        0.0,
+        954.9412
+      ],
+      [
+        0.0,
+        1126.4037,
+        536.3848
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "selected_intrinsics_name": "sim_left_intrinsics",
+    "selected_intrinsics": [
+      [
+        772.5483399593904,
+        0.0,
+        320.0
+      ],
+      [
+        0.0,
+        772.5483399593904,
+        320.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "raw_points_source": "sim_metric_depth_mask_pinhole",
+    "r_pdf": [
+      [
+        0.64348702,
+        -0.24681324,
+        0.72457414
+      ],
+      [
+        0.17130231,
+        0.96901536,
+        0.17794592
+      ],
+      [
+        -0.74604288,
+        0.00961534,
+        0.66582848
+      ]
+    ],
+    "t_pdf_m": [
+      -0.89021218409,
+      -0.12198498635,
+      0.87198401914
+    ],
+    "refined_transform_right_to_left_4x4": [
+      [
+        0.6429587715099456,
+        0.1566302154588371,
+        0.7497139378452353,
+        -1.2382756021427639
+      ],
+      [
+        -0.2281537342796397,
+        0.9735943753482525,
+        -0.00773741723212712,
+        0.1124578480538955
+      ],
+      [
+        -0.7311291862373982,
+        -0.1660751881638335,
+        0.6617168166474587,
+        0.08498370173982081
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "counts": {
+    "mask_pixels": 2525,
+    "raw_points": 2525,
+    "raw_after_stat_radius": 2362,
+    "raw_largest_cluster_points": 2237,
+    "raw_tail_trimmed_points": 2232,
+    "preprocessed_points": 2099,
+    "aligned_raw_points": 2525,
+    "aligned_cleaned_raw_points": 2232,
+    "aligned_processed_points": 2099,
+    "copy_base_points": 2232,
+    "filled_points": 46730
+  },
+  "outlier_filter": {
+    "cluster_filter": {
+      "applied": true,
+      "largest_component_size": 2237,
+      "input_points": 2362
+    },
+    "tail_trim": {
+      "applied": true,
+      "input_points": 2237,
+      "output_points": 2232,
+      "removed_points": 5,
+      "removed_ratio": 0.002235136343316942,
+      "left_trim_mm": 0.0,
+      "right_trim_mm": 0.5742308546732509,
+      "tail_bin_mm": 1.2,
+      "tail_min_support": 8
+    }
+  },
+  "geometry": {
+    "center_translation_xyz_m": [
+      0.24497247524372023,
+      0.24786613451016043,
+      1.234023344449736
+    ],
+    "rotation_to_z_3x3": [
+      [
+        0.9656934296474609,
+        -0.005890032803145909,
+        -0.2596180029319435
+      ],
+      [
+        -0.005890032803145909,
+        0.9989887509574513,
+        -0.04457334376017563
+      ],
+      [
+        0.2596180029319435,
+        0.04457334376017563,
+        0.9646821806049122
+      ]
+    ],
+    "pca_eigenvalues": [
+      0.0004357722930712176,
+      0.00041895203788824907,
+      6.685069222649752e-05
+    ],
+    "copy_shifts_z_m": [
+      0.0,
+      0.0025,
+      -0.0025,
+      0.005,
+      -0.005,
+      0.0075,
+      -0.0075,
+      0.01,
+      -0.01,
+      0.0125,
+      -0.0125,
+      0.015,
+      -0.015,
+      0.0175,
+      -0.0175,
+      0.02,
+      -0.02,
+      0.0225,
+      -0.0225,
+      0.025,
+      -0.025
+    ]
+  },
+  "outputs": {
+    "zcopy_filled_aligned_ply": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_zcopy_filled_aligned.ply"
+  }
+}

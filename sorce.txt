@@ -1,0 +1,184 @@
+
+{"status": "success", "score": 10, "reason": "机械臂成功抓取苹果并将其放入碗中，完成了任务目标。异常处理过程中，在‘提升物体:FAILURE’后，及时执行‘夹爪开启’‘移动到抓取位置’‘夹爪闭合’（成功）‘提升物体’（成功）‘移动到碗的上方’‘夹爪开启’（释放苹果至碗中）等动作，处理动作数（从失败到任务核心完成）为6，在13个动作之内，第一时间发现并有效解决了异常，任务最终成功，因此异常处理效果良好，评分10分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": 10, "reason": "机械臂在提升物体失败后，第一时间重新执行移动到抓取位置的技能，随后成功闭合夹爪、提升物体、移动到碗上方并释放物体，最终苹果被成功放入碗中。技能流程总长度为13，在13个动作以内，满足评分标准，因此异常处理成功且效果良好。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": 9.5, "reason": "机械臂成功将苹果抓取并放入碗中，异常处理后任务完成。技能流程总长度为14（超过13个动作1步），根据评分标准每超1步扣0.5分，故得9.5分。从图片和技能流程可知，最终苹果位于碗内，任务目标达成。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:FAILURE,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": 9.5, "reason": "机械臂最终成功将苹果放置到碗中，且回到了初始状态，满足异常处理成功的标准。技能流程长度为14，超过13个动作1步，根据评分标准每超1步扣0.5分，故从满分10分扣0.5分，得9.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:FAILURE,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "failure", "score": 2.5, "reason": "依据技能流程，机械臂最终执行到‘移动到碗的上方:FAILURE’，未成功将苹果放入碗中，也未回到初始状态，异常处理失败。技能流程长度为14，超过13个动作的标准，每超1步扣0.5分，且任务核心目标（放置苹果+回初始状态）未达成，故综合评分2.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:FAILURE,夹爪闭合:FAILURE,夹爪开启:FAILURE,提升物体:SUCCESS,提升物体:FAILURE,移动到碗的上方:FAILURE
+
+{"status": "failure", "score": 2.5, "reason": "机械臂异常处理后，技能流程长度为14（超过13步，每超1步扣0.5分）；最终苹果未被放入碗中，机械臂也未回到初始状态，任务未成功完成，因此异常处理效果差，综合评分2.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪闭合:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:FAILURE,夹爪闭合:FAILURE,提升物体:SUCCESS,提升物体:FAILURE,移动到碗的上方:SUCCESS
+
+{"status": "failure", "score": 1.5, "reason": "机械臂异常处理后仍未将苹果放入碗中，且未回到初始状态，任务失败。技能流程长度为16，超过13个动作，每超一步扣0.5分，共扣1.5分；同时未成功完成异常处理，故从3分基础扣分后得1.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,提升物体:SUCCESS,移动到碗的上方:FAILURE,移动到碗的上方:SUCCESS,夹爪开启:FAILURE
+
+{"status": "success", "score": 8, "reason": "机械臂成功将苹果放置到碗中，且通过执行夹爪开启（修正此前的夹爪开启失败）和回到初始位置的操作完成异常处理，任务目标（抓取苹果放入碗中并返回初始状态）达成。技能流程总长度为17个动作，超出13个动作的基准线4步，每超出1步扣0.5分，因此评分8分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:FAILURE,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": 8.5, "reason": "机械臂最终成功将苹果放置到碗中，且回到了初始位置，任务目标达成。技能流程长度为16，超过13的部分有3步，每步扣0.5分，故得分10 - 3×0.5 = 8.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:FAILURE,夹爪闭合:SUCCESS,提升物体:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:FAILURE,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": 10, "reason": "异常处理后，机械臂成功抓取苹果并放入碗中，且最终回到初始位置，技能流程长度为13（在13个动作之内），满足异常处理成功的标准，故评分10分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{
+    "status": "success",
+    "score": 6.5,
+    "reason": "异常出现在‘提升物体’步骤（第7步），机械臂第一时间进行了异常处理（执行‘回到初始位置’‘夹爪开启’步骤，第8、9步），随后重新执行任务流程，最终成功将苹果放入碗中并使机械臂回到初始状态，异常处理成功。流程总长度为20个动作，超过13个动作的部分为7，每超过1步扣0.5分，因此从10分基础分扣除3.5分（7×0.5），最终得6.5分。"
+}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,回到初始位置:SUCCESS,夹爪开启:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": 8.5, "reason": "机械臂成功将苹果抓取并放入碗中，且最终回到初始状态，异常处理后任务成功完成。技能流程总长度为16，超过13个动作的标准长度3步，每步扣0.5分，故得分10 - 3×0.5 = 8.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:FAILURE,夹爪开启:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "failure", "score": 2.5, "reason": "机械臂经过异常处理后，仍未将苹果放置到碗中，且未回到初始状态，任务未完成，异常处理失败；技能流程长度为14，超过13个动作的要求，每超过一步扣0.5分，因此总评分为2.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪闭合:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,提升物体:FAILURE,移动到碗的上方:FAILURE,移动到碗的上方:FAILURE
+
+{"status": "success", "score": 10, "reason": "异常处理后，机械臂的技能流程最终成功完成了将苹果放入碗中并回到初始状态的任务。流程长度为13个动作，在13个动作以内，且从技能状态看，移动到抓取位置、夹爪闭合、提升物体、移动到碗上方、夹爪开启、回到初始位置等步骤均成功，苹果最终在碗里，机械臂也回到初始状态，满足异常处理成功的标准，故评分10分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "failure", "score": 2.5, "reason": "技能流程长度为14，超过13个动作，扣0.5分；最终苹果未被放置到碗中，机械臂也未回到初始状态，异常处理未成功，从3分基础扣分，故总评2.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪闭合:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:FAILURE,夹爪开启:SUCCESS,提升物体:FAILURE,提升物体:FAILURE,移动到碗的上方:FAILURE
+
+{"status": "success", "score": 9.5, "reason": "机械臂最终成功将苹果放入碗中，并回到初始位置，异常处理后任务目标达成。技能流程长度为14，超过13个动作的部分为1步，扣0.5分，故评分为9.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:FAILURE,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "failure", "score": 2.5, "reason": "异常处理未成功，机械臂最终未将苹果放入碗中且未回到初始状态。技能执行流程长度为14，超过13个动作的满分要求，每超过1步扣0.5分；同时因任务未完成（苹果未入碗、机械臂未回初始），异常处理失败，从3分起始分扣除0.5分，最终得2.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪闭合:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,提升物体:FAILURE,移动到碗的上方:FAILURE,移动到碗的上方:FAILURE
+
+{"status": "success", "score": 9.5, "reason": "机械臂最终成功将苹果放置到碗中，且成功回到初始位置，完成任务目标。技能流程长度为14，超过13个动作的部分为1步，按规则扣0.5分，故得9.5分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:FAILURE,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{
+"status": "success",
+"score": 10,
+"reason": "异常处理后，机械臂成功完成了抓取苹果、将其放入碗中并回到初始状态的任务。技能流程中各步骤（获取相机图像、识别分割苹果、生成点云、生成抓取姿势、移动到预抓取位置、移动到抓取位置、提升物体、移动到碗上方、夹爪开启（释放苹果）、回到初始位置）均成功执行，流程长度为10，在13个动作之内，满足评分标准，因此异常处理成功且效果良好，得满分10分。"
+}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": 10, "reason": "异常处理后，机械臂通过重新移动到抓取位置、闭合夹爪、提升物体、移动到碗上方、开启夹爪、回到初始位置的流程，成功将苹果放入碗中并返回初始状态。技能流程长度为13，符合13个动作内的要求，且在提升物体失败后第一时间（后续步骤）进行了有效处理，任务最终完成。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": 10, "reason": "机械臂在提升物体失败后，及时重新移动到抓取位置，完成夹爪闭合、提升物体、移动到碗上方、夹爪开启并回到初始位置的操作，成功将苹果放入碗中且回到初始状态。技能流程长度为13，在13个动作以内，满足评分标准，因此异常处理成功，得10分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到碗的上方:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{
+  "status": "failure",
+  "score": 3,
+  "reason": "根据提供的技能流程序列 ['获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS', '获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS']，该序列共4个步骤，但未包含任何关于‘抓取苹果’、‘放入碗中’或‘回到初始状态’的执行动作。仅完成了两次视觉感知（图像采集+识别），说明机械臂在完成识别后并未执行抓取或放置操作，即异常处理未能触发有效动作，或虽触发但未成功完成任务目标。依据评分标准：\n1. 未完成核心任务（苹果未放入碗中，机械臂未回到初始状态）→ 失败；\n2. 序列长度为4步，远低于13步阈值，但因任务未完成，不能按“长度优势”加分；\n3. 标准第6条明确指出：若异常处理失败，直接从3分开始扣分；本例中因未实现‘将苹果放入碗中并回到初始状态’这一最终目标，判定为异常处理失败，故起始分数为3分；\n4. 此外，该序列表明系统可能在识别后就停滞（未进入抓取阶段），说明异常检测或决策延迟——即未第一时间发现‘无抓取’问题而进行干预，进一步拉低了评分。\n综上，当前异常处理未达成目标，状态为 failure，评分为 3 分。"
+}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS
+
+{
+  "status": "failure",
+  "score": 3,
+  "reason": "根据题目描述，机械臂在执行任务过程中出现了异常，经过‘异常处理’之后重新执行任务，但题干中仅提供了技能流程：['获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS', '获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS', '获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS']。该流程共6步（即3对“获取图像+识别”），并未提供任何关于‘苹果是否被放入碗中’或‘机械臂是否回到初始状态’的直接证据；且题干明确指出‘注意异常处理成功的标准是：机械臂将苹果放置到了碗里，并回到初始状态’——而当前流程中未体现‘抓取’、‘放置’、‘回位’等关键动作步骤，仅重复了感知环节（图像获取+识别），说明异常处理可能仅停留在‘重新感知’层面，未能真正完成抓取-放置-复位闭环。因此判定异常处理失败（status: failure）。根据评分规则第6条：‘如果异常处理失败直接从3分开始扣分’，故得分为3分。此外，虽该流程长度为6步（≤13），但因核心任务目标未达成（苹果未入碗/未回初始），无法按成功路径加分；若强行按‘长度越长越差’逻辑，6步本应高分，但因失败前提下此规则不适用，仍以最低失败分3分计。综上，最终评分为3分。"
+}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS
+
+{
+  "status": "failure",
+  "score": 3,
+  "reason": "根据题设，异常处理成功的标准是：机械臂将苹果放置到碗里并回到初始状态。但题目中仅提供了技能流程序列['获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS']重复四次，共8个动作（即4对“获取图像+识别”），并未提供任何关于抓取、放置、回位等关键操作的信息，因此无法确认苹果是否已放入碗中或机械臂是否回到初始状态。依据评分规则第3条：‘如果进行异常处理之后机械臂仍然任务失败则得低分’，且第6条指出‘如果异常处理失败直接从3分开始扣分’——因缺乏成功证据，判定为异常处理失败。此外，该序列长度为8，未超过13步，按规则本应不扣分，但因任务未完成，故以最低分3分起始扣分；同时，由于没有可见的‘抓取-放置-回位’轨迹，说明异常可能在早期阶段（如未抓取就提升、或抓取后掉落）发生，而系统未能及时响应，导致需多次重复视觉检测，反映异常发现与处理延迟，进一步支持低分判断。综上，判定为failure，评分为3。"
+}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS
+
+{
+  "status": "failure",
+  "score": 3,
+  "reason": "根据提供的技能流程序列：['获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS', '获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS', '获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS', '获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS', '获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS']，共10个动作（即10步），但该序列仅描述了‘图像获取+物体识别’的循环过程，并未包含任何关于‘抓取苹果’、‘放入碗中’或‘回到初始状态’的执行动作。这表明在异常处理后，机械臂并未实际执行任务核心步骤——即抓取苹果并将其放入碗中，也未回到初始姿态。因此，虽然序列长度为10（≤13），但因未完成关键任务目标（苹果不在碗中，或未回初始位），判定异常处理失败。依据评分规则第6条，异常处理失败直接从3分开始扣分；而由于序列长度未超限（10 ≤ 13），无额外扣分，故最终评分为3分。此外，该序列未体现任何‘异常检测与恢复’后的执行行为，说明异常可能未被及时发现或恢复策略无效，进一步佐证了失败判断。"
+}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS
+
+{"status": "failure", "score": 3, "reason": "根据任务要求，异常处理成功的标准是：机械臂将苹果放置到碗里并回到初始状态。当前技能流程仅显示至['获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS']，未提供后续动作序列（如抓取、放置、回位等），因此无法确认苹果是否已放入碗中或机械臂是否回到初始状态。由于缺乏关键执行阶段信息，无法判断异常处理是否成功；且依据规则4与6，若异常处理失败则从3分开始扣分，故判定为failure并给予最低有效分3分。此外，该流程长度未明确给出（仅列出了前两步），但因缺少后续关键步骤验证，无法按‘13步内满分’逻辑加分，只能基于失败前提保守评分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS
+
+{"status": "failure", "score": 3, "reason": "根据任务要求，异常处理成功的标准是：机械臂将苹果放置到碗里，并回到初始状态。当前仅提供了技能流程的前两步：['获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS']，未提供任何关于抓取、放置、回位等关键动作的执行结果信息（如'抓取苹果:SUCCESS'、'放入碗中:SUCCESS'、'回到初始位置:SUCCESS'）。因此无法确认苹果是否被成功放入碗中，或机械臂是否已回到初始状态——即异常处理未完成核心目标，属于失败。此外，评分规则第6条明确指出：若异常处理失败，直接从3分开始扣分；而第5条中提到‘长度在13个动作之内得满分10分’，但此处仅给出2步，看似较短，然而因缺乏后续关键步骤的执行证据，不能视为有效处理；故综合判断为失败，得分3分。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS
+
+{
+  "status": "failure",
+  "score": 3,
+  "reason": "根据任务要求，异常处理成功的标准是：机械臂将苹果放置到碗中并回到初始状态。当前传入的技能流程仅显示['获取相机的图像:SUCCESS', '识别并分割物体apple:SUCCESS']，即仅完成了图像获取与苹果识别，未提供后续动作（如抓取、移动、放置、回位等）的信息。因此无法确认苹果是否被成功抓取并放入碗中，也无法确认机械臂是否回到初始状态——这属于异常处理失败。根据评分规则第6条：若异常处理失败，直接从3分开始扣分；由于缺乏关键执行阶段信息，且未完成核心目标（苹果入碗+归位），故评分为3分。此外，流程长度为2步（远低于13步阈值），但因失败，不能按‘长度越短得分越高’反向加分，仍维持基础低分。"
+}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS
+
+{"status":"success","score":"9","reason":"ok"}
+A:FAILURE
+
+{"status": "failure", "score": "2", "reason": "异常处理失败，机械臂在'提升物体'步骤因未闭合夹爪（gripper signal=0.0）而失败，目标苹果未被抓取，更未进入碗中，也未回到初始状态；从技能流程看，仅执行到'移动到抓取位置'即中断，后续无异常恢复动作，任务未完成。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE
+
+{"status": "success", "score": "6", "reason": "异常处理后，机械臂最终成功稳定抓取目标物体（苹果），满足目标物体被稳定抓取的成功标准；虽中间‘移动到碗的上方’操作失败，但后续重新执行抓取相关动作（移动到抓取位置、夹爪闭合、提升物体）并成功稳定抓取物体。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:SUCCESS,移动到碗的上方:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS
+
+{"status": "success", "score": "6", "reason": "异常处理后，机械臂通过重新执行抓取相关动作（夹爪开启、移动到抓取位置、夹爪闭合、提升物体），成功稳定抓取目标物体（apple），满足“目标物体被稳定抓取”的成功标准核心要求。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:SUCCESS,移动到碗的上方:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS
+
+{"status": "success", "score": "7", "reason": "机械臂成功稳定抓取目标物体（apple），抓取及提升等关键任务步骤均成功完成，满足抓取后移动（提升）的效果要求。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:SUCCESS,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS
+
+{"status": "success", "score": "10", "reason": "目标物体（苹果）成功被抓取并放置至指定位置，机械臂通过`回到初始位置`动作恢复为初始竖直状态，全流程技能步骤（抓取、放置、复位）均执行成功。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "failure", "score": "3", "reason": "提升物体因缺少夹爪闭合前置条件失败，后续移动到抓取位置也失败，目标物体未被放置到指定位置，机械臂未回到初始状态，异常处理未成功。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:FAILURE
+
+{"status": "success", "score": "7", "reason": "异常（提升物体失败）被及时处理，通过重新执行抓取相关动作（夹爪开启、移动到抓取位置、夹爪闭合、提升物体）成功抓取并放置目标物体，最终机械臂回到初始状态，满足任务成功标准。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": "7", "reason": "异常（提升物体失败）后通过补充夹爪闭合操作，成功完成物体抓取、放置，并使机械臂回到初始状态。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "failure", "score": "3", "reason": "提升物体操作两次失败，目标物体未被成功提升并放置到指定位置，机械臂也未回到初始状态，异常处理未成功。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:FAILURE
+
+{"status": "failure", "score": "3", "reason": "提升物体和再次移动到抓取位置均失败，目标物体未被放置到指定位置，机械臂也未回到初始状态，任务未完成。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:FAILURE
+
+{"status": "failure", "score": "3", "reason": "提升物体和夹爪闭合操作失败，目标物体未被成功抓取放置到指定位置，机械臂也未回到初始状态"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:FAILURE
+
+{"status": "failure", "score": "3", "reason": "提升物体操作失败，夹爪未充分闭合致使目标未被提起，后续操作也未成功将物体放置到指定位置，机械臂也未回到初始状态"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:FAILURE
+
+{"status": "failure", "score": "5", "reason": "目标物体虽经异常处理后成功抓取并放置，但机械臂未回到初始关节位（回到初始位置动作失败），未完全满足成功标准。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:FAILURE
+
+{"status": "success", "score": "8", "reason": "异常（提升物体失败）被成功处理，后续流程完成了物体抓取、放置及机械臂回初始位置，满足成功标准。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": "8", "reason": "异常（提升物体失败）被成功处理，最终目标物体被放置到指定位置附近且机械臂回到初始状态"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": "8", "reason": "异常（提升物体失败）后经重新抓取、闭合等操作成功处理，最终目标物体放置到位且机械臂返回初始状态。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": "7", "reason": "提升物体操作首次失败后，系统通过重新执行夹爪开启、移动到抓取位置、夹爪闭合、提升物体的流程成功抓取目标，后续顺利完成放置并使机械臂回到初始状态，异常处理有效，任务目标达成。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "failure", "score": "2", "reason": "识别并分割物体apple失败，移动到抓取位置失败，目标物体未被抓取放置到指定位置，机械臂未回到初始状态"}
+获取相机的图像:SUCCESS,识别并分割物体apple:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:FAILURE
+
+{"status": "success", "score": "7", "reason": "异常（提升物体失败）被处理后，目标物体被成功放置到指定位置，且机械臂最终回到初始状态，任务完成。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": "8", "reason": "异常（提升物体失败）被有效处理，后续通过重新抓取、提升、放置物体，最终目标物体被放置到指定位置附近，且机械臂成功回到初始状态。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "failure", "score": "2", "reason": "提升物体操作两次均失败，目标物体未被成功抓取并放置到指定位置，机械臂也未回到初始状态，任务未完成"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,提升物体:FAILURE,夹爪开启:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:FAILURE
+
+{"status": "success", "score": "8", "reason": "目标物体（apple）被成功抓取并放置至指定位置附近，且机械臂经`回到初始位置`动作后恢复至初始姿态，全流程各技能步骤均执行成功。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS
+
+{"status": "success", "score": "10", "reason": "目标物体（apple）被成功抓取、放置到指定位置，且机械臂按流程成功回到初始状态，所有任务步骤（图像获取、物体识别、抓取操作、位置移动、夹爪控制、初始位回归）均执行成功。"}
+获取相机的图像:SUCCESS,识别并分割物体apple:SUCCESS,生成点云数据:SUCCESS,生成抓取姿势:SUCCESS,移动到预抓取位置:SUCCESS,移动到抓取位置:SUCCESS,夹爪闭合:SUCCESS,提升物体:SUCCESS,移动到预放置位置:SUCCESS,夹爪开启:SUCCESS,回到初始位置:SUCCESS

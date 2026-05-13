@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-03-23T13:07:45.506286Z",
+  "object": "pear",
+  "returncode": 0,
+  "inputs": {
+    "source_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/pear_watertight_voxel.stl",
+    "pipeline_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/pear_pipeline_report.json"
+  },
+  "geometry": {
+    "inverse_rotation_3x3": [
+      [
+        0.9999109149375951,
+        0.00016749098139574284,
+        0.013346690030526059
+      ],
+      [
+        0.00016749098139574284,
+        0.9996850961531416,
+        -0.02509343487282175
+      ],
+      [
+        -0.013346690030526059,
+        0.02509343487282175,
+        0.9995960110907368
+      ]
+    ]
+  },
+  "outputs": {
+    "restored_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/pear_watertight_voxel_restored.stl",
+    "runner_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_restored_pc2_release/pear_runner_report.json"
+  }
+}

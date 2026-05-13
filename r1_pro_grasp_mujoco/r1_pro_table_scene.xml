@@ -1,0 +1,24 @@
+<mujoco model="r1_pro_table_scene">
+  <option timestep="0.002" integrator="implicitfast" gravity="0 0 -9.81"/>
+
+  <include file="../URDF_r1_pro_with_hand/urdf/model.xml"/>
+
+  <worldbody>
+    <light name="sun" pos="0 0 2.5" dir="0 0 -1" diffuse="0.8 0.8 0.8" specular="0.2 0.2 0.2"/>
+    <geom name="floor" type="plane" size="6 6 0.1" rgba="0.94 0.94 0.94 1" contype="1" conaffinity="1"/>
+
+    <body name="table" pos="0.62 0.0 0.36">
+      <geom name="table_top" type="box" size="0.45 0.8 0.02" rgba="0.55 0.37 0.24 1" contype="1" conaffinity="1"/>
+    </body>
+
+    <body name="follow_target" mocap="true" pos="0.62 0.2 0.45">
+      <geom name="goal_ball" type="sphere" size="0.02" rgba="0.9 0.15 0.15 0.85" contype="0" conaffinity="0"/>
+    </body>
+
+    <camera name="main_cam" pos="1.45 0 1.15" xyaxes="0 1 0 -0.25 0 0.968" fovy="45"/>
+  </worldbody>
+
+  <equality>
+    <weld body1="torso_link1" body2="world" solref="0.02 1" solimp="0.999 0.999 0.001"/>
+  </equality>
+</mujoco>

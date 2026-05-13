@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "2026-05-03T12:41:48.373779Z",
+  "input_ply": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_zcopy_filled_aligned.ply",
+  "output_stl": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/runtime_assets/reports/apple_left/apple_watertight_voxel.stl",
+  "output_mesh_ply": "",
+  "watertight": true,
+  "is_volume": true,
+  "volume_m3": 0.0004418967376289611,
+  "mesh_vertices": 383,
+  "mesh_faces": 762,
+  "bbox_input_m": [
+    0.08154795961421876,
+    0.07913995399042473,
+    0.09499664197278342
+  ],
+  "bbox_mesh_m": [
+    0.08154795961421876,
+    0.07913995399042473,
+    0.09499664197278342
+  ],
+  "bbox_rel_error": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "fit_mean_mm": null,
+  "fit_p90_mm": null,
+  "fallback_used": true,
+  "config": {
+    "voxel_mm": 1.2,
+    "padding_vox": 2,
+    "close_iters": 2,
+    "open_iters": 0,
+    "smooth_iters": 0,
+    "smooth_lambda": 0.5,
+    "target_faces": 0,
+    "max_split_faces": 300000,
+    "fallback": "convex_hull",
+    "force_convex_hull": "on",
+    "sample_points": 0
+  }
+}

@@ -1,0 +1,13 @@
+[
+ {"action": "camera-image", "parameters": {}},
+  {"action": "detect-object", "parameters": {"object": "apple"}},
+  {"action": "create-cloud", "parameters": {}},
+  {"action": "create-grasp", "parameters": {}},
+  {"action": "move-pregrasp", "parameters": {}},
+  {"action": "move-grasp", "parameters": {}},
+   {"action": "gripper-action", "parameters":{"state":1}},
+  {"action": "vertical-grasp", "parameters": {}},
+  {"action": "execute-grasp2", "parameters": {"x": 0.5, "y": 0.5}},
+  {"action": "gripper-action", "parameters":{"state":0}},
+  {"action": "execute-init", "parameters":{}}
+]

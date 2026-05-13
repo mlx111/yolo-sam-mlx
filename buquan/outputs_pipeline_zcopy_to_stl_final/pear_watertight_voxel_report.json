@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-03-07T06:27:50.542165Z",
+  "input_ply": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/pear_zcopy_filled_aligned.ply",
+  "output_stl": "/mnt/d2514abe-51ba-4074-b9e4-ce71d9aff58a/malanxuan-25S103379/malanxuan/YOLO_World-SAM-GraspNet/buquan/outputs_pipeline_zcopy_to_stl_final/pear_watertight_voxel.stl",
+  "output_mesh_ply": "",
+  "watertight": true,
+  "is_volume": true,
+  "volume_m3": 0.0003650348981655086,
+  "mesh_vertices": 197,
+  "mesh_faces": 390,
+  "bbox_input_m": [
+    0.07926790201870043,
+    0.09555428149280593,
+    0.08503001255255133
+  ],
+  "bbox_mesh_m": [
+    0.07926790201870043,
+    0.09555428149280593,
+    0.08503001255255133
+  ],
+  "bbox_rel_error": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "fit_mean_mm": 8.76221056896147,
+  "fit_p90_mm": 20.74822853470611,
+  "fallback_used": true,
+  "config": {
+    "voxel_mm": 1.2,
+    "padding_vox": 2,
+    "close_iters": 2,
+    "open_iters": 0,
+    "smooth_iters": 8,
+    "smooth_lambda": 0.5,
+    "target_faces": 20000,
+    "fallback": "convex_hull",
+    "sample_points": 30000
+  }
+}

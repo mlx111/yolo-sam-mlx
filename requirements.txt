@@ -1,0 +1,50 @@
+numpy==1.26.4
+scipy==1.12.0
+open3d==0.18.0
+opencv-python==4.10.0.84
+Pillow
+tqdm
+matplotlib
+trimesh==4.5.3
+spatialmath-python
+mujoco
+torchvision>=0.18.1
+fastapi
+uvicorn[standard]
+py_trees
+ultralytics
+pydantic
+aiofiles
+httpx
+python-multipart
+volcenginesdkarkruntime
+openai
+tensorboard
+supervision>=0.22.0
+pycocotools
+transformers
+hydra-core
+iopath
+addict
+yapf
+timm
+
+# Install a CUDA-matched PyTorch build separately before running pip on this file.
+# Example:
+#   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+# Core local / workspace packages
+-e ./Grounded-SAM-2
+-e ./graspnet-baseline/graspnetAPI
+-e ./graspnet-baseline/pointnet2
+-e ./graspnet-baseline/knn
+-e ./anygrasp_sdk/pointnet2
+
+# Optional subprojects. Install these only if you need the corresponding
+# training / benchmark / perception stacks.
+# -e ./GalaxeaManipSim
+# -e ./GraspGen
+# -e ./FR5_Reinforcement-learning
+# -r anygrasp_sdk/requirements.txt
+# -r graspnet-baseline/requirements.txt
+# -r buquan/requirements.txt
