@@ -1,0 +1,35 @@
+{
+  "anomaly_type": "incipient_slip",
+  "condition": "direct",
+  "noise_scale": 0.0,
+  "anomaly_detected": true,
+  "detection_method": "perception_failed",
+  "recovery_success": true,
+  "apple_z_before_lift": 0.041669164979685716,
+  "apple_z_after_lift": 0.04307753283901009,
+  "apple_z_after_inject": 0.04307753283901009,
+  "apple_z_after_recovery": 0.31300908090794854,
+  "perceived_z_before_lift": 0.04157857429534056,
+  "perceived_z_after_inject": null,
+  "perceived_position": null,
+  "observed_pos": [
+    0.596118460950469,
+    0.24687504664280363,
+    0.043572496586849745
+  ],
+  "contact_after_close": {
+    "left_contact": true,
+    "right_contact": true
+  },
+  "contact_after_lift": {
+    "left_contact": false,
+    "right_contact": false
+  },
+  "time_costs": {
+    "detection_perception": 1.66,
+    "pre_recovery": 6.098,
+    "recovery": 0.828,
+    "total": 7.664
+  },
+  "plan_saved": "/tmp/incipient_slip_test2.json"
+}

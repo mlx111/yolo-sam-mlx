@@ -141,7 +141,6 @@ cython_debug/
 
 # Large data directories (transfer via USB)
 GraspGen/
-experiment-sim-wrapper/
 Grounded-SAM-2/
 FR5_Reinforcement-learning/
 galaxea_isaac_tutorial/
