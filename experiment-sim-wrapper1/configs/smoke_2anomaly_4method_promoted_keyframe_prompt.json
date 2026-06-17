@@ -1,0 +1,24 @@
+{
+  "anomalies": [
+    "grasp_miss",
+    "object_displaced"
+  ],
+  "methods": [
+    "direct_llm_weak",
+    "sim_only_weak",
+    "sim_memory_weak",
+    "hierarchical_memory_weak"
+  ],
+  "trials_per_method": 1,
+  "seed_start": 9000,
+  "experience_read": "results/memory_snapshots/memory_grasp_miss_object_displaced_promoted_keyframes_v2.json",
+  "output_dir": "results/promoted_keyframe_prompt_smoke_v2",
+  "noise_scale": 0.0,
+  "no_viewer": true,
+  "no_inject": false,
+  "resume": false,
+  "skip_existing": false,
+  "stop_on_failure": true,
+  "use_memory_keyframes": true,
+  "memory_keyframe_top_k": 2
+}

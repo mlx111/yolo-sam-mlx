@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    "U4-3",
+    "U4-4",
+    "U4-5",
+    "U5-1",
+    "U5-4",
+    "U5-5"
+  ],
+  "methods": [
+    "direct_llm_weak"
+  ],
+  "trials_per_method": 1,
+  "seed_start": 20200,
+  "experience_read": "results/memory_snapshots/memory_5anomaly_with_collision_failed_v10.json",
+  "memory_index_dir": "results/memory_indexes/text_memory_v10_collision_failed",
+  "output_dir": "results/ur5e_condition_new6_direct_smoke_v1",
+  "noise_scale": 0.03,
+  "no_viewer": true,
+  "no_inject": false,
+  "resume": false,
+  "skip_existing": false,
+  "stop_on_failure": false,
+  "use_memory_keyframes": true,
+  "memory_keyframe_top_k": 2,
+  "enable_failed_plan_rewrite": true
+}

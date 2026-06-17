@@ -1,0 +1,26 @@
+{
+  "anomalies": [
+    "collision"
+  ],
+  "methods": [
+    "hierarchical_memory_weak",
+    "hierarchical_no_failed"
+  ],
+  "trials_per_method": 1,
+  "seed_start": 17100,
+  "experience_read": "results/memory_snapshots/memory_5anomaly_with_collision_failed_v10.json",
+  "memory_index_dir": "results/memory_indexes/text_memory_v10_collision_failed",
+  "output_dir": "results/collision_failed_memory_pressure_smoke_v1",
+  "noise_scale": 0.03,
+  "object_displaced_dx": 0.12,
+  "object_displaced_dy": 0.08,
+  "no_viewer": true,
+  "no_inject": false,
+  "resume": false,
+  "skip_existing": false,
+  "stop_on_failure": false,
+  "use_memory_keyframes": true,
+  "memory_keyframe_top_k": 2,
+  "enable_failed_plan_rewrite": true,
+  "inject_failed_plan_for_test": true
+}

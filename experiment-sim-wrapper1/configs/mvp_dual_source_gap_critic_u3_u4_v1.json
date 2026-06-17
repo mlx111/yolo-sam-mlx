@@ -1,0 +1,36 @@
+{
+  "name": "mvp_dual_source_gap_critic_u3_u4_v1",
+  "mode": "offline_dual_source_pipeline",
+  "conditions": ["U3-4", "U4-2"],
+  "methods": [
+    "direct_llm_weak",
+    "sim_only_weak",
+    "sim_memory_weak",
+    "hierarchical_memory_weak",
+    "dual_source_gap_memory",
+    "dual_source_gap_critic"
+  ],
+  "pseudo_real_inputs": [
+    "results/demo_u3_4_direct_memory_video/result.json",
+    "results/demo_u4_2_direct_memory_video/result.json",
+    "results/demo_u4_2_hier_memory_video/result.json",
+    "results/u5_all5_direct_smoke_v1/U5/U5-1/direct_llm_weak/trial_000/result.json",
+    "results/u5_all5_direct_smoke_v1/U5/U5-2/direct_llm_weak/trial_000/result.json",
+    "results/u5_all5_direct_smoke_v1/U5/U5-3/direct_llm_weak/trial_000/result.json",
+    "results/u5_all5_direct_smoke_v1/U5/U5-4/direct_llm_weak/trial_000/result.json",
+    "results/u5_all5_direct_smoke_v1/U5/U5-5/direct_llm_weak/trial_000/result.json"
+  ],
+  "candidate_steps": [
+    {"action": "move-grasp", "parameters": {}},
+    {"action": "gripper-action", "parameters": {"state": 1}},
+    {"action": "vertical-grasp", "parameters": {}}
+  ],
+  "output_dir": "results/mvp_dual_source_gap_critic_u3_u4_v1",
+  "analysis_report": "analysis/mvp_dual_source_report.md",
+  "artifacts": {
+    "real_memory": "real_memory_snapshot.json",
+    "sim_real_memory": "sim_real_memory_snapshot.json",
+    "gap_report": "gap_report.json",
+    "scoring_report": "candidate_scoring_report.json"
+  }
+}

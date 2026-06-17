@@ -1,0 +1,19 @@
+{
+  "conditions": ["U1-5", "U3-5"],
+  "methods": ["direct_llm_weak", "sim_only_weak", "sim_memory_weak", "hierarchical_memory_weak"],
+  "trials_per_method": 10,
+  "seed_start": 8000,
+  "output_dir": "results/u15_u35_2cond_4method_10trials_rolling_scenario_v1",
+  "noise_scale": 0.0,
+  "no_viewer": true,
+  "no_inject": false,
+  "enable_failed_plan_rewrite": true,
+  "rolling_memory": true,
+  "rolling_memory_scope": "scenario",
+  "rolling_memory_save_modes": {
+    "direct_llm_weak": "success_only",
+    "sim_only_weak": "success_only",
+    "sim_memory_weak": "success_only",
+    "hierarchical_memory_weak": "all"
+  }
+}

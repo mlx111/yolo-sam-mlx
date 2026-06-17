@@ -1,0 +1,13 @@
+{
+  "conditions": ["U3-1"],
+  "methods": ["sim_only_weak"],
+  "trials_per_method": 10,
+  "seed_start": 300000,
+  "output_dir": "results/u3-1_sim_only_hint_fix_v1",
+  "noise_scale": 0.03,
+  "no_viewer": true,
+  "no_inject": false,
+  "resume": false,
+  "skip_existing": false,
+  "stop_on_failure": false
+}

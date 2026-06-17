@@ -1,0 +1,20 @@
+{
+  "anomalies": [
+    "grasp_miss",
+    "object_displaced"
+  ],
+  "methods": [
+    "sim_memory_weak",
+    "hierarchical_memory_weak"
+  ],
+  "trials_per_method": 5,
+  "seed_start": 5000,
+  "experience_read": "results/memory_snapshots/memory_grasp_miss_object_displaced_clean_with_failed_v4.json",
+  "output_dir": "results/memory_growth_rounds",
+  "noise_scale": 0.0,
+  "no_viewer": true,
+  "no_inject": false,
+  "resume": false,
+  "skip_existing": false,
+  "stop_on_failure": false
+}

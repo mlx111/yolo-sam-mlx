@@ -1,0 +1,27 @@
+{
+  "anomalies": [
+    "grasp_miss",
+    "object_displaced",
+    "gripper_fail"
+  ],
+  "methods": [
+    "direct_llm_weak",
+    "sim_only_weak",
+    "sim_memory_weak",
+    "hierarchical_memory_weak"
+  ],
+  "trials_per_method": 1,
+  "seed_start": 9400,
+  "experience_read": "results/memory_snapshots/memory_3anomaly_promoted_keyframes_v3.json",
+  "memory_index_dir": "results/memory_indexes/text_memory_v3",
+  "output_dir": "results/smoke_3anomaly_4method_v3_vector_index_v1",
+  "noise_scale": 0.0,
+  "no_viewer": true,
+  "no_inject": false,
+  "resume": false,
+  "skip_existing": false,
+  "stop_on_failure": true,
+  "use_memory_keyframes": true,
+  "memory_keyframe_top_k": 2,
+  "enable_failed_plan_rewrite": true
+}
