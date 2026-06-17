@@ -1,0 +1,44 @@
+{
+  "output_dir": "results/memory/universal_pipeline_smoke",
+  "strict_quality": true,
+  "check_refs": false,
+  "consolidate": true,
+  "r1pro_tasks": [
+    {
+      "scenario": "G3",
+      "condition": "clean",
+      "candidate_id": "g3_default"
+    },
+    {
+      "scenario": "G3",
+      "condition": "place_occupied",
+      "candidate_id": "g3_default"
+    }
+  ],
+  "wrapper1_imports": [],
+  "real_episode_imports": [],
+  "min_pair_score": 0.55,
+  "critic_thresholds": {
+    "min_object_lift": 0.05,
+    "max_place_xy_error": 0.05,
+    "max_place_z_error": 0.08,
+    "high_sim_real_gap": 0.65
+  },
+  "summary_top_k": 10,
+  "policy_smoke": [
+    {
+      "scenario": "G3",
+      "condition": "clean",
+      "execute_on": "review",
+      "execute": true
+    }
+  ],
+  "policy_comparison": [
+    {
+      "scenario": "G3",
+      "condition": "clean",
+      "execute_on": "review",
+      "execute": false
+    }
+  ]
+}

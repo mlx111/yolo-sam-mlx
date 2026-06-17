@@ -1,0 +1,18 @@
+{
+  "name": "r1pro_base_move_to_pose",
+  "description": "Move the planar mobile base using base_x, base_y, and base_yaw position actuators.",
+  "joints": ["base_x", "base_y", "base_yaw"],
+  "parameters": {
+    "base_x": "Target world x position for the planar base joint.",
+    "base_y": "Target world y position for the planar base joint.",
+    "base_yaw": "Target yaw angle in radians.",
+    "target_qpos": "Optional three-element [base_x, base_y, base_yaw] target."
+  },
+  "control_defaults": {
+    "steps": 900,
+    "settle_steps": 120,
+    "max_joint_step": 0.01,
+    "fail_threshold": 0.02,
+    "direct_qpos": false
+  }
+}

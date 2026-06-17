@@ -1,0 +1,178 @@
+{
+  "schema_version": "policy_risk_calibration_v1",
+  "default_weights": {
+    "gap_condition_mismatch_scale": 0.3,
+    "failure_condition_mismatch_scale": 0.5,
+    "gap_task_stage_mismatch_scale": 0.6,
+    "gap_object_class_mismatch_scale": 0.5,
+    "min_nonzero_risk_transfer": 0.05
+  },
+  "groups": [
+    {
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "task_stage": "task_chain",
+      "object_class": "sortable_object",
+      "entry_count": 2,
+      "failure_count": 0,
+      "gap_count": 2,
+      "sim_success_real_fail_count": 0,
+      "failure_rate": 0.0,
+      "sim_success_real_fail_rate": 0.0,
+      "evidence_confidence": 0.2,
+      "weights": {
+        "gap_condition_mismatch_scale": 0.35
+      },
+      "evidence_ids": [
+        "exp_50d6a96f91ed",
+        "pseudo_real_g3_clean_success_001"
+      ]
+    },
+    {
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "task_stage": "task_chain",
+      "object_class": "sortable_object",
+      "entry_count": 1,
+      "failure_count": 1,
+      "gap_count": 0,
+      "sim_success_real_fail_count": 0,
+      "failure_rate": 1.0,
+      "sim_success_real_fail_rate": 0.0,
+      "evidence_confidence": 0.1,
+      "weights": {
+        "gap_condition_mismatch_scale": 0.35
+      },
+      "evidence_ids": [
+        "pseudo_real_g3_grasp_miss_001"
+      ]
+    },
+    {
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "task_stage": "task_chain",
+      "object_class": "sortable_object",
+      "entry_count": 1,
+      "failure_count": 1,
+      "gap_count": 0,
+      "sim_success_real_fail_count": 0,
+      "failure_rate": 1.0,
+      "sim_success_real_fail_rate": 0.0,
+      "evidence_confidence": 0.1,
+      "weights": {
+        "gap_condition_mismatch_scale": 0.35
+      },
+      "evidence_ids": [
+        "pseudo_real_g3_grasp_slip_001"
+      ]
+    },
+    {
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "task_stage": "task_chain",
+      "object_class": "sortable_object",
+      "entry_count": 2,
+      "failure_count": 0,
+      "gap_count": 2,
+      "sim_success_real_fail_count": 0,
+      "failure_rate": 0.0,
+      "sim_success_real_fail_rate": 0.0,
+      "evidence_confidence": 0.2,
+      "weights": {
+        "gap_condition_mismatch_scale": 0.35
+      },
+      "evidence_ids": [
+        "exp_5a2556148f7d",
+        "pseudo_real_g3_place_occupied_success_001"
+      ]
+    },
+    {
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "task_stage": "task_chain",
+      "object_class": "large_object",
+      "entry_count": 2,
+      "failure_count": 0,
+      "gap_count": 2,
+      "sim_success_real_fail_count": 0,
+      "failure_rate": 0.0,
+      "sim_success_real_fail_rate": 0.0,
+      "evidence_confidence": 0.2,
+      "weights": {
+        "gap_condition_mismatch_scale": 0.35
+      },
+      "evidence_ids": [
+        "exp_a7094c40a5c9",
+        "pseudo_real_g4_clean_success_001"
+      ]
+    },
+    {
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G4",
+      "condition_id": "dual_arm_mismatch",
+      "task_stage": "task_chain",
+      "object_class": "large_object",
+      "entry_count": 1,
+      "failure_count": 1,
+      "gap_count": 0,
+      "sim_success_real_fail_count": 0,
+      "failure_rate": 1.0,
+      "sim_success_real_fail_rate": 0.0,
+      "evidence_confidence": 0.1,
+      "weights": {
+        "gap_condition_mismatch_scale": 0.35
+      },
+      "evidence_ids": [
+        "pseudo_real_g4_dual_arm_mismatch_001"
+      ]
+    },
+    {
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "task_stage": "task_chain",
+      "object_class": "large_object",
+      "entry_count": 2,
+      "failure_count": 1,
+      "gap_count": 2,
+      "sim_success_real_fail_count": 2,
+      "failure_rate": 0.5,
+      "sim_success_real_fail_rate": 1.0,
+      "evidence_confidence": 0.2,
+      "weights": {
+        "gap_condition_mismatch_scale": 0.314
+      },
+      "evidence_ids": [
+        "exp_9c3954664691",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ]
+    },
+    {
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G4",
+      "condition_id": "transport_collision",
+      "task_stage": "task_chain",
+      "object_class": "large_object",
+      "entry_count": 1,
+      "failure_count": 1,
+      "gap_count": 0,
+      "sim_success_real_fail_count": 0,
+      "failure_rate": 1.0,
+      "sim_success_real_fail_rate": 0.0,
+      "evidence_confidence": 0.1,
+      "weights": {
+        "gap_condition_mismatch_scale": 0.35
+      },
+      "evidence_ids": [
+        "pseudo_real_g4_transport_collision_001"
+      ]
+    }
+  ],
+  "created_at": "2026-06-15T14:14:15Z",
+  "group_count": 8
+}

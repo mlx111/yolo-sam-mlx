@@ -1,0 +1,1155 @@
+{
+  "scenario": "G4",
+  "condition": "clean",
+  "control_mode": "ideal",
+  "candidate_steps": [
+    "base_move_to_region",
+    "torso_set_height",
+    "detect_place_occupancy",
+    "choose_alternate_place",
+    "dual_arm_pregrasp",
+    "dual_arm_approach",
+    "dual_gripper_close",
+    "dual_arm_synchronized_lift",
+    "dual_arm_level_object",
+    "segmented_transport",
+    "base_move_to_place",
+    "dual_arm_place",
+    "dual_gripper_release",
+    "verify_place_zone"
+  ],
+  "retrieval": {
+    "support_query": {
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "robot_type": "mobile_dual_arm",
+      "object_class": "large_object",
+      "risk_aware": true,
+      "top_k": 5
+    },
+    "risk_query": {
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "robot_type": "mobile_dual_arm",
+      "object_class": "large_object",
+      "memory_role": "sim_real_gap_memory",
+      "risk_aware": false,
+      "top_k": 5
+    },
+    "support_match_count": 1,
+    "risk_match_count": 2,
+    "match_count": 3,
+    "matches": [
+      {
+        "experience_id": "exp_91608f3c5948",
+        "score": 0.7514,
+        "source": "simulation",
+        "scenario_id": "G4",
+        "condition_id": "clean",
+        "robot_type": "mobile_dual_arm",
+        "success": true,
+        "memory_partition": "validated_memory",
+        "memory_role": "success_prior",
+        "critic_status": "pass",
+        "gap_type": "",
+        "calibration_id": "",
+        "explanation": {
+          "scenario_id": 0.3,
+          "condition_id": 0.18,
+          "robot_type": 0.1,
+          "object_class": 0.06,
+          "plan_overlap": 0.1114,
+          "risk_adjustment": {
+            "gap_uncertainty": 0.0,
+            "critic_risk": 0.0,
+            "real_validation_bonus": 0.0,
+            "real_success_bonus": 0.0,
+            "paired_bonus": 0.0,
+            "failure_penalty": 0.0,
+            "sim_real_failure_penalty": 0.0,
+            "gap_score_penalty": 0.0,
+            "gap_uncertainty_penalty": 0.0,
+            "critic_penalty": 0.0,
+            "risk_penalty": 0.0,
+            "trust_bonus": 0.0,
+            "score_adjustment": 0.0
+          },
+          "total": 0.7514
+        }
+      },
+      {
+        "experience_id": "pseudo_real_g4_place_occupied_v1",
+        "score": 0.6914,
+        "source": "pseudo_real",
+        "scenario_id": "G4",
+        "condition_id": "place_occupied",
+        "robot_type": "mobile_dual_arm",
+        "success": false,
+        "memory_partition": "real_memory",
+        "memory_role": "sim_real_gap_memory",
+        "critic_status": "block",
+        "gap_type": "sim_success_real_fail",
+        "calibration_id": "cal_2cfce35e00e3",
+        "explanation": {
+          "scenario_id": 0.3,
+          "robot_type": 0.1,
+          "memory_role": 0.08,
+          "object_class": 0.06,
+          "plan_overlap": 0.1114,
+          "real_source_bonus": 0.04,
+          "total": 0.6914
+        }
+      },
+      {
+        "experience_id": "exp_5a0bab782613",
+        "score": 0.6514,
+        "source": "simulation",
+        "scenario_id": "G4",
+        "condition_id": "place_occupied",
+        "robot_type": "mobile_dual_arm",
+        "success": true,
+        "memory_partition": "validated_memory",
+        "memory_role": "sim_real_gap_memory",
+        "critic_status": "block",
+        "gap_type": "sim_success_real_fail",
+        "calibration_id": "cal_2cfce35e00e3",
+        "explanation": {
+          "scenario_id": 0.3,
+          "robot_type": 0.1,
+          "memory_role": 0.08,
+          "object_class": 0.06,
+          "plan_overlap": 0.1114,
+          "total": 0.6514
+        }
+      }
+    ]
+  },
+  "candidate_score": {
+    "candidate_score": 0.716,
+    "decision": "accept",
+    "support_score": 1.0,
+    "risk_score": 0.1698,
+    "failure_overlap_risk": 0.1851,
+    "gap_uncertainty": 0.1573,
+    "critic_risk": 0.1666,
+    "real_success_prior": 0.0,
+    "real_evidence_count": 1,
+    "evidence": [
+      {
+        "experience_id": "exp_91608f3c5948",
+        "scenario_id": "G4",
+        "condition_id": "clean",
+        "source": "simulation",
+        "success": true,
+        "retrieval_score": 0.7514,
+        "action_overlap": 0.8571,
+        "risk_transfer": {
+          "context_score": 1.0,
+          "scenario_match": true,
+          "condition_match": true,
+          "task_stage_match": true,
+          "object_class_match": true,
+          "action_jaccard": 1.0,
+          "policy_calibration_group": {},
+          "risk_transfer_weight": 0.9071
+        },
+        "adjustment": {
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.0,
+          "real_validation_bonus": 0.0,
+          "real_success_bonus": 0.0,
+          "paired_bonus": 0.0,
+          "failure_penalty": 0.0,
+          "sim_real_failure_penalty": 0.0,
+          "gap_score_penalty": 0.0,
+          "gap_uncertainty_penalty": 0.0,
+          "critic_penalty": 0.0,
+          "risk_penalty": 0.0,
+          "trust_bonus": 0.0,
+          "score_adjustment": 0.0
+        }
+      },
+      {
+        "experience_id": "pseudo_real_g4_place_occupied_v1",
+        "scenario_id": "G4",
+        "condition_id": "place_occupied",
+        "source": "pseudo_real",
+        "success": false,
+        "retrieval_score": 0.6914,
+        "action_overlap": 0.8571,
+        "risk_transfer": {
+          "context_score": 0.65,
+          "scenario_match": true,
+          "condition_match": false,
+          "task_stage_match": true,
+          "object_class_match": true,
+          "action_jaccard": 1.0,
+          "policy_calibration_group": {
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "entry_count": 2,
+            "evidence_confidence": 0.2
+          },
+          "risk_transfer_weight": 0.1851
+        },
+        "adjustment": {
+          "gap_uncertainty": 0.85,
+          "critic_risk": 0.9,
+          "real_validation_bonus": 0.65,
+          "real_success_bonus": 0.0,
+          "paired_bonus": 0.05,
+          "failure_penalty": 0.25,
+          "sim_real_failure_penalty": 0.45,
+          "gap_score_penalty": 0.25,
+          "gap_uncertainty_penalty": 0.153,
+          "critic_penalty": 0.162,
+          "risk_penalty": 1.265,
+          "trust_bonus": 0.05,
+          "score_adjustment": -1.215
+        }
+      },
+      {
+        "experience_id": "exp_5a0bab782613",
+        "scenario_id": "G4",
+        "condition_id": "place_occupied",
+        "source": "simulation",
+        "success": true,
+        "retrieval_score": 0.6514,
+        "action_overlap": 0.8571,
+        "risk_transfer": {
+          "context_score": 0.65,
+          "scenario_match": true,
+          "condition_match": false,
+          "task_stage_match": true,
+          "object_class_match": true,
+          "action_jaccard": 1.0,
+          "policy_calibration_group": {
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "entry_count": 2,
+            "evidence_confidence": 0.2
+          },
+          "risk_transfer_weight": 0.1851
+        },
+        "adjustment": {
+          "gap_uncertainty": 0.85,
+          "critic_risk": 0.9,
+          "real_validation_bonus": 0.0,
+          "real_success_bonus": 0.0,
+          "paired_bonus": 0.05,
+          "failure_penalty": 0.0,
+          "sim_real_failure_penalty": 0.45,
+          "gap_score_penalty": 0.25,
+          "gap_uncertainty_penalty": 0.153,
+          "critic_penalty": 0.162,
+          "risk_penalty": 1.015,
+          "trust_bonus": 0.05,
+          "score_adjustment": -0.965
+        }
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate_id": "g4_avoid_occupied_primary",
+      "description": "detect and choose place before carrying object to place zone",
+      "executable": true,
+      "candidate_steps": [
+        "base_move_to_region",
+        "torso_set_height",
+        "detect_place_occupancy",
+        "choose_alternate_place",
+        "dual_arm_pregrasp",
+        "dual_arm_approach",
+        "dual_gripper_close",
+        "dual_arm_synchronized_lift",
+        "dual_arm_level_object",
+        "segmented_transport",
+        "base_move_to_place",
+        "dual_arm_place",
+        "dual_gripper_release",
+        "verify_place_zone"
+      ],
+      "retrieval": {
+        "support_query": {
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "robot_type": "mobile_dual_arm",
+          "object_class": "large_object",
+          "risk_aware": true,
+          "top_k": 5
+        },
+        "risk_query": {
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "robot_type": "mobile_dual_arm",
+          "object_class": "large_object",
+          "memory_role": "sim_real_gap_memory",
+          "risk_aware": false,
+          "top_k": 5
+        },
+        "support_match_count": 1,
+        "risk_match_count": 2,
+        "match_count": 3,
+        "matches": [
+          {
+            "experience_id": "exp_91608f3c5948",
+            "score": 0.7514,
+            "source": "simulation",
+            "scenario_id": "G4",
+            "condition_id": "clean",
+            "robot_type": "mobile_dual_arm",
+            "success": true,
+            "memory_partition": "validated_memory",
+            "memory_role": "success_prior",
+            "critic_status": "pass",
+            "gap_type": "",
+            "calibration_id": "",
+            "explanation": {
+              "scenario_id": 0.3,
+              "condition_id": 0.18,
+              "robot_type": 0.1,
+              "object_class": 0.06,
+              "plan_overlap": 0.1114,
+              "risk_adjustment": {
+                "gap_uncertainty": 0.0,
+                "critic_risk": 0.0,
+                "real_validation_bonus": 0.0,
+                "real_success_bonus": 0.0,
+                "paired_bonus": 0.0,
+                "failure_penalty": 0.0,
+                "sim_real_failure_penalty": 0.0,
+                "gap_score_penalty": 0.0,
+                "gap_uncertainty_penalty": 0.0,
+                "critic_penalty": 0.0,
+                "risk_penalty": 0.0,
+                "trust_bonus": 0.0,
+                "score_adjustment": 0.0
+              },
+              "total": 0.7514
+            }
+          },
+          {
+            "experience_id": "pseudo_real_g4_place_occupied_v1",
+            "score": 0.6914,
+            "source": "pseudo_real",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "robot_type": "mobile_dual_arm",
+            "success": false,
+            "memory_partition": "real_memory",
+            "memory_role": "sim_real_gap_memory",
+            "critic_status": "block",
+            "gap_type": "sim_success_real_fail",
+            "calibration_id": "cal_2cfce35e00e3",
+            "explanation": {
+              "scenario_id": 0.3,
+              "robot_type": 0.1,
+              "memory_role": 0.08,
+              "object_class": 0.06,
+              "plan_overlap": 0.1114,
+              "real_source_bonus": 0.04,
+              "total": 0.6914
+            }
+          },
+          {
+            "experience_id": "exp_5a0bab782613",
+            "score": 0.6514,
+            "source": "simulation",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "robot_type": "mobile_dual_arm",
+            "success": true,
+            "memory_partition": "validated_memory",
+            "memory_role": "sim_real_gap_memory",
+            "critic_status": "block",
+            "gap_type": "sim_success_real_fail",
+            "calibration_id": "cal_2cfce35e00e3",
+            "explanation": {
+              "scenario_id": 0.3,
+              "robot_type": 0.1,
+              "memory_role": 0.08,
+              "object_class": 0.06,
+              "plan_overlap": 0.1114,
+              "total": 0.6514
+            }
+          }
+        ]
+      },
+      "candidate_score": {
+        "candidate_score": 0.716,
+        "decision": "accept",
+        "support_score": 1.0,
+        "risk_score": 0.1698,
+        "failure_overlap_risk": 0.1851,
+        "gap_uncertainty": 0.1573,
+        "critic_risk": 0.1666,
+        "real_success_prior": 0.0,
+        "real_evidence_count": 1,
+        "evidence": [
+          {
+            "experience_id": "exp_91608f3c5948",
+            "scenario_id": "G4",
+            "condition_id": "clean",
+            "source": "simulation",
+            "success": true,
+            "retrieval_score": 0.7514,
+            "action_overlap": 0.8571,
+            "risk_transfer": {
+              "context_score": 1.0,
+              "scenario_match": true,
+              "condition_match": true,
+              "task_stage_match": true,
+              "object_class_match": true,
+              "action_jaccard": 1.0,
+              "policy_calibration_group": {},
+              "risk_transfer_weight": 0.9071
+            },
+            "adjustment": {
+              "gap_uncertainty": 0.0,
+              "critic_risk": 0.0,
+              "real_validation_bonus": 0.0,
+              "real_success_bonus": 0.0,
+              "paired_bonus": 0.0,
+              "failure_penalty": 0.0,
+              "sim_real_failure_penalty": 0.0,
+              "gap_score_penalty": 0.0,
+              "gap_uncertainty_penalty": 0.0,
+              "critic_penalty": 0.0,
+              "risk_penalty": 0.0,
+              "trust_bonus": 0.0,
+              "score_adjustment": 0.0
+            }
+          },
+          {
+            "experience_id": "pseudo_real_g4_place_occupied_v1",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "source": "pseudo_real",
+            "success": false,
+            "retrieval_score": 0.6914,
+            "action_overlap": 0.8571,
+            "risk_transfer": {
+              "context_score": 0.65,
+              "scenario_match": true,
+              "condition_match": false,
+              "task_stage_match": true,
+              "object_class_match": true,
+              "action_jaccard": 1.0,
+              "policy_calibration_group": {
+                "scenario_id": "G4",
+                "condition_id": "place_occupied",
+                "entry_count": 2,
+                "evidence_confidence": 0.2
+              },
+              "risk_transfer_weight": 0.1851
+            },
+            "adjustment": {
+              "gap_uncertainty": 0.85,
+              "critic_risk": 0.9,
+              "real_validation_bonus": 0.65,
+              "real_success_bonus": 0.0,
+              "paired_bonus": 0.05,
+              "failure_penalty": 0.25,
+              "sim_real_failure_penalty": 0.45,
+              "gap_score_penalty": 0.25,
+              "gap_uncertainty_penalty": 0.153,
+              "critic_penalty": 0.162,
+              "risk_penalty": 1.265,
+              "trust_bonus": 0.05,
+              "score_adjustment": -1.215
+            }
+          },
+          {
+            "experience_id": "exp_5a0bab782613",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "source": "simulation",
+            "success": true,
+            "retrieval_score": 0.6514,
+            "action_overlap": 0.8571,
+            "risk_transfer": {
+              "context_score": 0.65,
+              "scenario_match": true,
+              "condition_match": false,
+              "task_stage_match": true,
+              "object_class_match": true,
+              "action_jaccard": 1.0,
+              "policy_calibration_group": {
+                "scenario_id": "G4",
+                "condition_id": "place_occupied",
+                "entry_count": 2,
+                "evidence_confidence": 0.2
+              },
+              "risk_transfer_weight": 0.1851
+            },
+            "adjustment": {
+              "gap_uncertainty": 0.85,
+              "critic_risk": 0.9,
+              "real_validation_bonus": 0.0,
+              "real_success_bonus": 0.0,
+              "paired_bonus": 0.05,
+              "failure_penalty": 0.0,
+              "sim_real_failure_penalty": 0.45,
+              "gap_score_penalty": 0.25,
+              "gap_uncertainty_penalty": 0.153,
+              "critic_penalty": 0.162,
+              "risk_penalty": 1.015,
+              "trust_bonus": 0.05,
+              "score_adjustment": -0.965
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "g4_safer_transport",
+      "description": "insert safe transport pose before segmented transport",
+      "executable": true,
+      "candidate_steps": [
+        "base_move_to_region",
+        "torso_set_height",
+        "dual_arm_pregrasp",
+        "dual_arm_approach",
+        "dual_gripper_close",
+        "dual_arm_synchronized_lift",
+        "dual_arm_level_object",
+        "safe_transport_pose",
+        "segmented_transport",
+        "detect_place_occupancy",
+        "choose_alternate_place",
+        "base_move_to_place",
+        "dual_arm_place",
+        "dual_gripper_release",
+        "verify_place_zone"
+      ],
+      "retrieval": {
+        "support_query": {
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "robot_type": "mobile_dual_arm",
+          "object_class": "large_object",
+          "risk_aware": true,
+          "top_k": 5
+        },
+        "risk_query": {
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "robot_type": "mobile_dual_arm",
+          "object_class": "large_object",
+          "memory_role": "sim_real_gap_memory",
+          "risk_aware": false,
+          "top_k": 5
+        },
+        "support_match_count": 1,
+        "risk_match_count": 2,
+        "match_count": 3,
+        "matches": [
+          {
+            "experience_id": "exp_91608f3c5948",
+            "score": 0.7613,
+            "source": "simulation",
+            "scenario_id": "G4",
+            "condition_id": "clean",
+            "robot_type": "mobile_dual_arm",
+            "success": true,
+            "memory_partition": "validated_memory",
+            "memory_role": "success_prior",
+            "critic_status": "pass",
+            "gap_type": "",
+            "calibration_id": "",
+            "explanation": {
+              "scenario_id": 0.3,
+              "condition_id": 0.18,
+              "robot_type": 0.1,
+              "object_class": 0.06,
+              "plan_overlap": 0.1213,
+              "risk_adjustment": {
+                "gap_uncertainty": 0.0,
+                "critic_risk": 0.0,
+                "real_validation_bonus": 0.0,
+                "real_success_bonus": 0.0,
+                "paired_bonus": 0.0,
+                "failure_penalty": 0.0,
+                "sim_real_failure_penalty": 0.0,
+                "gap_score_penalty": 0.0,
+                "gap_uncertainty_penalty": 0.0,
+                "critic_penalty": 0.0,
+                "risk_penalty": 0.0,
+                "trust_bonus": 0.0,
+                "score_adjustment": 0.0
+              },
+              "total": 0.7613
+            }
+          },
+          {
+            "experience_id": "pseudo_real_g4_place_occupied_v1",
+            "score": 0.7013,
+            "source": "pseudo_real",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "robot_type": "mobile_dual_arm",
+            "success": false,
+            "memory_partition": "real_memory",
+            "memory_role": "sim_real_gap_memory",
+            "critic_status": "block",
+            "gap_type": "sim_success_real_fail",
+            "calibration_id": "cal_2cfce35e00e3",
+            "explanation": {
+              "scenario_id": 0.3,
+              "robot_type": 0.1,
+              "memory_role": 0.08,
+              "object_class": 0.06,
+              "plan_overlap": 0.1213,
+              "real_source_bonus": 0.04,
+              "total": 0.7013
+            }
+          },
+          {
+            "experience_id": "exp_5a0bab782613",
+            "score": 0.6613,
+            "source": "simulation",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "robot_type": "mobile_dual_arm",
+            "success": true,
+            "memory_partition": "validated_memory",
+            "memory_role": "sim_real_gap_memory",
+            "critic_status": "block",
+            "gap_type": "sim_success_real_fail",
+            "calibration_id": "cal_2cfce35e00e3",
+            "explanation": {
+              "scenario_id": 0.3,
+              "robot_type": 0.1,
+              "memory_role": 0.08,
+              "object_class": 0.06,
+              "plan_overlap": 0.1213,
+              "total": 0.6613
+            }
+          }
+        ]
+      },
+      "candidate_score": {
+        "candidate_score": 0.715,
+        "decision": "accept",
+        "support_score": 1.0,
+        "risk_score": 0.1748,
+        "failure_overlap_risk": 0.1905,
+        "gap_uncertainty": 0.1619,
+        "critic_risk": 0.1715,
+        "real_success_prior": 0.0,
+        "real_evidence_count": 1,
+        "evidence": [
+          {
+            "experience_id": "exp_91608f3c5948",
+            "scenario_id": "G4",
+            "condition_id": "clean",
+            "source": "simulation",
+            "success": true,
+            "retrieval_score": 0.7613,
+            "action_overlap": 0.9333,
+            "risk_transfer": {
+              "context_score": 1.0,
+              "scenario_match": true,
+              "condition_match": true,
+              "task_stage_match": true,
+              "object_class_match": true,
+              "action_jaccard": 0.9333,
+              "policy_calibration_group": {},
+              "risk_transfer_weight": 0.9333
+            },
+            "adjustment": {
+              "gap_uncertainty": 0.0,
+              "critic_risk": 0.0,
+              "real_validation_bonus": 0.0,
+              "real_success_bonus": 0.0,
+              "paired_bonus": 0.0,
+              "failure_penalty": 0.0,
+              "sim_real_failure_penalty": 0.0,
+              "gap_score_penalty": 0.0,
+              "gap_uncertainty_penalty": 0.0,
+              "critic_penalty": 0.0,
+              "risk_penalty": 0.0,
+              "trust_bonus": 0.0,
+              "score_adjustment": 0.0
+            }
+          },
+          {
+            "experience_id": "pseudo_real_g4_place_occupied_v1",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "source": "pseudo_real",
+            "success": false,
+            "retrieval_score": 0.7013,
+            "action_overlap": 0.9333,
+            "risk_transfer": {
+              "context_score": 0.65,
+              "scenario_match": true,
+              "condition_match": false,
+              "task_stage_match": true,
+              "object_class_match": true,
+              "action_jaccard": 0.9333,
+              "policy_calibration_group": {
+                "scenario_id": "G4",
+                "condition_id": "place_occupied",
+                "entry_count": 2,
+                "evidence_confidence": 0.2
+              },
+              "risk_transfer_weight": 0.1905
+            },
+            "adjustment": {
+              "gap_uncertainty": 0.85,
+              "critic_risk": 0.9,
+              "real_validation_bonus": 0.65,
+              "real_success_bonus": 0.0,
+              "paired_bonus": 0.05,
+              "failure_penalty": 0.25,
+              "sim_real_failure_penalty": 0.45,
+              "gap_score_penalty": 0.25,
+              "gap_uncertainty_penalty": 0.153,
+              "critic_penalty": 0.162,
+              "risk_penalty": 1.265,
+              "trust_bonus": 0.05,
+              "score_adjustment": -1.215
+            }
+          },
+          {
+            "experience_id": "exp_5a0bab782613",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "source": "simulation",
+            "success": true,
+            "retrieval_score": 0.6613,
+            "action_overlap": 0.9333,
+            "risk_transfer": {
+              "context_score": 0.65,
+              "scenario_match": true,
+              "condition_match": false,
+              "task_stage_match": true,
+              "object_class_match": true,
+              "action_jaccard": 0.9333,
+              "policy_calibration_group": {
+                "scenario_id": "G4",
+                "condition_id": "place_occupied",
+                "entry_count": 2,
+                "evidence_confidence": 0.2
+              },
+              "risk_transfer_weight": 0.1905
+            },
+            "adjustment": {
+              "gap_uncertainty": 0.85,
+              "critic_risk": 0.9,
+              "real_validation_bonus": 0.0,
+              "real_success_bonus": 0.0,
+              "paired_bonus": 0.05,
+              "failure_penalty": 0.0,
+              "sim_real_failure_penalty": 0.45,
+              "gap_score_penalty": 0.25,
+              "gap_uncertainty_penalty": 0.153,
+              "critic_penalty": 0.162,
+              "risk_penalty": 1.015,
+              "trust_bonus": 0.05,
+              "score_adjustment": -0.965
+            }
+          }
+        ]
+      }
+    },
+    {
+      "candidate_id": "g4_default",
+      "description": "current executable G4 dual-arm chain",
+      "executable": true,
+      "candidate_steps": [
+        "base_move_to_region",
+        "torso_set_height",
+        "dual_arm_pregrasp",
+        "dual_arm_approach",
+        "dual_gripper_close",
+        "dual_arm_synchronized_lift",
+        "dual_arm_level_object",
+        "segmented_transport",
+        "detect_place_occupancy",
+        "choose_alternate_place",
+        "base_move_to_place",
+        "dual_arm_place",
+        "dual_gripper_release",
+        "verify_place_zone"
+      ],
+      "retrieval": {
+        "support_query": {
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "robot_type": "mobile_dual_arm",
+          "object_class": "large_object",
+          "risk_aware": true,
+          "top_k": 5
+        },
+        "risk_query": {
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "robot_type": "mobile_dual_arm",
+          "object_class": "large_object",
+          "memory_role": "sim_real_gap_memory",
+          "risk_aware": false,
+          "top_k": 5
+        },
+        "support_match_count": 1,
+        "risk_match_count": 2,
+        "match_count": 3,
+        "matches": [
+          {
+            "experience_id": "exp_91608f3c5948",
+            "score": 0.77,
+            "source": "simulation",
+            "scenario_id": "G4",
+            "condition_id": "clean",
+            "robot_type": "mobile_dual_arm",
+            "success": true,
+            "memory_partition": "validated_memory",
+            "memory_role": "success_prior",
+            "critic_status": "pass",
+            "gap_type": "",
+            "calibration_id": "",
+            "explanation": {
+              "scenario_id": 0.3,
+              "condition_id": 0.18,
+              "robot_type": 0.1,
+              "object_class": 0.06,
+              "plan_overlap": 0.13,
+              "risk_adjustment": {
+                "gap_uncertainty": 0.0,
+                "critic_risk": 0.0,
+                "real_validation_bonus": 0.0,
+                "real_success_bonus": 0.0,
+                "paired_bonus": 0.0,
+                "failure_penalty": 0.0,
+                "sim_real_failure_penalty": 0.0,
+                "gap_score_penalty": 0.0,
+                "gap_uncertainty_penalty": 0.0,
+                "critic_penalty": 0.0,
+                "risk_penalty": 0.0,
+                "trust_bonus": 0.0,
+                "score_adjustment": 0.0
+              },
+              "total": 0.77
+            }
+          },
+          {
+            "experience_id": "pseudo_real_g4_place_occupied_v1",
+            "score": 0.71,
+            "source": "pseudo_real",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "robot_type": "mobile_dual_arm",
+            "success": false,
+            "memory_partition": "real_memory",
+            "memory_role": "sim_real_gap_memory",
+            "critic_status": "block",
+            "gap_type": "sim_success_real_fail",
+            "calibration_id": "cal_2cfce35e00e3",
+            "explanation": {
+              "scenario_id": 0.3,
+              "robot_type": 0.1,
+              "memory_role": 0.08,
+              "object_class": 0.06,
+              "plan_overlap": 0.13,
+              "real_source_bonus": 0.04,
+              "total": 0.71
+            }
+          },
+          {
+            "experience_id": "exp_5a0bab782613",
+            "score": 0.67,
+            "source": "simulation",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "robot_type": "mobile_dual_arm",
+            "success": true,
+            "memory_partition": "validated_memory",
+            "memory_role": "sim_real_gap_memory",
+            "critic_status": "block",
+            "gap_type": "sim_success_real_fail",
+            "calibration_id": "cal_2cfce35e00e3",
+            "explanation": {
+              "scenario_id": 0.3,
+              "robot_type": 0.1,
+              "memory_role": 0.08,
+              "object_class": 0.06,
+              "plan_overlap": 0.13,
+              "total": 0.67
+            }
+          }
+        ]
+      },
+      "candidate_score": {
+        "candidate_score": 0.7125,
+        "decision": "accept",
+        "support_score": 1.0,
+        "risk_score": 0.1873,
+        "failure_overlap_risk": 0.2041,
+        "gap_uncertainty": 0.1735,
+        "critic_risk": 0.1837,
+        "real_success_prior": 0.0,
+        "real_evidence_count": 1,
+        "evidence": [
+          {
+            "experience_id": "exp_91608f3c5948",
+            "scenario_id": "G4",
+            "condition_id": "clean",
+            "source": "simulation",
+            "success": true,
+            "retrieval_score": 0.77,
+            "action_overlap": 1.0,
+            "risk_transfer": {
+              "context_score": 1.0,
+              "scenario_match": true,
+              "condition_match": true,
+              "task_stage_match": true,
+              "object_class_match": true,
+              "action_jaccard": 1.0,
+              "policy_calibration_group": {},
+              "risk_transfer_weight": 1.0
+            },
+            "adjustment": {
+              "gap_uncertainty": 0.0,
+              "critic_risk": 0.0,
+              "real_validation_bonus": 0.0,
+              "real_success_bonus": 0.0,
+              "paired_bonus": 0.0,
+              "failure_penalty": 0.0,
+              "sim_real_failure_penalty": 0.0,
+              "gap_score_penalty": 0.0,
+              "gap_uncertainty_penalty": 0.0,
+              "critic_penalty": 0.0,
+              "risk_penalty": 0.0,
+              "trust_bonus": 0.0,
+              "score_adjustment": 0.0
+            }
+          },
+          {
+            "experience_id": "pseudo_real_g4_place_occupied_v1",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "source": "pseudo_real",
+            "success": false,
+            "retrieval_score": 0.71,
+            "action_overlap": 1.0,
+            "risk_transfer": {
+              "context_score": 0.65,
+              "scenario_match": true,
+              "condition_match": false,
+              "task_stage_match": true,
+              "object_class_match": true,
+              "action_jaccard": 1.0,
+              "policy_calibration_group": {
+                "scenario_id": "G4",
+                "condition_id": "place_occupied",
+                "entry_count": 2,
+                "evidence_confidence": 0.2
+              },
+              "risk_transfer_weight": 0.2041
+            },
+            "adjustment": {
+              "gap_uncertainty": 0.85,
+              "critic_risk": 0.9,
+              "real_validation_bonus": 0.65,
+              "real_success_bonus": 0.0,
+              "paired_bonus": 0.05,
+              "failure_penalty": 0.25,
+              "sim_real_failure_penalty": 0.45,
+              "gap_score_penalty": 0.25,
+              "gap_uncertainty_penalty": 0.153,
+              "critic_penalty": 0.162,
+              "risk_penalty": 1.265,
+              "trust_bonus": 0.05,
+              "score_adjustment": -1.215
+            }
+          },
+          {
+            "experience_id": "exp_5a0bab782613",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "source": "simulation",
+            "success": true,
+            "retrieval_score": 0.67,
+            "action_overlap": 1.0,
+            "risk_transfer": {
+              "context_score": 0.65,
+              "scenario_match": true,
+              "condition_match": false,
+              "task_stage_match": true,
+              "object_class_match": true,
+              "action_jaccard": 1.0,
+              "policy_calibration_group": {
+                "scenario_id": "G4",
+                "condition_id": "place_occupied",
+                "entry_count": 2,
+                "evidence_confidence": 0.2
+              },
+              "risk_transfer_weight": 0.2041
+            },
+            "adjustment": {
+              "gap_uncertainty": 0.85,
+              "critic_risk": 0.9,
+              "real_validation_bonus": 0.0,
+              "real_success_bonus": 0.0,
+              "paired_bonus": 0.05,
+              "failure_penalty": 0.0,
+              "sim_real_failure_penalty": 0.45,
+              "gap_score_penalty": 0.25,
+              "gap_uncertainty_penalty": 0.153,
+              "critic_penalty": 0.162,
+              "risk_penalty": 1.015,
+              "trust_bonus": 0.05,
+              "score_adjustment": -0.965
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "best_candidate": {
+    "candidate_id": "g4_avoid_occupied_primary",
+    "description": "detect and choose place before carrying object to place zone",
+    "executable": true,
+    "decision": "accept",
+    "candidate_score": 0.716,
+    "risk_score": 0.1698
+  },
+  "selected_candidate": {
+    "candidate_id": "g4_avoid_occupied_primary",
+    "description": "detect and choose place before carrying object to place zone",
+    "executable": true
+  },
+  "execute_on": "review",
+  "policy_calibration": "results/memory/policy_risk_calibration_v1.json",
+  "executed": true,
+  "execution_skip_reason": "",
+  "execution_result": {
+    "scenario_id": "G4",
+    "condition_id": "clean",
+    "control_mode": "ideal",
+    "model_path": "r1pro_dual_arm_scene.xml",
+    "success": true,
+    "task_success": true,
+    "selected_place_site": "place_zone_site",
+    "target_object": "large_object_body",
+    "object_start": [
+      0.16,
+      0.0,
+      0.805
+    ],
+    "object_final": [
+      -0.119974,
+      0.22,
+      0.914937
+    ],
+    "skill_trace": [
+      {
+        "skill": "base_move_to_region",
+        "success": true,
+        "message": "",
+        "error": 0.0,
+        "target": [
+          -0.25,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "skill": "torso_set_height",
+        "success": true,
+        "message": "height_posture_error=0.000000",
+        "error": 0.0,
+        "height_level": "high"
+      },
+      {
+        "skill": "detect_place_occupancy",
+        "success": true,
+        "message": "place_site=place_zone_site, occupied=False, objects=0",
+        "occupied": false,
+        "objects": []
+      },
+      {
+        "skill": "choose_alternate_place",
+        "success": true,
+        "message": "selected_place_site=place_zone_site",
+        "selected_site": "place_zone_site"
+      },
+      {
+        "skill": "dual_arm_pregrasp",
+        "success": true,
+        "message": "left_error=0.000240, right_error=0.000240",
+        "error": 0.00024
+      },
+      {
+        "skill": "dual_arm_approach",
+        "success": true,
+        "message": "left_error=0.000056, right_error=0.000056",
+        "error": 5.6e-05
+      },
+      {
+        "skill": "dual_gripper_close",
+        "success": true,
+        "message": "left=0.025000, right=0.025000, attached_object=large_object_body",
+        "attached_object": "large_object_body"
+      },
+      {
+        "skill": "dual_arm_synchronized_lift",
+        "success": true,
+        "message": "left_error=0.000016, right_error=0.000016, height_error=0.000000",
+        "error": 1.6e-05
+      },
+      {
+        "skill": "dual_arm_level_object",
+        "success": true,
+        "message": "already_level height_error=-0.000000",
+        "error": 0.0
+      },
+      {
+        "skill": "segmented_transport",
+        "success": true,
+        "message": "segments=4, left_error=0.000005, right_error=0.000005",
+        "error": 5e-06,
+        "segment_count": 4
+      },
+      {
+        "skill": "base_move_to_place",
+        "success": true,
+        "message": "",
+        "error": 0.0,
+        "target": [
+          -0.25,
+          0.22,
+          0.0
+        ]
+      },
+      {
+        "skill": "dual_arm_place",
+        "success": true,
+        "message": "left_error=0.000015, right_error=0.000015",
+        "error": 1.5e-05
+      },
+      {
+        "skill": "dual_gripper_release",
+        "success": true,
+        "message": "left=0.000000, right=0.000000"
+      },
+      {
+        "skill": "verify_place_zone",
+        "success": true,
+        "message": "xy_error=0.000026, z_error=0.000063",
+        "error": 6.3e-05
+      }
+    ],
+    "metrics": {
+      "place_occupied": false,
+      "object_lift": 0.109937,
+      "attach_mode": "dual_hand",
+      "candidate_id": "g4_avoid_occupied_primary"
+    },
+    "failure_reason": ""
+  },
+  "written_experience_id": "",
+  "experience_library": "results/memory/universal_experience_with_pseudo_real_paired_critic_calibrated.json"
+}

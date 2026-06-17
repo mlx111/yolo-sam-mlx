@@ -1,0 +1,9 @@
+{
+  "name": "stop_lift",
+  "description": "Stop an arm lift by holding the selected arm's current joint posture.",
+  "settle_steps": 120,
+  "parameters": {
+    "side": "Required. left or right.",
+    "settle_steps": "Number of MuJoCo steps to hold the current arm posture."
+  }
+}

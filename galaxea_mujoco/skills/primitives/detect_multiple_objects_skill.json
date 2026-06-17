@@ -1,0 +1,11 @@
+{
+  "name": "detect_multiple_objects",
+  "description": "Detect multiple candidate objects from MuJoCo ground-truth bodies, geoms, or sites.",
+  "parameters": {
+    "object_bodies/object_geoms/object_sites": "Optional explicit candidate lists.",
+    "name_prefix": "Optional body-name prefix filter when scanning all bodies.",
+    "exclude_prefix": "Optional prefixes excluded during body scanning.",
+    "movable_only": "If true, only bodies with free joints are returned. Defaults to true.",
+    "workspace_bounds": "Optional [[xmin,xmax], [ymin,ymax], [zmin,zmax]] filter."
+  }
+}

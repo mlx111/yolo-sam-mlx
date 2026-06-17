@@ -1,0 +1,17 @@
+{
+  "name": "base_reposition_lateral",
+  "description": "Move the base laterally or forward relative to its current yaw.",
+  "base_skill_config": "skills/base/base_motion_skill.json",
+  "control_defaults": {
+    "steps": 600,
+    "settle_steps": 120,
+    "max_joint_step": 0.01,
+    "fail_threshold": 0.02,
+    "direct_qpos": false
+  },
+  "parameters": {
+    "lateral_offset": "Left-positive lateral displacement in the current base frame.",
+    "forward_offset": "Forward displacement in the current base frame.",
+    "yaw_delta": "Optional relative yaw change."
+  }
+}

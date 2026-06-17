@@ -1,0 +1,25 @@
+{
+  "universal_experience_lib": "galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/universal_experience_library.json",
+  "policy_calibration": "galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/policy_risk_calibration.json",
+  "lesson_lib": "",
+  "scenarios": ["G3"],
+  "conditions": ["clean", "place_occupied"],
+  "variants": [
+    "baseline_no_memory",
+    "memory_only",
+    "memory_lifecycle",
+    "full_visual_sandbox_critic"
+  ],
+  "top_k": 5,
+  "execute_on": "review",
+  "control_mode": "physical",
+  "sandbox_weight": 0.45,
+  "lesson_weight": 0.08,
+  "visual_top_k": 10,
+  "visual_weight": 0.12,
+  "include_risky_candidates": false,
+  "use_sandbox_calibration": true,
+  "execute_selected": true,
+  "save": "galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/ablation_r1pro_paper_v1.json",
+  "save_csv": "galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/ablation_r1pro_paper_v1.csv"
+}

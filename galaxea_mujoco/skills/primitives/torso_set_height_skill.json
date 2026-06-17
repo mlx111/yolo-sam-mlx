@@ -1,0 +1,23 @@
+{
+  "name": "torso_set_height",
+  "description": "Set the torso to a named or explicit height posture before reaching.",
+  "torso_skill_config": "skills/base/torso_move_skill.json",
+  "default_height_level": "mid",
+  "low_height": 0.75,
+  "high_height": 1.15,
+  "height_postures": {
+    "low": [0.0, -0.25, 0.2, 0.0],
+    "mid": [0.0, 0.0, 0.0, 0.0],
+    "high": [0.0, 0.35, -0.25, 0.0]
+  },
+  "steps": 900,
+  "settle_steps": 900,
+  "max_joint_step": 0.004,
+  "fail_threshold": 0.02,
+  "direct_qpos": false,
+  "parameters": {
+    "height_level": "Named posture: low, mid, or high.",
+    "target_height": "Optional continuous height request interpolated between low/high postures.",
+    "target_qpos": "Optional explicit 4-element torso posture override."
+  }
+}

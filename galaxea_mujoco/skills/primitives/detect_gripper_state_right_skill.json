@@ -1,0 +1,12 @@
+{
+  "name": "detect_gripper_state_right",
+  "description": "Read and classify the right gripper state as open, partial, or closed.",
+  "side": "right",
+  "open_threshold": 0.004,
+  "closed_threshold": 0.020,
+  "parameters": {
+    "expected_state": "Optional expected state: open, partial, or closed.",
+    "open_threshold": "Value at or below this is considered open.",
+    "closed_threshold": "Value at or above this is considered closed."
+  }
+}

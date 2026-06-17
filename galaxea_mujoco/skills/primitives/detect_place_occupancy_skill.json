@@ -1,0 +1,16 @@
+{
+  "name": "detect_place_occupancy",
+  "description": "Check whether a placement zone is occupied by candidate bodies.",
+  "place_site": "place_zone_site",
+  "candidate_bodies": ["place_obstacle_body", "large_object_body"],
+  "exclude_bodies": ["large_object_body"],
+  "occupancy_radius": 0.12,
+  "z_tolerance": 0.12,
+  "parameters": {
+    "place_site": "MuJoCo site used as the placement zone center.",
+    "candidate_bodies": "Bodies to check for occupancy.",
+    "exclude_bodies": "Bodies ignored during occupancy detection.",
+    "occupancy_radius": "Maximum xy distance from the site to count as occupied.",
+    "z_tolerance": "Maximum z distance from the site to count as occupied."
+  }
+}

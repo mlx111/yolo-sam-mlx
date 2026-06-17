@@ -1,0 +1,31 @@
+{
+  "input": "../experiment-sim-wrapper1/acknowledge/sim_memory_weak.json",
+  "output": "results/memory/universal_experience_v1.json",
+  "imported_count": 3,
+  "entries": [
+    {
+      "source_experience_id": "235da9ab",
+      "universal_experience_id": "wrapper1_235da9ab",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "success": false,
+      "memory_partition": "failed_memory"
+    },
+    {
+      "source_experience_id": "dffa46b4",
+      "universal_experience_id": "wrapper1_dffa46b4",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "success": false,
+      "memory_partition": "failed_memory"
+    },
+    {
+      "source_experience_id": "3c043d2f",
+      "universal_experience_id": "wrapper1_3c043d2f",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "success": false,
+      "memory_partition": "failed_memory"
+    }
+  ]
+}

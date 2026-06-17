@@ -1,0 +1,10 @@
+{
+  "name": "classify_target_object",
+  "description": "Select the intended target object from candidates using name, label, or nearest target position.",
+  "parameters": {
+    "objects": "Optional PerceptionObject or dict candidates from detect_multiple_objects.",
+    "target_name": "Optional exact or fuzzy object name.",
+    "target_label": "Optional exact or fuzzy semantic label.",
+    "target_position": "Optional fallback position used to choose nearest object."
+  }
+}

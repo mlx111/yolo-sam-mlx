@@ -1,0 +1,121 @@
+{
+  "library": "results/memory/universal_pipeline_calibration_v1/universal_experience_library.json",
+  "index_dir": "results/memory/universal_pipeline_calibration_v1/visual_index",
+  "query_images": [
+    "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1/before_task.png"
+  ],
+  "top_k": 5,
+  "result_count": 2,
+  "results": [
+    {
+      "experience_id": "exp_7631324402d4",
+      "visual_similarity": 1.0,
+      "found_in_library": true,
+      "source": "simulation",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "robot_type": "mobile_dual_arm",
+      "success": true,
+      "failure_type": "unknown_failure",
+      "memory_role": "sim_real_gap_memory"
+    },
+    {
+      "experience_id": "exp_67fcdaf04d8d",
+      "visual_similarity": 0.987,
+      "found_in_library": true,
+      "source": "simulation",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "robot_type": "mobile_dual_arm",
+      "success": true,
+      "failure_type": "unknown_failure",
+      "memory_role": "sim_real_gap_memory"
+    }
+  ],
+  "structured_results": [
+    {
+      "experience_id": "exp_7631324402d4",
+      "score": 0.76,
+      "visual_similarity": 1.0,
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "source": "simulation",
+      "success": true,
+      "explanation": {
+        "scenario_id": 0.3,
+        "condition_id": 0.18,
+        "robot_type": 0.1,
+        "object_class": 0.06,
+        "visual_similarity": 1.0,
+        "visual_score": 0.12,
+        "total": 0.76
+      }
+    },
+    {
+      "experience_id": "pseudo_real_g3_clean_success_001",
+      "score": 0.68,
+      "visual_similarity": 0.0,
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "source": "pseudo_real",
+      "success": true,
+      "explanation": {
+        "scenario_id": 0.3,
+        "condition_id": 0.18,
+        "robot_type": 0.1,
+        "object_class": 0.06,
+        "real_source_bonus": 0.04,
+        "total": 0.68
+      }
+    },
+    {
+      "experience_id": "exp_67fcdaf04d8d",
+      "score": 0.5784,
+      "visual_similarity": 0.987,
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "source": "simulation",
+      "success": true,
+      "explanation": {
+        "scenario_id": 0.3,
+        "robot_type": 0.1,
+        "object_class": 0.06,
+        "visual_similarity": 0.987,
+        "visual_score": 0.1184,
+        "total": 0.5784
+      }
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_miss_001",
+      "score": 0.5,
+      "visual_similarity": 0.0,
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "source": "pseudo_real",
+      "success": false,
+      "explanation": {
+        "scenario_id": 0.3,
+        "robot_type": 0.1,
+        "object_class": 0.06,
+        "real_source_bonus": 0.04,
+        "total": 0.5
+      }
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_slip_001",
+      "score": 0.5,
+      "visual_similarity": 0.0,
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "source": "pseudo_real",
+      "success": false,
+      "explanation": {
+        "scenario_id": 0.3,
+        "robot_type": 0.1,
+        "object_class": 0.06,
+        "real_source_bonus": 0.04,
+        "total": 0.5
+      }
+    }
+  ]
+}

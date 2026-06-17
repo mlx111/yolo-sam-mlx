@@ -1,0 +1,10 @@
+{
+  "name": "multi_view_redetect",
+  "description": "Redetect a target across candidate objects. First implementation uses MuJoCo ground-truth state.",
+  "parameters": {
+    "target_name": "Optional exact or fuzzy object name.",
+    "target_label": "Optional exact or fuzzy semantic label.",
+    "object_bodies/object_geoms/object_sites": "Optional candidate lists.",
+    "view_offsets": "Reserved for future camera-backed multi-view detection."
+  }
+}

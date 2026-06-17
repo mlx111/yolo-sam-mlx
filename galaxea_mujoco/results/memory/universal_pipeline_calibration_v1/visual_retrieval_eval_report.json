@@ -1,0 +1,1200 @@
+{
+  "library": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/universal_experience_library.json",
+  "index_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/visual_index",
+  "entry_count": 12,
+  "entries_with_keyframes": 12,
+  "keyframe_count": 60,
+  "indexed_entry_count": 12,
+  "indexed_image_count": 60,
+  "indexed_keyframe_coverage": 1.0,
+  "top_k": 5,
+  "visual_weight": 0.12,
+  "query_count": 60,
+  "top1_self_hit_rate": 0.3333,
+  "topk_self_hit_rate": 0.9667,
+  "top1_same_condition_rate": 0.6667,
+  "topk_same_condition_rate": 0.9667,
+  "rank_delta_avg": 0,
+  "queries": [
+    {
+      "experience_id": "exp_bbed526ab28b",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1/before_task.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001",
+        "exp_ddaf34a39edc"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_bbed526ab28b",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1/after_grasp.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_bbed526ab28b",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1/after_lift.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_bbed526ab28b",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1/before_place.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_bbed526ab28b",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1/after_place.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_ddaf34a39edc",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/before_task.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_ddaf34a39edc",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/after_grasp.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_ddaf34a39edc",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/after_lift.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_ddaf34a39edc",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/before_place.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_ddaf34a39edc",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/after_place.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_6a115cd94118",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1/before_task.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_6a115cd94118",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1/after_grasp.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_6a115cd94118",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1/after_lift.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_6a115cd94118",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1/before_place.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_6a115cd94118",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1/after_place.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_b7fb782456f2",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_place_occupied_g4_default_1/before_task.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001",
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_b7fb782456f2",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_place_occupied_g4_default_1/after_grasp.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001",
+        "pseudo_real_g4_dual_arm_mismatch_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_b7fb782456f2",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_place_occupied_g4_default_1/after_lift.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001",
+        "pseudo_real_g4_dual_arm_mismatch_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_b7fb782456f2",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_place_occupied_g4_default_1/before_place.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "exp_b7fb782456f2",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_place_occupied_g4_default_1/after_place.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001",
+        "pseudo_real_g3_place_occupied_success_001"
+      ],
+      "top1_self_hit": true,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 2,
+      "rank_with_visual": 2,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_clean_success_001",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_clean_success_001/keyframes/before_task.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001",
+        "exp_ddaf34a39edc"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_clean_success_001",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_clean_success_001/keyframes/after_grasp.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_clean_success_001",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_clean_success_001/keyframes/after_lift.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_clean_success_001",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_clean_success_001/keyframes/before_place.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_clean_success_001",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_clean_success_001/keyframes/after_place.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_miss_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_miss_001/keyframes/before_task.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001",
+        "exp_ddaf34a39edc"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_miss_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_miss_001/keyframes/after_grasp.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_miss_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_miss_001/keyframes/after_lift.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_miss_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_miss_001/keyframes/before_place.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_miss_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_miss_001/keyframes/after_place.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_slip_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_slip_001/keyframes/before_task.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001",
+        "exp_ddaf34a39edc"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_slip_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_slip_001/keyframes/after_grasp.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_slip_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_slip_001/keyframes/after_lift.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": false,
+      "top1_same_condition": false,
+      "topk_same_condition": false,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_slip_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_slip_001/keyframes/before_place.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": false,
+      "top1_same_condition": false,
+      "topk_same_condition": false,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_slip_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_slip_001/keyframes/after_place.png",
+      "visual_top1": "exp_bbed526ab28b",
+      "visual_topk": [
+        "exp_bbed526ab28b",
+        "pseudo_real_g3_clean_success_001",
+        "pseudo_real_g3_grasp_miss_001",
+        "pseudo_real_g3_grasp_slip_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_place_occupied_success_001",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_place_occupied_success_001/keyframes/before_task.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_place_occupied_success_001",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_place_occupied_success_001/keyframes/after_grasp.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001",
+        "pseudo_real_g3_grasp_miss_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_place_occupied_success_001",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_place_occupied_success_001/keyframes/after_lift.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_place_occupied_success_001",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_place_occupied_success_001/keyframes/before_place.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g3_place_occupied_success_001",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_place_occupied_success_001/keyframes/after_place.png",
+      "visual_top1": "exp_ddaf34a39edc",
+      "visual_topk": [
+        "exp_ddaf34a39edc",
+        "pseudo_real_g3_place_occupied_success_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_clean_success_001",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_clean_success_001/keyframes/before_task.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_clean_success_001",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_clean_success_001/keyframes/after_grasp.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_clean_success_001",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_clean_success_001/keyframes/after_lift.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_clean_success_001",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_clean_success_001/keyframes/before_place.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_clean_success_001",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_clean_success_001/keyframes/after_place.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "scenario_id": "G4",
+      "condition_id": "dual_arm_mismatch",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_dual_arm_mismatch_001/keyframes/before_task.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "scenario_id": "G4",
+      "condition_id": "dual_arm_mismatch",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_dual_arm_mismatch_001/keyframes/after_grasp.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "scenario_id": "G4",
+      "condition_id": "dual_arm_mismatch",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_dual_arm_mismatch_001/keyframes/after_lift.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "scenario_id": "G4",
+      "condition_id": "dual_arm_mismatch",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_dual_arm_mismatch_001/keyframes/before_place.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "scenario_id": "G4",
+      "condition_id": "dual_arm_mismatch",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_dual_arm_mismatch_001/keyframes/after_place.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_place_occupied_failure_001/keyframes/before_task.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001",
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_place_occupied_failure_001/keyframes/after_grasp.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001",
+        "pseudo_real_g4_dual_arm_mismatch_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_place_occupied_failure_001/keyframes/after_lift.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001",
+        "pseudo_real_g4_dual_arm_mismatch_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_place_occupied_failure_001/keyframes/before_place.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_place_occupied_failure_001/keyframes/after_place.png",
+      "visual_top1": "exp_b7fb782456f2",
+      "visual_topk": [
+        "exp_b7fb782456f2",
+        "pseudo_real_g4_place_occupied_failure_001",
+        "pseudo_real_g3_place_occupied_success_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": true,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_transport_collision_001",
+      "scenario_id": "G4",
+      "condition_id": "transport_collision",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_transport_collision_001/keyframes/before_task.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_transport_collision_001",
+      "scenario_id": "G4",
+      "condition_id": "transport_collision",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_transport_collision_001/keyframes/after_grasp.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001",
+        "pseudo_real_g4_place_occupied_failure_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_transport_collision_001",
+      "scenario_id": "G4",
+      "condition_id": "transport_collision",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_transport_collision_001/keyframes/after_lift.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_transport_collision_001",
+      "scenario_id": "G4",
+      "condition_id": "transport_collision",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_transport_collision_001/keyframes/before_place.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    },
+    {
+      "experience_id": "pseudo_real_g4_transport_collision_001",
+      "scenario_id": "G4",
+      "condition_id": "transport_collision",
+      "query_image": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_transport_collision_001/keyframes/after_place.png",
+      "visual_top1": "exp_6a115cd94118",
+      "visual_topk": [
+        "exp_6a115cd94118",
+        "pseudo_real_g4_clean_success_001",
+        "pseudo_real_g4_dual_arm_mismatch_001",
+        "pseudo_real_g4_transport_collision_001"
+      ],
+      "top1_self_hit": false,
+      "topk_self_hit": true,
+      "top1_same_condition": false,
+      "topk_same_condition": true,
+      "rank_without_visual": 1,
+      "rank_with_visual": 1,
+      "rank_delta": 0
+    }
+  ]
+}

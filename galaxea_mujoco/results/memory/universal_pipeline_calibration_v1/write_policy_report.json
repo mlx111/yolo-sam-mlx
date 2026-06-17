@@ -1,0 +1,12 @@
+{
+  "decision_counts": {
+    "write": 12
+  },
+  "reason_counts": {
+    "accepted": 4,
+    "preserve_real_or_pseudo_real": 3,
+    "preserve_real_or_pseudo_real_failure": 5
+  },
+  "total_candidates": 12,
+  "stored_or_merged_count": 12
+}

@@ -1,0 +1,49 @@
+{
+  "input": "results/memory/universal_experience_with_pseudo_real_paired_critic.json",
+  "match_count": 2,
+  "matches": [
+    {
+      "experience_id": "pseudo_real_g4_place_occupied_v1",
+      "score": 0.51,
+      "source": "pseudo_real",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "robot_type": "mobile_dual_arm",
+      "backend": "mujoco",
+      "success": false,
+      "memory_partition": "real_memory",
+      "memory_role": "sim_real_gap_memory",
+      "critic_status": "block",
+      "gap_type": "sim_success_real_fail",
+      "failure_type": "",
+      "explanation": {
+        "scenario_id": 0.3,
+        "critic_status": 0.08,
+        "gap_type": 0.09,
+        "real_source_bonus": 0.04,
+        "total": 0.51
+      }
+    },
+    {
+      "experience_id": "exp_5a0bab782613",
+      "score": 0.47,
+      "source": "simulation",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "robot_type": "mobile_dual_arm",
+      "backend": "mujoco",
+      "success": true,
+      "memory_partition": "validated_memory",
+      "memory_role": "sim_real_gap_memory",
+      "critic_status": "block",
+      "gap_type": "sim_success_real_fail",
+      "failure_type": "",
+      "explanation": {
+        "scenario_id": 0.3,
+        "critic_status": 0.08,
+        "gap_type": 0.09,
+        "total": 0.47
+      }
+    }
+  ]
+}

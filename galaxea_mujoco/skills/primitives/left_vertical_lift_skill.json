@@ -1,0 +1,25 @@
+{
+  "name": "left_vertical_lift",
+  "description": "Lift the left hand TCP upward in world z while preserving its current orientation.",
+  "side": "left",
+  "parameters": {
+    "lift_dx/lift_dy/lift_dz": "Required world-frame lift vector. lift_height may be used instead of lift_dz.",
+    "steps": "Number of servo steps.",
+    "settle_steps": "Number of settle steps after the move.",
+    "fail_threshold": "Final TCP error threshold.",
+    "target_quat_wxyz": "Optional explicit TCP target orientation as quaternion [w, x, y, z]. Overrides lock_orientation/current orientation.",
+    "lock_orientation": "If true and no explicit orientation is provided, preserve current TCP orientation during the move.",
+    "orientation_weight": "Pose IK orientation weight when target orientation is used.",
+    "orientation_threshold": "Orientation success threshold in radians."
+  },
+  "control_defaults": {
+    "steps": 2500,
+    "settle_steps": 1500,
+    "fail_threshold": 0.03,
+    "orientation_weight": 0.02,
+    "orientation_threshold": 1.0,
+    "max_joint_step": 0.012,
+    "runtime_damping": 50.0,
+    "runtime_armature": 0.05
+  }
+}

@@ -1,0 +1,4 @@
+candidate_id,score_without_visual,score_with_visual,candidate_score_delta,risk_without_visual,risk_with_visual,risk_score_delta,decision_without_visual,decision_with_visual,retrieval_changed,top_match_overlap
+g3_cautious_place,0.8266,0.8187,-0.0079,0.422,0.4232,0.0012,accept,accept,True,1.0
+g3_default,0.8655,0.8593,-0.0062,0.4049,0.4061,0.0012,accept,accept,False,1.0
+g3_place_first,0.8279,0.8688,0.0409,0.3619,0.363,0.0011,accept,accept,False,1.0

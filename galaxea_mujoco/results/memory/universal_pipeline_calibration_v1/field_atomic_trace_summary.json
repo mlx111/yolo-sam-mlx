@@ -1,0 +1,509 @@
+{
+  "schema_version": "field_atomic_trace_summary_v1",
+  "inputs": [
+    "/tmp/field_atomic_smoke_report.json",
+    "/tmp/field_atomic_smoke_library.json"
+  ],
+  "input_count": 2,
+  "trace_count": 10,
+  "summary": {
+    "action_count": 5,
+    "success_count": 10,
+    "failure_count": 0,
+    "action_kind_counts": {
+      "base": 2,
+      "torso": 2,
+      "gripper": 2,
+      "sensor": 4
+    },
+    "direct_qpos_true_count": 0,
+    "direct_qpos_false_count": 10,
+    "final_error": {
+      "count": 4,
+      "min": 0.001971,
+      "median": 0.001998,
+      "mean": 0.001998,
+      "max": 0.002026
+    }
+  },
+  "by_action": {
+    "base_lidar_scan": {
+      "action_kind": "sensor",
+      "count": 2,
+      "success_count": 2,
+      "failure_count": 0,
+      "success_rate": 1.0,
+      "final_error": {},
+      "gripper_command": {},
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 2,
+      "control_mode_counts": {
+        "unknown": 2
+      },
+      "status_counts": {
+        "ok": 2
+      },
+      "failed_examples": []
+    },
+    "base_move_to_pose": {
+      "action_kind": "base",
+      "count": 2,
+      "success_count": 2,
+      "failure_count": 0,
+      "success_rate": 1.0,
+      "final_error": {
+        "count": 2,
+        "min": 0.001971,
+        "median": 0.001971,
+        "mean": 0.001971,
+        "max": 0.001971
+      },
+      "gripper_command": {},
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 2,
+      "control_mode_counts": {
+        "unknown": 2
+      },
+      "status_counts": {
+        "ok": 2
+      },
+      "failed_examples": []
+    },
+    "head_camera_capture": {
+      "action_kind": "sensor",
+      "count": 2,
+      "success_count": 2,
+      "failure_count": 0,
+      "success_rate": 1.0,
+      "final_error": {},
+      "gripper_command": {},
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 2,
+      "control_mode_counts": {
+        "unknown": 2
+      },
+      "status_counts": {
+        "ok": 2
+      },
+      "failed_examples": []
+    },
+    "left_gripper_set": {
+      "action_kind": "gripper",
+      "count": 2,
+      "success_count": 2,
+      "failure_count": 0,
+      "success_rate": 1.0,
+      "final_error": {},
+      "gripper_command": {
+        "count": 2,
+        "min": 0.025,
+        "median": 0.025,
+        "mean": 0.025,
+        "max": 0.025
+      },
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 2,
+      "control_mode_counts": {
+        "unknown": 2
+      },
+      "status_counts": {
+        "ok": 2
+      },
+      "failed_examples": []
+    },
+    "torso_move_to_posture": {
+      "action_kind": "torso",
+      "count": 2,
+      "success_count": 2,
+      "failure_count": 0,
+      "success_rate": 1.0,
+      "final_error": {
+        "count": 2,
+        "min": 0.002026,
+        "median": 0.002026,
+        "mean": 0.002026,
+        "max": 0.002026
+      },
+      "gripper_command": {},
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 2,
+      "control_mode_counts": {
+        "actuator_joint_servo": 2
+      },
+      "status_counts": {
+        "ok": 2
+      },
+      "failed_examples": []
+    }
+  },
+  "traces": [
+    {
+      "source_file": "/tmp/field_atomic_smoke_report.json",
+      "source_kind": "field_atomic_skill_smoke_report_v1",
+      "index": 0,
+      "action": "base_move_to_pose",
+      "success": true,
+      "status": "ok",
+      "message": "base_move_to_pose completed",
+      "parameters": {
+        "base_x": 0.02,
+        "base_y": 0.0,
+        "base_yaw": 0.0,
+        "steps": 120,
+        "settle_steps": 20,
+        "max_joint_step": 0.004,
+        "direct_qpos": false
+      },
+      "raw_result": {
+        "joint_names": [
+          "base_x",
+          "base_y",
+          "base_yaw"
+        ],
+        "start_qpos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target_qpos": [
+          0.02,
+          0.0,
+          0.0
+        ],
+        "final_qpos": [
+          0.02197055849960256,
+          1.643108075877737e-07,
+          -1.938206004417839e-05
+        ],
+        "final_error": 0.00197065382338083,
+        "success": true
+      },
+      "action_kind": "base",
+      "final_error": 0.00197065382338083,
+      "control_mode": "",
+      "direct_qpos_used": false,
+      "gripper_command": null,
+      "target_xyz": null,
+      "target_qpos": null
+    },
+    {
+      "source_file": "/tmp/field_atomic_smoke_report.json",
+      "source_kind": "field_atomic_skill_smoke_report_v1",
+      "index": 1,
+      "action": "torso_move_to_posture",
+      "success": true,
+      "status": "ok",
+      "message": "torso_move_to_posture completed",
+      "parameters": {
+        "target_qpos": [
+          0.0,
+          0.02,
+          0.0,
+          0.02
+        ],
+        "steps": 120,
+        "settle_steps": 20,
+        "max_joint_step": 0.004,
+        "direct_qpos": false
+      },
+      "raw_result": {
+        "joint_names": [
+          "torso_joint1",
+          "torso_joint2",
+          "torso_joint3",
+          "torso_joint4"
+        ],
+        "start_qpos": [
+          0.0026635893291003868,
+          0.0023272626177100217,
+          -0.0020507300137305833,
+          -1.1115931278270652e-05
+        ],
+        "target_qpos": [
+          0.0,
+          0.02,
+          0.0,
+          0.02
+        ],
+        "final_qpos": [
+          0.0012438701351596298,
+          0.02121521229675132,
+          -0.0010389961787050082,
+          0.01999243681963069
+        ],
+        "final_error": 0.0020257157007780133,
+        "success": true,
+        "control_mode": "actuator_joint_servo"
+      },
+      "action_kind": "torso",
+      "final_error": 0.0020257157007780133,
+      "control_mode": "actuator_joint_servo",
+      "direct_qpos_used": false,
+      "gripper_command": null,
+      "target_xyz": null,
+      "target_qpos": [
+        0.0,
+        0.02,
+        0.0,
+        0.02
+      ]
+    },
+    {
+      "source_file": "/tmp/field_atomic_smoke_report.json",
+      "source_kind": "field_atomic_skill_smoke_report_v1",
+      "index": 2,
+      "action": "left_gripper_set",
+      "success": true,
+      "status": "ok",
+      "message": "left gripper command applied",
+      "parameters": {
+        "state": 1,
+        "direct_qpos": false
+      },
+      "raw_result": {
+        "value": 0.025
+      },
+      "action_kind": "gripper",
+      "final_error": null,
+      "control_mode": "",
+      "direct_qpos_used": false,
+      "gripper_command": 0.025,
+      "target_xyz": null,
+      "target_qpos": null
+    },
+    {
+      "source_file": "/tmp/field_atomic_smoke_report.json",
+      "source_kind": "field_atomic_skill_smoke_report_v1",
+      "index": 3,
+      "action": "head_camera_capture",
+      "success": true,
+      "status": "ok",
+      "message": "head camera captured",
+      "parameters": {
+        "width": 80,
+        "height": 60,
+        "include_depth": true
+      },
+      "raw_result": {
+        "camera_name": "external_head_rgbd_camera"
+      },
+      "action_kind": "sensor",
+      "final_error": null,
+      "control_mode": "",
+      "direct_qpos_used": false,
+      "gripper_command": null,
+      "target_xyz": null,
+      "target_qpos": null
+    },
+    {
+      "source_file": "/tmp/field_atomic_smoke_report.json",
+      "source_kind": "field_atomic_skill_smoke_report_v1",
+      "index": 4,
+      "action": "base_lidar_scan",
+      "success": true,
+      "status": "ok",
+      "message": "base lidar scan captured",
+      "parameters": {
+        "ray_count": 45,
+        "horizontal_fov_deg": 180.0,
+        "max_range": 3.0
+      },
+      "raw_result": {
+        "site_name": "base_lidar_site"
+      },
+      "action_kind": "sensor",
+      "final_error": null,
+      "control_mode": "",
+      "direct_qpos_used": false,
+      "gripper_command": null,
+      "target_xyz": null,
+      "target_qpos": null
+    },
+    {
+      "source_file": "/tmp/field_atomic_smoke_library.json",
+      "source_kind": "universal_experience_library_v1",
+      "experience_id": "exp_f825a58d0635",
+      "action": "base_move_to_pose",
+      "success": true,
+      "status": "ok",
+      "message": "",
+      "parameters": {
+        "base_x": 0.02,
+        "base_y": 0.0,
+        "base_yaw": 0.0,
+        "steps": 120,
+        "settle_steps": 20,
+        "max_joint_step": 0.004,
+        "direct_qpos": false
+      },
+      "raw_result": {
+        "joint_names": [
+          "base_x",
+          "base_y",
+          "base_yaw"
+        ],
+        "start_qpos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "target_qpos": [
+          0.02,
+          0.0,
+          0.0
+        ],
+        "final_qpos": [
+          0.02197055849960256,
+          1.643108075877737e-07,
+          -1.938206004417839e-05
+        ],
+        "final_error": 0.00197065382338083,
+        "success": true
+      },
+      "action_kind": "base",
+      "final_error": 0.00197065382338083,
+      "control_mode": "",
+      "direct_qpos_used": false,
+      "gripper_command": null,
+      "target_xyz": null,
+      "target_qpos": null
+    },
+    {
+      "source_file": "/tmp/field_atomic_smoke_library.json",
+      "source_kind": "universal_experience_library_v1",
+      "experience_id": "exp_97f9513c3bca",
+      "action": "torso_move_to_posture",
+      "success": true,
+      "status": "ok",
+      "message": "",
+      "parameters": {
+        "target_qpos": [
+          0.0,
+          0.02,
+          0.0,
+          0.02
+        ],
+        "steps": 120,
+        "settle_steps": 20,
+        "max_joint_step": 0.004,
+        "direct_qpos": false
+      },
+      "raw_result": {
+        "joint_names": [
+          "torso_joint1",
+          "torso_joint2",
+          "torso_joint3",
+          "torso_joint4"
+        ],
+        "start_qpos": [
+          0.0026635893291003868,
+          0.0023272626177100217,
+          -0.0020507300137305833,
+          -1.1115931278270652e-05
+        ],
+        "target_qpos": [
+          0.0,
+          0.02,
+          0.0,
+          0.02
+        ],
+        "final_qpos": [
+          0.0012438701351596298,
+          0.02121521229675132,
+          -0.0010389961787050082,
+          0.01999243681963069
+        ],
+        "final_error": 0.0020257157007780133,
+        "success": true,
+        "control_mode": "actuator_joint_servo"
+      },
+      "action_kind": "torso",
+      "final_error": 0.0020257157007780133,
+      "control_mode": "actuator_joint_servo",
+      "direct_qpos_used": false,
+      "gripper_command": null,
+      "target_xyz": null,
+      "target_qpos": [
+        0.0,
+        0.02,
+        0.0,
+        0.02
+      ]
+    },
+    {
+      "source_file": "/tmp/field_atomic_smoke_library.json",
+      "source_kind": "universal_experience_library_v1",
+      "experience_id": "exp_f7c5357d7520",
+      "action": "left_gripper_set",
+      "success": true,
+      "status": "ok",
+      "message": "",
+      "parameters": {
+        "state": 1,
+        "direct_qpos": false
+      },
+      "raw_result": {
+        "value": 0.025
+      },
+      "action_kind": "gripper",
+      "final_error": null,
+      "control_mode": "",
+      "direct_qpos_used": false,
+      "gripper_command": 0.025,
+      "target_xyz": null,
+      "target_qpos": null
+    },
+    {
+      "source_file": "/tmp/field_atomic_smoke_library.json",
+      "source_kind": "universal_experience_library_v1",
+      "experience_id": "exp_c044c56e3ec5",
+      "action": "head_camera_capture",
+      "success": true,
+      "status": "ok",
+      "message": "",
+      "parameters": {
+        "width": 80,
+        "height": 60,
+        "include_depth": true
+      },
+      "raw_result": {
+        "camera_name": "external_head_rgbd_camera"
+      },
+      "action_kind": "sensor",
+      "final_error": null,
+      "control_mode": "",
+      "direct_qpos_used": false,
+      "gripper_command": null,
+      "target_xyz": null,
+      "target_qpos": null
+    },
+    {
+      "source_file": "/tmp/field_atomic_smoke_library.json",
+      "source_kind": "universal_experience_library_v1",
+      "experience_id": "exp_9e3f6c3e3c6e",
+      "action": "base_lidar_scan",
+      "success": true,
+      "status": "ok",
+      "message": "",
+      "parameters": {
+        "ray_count": 45,
+        "horizontal_fov_deg": 180.0,
+        "max_range": 3.0
+      },
+      "raw_result": {
+        "site_name": "base_lidar_site"
+      },
+      "action_kind": "sensor",
+      "final_error": null,
+      "control_mode": "",
+      "direct_qpos_used": false,
+      "gripper_command": null,
+      "target_xyz": null,
+      "target_qpos": null
+    }
+  ],
+  "paper_wording": {
+    "safe_claim": "Field-atomic executions expose action-level trace summaries, including final tracking error, gripper command, control mode, and direct-qpos usage for onsite debugging.",
+    "avoid_claim": "Do not claim these summaries prove real-robot tracking accuracy; they summarize MuJoCo or stored experience traces only."
+  }
+}

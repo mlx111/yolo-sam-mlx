@@ -1,0 +1,114 @@
+{
+  "input": "results/memory/universal_experience_with_pseudo_real_paired_critic.json",
+  "match_count": 3,
+  "matches": [
+    {
+      "experience_id": "wrapper1_235da9ab",
+      "score": 0.211,
+      "source": "simulation",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "robot_type": "fixed_single_arm",
+      "backend": "mujoco",
+      "success": false,
+      "memory_partition": "failed_memory",
+      "memory_role": "failure_case",
+      "critic_status": "warn",
+      "gap_type": "",
+      "failure_type": "恢复阶段未满足判定条件：u3_gripper_recovered_and_lifted。",
+      "explanation": {
+        "scenario_id": 0.3,
+        "condition_id": 0.18,
+        "failure_type": 0.08,
+        "risk_adjustment": {
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.55,
+          "real_validation_bonus": 0.0,
+          "real_success_bonus": 0.0,
+          "paired_bonus": 0.0,
+          "failure_penalty": 0.25,
+          "sim_real_failure_penalty": 0.0,
+          "gap_score_penalty": 0.0,
+          "gap_uncertainty_penalty": 0.0,
+          "critic_penalty": 0.099,
+          "risk_penalty": 0.349,
+          "trust_bonus": 0.0,
+          "score_adjustment": -0.349
+        },
+        "total": 0.211
+      }
+    },
+    {
+      "experience_id": "wrapper1_3c043d2f",
+      "score": 0.211,
+      "source": "simulation",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "robot_type": "fixed_single_arm",
+      "backend": "mujoco",
+      "success": false,
+      "memory_partition": "failed_memory",
+      "memory_role": "failure_case",
+      "critic_status": "warn",
+      "gap_type": "",
+      "failure_type": "恢复阶段未满足判定条件：u3_gripper_recovered_and_lifted。",
+      "explanation": {
+        "scenario_id": 0.3,
+        "condition_id": 0.18,
+        "failure_type": 0.08,
+        "risk_adjustment": {
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.55,
+          "real_validation_bonus": 0.0,
+          "real_success_bonus": 0.0,
+          "paired_bonus": 0.0,
+          "failure_penalty": 0.25,
+          "sim_real_failure_penalty": 0.0,
+          "gap_score_penalty": 0.0,
+          "gap_uncertainty_penalty": 0.0,
+          "critic_penalty": 0.099,
+          "risk_penalty": 0.349,
+          "trust_bonus": 0.0,
+          "score_adjustment": -0.349
+        },
+        "total": 0.211
+      }
+    },
+    {
+      "experience_id": "wrapper1_dffa46b4",
+      "score": 0.211,
+      "source": "simulation",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "robot_type": "fixed_single_arm",
+      "backend": "mujoco",
+      "success": false,
+      "memory_partition": "failed_memory",
+      "memory_role": "failure_case",
+      "critic_status": "warn",
+      "gap_type": "",
+      "failure_type": "恢复阶段未满足判定条件：u3_gripper_recovered_and_lifted。",
+      "explanation": {
+        "scenario_id": 0.3,
+        "condition_id": 0.18,
+        "failure_type": 0.08,
+        "risk_adjustment": {
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.55,
+          "real_validation_bonus": 0.0,
+          "real_success_bonus": 0.0,
+          "paired_bonus": 0.0,
+          "failure_penalty": 0.25,
+          "sim_real_failure_penalty": 0.0,
+          "gap_score_penalty": 0.0,
+          "gap_uncertainty_penalty": 0.0,
+          "critic_penalty": 0.099,
+          "risk_penalty": 0.349,
+          "trust_bonus": 0.0,
+          "score_adjustment": -0.349
+        },
+        "total": 0.211
+      }
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "episode_id": "replace_with_unique_episode_id",
+  "source": "real",
+  "backend": "real_robot",
+  "validation_status": "real_executed",
+  "scenario_id": "G1",
+  "condition_id": "clean",
+  "task_name": "grasp_place_demo",
+  "task_stage": "execution",
+  "robot_type": "r1pro",
+  "robot_id": "r1pro_real_001",
+  "object_class": "cube",
+  "target_object": "target_cube",
+  "operator": "",
+  "device": "real_robot_r1pro",
+  "robot": {
+    "robot_id": "r1pro_real_001",
+    "robot_type": "r1pro",
+    "embodiment_tags": [
+      "mobile_manipulator",
+      "dual_arm"
+    ],
+    "backend": "real_robot"
+  },
+  "scenario": {
+    "scenario_id": "G1",
+    "name": "replace_with_scene_name"
+  },
+  "condition": {
+    "condition_id": "clean",
+    "name": "replace_with_condition_name"
+  },
+  "task": {
+    "name": "grasp_place_demo",
+    "stage": "execution",
+    "object_class": "cube"
+  },
+  "skill_sequence": [
+    {
+      "name": "detect_target",
+      "success": true,
+      "message": ""
+    },
+    {
+      "name": "grasp_target",
+      "success": true,
+      "message": ""
+    },
+    {
+      "name": "place_target",
+      "success": true,
+      "message": ""
+    }
+  ],
+  "result": {
+    "success": true,
+    "recovery_success": true,
+    "task_success": true,
+    "failure_reason": "",
+    "attempt_count": 1
+  },
+  "sensor_summary": {
+    "sensor_modalities": [
+      "rgbd",
+      "lidar",
+      "wrist_force"
+    ]
+  },
+  "visual_observation": {
+    "camera_name": "external_head_rgbd_camera",
+    "rgb_path": "rgb/000000.png",
+    "depth_path": "depth/000000.npy",
+    "rgb_resolution": [
+      1920,
+      1536
+    ],
+    "depth_resolution": [
+      640,
+      480
+    ],
+    "timestamp": "",
+    "notes": ""
+  },
+  "lidar_observation": {
+    "site_name": "base_lidar_site",
+    "ray_count": 360,
+    "horizontal_fov_deg": 360.0,
+    "min_range": 0.1,
+    "max_range": 30.0,
+    "scan_path": "lidar/scan_000000.json",
+    "timestamp": "",
+    "nearest_obstacle_distance": null
+  },
+  "wrist_force_observation": {
+    "left": {
+      "force_norm": 0.0,
+      "torque_norm": 0.0,
+      "log_path": "force/left_wrist_force.json"
+    },
+    "right": {
+      "force_norm": 0.0,
+      "torque_norm": 0.0,
+      "log_path": "force/right_wrist_force.json"
+    },
+    "peak_force_norm": 0.0,
+    "timestamp": ""
+  },
+  "keyframes": [
+    {
+      "stage": "before_grasp",
+      "image_path": "keyframes/before_grasp.png",
+      "description": "before grasp",
+      "used_for_retrieval": true
+    },
+    {
+      "stage": "after_grasp",
+      "image_path": "keyframes/after_grasp.png",
+      "description": "after grasp",
+      "used_for_retrieval": true
+    },
+    {
+      "stage": "after_place",
+      "image_path": "keyframes/after_place.png",
+      "description": "after place",
+      "used_for_retrieval": true
+    }
+  ],
+  "real_episode_ref": {
+    "raw_episode_id": "replace_with_unique_episode_id",
+    "episode_dir": ".",
+    "video_dir": "video",
+    "keyframe_dir": "keyframes",
+    "robot_log_path": "logs/robot_log.jsonl"
+  },
+  "raw_refs": {
+    "episode_dir": ".",
+    "rgb_dir": "rgb",
+    "depth_dir": "depth",
+    "lidar_dir": "lidar",
+    "force_dir": "force",
+    "video_dir": "video",
+    "keyframes_dir": "keyframes",
+    "logs_dir": "logs"
+  },
+  "metadata": {
+    "template_version": "r1pro_real_episode_template_v1",
+    "notes": ""
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "detect_object_pose",
+  "description": "Read one object's pose from MuJoCo ground-truth state.",
+  "parameters": {
+    "object_body": "Optional MuJoCo body name.",
+    "object_geom": "Optional MuJoCo geom name.",
+    "object_site": "Optional MuJoCo site name.",
+    "target_name": "Optional name resolved as body, geom, then site."
+  }
+}

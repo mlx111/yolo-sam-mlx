@@ -1,0 +1,191 @@
+{
+  "episode_id": "pseudo_real_g3_place_occupied_success_001",
+  "source": "pseudo_real",
+  "backend": "pseudo_real_robot",
+  "validation_status": "pseudo_real_executed",
+  "domain": "r1pro_pseudo_real_calibration",
+  "robot": {
+    "robot_id": "r1pro_pseudo_real_001",
+    "robot_type": "mobile_dual_arm",
+    "embodiment_tags": [
+      "mobile_base",
+      "torso",
+      "dual_arm",
+      "gripper"
+    ]
+  },
+  "scenario": {
+    "scenario_id": "G3",
+    "name": "R1Pro G3 pseudo-real calibration"
+  },
+  "condition": {
+    "condition_id": "place_occupied",
+    "name": "place_occupied"
+  },
+  "task": {
+    "name": "r1pro_g3_task_chain",
+    "stage": "task_chain",
+    "object_class": "sortable_object"
+  },
+  "object_state": {
+    "target_object": "target_cube",
+    "object_class": "sortable_object",
+    "objects": {
+      "target_cube": {
+        "observed_position": [
+          0.12,
+          0.0,
+          0.78
+        ],
+        "final_position": [
+          0.28,
+          0.25,
+          0.88
+        ]
+      }
+    },
+    "occupancy": {
+      "place_occupied": true,
+      "selected_place_site": "alternate_place_zone_site"
+    }
+  },
+  "skill_sequence": [
+    {
+      "name": "detect_multiple_objects",
+      "success": true
+    },
+    {
+      "name": "select_correct_object",
+      "success": true
+    },
+    {
+      "name": "move_to_pregrasp",
+      "success": true
+    },
+    {
+      "name": "approach_object",
+      "success": true
+    },
+    {
+      "name": "left_gripper_close",
+      "success": true
+    },
+    {
+      "name": "verify_grasp",
+      "success": true
+    },
+    {
+      "name": "left_vertical_lift",
+      "success": true
+    },
+    {
+      "name": "detect_place_occupancy",
+      "success": true
+    },
+    {
+      "name": "choose_alternate_place",
+      "success": true
+    },
+    {
+      "name": "place_object",
+      "success": true
+    },
+    {
+      "name": "open_gripper_release",
+      "success": true
+    },
+    {
+      "name": "verify_place_zone",
+      "success": true
+    }
+  ],
+  "result": {
+    "success": true,
+    "recovery_success": true,
+    "task_success": true,
+    "failure_reason": "",
+    "attempt_count": 1
+  },
+  "failure_taxonomy": {},
+  "execution_feedback": {
+    "selected_place_site": "alternate_place_zone_site",
+    "object_lift": 0.1,
+    "metrics": {
+      "place_occupied": true,
+      "attach_mode": "pseudo_real_contact",
+      "failure_type": ""
+    }
+  },
+  "sensor_summary": {
+    "sensor_modalities": [
+      "joint_state",
+      "rgb",
+      "depth",
+      "contact"
+    ],
+    "gripper_state": {
+      "left": "open",
+      "right": "open"
+    },
+    "contact_state": {
+      "left": true,
+      "right": false
+    }
+  },
+  "real_episode_ref": {
+    "raw_episode_id": "pseudo_real_g3_place_occupied_success_001",
+    "robot_log_path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_place_occupied_success_001/robot_log.jsonl",
+    "keyframe_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_place_occupied_success_001/keyframes"
+  },
+  "memory_tags": {
+    "memory_type": "episodic",
+    "memory_scope": "condition",
+    "memory_role": "pseudo_real_success_prior"
+  },
+  "keyframes": [
+    {
+      "stage": "before_task",
+      "image_path": "keyframes/before_task.png",
+      "description": "pseudo-real smoke keyframe copied from G3_place_occupied_g3_default_1/before_task.png",
+      "used_for_retrieval": true,
+      "source": "simulation_keyframe_copy",
+      "source_image_path": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/before_task.png"
+    },
+    {
+      "stage": "after_grasp",
+      "image_path": "keyframes/after_grasp.png",
+      "description": "pseudo-real smoke keyframe copied from G3_place_occupied_g3_default_1/after_grasp.png",
+      "used_for_retrieval": true,
+      "source": "simulation_keyframe_copy",
+      "source_image_path": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/after_grasp.png"
+    },
+    {
+      "stage": "after_lift",
+      "image_path": "keyframes/after_lift.png",
+      "description": "pseudo-real smoke keyframe copied from G3_place_occupied_g3_default_1/after_lift.png",
+      "used_for_retrieval": true,
+      "source": "simulation_keyframe_copy",
+      "source_image_path": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/after_lift.png"
+    },
+    {
+      "stage": "before_place",
+      "image_path": "keyframes/before_place.png",
+      "description": "pseudo-real smoke keyframe copied from G3_place_occupied_g3_default_1/before_place.png",
+      "used_for_retrieval": true,
+      "source": "simulation_keyframe_copy",
+      "source_image_path": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/before_place.png"
+    },
+    {
+      "stage": "after_place",
+      "image_path": "keyframes/after_place.png",
+      "description": "pseudo-real smoke keyframe copied from G3_place_occupied_g3_default_1/after_place.png",
+      "used_for_retrieval": true,
+      "source": "simulation_keyframe_copy",
+      "source_image_path": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1/after_place.png"
+    }
+  ],
+  "metadata": {
+    "pseudo_real_keyframe_source": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1",
+    "pseudo_real_keyframe_note": "Smoke calibration images copied from matching simulation run; replace with real camera keyframes for real deployment."
+  }
+}

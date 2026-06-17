@@ -1,0 +1,14 @@
+{
+  "name": "check_collision",
+  "description": "Check MuJoCo contacts for disallowed collisions.",
+  "ignored_geom_prefixes": [
+    "left_gripper_finger",
+    "right_gripper_finger"
+  ],
+  "allowed_geom_pairs": [],
+  "parameters": {
+    "ignored_geom_prefixes": "Geom prefixes ignored during contact inspection.",
+    "allowed_geom_pairs": "Explicit sorted geom-name pairs allowed as contacts.",
+    "blocked_geom_prefixes": "Optional prefixes that restrict detection to specific geoms."
+  }
+}

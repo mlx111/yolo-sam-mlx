@@ -1,0 +1,91 @@
+{
+  "config": "configs/r1pro_keyframe_smoke.json",
+  "output_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/r1pro_keyframe_smoke",
+  "steps": {
+    "r1pro_tasks": [
+      {
+        "scenario": "G3",
+        "condition": "clean",
+        "control_mode": "ideal",
+        "candidate_id": "g3_default",
+        "success": true,
+        "task_success": true,
+        "experience_id": "exp_9c7e44a0e761",
+        "stored_experience_id": "exp_9c7e44a0e761",
+        "keyframe_count": 5,
+        "keyframe_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/r1pro_keyframe_smoke/keyframes/G3_clean_g3_default_1",
+        "write_policy": {
+          "candidate_experience_id": "exp_9c7e44a0e761",
+          "decision": "write",
+          "reason": "accepted",
+          "write": true,
+          "source": "simulation",
+          "backend": "mujoco",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "success": true,
+          "write_score": 0.215,
+          "stored_experience_id": "exp_9c7e44a0e761"
+        }
+      }
+    ],
+    "wrapper1_imports": [],
+    "real_episode_imports": [],
+    "write_policy": {
+      "decision_counts": {
+        "write": 1
+      },
+      "reason_counts": {
+        "accepted": 1
+      },
+      "total_candidates": 1,
+      "stored_or_merged_count": 1
+    },
+    "pair": {
+      "min_pair_score": 0.55,
+      "pair_count": 0,
+      "pairs": []
+    },
+    "critic": {
+      "thresholds": {
+        "min_object_lift": 0.05,
+        "max_place_xy_error": 0.05,
+        "max_place_z_error": 0.08,
+        "max_dual_arm_height_mismatch": 0.02,
+        "high_sim_real_gap": 0.65
+      },
+      "summary": {
+        "pass": 1,
+        "warn": 0,
+        "block": 0,
+        "unknown": 0
+      }
+    },
+    "sandbox_calibration": {
+      "group_count": 0
+    },
+    "policy_calibration": {
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/r1pro_keyframe_smoke/policy_risk_calibration.json",
+      "group_count": 0
+    },
+    "consolidation": {
+      "skipped": true
+    },
+    "summary": {
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/r1pro_keyframe_smoke/summary_report.json",
+      "entry_count": 1,
+      "success_rate": 1.0
+    },
+    "quality": {
+      "entry_count": 1,
+      "error_count": 0,
+      "warning_count": 0,
+      "duplicate_experience_ids": {},
+      "entries": [],
+      "passed": true
+    },
+    "policy_smoke": [],
+    "policy_comparison": []
+  }
+}

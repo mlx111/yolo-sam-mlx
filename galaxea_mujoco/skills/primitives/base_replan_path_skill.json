@@ -1,0 +1,22 @@
+{
+  "name": "base_replan_path",
+  "description": "Execute a simple segmented base path to a target or explicit waypoint list.",
+  "base_skill_config": "skills/base/base_motion_skill.json",
+  "standoff_distance": 0.65,
+  "lateral_clearance": 0.25,
+  "yaw_offset": 0.0,
+  "control_defaults": {
+    "steps": 600,
+    "settle_steps": 120,
+    "max_joint_step": 0.01,
+    "fail_threshold": 0.02,
+    "direct_qpos": false
+  },
+  "parameters": {
+    "waypoints": "Optional list of [base_x, base_y, base_yaw] waypoints.",
+    "target_x/target_y": "Target world xy used to generate a two-segment path.",
+    "object_body/object_geom": "Optional target object used instead of explicit target xy.",
+    "standoff_distance": "Distance to stop before the target.",
+    "lateral_clearance": "Side offset used for the generated midpoint."
+  }
+}

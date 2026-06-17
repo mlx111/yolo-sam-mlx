@@ -1,0 +1,61 @@
+{
+  "input": "results/memory/universal_experience_with_pseudo_real_paired_critic.json",
+  "output": "results/memory/universal_experience_with_pseudo_real_paired_critic_calibrated.json",
+  "entry_count": 8,
+  "group_count": 1,
+  "groups": [
+    {
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "object_class": "large_object",
+      "calibration_id": "cal_2cfce35e00e3",
+      "source_gap_ids": [
+        "gap_5ce7747b5980"
+      ],
+      "object_pose_bias": [
+        0.019974,
+        0.02,
+        -0.014937
+      ],
+      "perception_noise_bias": [
+        0.03197,
+        0.03197,
+        0.03197
+      ],
+      "contact_success_bias": -0.7,
+      "slip_risk_bias": 0.7,
+      "calibration_confidence": 0.17,
+      "details": {
+        "method": "universal_grouped_gap_weighted_average",
+        "created_at": "2026-06-12T15:09:28Z",
+        "group_key": {
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G4",
+          "condition_id": "place_occupied",
+          "object_class": "large_object"
+        },
+        "source_count": 1,
+        "total_weight": 0.85,
+        "contact_mismatch_rate": 0.0,
+        "sim_success_real_fail_rate": 1.0,
+        "matched_success_rate": 0.0,
+        "avg_object_pose_error": 0.03197,
+        "evidence": [
+          {
+            "experience_id": "exp_5a0bab782613",
+            "source": "simulation",
+            "gap_id": "gap_5ce7747b5980",
+            "gap_score": 1.0,
+            "uncertainty": 0.5,
+            "pair_score": 1.0,
+            "weight": 0.85,
+            "outcome_gap_type": "sim_success_real_fail",
+            "contact_mismatch": false,
+            "object_pose_error": 0.03197
+          }
+        ]
+      }
+    }
+  ]
+}

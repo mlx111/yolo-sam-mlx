@@ -1,0 +1,619 @@
+{
+  "schema_version": "text_semantic_memory_report_v1",
+  "input": "results/memory/universal_pipeline_calibration_v1/universal_experience_library.json",
+  "entry_count": 12,
+  "retrieval_backend": "faiss_tfidf",
+  "backend_fallback_reason": "",
+  "faiss_index": {
+    "dimension": 210,
+    "indexed_entry_count": 12
+  },
+  "summary": {
+    "semantic_summary_count": 12,
+    "semantic_summary_nonempty_count": 12,
+    "semantic_summary_nonempty_rate": 1.0,
+    "avg_token_count": 148.75,
+    "max_token_count": 329,
+    "min_token_count": 72,
+    "source_distribution": {
+      "simulation": 4,
+      "pseudo_real": 8
+    },
+    "scenario_distribution": {
+      "G3": 6,
+      "G4": 6
+    },
+    "condition_distribution": {
+      "clean": 4,
+      "place_occupied": 4,
+      "grasp_miss": 1,
+      "grasp_slip": 1,
+      "dual_arm_mismatch": 1,
+      "transport_collision": 1
+    },
+    "memory_role_distribution": {
+      "sim_real_gap_memory": 8,
+      "pseudo_real_failure_case": 4
+    },
+    "failure_type_distribution": {
+      "": 6,
+      "sim_success_real_fail": 1,
+      "grasp_miss": 1,
+      "grasp_slip": 1,
+      "dual_arm_mismatch": 1,
+      "place_occupied": 1,
+      "transport_collision": 1
+    },
+    "gap_type_distribution": {
+      "matched_success": 6,
+      "sim_success_real_fail": 2,
+      "": 4
+    },
+    "query_token_coverage": {
+      "scenario": 12,
+      "condition": 12,
+      "task": 12,
+      "anomaly": 2,
+      "failure": 6,
+      "critic": 12,
+      "gap": 8,
+      "plan": 12
+    },
+    "semantic_signal_rate": 1.0,
+    "query_count": 9,
+    "same_scenario_topk_match_count": 31,
+    "cross_scenario_topk_match_count": 14,
+    "cross_condition_topk_match_count": 36
+  },
+  "semantic_summaries": [
+    {
+      "experience_id": "exp_bbed526ab28b",
+      "summary": "simulation mujoco G3 clean r1pro_g3_task_chain task_chain sortable_object target_cube warn matched_success gap_fe113a053f14 sim_real_gap_memory episodic condition stm_only detect_multiple_objects->select_correct_object->move_to_pregrasp->approach_object->left_gripper_close->left_vertical_lift->detect_place_occupancy->choose_alternate_place->place_object->open_gripper_release->verify_place_zone metrics:attach_mode:single_hand candidate_id:g3_default condition_id:clean keyframe_dir:/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1 object_lift:0.102982 place_occupied:false selected_alternate_place:false skill_trace:message:detected 3 object(s) object_count:3 skill:detect_multiple_objects success:true message:selected=target_cube selected_object:target_cube skill:select_correct_object success:true error:0.000133 skill:move_to_pregrasp success:true error:0.000512 skill:approach_object success:true attached_object:target_cube message:gripper_value=0.025000, attached_object=target_cube skill:left_gripper_close success:true error:8e-05 skill:left_vertical_lift success:true message:place_site=place_zone_site, occupied=False, objects=0 occupied:false skill:detect_place_occupancy success:true message:selected_place_site=place_zone_site selected_site:place_zone_site skill:choose_alternate_place success:true error:1.4e-05 skill:place_object success:true message:released_gripper_value=0.000000 skill:open_gripper_release success:true error:0.077982 message:xy_error=0.011810, z_error=0.077982 skill:verify_place_zone success:true object_final:0.031235 0.24364 0.882982 object_lift:0.102982 object_start:0.08 0.1 0.78 selected_place_site:place_zone_site recovery_success:true success:true task_success:true evidence:gap_score=0.8000 >= 0.6500 rule:sim_real_gap_high severity:warn stage:sim_real value:0.8 detect_multiple_objects select_correct_object move_to_pregrasp approach_object left_gripper_close left_vertical_lift detect_place_occupancy choose_alternate_place place_object open_gripper_release verify_place_zone",
+      "token_count": 210,
+      "source": "simulation",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "failure_type": "",
+      "memory_role": "sim_real_gap_memory"
+    },
+    {
+      "experience_id": "exp_ddaf34a39edc",
+      "summary": "simulation mujoco G3 place_occupied r1pro_g3_task_chain task_chain place_occupied primary place zone occupied sortable_object target_cube warn matched_success gap_1c0e87424d0f sim_real_gap_memory episodic condition stm_only detect_multiple_objects->select_correct_object->move_to_pregrasp->approach_object->left_gripper_close->left_vertical_lift->detect_place_occupancy->choose_alternate_place->place_object->open_gripper_release->verify_place_zone metrics:attach_mode:single_hand candidate_id:g3_default condition_id:place_occupied keyframe_dir:/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1 object_lift:0.091113 place_occupied:true selected_alternate_place:true skill_trace:message:detected 3 object(s) object_count:3 skill:detect_multiple_objects success:true message:selected=target_cube selected_object:target_cube skill:select_correct_object success:true error:0.000133 skill:move_to_pregrasp success:true error:0.000512 skill:approach_object success:true attached_object:target_cube message:gripper_value=0.025000, attached_object=target_cube skill:left_gripper_close success:true error:8e-05 skill:left_vertical_lift success:true message:place_site=place_zone_site, occupied=True, objects=1 objects:place_obstacle_body occupied:true skill:detect_place_occupancy success:false message:selected_place_site=alternate_place_zone_site selected_site:alternate_place_zone_site skill:choose_alternate_place success:true error:0.024845 skill:place_object success:true message:released_gripper_value=0.000000 skill:open_gripper_release success:true error:0.066113 message:xy_error=0.013222, z_error=0.066113 skill:verify_place_zone success:true object_final:-0.02047 -0.026786 0.871113 object_lift:0.091113 object_start:0.08 0.1 0.78 selected_place_site:alternate_place_zone_site recovery_success:true success:true task_success:true evidence:gap_score=0.8000 >= 0.6500 rule:sim_real_gap_high severity:warn stage:sim_real value:0.8 detect_multiple_objects select_correct_object move_to_pregrasp approach_object left_gripper_close left_vertical_lift detect_place_occupancy choose_alternate_place place_object open_gripper_release verify_place_zone",
+      "token_count": 216,
+      "source": "simulation",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "failure_type": "",
+      "memory_role": "sim_real_gap_memory"
+    },
+    {
+      "experience_id": "exp_6a115cd94118",
+      "summary": "simulation mujoco G4 clean r1pro_g4_task_chain task_chain large_object large_object_body warn matched_success gap_9ed1c6579b25 sim_real_gap_memory episodic condition stm_only base_move_to_region->torso_set_height->dual_arm_pregrasp->dual_arm_approach->dual_gripper_close->dual_arm_synchronized_lift->dual_arm_level_object->segmented_transport->detect_place_occupancy->choose_alternate_place->base_move_to_place->dual_arm_place->dual_gripper_release->verify_place_zone metrics:attach_mode:dual_hand candidate_id:g4_default condition_id:clean keyframe_dir:/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1 object_lift:0.109937 place_occupied:false selected_alternate_place:false skill_trace:error:0.0 skill:base_move_to_region success:true target:-0.25 0.0 0.0 error:0.0 height_level:high message:height_posture_error=0.000000 skill:torso_set_height success:true error:0.00024 message:left_error=0.000240, right_error=0.000240 skill:dual_arm_pregrasp success:true error:5.6e-05 message:left_error=0.000056, right_error=0.000056 skill:dual_arm_approach success:true attached_object:large_object_body message:left=0.025000, right=0.025000, attached_object=large_object_body skill:dual_gripper_close success:true error:1.6e-05 message:left_error=0.000016, right_error=0.000016, height_error=0.000000 skill:dual_arm_synchronized_lift success:true error:0.0 message:already_level height_error=-0.000000 skill:dual_arm_level_object success:true error:5e-06 message:segments=4, left_error=0.000005, right_error=0.000005 segment_count:4 skill:segmented_transport success:true message:place_site=place_zone_site, occupied=False, objects=0 occupied:false skill:detect_place_occupancy success:true message:selected_place_site=place_zone_site selected_site:place_zone_site skill:choose_alternate_place success:true error:0.0 skill:base_move_to_place success:true target:-0.25 0.22 0.0 error:1.5e-05 message:left_error=0.000015, right_error=0.000015 skill:dual_arm_place success:true message:left=0.000000, right=0.000000 skill:dual_gripper_release success:true error:6.3e-05 message:xy_error=0.000026, z_error=0.000063 skill:verify_place_zone success:true object_final:-0.119974 0.22 0.914937 object_lift:0.109937 object_start:0.16 0.0 0.805 selected_place_site:place_zone_site recovery_success:true success:true task_success:true evidence:gap_score=0.8000 >= 0.6500 rule:sim_real_gap_high severity:warn stage:sim_real value:0.8 base_move_to_region torso_set_height dual_arm_pregrasp dual_arm_approach dual_gripper_close dual_arm_synchronized_lift dual_arm_level_object segmented_transport detect_place_occupancy choose_alternate_place base_move_to_place dual_arm_place dual_gripper_release verify_place_zone",
+      "token_count": 307,
+      "source": "simulation",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "failure_type": "",
+      "memory_role": "sim_real_gap_memory"
+    },
+    {
+      "experience_id": "exp_b7fb782456f2",
+      "summary": "simulation mujoco G4 place_occupied r1pro_g4_task_chain task_chain place_occupied primary place zone occupied large_object large_object_body sim_success_real_fail sim_success_real_fail block sim_success_real_fail gap_491949645931 sim_real_gap_memory episodic condition stm_only base_move_to_region->torso_set_height->dual_arm_pregrasp->dual_arm_approach->dual_gripper_close->dual_arm_synchronized_lift->dual_arm_level_object->segmented_transport->detect_place_occupancy->choose_alternate_place->base_move_to_place->dual_arm_place->dual_gripper_release->verify_place_zone metrics:attach_mode:dual_hand candidate_id:g4_default condition_id:place_occupied keyframe_dir:/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_place_occupied_g4_default_1 object_lift:0.109937 place_occupied:true selected_alternate_place:true skill_trace:error:0.0 skill:base_move_to_region success:true target:-0.25 0.0 0.0 error:0.0 height_level:high message:height_posture_error=0.000000 skill:torso_set_height success:true error:0.00024 message:left_error=0.000240, right_error=0.000240 skill:dual_arm_pregrasp success:true error:5.6e-05 message:left_error=0.000056, right_error=0.000056 skill:dual_arm_approach success:true attached_object:large_object_body message:left=0.025000, right=0.025000, attached_object=large_object_body skill:dual_gripper_close success:true error:1.6e-05 message:left_error=0.000016, right_error=0.000016, height_error=0.000000 skill:dual_arm_synchronized_lift success:true error:0.0 message:already_level height_error=-0.000000 skill:dual_arm_level_object success:true error:5e-06 message:segments=4, left_error=0.000005, right_error=0.000005 segment_count:4 skill:segmented_transport success:true message:place_site=place_zone_site, occupied=True, objects=1 objects:place_obstacle_body occupied:true skill:detect_place_occupancy success:false message:selected_place_site=alternate_place_zone_site selected_site:alternate_place_zone_site skill:choose_alternate_place success:true error:0.0 skill:base_move_to_place success:true target:-0.25 -0.22 0.0 error:1.5e-05 message:left_error=0.000015, right_error=0.000015 skill:dual_arm_place success:true message:left=0.000000, right=0.000000 skill:dual_gripper_release success:true error:6.3e-05 message:xy_error=0.000026, z_error=0.000063 skill:verify_place_zone success:true object_final:-0.119974 -0.22 0.914937 object_lift:0.109937 object_start:0.16 0.0 0.805 selected_place_site:alternate_place_zone_site recovery_success:true success:true task_success:true evidence:gap_score=1.0000 >= 0.6500 rule:sim_real_gap_high severity:warn stage:sim_real value:1.0 evidence:simulation success paired with real failure rule:sim_success_real_fail severity:block stage:sim_real base_move_to_region torso_set_height dual_arm_pregrasp dual_arm_approach dual_gripper_close dual_arm_synchronized_lift dual_arm_level_object segmented_transport detect_place_occupancy choose_alternate_place base_move_to_place dual_arm_place dual_gripper_release verify_place_zone",
+      "token_count": 329,
+      "source": "simulation",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "failure_type": "sim_success_real_fail",
+      "memory_role": "sim_real_gap_memory"
+    },
+    {
+      "experience_id": "pseudo_real_g3_clean_success_001",
+      "summary": "pseudo_real pseudo_real_robot G3 clean r1pro_g3_task_chain task_chain sortable_object target_cube warn matched_success gap_fe113a053f14 sim_real_gap_memory episodic condition stm_only detect_multiple_objects->select_correct_object->move_to_pregrasp->approach_object->left_gripper_close->verify_grasp->left_vertical_lift->detect_place_occupancy->choose_alternate_place->place_object->open_gripper_release->verify_place_zone metrics:attach_mode:pseudo_real_contact place_occupied:false object_lift:0.1 selected_place_site:place_zone_site attempt_count:1 recovery_success:true success:true task_success:true evidence:gap_score=0.8000 >= 0.6500 rule:sim_real_gap_high severity:warn stage:sim_real value:0.8 detect_multiple_objects select_correct_object move_to_pregrasp approach_object left_gripper_close verify_grasp left_vertical_lift detect_place_occupancy choose_alternate_place place_object open_gripper_release verify_place_zone",
+      "token_count": 72,
+      "source": "pseudo_real",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "failure_type": "",
+      "memory_role": "sim_real_gap_memory"
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_miss_001",
+      "summary": "pseudo_real pseudo_real_robot G3 grasp_miss r1pro_g3_task_chain task_chain sortable_object target_cube grasp_miss grasp_miss warn pseudo_real_failure_case episodic condition ltm_candidate detect_multiple_objects->select_correct_object->move_to_pregrasp->approach_object->left_gripper_close->verify_grasp->left_vertical_lift->detect_place_occupancy->choose_alternate_place->place_object->open_gripper_release->verify_place_zone metrics:attach_mode:pseudo_real_contact failure_type:grasp_miss place_occupied:false object_lift:0.0 selected_place_site:place_zone_site attempt_count:1 failure_reason:grasp_miss recovery_success:false success:false task_success:false evidence:object_lift=0.0000 < min_object_lift=0.0500 rule:object_not_lifted severity:warn stage:lift value:0.0 evidence:contact_state has no active contact rule:gripper_contact_missing severity:warn stage:grasp evidence:grasp_miss rule:gripper_failure_reason severity:warn stage:grasp detect_multiple_objects select_correct_object move_to_pregrasp approach_object left_gripper_close verify_grasp left_vertical_lift detect_place_occupancy choose_alternate_place place_object open_gripper_release verify_place_zone",
+      "token_count": 97,
+      "source": "pseudo_real",
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "failure_type": "grasp_miss",
+      "memory_role": "pseudo_real_failure_case"
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_slip_001",
+      "summary": "pseudo_real pseudo_real_robot G3 grasp_slip r1pro_g3_task_chain task_chain sortable_object target_cube grasp_slip grasp_slip warn pseudo_real_failure_case episodic condition ltm_candidate detect_multiple_objects->select_correct_object->move_to_pregrasp->approach_object->left_gripper_close->verify_grasp->left_vertical_lift->detect_place_occupancy->choose_alternate_place->place_object->open_gripper_release->verify_place_zone metrics:attach_mode:pseudo_real_contact failure_type:grasp_slip place_occupied:false object_lift:0.02 selected_place_site:place_zone_site attempt_count:1 failure_reason:grasp_slip recovery_success:false success:false task_success:false evidence:object_lift=0.0200 < min_object_lift=0.0500 rule:object_not_lifted severity:warn stage:lift value:0.02 evidence:contact_state has no active contact rule:gripper_contact_missing severity:warn stage:grasp evidence:grasp_slip rule:gripper_failure_reason severity:warn stage:grasp detect_multiple_objects select_correct_object move_to_pregrasp approach_object left_gripper_close verify_grasp left_vertical_lift detect_place_occupancy choose_alternate_place place_object open_gripper_release verify_place_zone",
+      "token_count": 97,
+      "source": "pseudo_real",
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "failure_type": "grasp_slip",
+      "memory_role": "pseudo_real_failure_case"
+    },
+    {
+      "experience_id": "pseudo_real_g3_place_occupied_success_001",
+      "summary": "pseudo_real pseudo_real_robot G3 place_occupied r1pro_g3_task_chain task_chain sortable_object target_cube warn matched_success gap_1c0e87424d0f sim_real_gap_memory episodic condition stm_only detect_multiple_objects->select_correct_object->move_to_pregrasp->approach_object->left_gripper_close->verify_grasp->left_vertical_lift->detect_place_occupancy->choose_alternate_place->place_object->open_gripper_release->verify_place_zone metrics:attach_mode:pseudo_real_contact place_occupied:true object_lift:0.1 selected_place_site:alternate_place_zone_site attempt_count:1 recovery_success:true success:true task_success:true evidence:gap_score=0.8000 >= 0.6500 rule:sim_real_gap_high severity:warn stage:sim_real value:0.8 detect_multiple_objects select_correct_object move_to_pregrasp approach_object left_gripper_close verify_grasp left_vertical_lift detect_place_occupancy choose_alternate_place place_object open_gripper_release verify_place_zone",
+      "token_count": 72,
+      "source": "pseudo_real",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "failure_type": "",
+      "memory_role": "sim_real_gap_memory"
+    },
+    {
+      "experience_id": "pseudo_real_g4_clean_success_001",
+      "summary": "pseudo_real pseudo_real_robot G4 clean r1pro_g4_task_chain task_chain large_object large_object_body warn matched_success gap_9ed1c6579b25 sim_real_gap_memory episodic condition stm_only base_move_to_region->torso_set_height->dual_arm_pregrasp->dual_arm_approach->dual_gripper_close->dual_arm_synchronized_lift->dual_arm_level_object->segmented_transport->detect_place_occupancy->choose_alternate_place->base_move_to_place->dual_arm_place->dual_gripper_release->verify_place_zone metrics:attach_mode:pseudo_real_contact place_occupied:false object_lift:0.1 selected_place_site:place_zone_site attempt_count:1 recovery_success:true success:true task_success:true evidence:gap_score=0.8000 >= 0.6500 rule:sim_real_gap_high severity:warn stage:sim_real value:0.8 base_move_to_region torso_set_height dual_arm_pregrasp dual_arm_approach dual_gripper_close dual_arm_synchronized_lift dual_arm_level_object segmented_transport detect_place_occupancy choose_alternate_place base_move_to_place dual_arm_place dual_gripper_release verify_place_zone",
+      "token_count": 76,
+      "source": "pseudo_real",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "failure_type": "",
+      "memory_role": "sim_real_gap_memory"
+    },
+    {
+      "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "summary": "pseudo_real pseudo_real_robot G4 dual_arm_mismatch r1pro_g4_task_chain task_chain large_object large_object_body dual_arm_mismatch dual_arm_mismatch warn pseudo_real_failure_case episodic condition ltm_candidate base_move_to_region->torso_set_height->dual_arm_pregrasp->dual_arm_approach->dual_gripper_close->dual_arm_synchronized_lift->dual_arm_level_object->segmented_transport->detect_place_occupancy->choose_alternate_place->base_move_to_place->dual_arm_place->dual_gripper_release->verify_place_zone metrics:attach_mode:pseudo_real_contact failure_type:dual_arm_mismatch place_occupied:false object_lift:0.02 selected_place_site:place_zone_site attempt_count:1 failure_reason:dual_arm_mismatch recovery_success:false success:false task_success:false evidence:object_lift=0.0200 < min_object_lift=0.0500 rule:object_not_lifted severity:warn stage:lift value:0.02 evidence:contact_state has no active contact rule:gripper_contact_missing severity:warn stage:grasp evidence:dual_arm_mismatch rule:task_failure_reason severity:warn stage:task base_move_to_region torso_set_height dual_arm_pregrasp dual_arm_approach dual_gripper_close dual_arm_synchronized_lift dual_arm_level_object segmented_transport detect_place_occupancy choose_alternate_place base_move_to_place dual_arm_place dual_gripper_release verify_place_zone",
+      "token_count": 101,
+      "source": "pseudo_real",
+      "scenario_id": "G4",
+      "condition_id": "dual_arm_mismatch",
+      "failure_type": "dual_arm_mismatch",
+      "memory_role": "pseudo_real_failure_case"
+    },
+    {
+      "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+      "summary": "pseudo_real pseudo_real_robot G4 place_occupied r1pro_g4_task_chain task_chain large_object large_object_body place_occupied place_occupied block sim_success_real_fail gap_491949645931 sim_real_gap_memory episodic condition ltm_candidate base_move_to_region->torso_set_height->dual_arm_pregrasp->dual_arm_approach->dual_gripper_close->dual_arm_synchronized_lift->dual_arm_level_object->segmented_transport->detect_place_occupancy->choose_alternate_place->base_move_to_place->dual_arm_place->dual_gripper_release->verify_place_zone metrics:attach_mode:pseudo_real_contact failure_type:place_occupied place_occupied:true object_lift:0.08 selected_place_site:place_zone_site attempt_count:1 failure_reason:place_occupied recovery_success:false success:false task_success:false evidence:place_occupied rule:place_zone_miss severity:warn stage:place evidence:contact_state has no active contact rule:gripper_contact_missing severity:warn stage:grasp evidence:gap_score=1.0000 >= 0.6500 rule:sim_real_gap_high severity:warn stage:sim_real value:1.0 evidence:simulation success paired with real failure rule:sim_success_real_fail severity:block stage:sim_real evidence:place_occupied rule:task_failure_reason severity:warn stage:task base_move_to_region torso_set_height dual_arm_pregrasp dual_arm_approach dual_gripper_close dual_arm_synchronized_lift dual_arm_level_object segmented_transport detect_place_occupancy choose_alternate_place base_move_to_place dual_arm_place dual_gripper_release verify_place_zone",
+      "token_count": 123,
+      "source": "pseudo_real",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "failure_type": "place_occupied",
+      "memory_role": "sim_real_gap_memory"
+    },
+    {
+      "experience_id": "pseudo_real_g4_transport_collision_001",
+      "summary": "pseudo_real pseudo_real_robot G4 transport_collision r1pro_g4_task_chain task_chain large_object large_object_body transport_collision transport_collision block pseudo_real_failure_case episodic condition ltm_candidate base_move_to_region->torso_set_height->dual_arm_pregrasp->dual_arm_approach->dual_gripper_close->dual_arm_synchronized_lift->dual_arm_level_object->segmented_transport->detect_place_occupancy->choose_alternate_place->base_move_to_place->dual_arm_place->dual_gripper_release->verify_place_zone metrics:attach_mode:pseudo_real_contact failure_type:transport_collision place_occupied:false object_lift:0.06 selected_place_site:place_zone_site attempt_count:1 failure_reason:transport_collision recovery_success:false success:false task_success:false evidence:contact_state has no active contact rule:gripper_contact_missing severity:warn stage:grasp evidence:transport_collision rule:collision_risk severity:block stage:safety base_move_to_region torso_set_height dual_arm_pregrasp dual_arm_approach dual_gripper_close dual_arm_synchronized_lift dual_arm_level_object segmented_transport detect_place_occupancy choose_alternate_place base_move_to_place dual_arm_place dual_gripper_release verify_place_zone",
+      "token_count": 85,
+      "source": "pseudo_real",
+      "scenario_id": "G4",
+      "condition_id": "transport_collision",
+      "failure_type": "transport_collision",
+      "memory_role": "pseudo_real_failure_case"
+    }
+  ],
+  "retrieval_reports": [
+    {
+      "query_experience_id": "exp_bbed526ab28b",
+      "query_text": "G3 clean sortable_object task_chain warn sim_real_gap_memory",
+      "query_tokens": 6,
+      "top_matches": [
+        {
+          "experience_id": "pseudo_real_g3_clean_success_001",
+          "score": 0.2626,
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "score": 0.1844,
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_clean_success_001",
+          "score": 0.158,
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_grasp_miss_001",
+          "score": 0.1139,
+          "scenario_id": "G3",
+          "condition_id": "grasp_miss",
+          "failure_type": "grasp_miss",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g3_grasp_slip_001",
+          "score": 0.1134,
+          "scenario_id": "G3",
+          "condition_id": "grasp_slip",
+          "failure_type": "grasp_slip",
+          "memory_role": "pseudo_real_failure_case"
+        }
+      ]
+    },
+    {
+      "query_experience_id": "exp_ddaf34a39edc",
+      "query_text": "G3 place_occupied sortable_object task_chain warn sim_real_gap_memory",
+      "query_tokens": 6,
+      "top_matches": [
+        {
+          "experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "score": 0.2498,
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_clean_success_001",
+          "score": 0.2368,
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+          "score": 0.2033,
+          "scenario_id": "G4",
+          "condition_id": "place_occupied",
+          "failure_type": "place_occupied",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_grasp_miss_001",
+          "score": 0.1415,
+          "scenario_id": "G3",
+          "condition_id": "grasp_miss",
+          "failure_type": "grasp_miss",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g3_grasp_slip_001",
+          "score": 0.1408,
+          "scenario_id": "G3",
+          "condition_id": "grasp_slip",
+          "failure_type": "grasp_slip",
+          "memory_role": "pseudo_real_failure_case"
+        }
+      ]
+    },
+    {
+      "query_experience_id": "exp_6a115cd94118",
+      "query_text": "G4 clean large_object task_chain warn sim_real_gap_memory",
+      "query_tokens": 6,
+      "top_matches": [
+        {
+          "experience_id": "pseudo_real_g4_clean_success_001",
+          "score": 0.2533,
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_clean_success_001",
+          "score": 0.1638,
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+          "score": 0.1464,
+          "scenario_id": "G4",
+          "condition_id": "place_occupied",
+          "failure_type": "place_occupied",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+          "score": 0.1123,
+          "scenario_id": "G4",
+          "condition_id": "dual_arm_mismatch",
+          "failure_type": "dual_arm_mismatch",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "score": 0.0888,
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        }
+      ]
+    },
+    {
+      "query_experience_id": "exp_b7fb782456f2",
+      "query_text": "G4 place_occupied large_object task_chain sim_success_real_fail block sim_real_gap_memory",
+      "query_tokens": 7,
+      "top_matches": [
+        {
+          "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+          "score": 0.3678,
+          "scenario_id": "G4",
+          "condition_id": "place_occupied",
+          "failure_type": "place_occupied",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_transport_collision_001",
+          "score": 0.1568,
+          "scenario_id": "G4",
+          "condition_id": "transport_collision",
+          "failure_type": "transport_collision",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g4_clean_success_001",
+          "score": 0.1334,
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "score": 0.0715,
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+          "score": 0.064,
+          "scenario_id": "G4",
+          "condition_id": "dual_arm_mismatch",
+          "failure_type": "dual_arm_mismatch",
+          "memory_role": "pseudo_real_failure_case"
+        }
+      ]
+    },
+    {
+      "query_experience_id": "pseudo_real_g3_grasp_miss_001",
+      "query_text": "G3 grasp_miss sortable_object task_chain grasp_miss warn pseudo_real_failure_case",
+      "query_tokens": 7,
+      "top_matches": [
+        {
+          "experience_id": "pseudo_real_g3_grasp_slip_001",
+          "score": 0.0844,
+          "scenario_id": "G3",
+          "condition_id": "grasp_slip",
+          "failure_type": "grasp_slip",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g3_clean_success_001",
+          "score": 0.0841,
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "score": 0.0814,
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+          "score": 0.0524,
+          "scenario_id": "G4",
+          "condition_id": "dual_arm_mismatch",
+          "failure_type": "dual_arm_mismatch",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g4_transport_collision_001",
+          "score": 0.0367,
+          "scenario_id": "G4",
+          "condition_id": "transport_collision",
+          "failure_type": "transport_collision",
+          "memory_role": "pseudo_real_failure_case"
+        }
+      ]
+    },
+    {
+      "query_experience_id": "pseudo_real_g3_grasp_slip_001",
+      "query_text": "G3 grasp_slip sortable_object task_chain grasp_slip warn pseudo_real_failure_case",
+      "query_tokens": 7,
+      "top_matches": [
+        {
+          "experience_id": "pseudo_real_g3_grasp_miss_001",
+          "score": 0.0848,
+          "scenario_id": "G3",
+          "condition_id": "grasp_miss",
+          "failure_type": "grasp_miss",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g3_clean_success_001",
+          "score": 0.0841,
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "score": 0.0814,
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+          "score": 0.0524,
+          "scenario_id": "G4",
+          "condition_id": "dual_arm_mismatch",
+          "failure_type": "dual_arm_mismatch",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g4_transport_collision_001",
+          "score": 0.0367,
+          "scenario_id": "G4",
+          "condition_id": "transport_collision",
+          "failure_type": "transport_collision",
+          "memory_role": "pseudo_real_failure_case"
+        }
+      ]
+    },
+    {
+      "query_experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "query_text": "G4 dual_arm_mismatch large_object task_chain dual_arm_mismatch warn pseudo_real_failure_case",
+      "query_tokens": 7,
+      "top_matches": [
+        {
+          "experience_id": "pseudo_real_g4_clean_success_001",
+          "score": 0.0812,
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_transport_collision_001",
+          "score": 0.0698,
+          "scenario_id": "G4",
+          "condition_id": "transport_collision",
+          "failure_type": "transport_collision",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+          "score": 0.0671,
+          "scenario_id": "G4",
+          "condition_id": "place_occupied",
+          "failure_type": "place_occupied",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_grasp_miss_001",
+          "score": 0.0532,
+          "scenario_id": "G3",
+          "condition_id": "grasp_miss",
+          "failure_type": "grasp_miss",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g3_grasp_slip_001",
+          "score": 0.053,
+          "scenario_id": "G3",
+          "condition_id": "grasp_slip",
+          "failure_type": "grasp_slip",
+          "memory_role": "pseudo_real_failure_case"
+        }
+      ]
+    },
+    {
+      "query_experience_id": "pseudo_real_g4_place_occupied_failure_001",
+      "query_text": "G4 place_occupied large_object task_chain place_occupied block sim_real_gap_memory",
+      "query_tokens": 7,
+      "top_matches": [
+        {
+          "experience_id": "pseudo_real_g4_transport_collision_001",
+          "score": 0.1808,
+          "scenario_id": "G4",
+          "condition_id": "transport_collision",
+          "failure_type": "transport_collision",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "pseudo_real_g4_clean_success_001",
+          "score": 0.161,
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "score": 0.1097,
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_clean_success_001",
+          "score": 0.0804,
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+          "score": 0.0792,
+          "scenario_id": "G4",
+          "condition_id": "dual_arm_mismatch",
+          "failure_type": "dual_arm_mismatch",
+          "memory_role": "pseudo_real_failure_case"
+        }
+      ]
+    },
+    {
+      "query_experience_id": "pseudo_real_g4_transport_collision_001",
+      "query_text": "G4 transport_collision large_object task_chain transport_collision block pseudo_real_failure_case",
+      "query_tokens": 7,
+      "top_matches": [
+        {
+          "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+          "score": 0.099,
+          "scenario_id": "G4",
+          "condition_id": "place_occupied",
+          "failure_type": "place_occupied",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_clean_success_001",
+          "score": 0.059,
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "failure_type": "",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+          "score": 0.0574,
+          "scenario_id": "G4",
+          "condition_id": "dual_arm_mismatch",
+          "failure_type": "dual_arm_mismatch",
+          "memory_role": "pseudo_real_failure_case"
+        },
+        {
+          "experience_id": "exp_b7fb782456f2",
+          "score": 0.0279,
+          "scenario_id": "G4",
+          "condition_id": "place_occupied",
+          "failure_type": "sim_success_real_fail",
+          "memory_role": "sim_real_gap_memory"
+        },
+        {
+          "experience_id": "pseudo_real_g3_grasp_miss_001",
+          "score": 0.0279,
+          "scenario_id": "G3",
+          "condition_id": "grasp_miss",
+          "failure_type": "grasp_miss",
+          "memory_role": "pseudo_real_failure_case"
+        }
+      ]
+    }
+  ],
+  "paper_wording": {
+    "safe_claim": "The system constructs explicit text-semantic summaries from scenario, condition, task, anomaly, failure taxonomy, critic, gap, and retrieval-key fields, and uses TF-IDF vectors indexed by FAISS as an auxiliary semantic retrieval signal.",
+    "avoid_claim": "Do not claim this is a learned language encoder or neural embedding benchmark; the report measures lightweight TF-IDF + FAISS semantic retrieval only."
+  }
+}

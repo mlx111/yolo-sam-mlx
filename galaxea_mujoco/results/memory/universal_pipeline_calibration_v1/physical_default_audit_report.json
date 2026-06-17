@@ -1,0 +1,145 @@
+{
+  "schema_version": "physical_default_audit_report_v1",
+  "file_count": 26,
+  "rows": [
+    {
+      "path": "skills/base/base_motion_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/base/torso_move_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/base/left_arm_move_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/base/right_arm_move_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/left_gripper_close_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/right_gripper_close_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/left_gripper_open_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/right_gripper_open_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/open_gripper_release_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/resync_grippers_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/base_move_to_region_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/base_reposition_lateral_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/base_replan_path_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/torso_turn_to_target_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/torso_set_height_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/pre_grasp_safe_posture_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/safe_transport_pose_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/go_home_upper_body_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/grasp_handle_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/regrasp_deeper_skill.json",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 1
+    },
+    {
+      "path": "skills/primitives/object_manipulation_skills.py",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 0
+    },
+    {
+      "path": "skills/base/arm_ik_skill.py",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 0
+    },
+    {
+      "path": "skills/base/base_motion_skill.py",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 0
+    },
+    {
+      "path": "skills/base/torso_move_skill.py",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 0
+    },
+    {
+      "path": "skills/base/gripper_skill.py",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 0
+    },
+    {
+      "path": "skills/primitives/recovery_skills.py",
+      "direct_qpos_true_count": 0,
+      "direct_qpos_false_count": 0
+    }
+  ],
+  "summary": {
+    "file_count": 26,
+    "direct_qpos_true_total": 0,
+    "direct_qpos_false_total": 20
+  },
+  "paper_wording": {
+    "safe_claim": "Core base, torso, arm, gripper, and field atomic defaults have been audited to prefer physical control over direct-qpos shortcuts.",
+    "avoid_claim": "Do not claim that every explicit debug or test path is physical-only; the audit concerns defaults, not every possible parameter override."
+  }
+}

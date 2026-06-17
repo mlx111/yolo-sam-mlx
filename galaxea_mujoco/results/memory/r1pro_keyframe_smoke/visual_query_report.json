@@ -1,0 +1,43 @@
+{
+  "library": "results/memory/r1pro_keyframe_smoke/universal_experience_library.json",
+  "index_dir": "results/memory/r1pro_keyframe_smoke/visual_index",
+  "query_images": [
+    "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/r1pro_keyframe_smoke/keyframes/G3_clean_g3_default_1/before_task.png"
+  ],
+  "top_k": 1,
+  "result_count": 1,
+  "results": [
+    {
+      "experience_id": "exp_9c7e44a0e761",
+      "visual_similarity": 1.0,
+      "found_in_library": true,
+      "source": "simulation",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "robot_type": "mobile_dual_arm",
+      "success": true,
+      "failure_type": "",
+      "memory_role": "success_prior"
+    }
+  ],
+  "structured_results": [
+    {
+      "experience_id": "exp_9c7e44a0e761",
+      "score": 0.76,
+      "visual_similarity": 1.0,
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "source": "simulation",
+      "success": true,
+      "explanation": {
+        "scenario_id": 0.3,
+        "condition_id": 0.18,
+        "robot_type": 0.1,
+        "object_class": 0.06,
+        "visual_similarity": 1.0,
+        "visual_score": 0.12,
+        "total": 0.76
+      }
+    }
+  ]
+}

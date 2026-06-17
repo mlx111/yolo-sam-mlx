@@ -1,0 +1,19 @@
+{
+  "name": "torso_turn_to_target",
+  "description": "Turn torso yaw toward a target position while preserving current torso height joints.",
+  "torso_skill_config": "skills/base/torso_move_skill.json",
+  "yaw_offset": 0.0,
+  "max_abs_yaw": 0.35,
+  "steps": 900,
+  "settle_steps": 900,
+  "max_joint_step": 0.004,
+  "fail_threshold": 0.02,
+  "direct_qpos": false,
+  "parameters": {
+    "target_x/target_y/target_z": "Target world position.",
+    "object_body": "Optional target body used instead of explicit target position.",
+    "object_geom": "Optional target geom used instead of explicit target position.",
+    "yaw_offset": "Optional yaw offset in radians.",
+    "target_qpos": "Optional 4-element posture whose first 3 joints are preserved while yaw is recomputed."
+  }
+}

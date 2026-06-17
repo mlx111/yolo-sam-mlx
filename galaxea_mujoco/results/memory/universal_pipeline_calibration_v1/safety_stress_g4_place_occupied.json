@@ -1,0 +1,820 @@
+{
+  "schema_version": "memory_safety_stress_report_v1",
+  "scenario": "G4",
+  "condition": "place_occupied",
+  "experience_library": "results/memory/universal_pipeline_calibration_v1/universal_experience_library.json",
+  "policy_calibration": "results/memory/universal_pipeline_calibration_v1/policy_risk_calibration.json",
+  "lesson_lib": "results/memory/universal_pipeline_calibration_v1/llm_experience_lessons_g4_place_occupied.json",
+  "risky_candidate_ids": [
+    "g4_fast_transport"
+  ],
+  "sandbox_weight": 0.45,
+  "stage_support_weight": 0.08,
+  "stage_risk_weight": 0.12,
+  "summary": [
+    {
+      "variant_id": "memory_only",
+      "variant_label": "memory only",
+      "run_count": 1,
+      "risky_candidate_selected_rate": 0.0,
+      "safe_candidate_selected_rate": 1.0,
+      "selected_warn_or_block_rate": 0.0,
+      "warn_or_block_candidate_rate": 0.0,
+      "risky_warn_or_block_rate": 0.0,
+      "candidate_changed_by_sandbox_rate": 0.0,
+      "score_margin_selected_vs_best_risky_avg": 0.1785,
+      "stage_specificity_score_avg": 0.0,
+      "critic_warn_rate_avg": 0.0,
+      "critic_block_rate_avg": 0.0
+    },
+    {
+      "variant_id": "memory_stage",
+      "variant_label": "memory + stage retrieval",
+      "run_count": 1,
+      "risky_candidate_selected_rate": 0.0,
+      "safe_candidate_selected_rate": 1.0,
+      "selected_warn_or_block_rate": 0.0,
+      "warn_or_block_candidate_rate": 0.0,
+      "risky_warn_or_block_rate": 0.0,
+      "candidate_changed_by_sandbox_rate": 0.0,
+      "score_margin_selected_vs_best_risky_avg": 0.172,
+      "stage_specificity_score_avg": 0.7056,
+      "critic_warn_rate_avg": 0.0,
+      "critic_block_rate_avg": 0.0
+    },
+    {
+      "variant_id": "memory_sandbox_critic",
+      "variant_label": "memory + sandbox critic",
+      "run_count": 1,
+      "risky_candidate_selected_rate": 0.0,
+      "safe_candidate_selected_rate": 1.0,
+      "selected_warn_or_block_rate": 0.0,
+      "warn_or_block_candidate_rate": 0.2,
+      "risky_warn_or_block_rate": 1.0,
+      "candidate_changed_by_sandbox_rate": 0.0,
+      "score_margin_selected_vs_best_risky_avg": 0.3771,
+      "stage_specificity_score_avg": 0.0,
+      "critic_warn_rate_avg": 0.2,
+      "critic_block_rate_avg": 0.0
+    },
+    {
+      "variant_id": "full_stage_lesson_sandbox",
+      "variant_label": "memory + lessons + stage + sandbox critic",
+      "run_count": 1,
+      "risky_candidate_selected_rate": 0.0,
+      "safe_candidate_selected_rate": 1.0,
+      "selected_warn_or_block_rate": 0.0,
+      "warn_or_block_candidate_rate": 0.2,
+      "risky_warn_or_block_rate": 1.0,
+      "candidate_changed_by_sandbox_rate": 0.0,
+      "score_margin_selected_vs_best_risky_avg": 0.3736,
+      "stage_specificity_score_avg": 0.7056,
+      "critic_warn_rate_avg": 0.2,
+      "critic_block_rate_avg": 0.0
+    }
+  ],
+  "runs": [
+    {
+      "variant_id": "memory_only",
+      "variant_label": "memory only",
+      "scenario": "G4",
+      "condition": "place_occupied",
+      "selected_candidate_id": "g4_avoid_occupied_primary",
+      "selected_before_sandbox_id": "g4_avoid_occupied_primary",
+      "risky_candidate_ids": [
+        "g4_fast_transport"
+      ],
+      "risky_candidate_selected": false,
+      "safe_candidate_selected": true,
+      "best_risky_rank": 3,
+      "selected_warn_or_block": false,
+      "warn_or_block_candidate_count": 0,
+      "warn_or_block_candidate_rate": 0.0,
+      "risky_warn_or_block_rate": 0.0,
+      "candidate_changed_by_sandbox": false,
+      "score_margin_selected_vs_best_risky": 0.1785,
+      "stage_retrieval_enabled": false,
+      "stage_retrieval_summary": {},
+      "sandbox_enabled": false,
+      "sandbox_summary": {},
+      "sandbox_calibration_enabled": true,
+      "sandbox_calibration": {
+        "calibration_id": "cal_78333f4dfb2b",
+        "source_gap_ids": [
+          "gap_491949645931"
+        ],
+        "object_pose_bias": [
+          0.04,
+          0.04,
+          -0.04
+        ],
+        "perception_noise_bias": [
+          0.08,
+          0.08,
+          0.08
+        ],
+        "actuation_delay_bias": 0.0,
+        "contact_success_bias": -1.0,
+        "slip_risk_bias": 1.0,
+        "calibration_confidence": 0.168,
+        "details": {
+          "method": "universal_grouped_gap_weighted_average",
+          "created_at": "2026-06-13T17:08:24Z",
+          "group_key": {
+            "robot_type": "mobile_dual_arm",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "object_class": "large_object"
+          },
+          "source_count": 1,
+          "total_weight": 0.84,
+          "contact_mismatch_rate": 1.0,
+          "sim_success_real_fail_rate": 1.0,
+          "matched_success_rate": 0.0,
+          "avg_object_pose_error": 0.540925,
+          "evidence": [
+            {
+              "experience_id": "exp_b7fb782456f2",
+              "source": "simulation",
+              "gap_id": "gap_491949645931",
+              "gap_score": 1.0,
+              "uncertainty": 0.5,
+              "pair_score": 0.95,
+              "weight": 0.84,
+              "outcome_gap_type": "sim_success_real_fail",
+              "contact_mismatch": true,
+              "object_pose_error": 0.540925
+            }
+          ]
+        }
+      },
+      "selected": {
+        "candidate_id": "g4_avoid_occupied_primary",
+        "is_risky": false,
+        "decision": "accept",
+        "score": 0.7315,
+        "memory_score": 0.7315,
+        "risk_score": 0.3949,
+        "stage_support_score": 0.0,
+        "stage_risk_score": 0.0,
+        "sandbox_score": null,
+        "critic_status": "",
+        "critic_risk_score": 0.0,
+        "calibration_risk_penalty": 0.0
+      },
+      "selected_before_sandbox": {
+        "candidate_id": "g4_avoid_occupied_primary",
+        "is_risky": false,
+        "decision": "accept",
+        "score": 0.7315,
+        "memory_score": 0.7315,
+        "risk_score": 0.3949,
+        "stage_support_score": 0.0,
+        "stage_risk_score": 0.0,
+        "sandbox_score": null,
+        "critic_status": "",
+        "critic_risk_score": 0.0,
+        "calibration_risk_penalty": 0.0
+      },
+      "candidate_ranking": [
+        {
+          "candidate_id": "g4_avoid_occupied_primary",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.7315,
+          "memory_score": 0.7315,
+          "risk_score": 0.3949,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        },
+        {
+          "candidate_id": "g4_default",
+          "is_risky": false,
+          "decision": "rewrite",
+          "score": 0.5731,
+          "memory_score": 0.5731,
+          "risk_score": 0.7606,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        },
+        {
+          "candidate_id": "g4_fast_transport",
+          "is_risky": true,
+          "decision": "rewrite",
+          "score": 0.553,
+          "memory_score": 0.553,
+          "risk_score": 0.6923,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        },
+        {
+          "candidate_id": "g4_safer_transport",
+          "is_risky": false,
+          "decision": "rewrite",
+          "score": 0.5407,
+          "memory_score": 0.5407,
+          "risk_score": 0.7128,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        },
+        {
+          "candidate_id": "g4_relevel_before_place",
+          "is_risky": false,
+          "decision": "rewrite",
+          "score": 0.5249,
+          "memory_score": 0.5249,
+          "risk_score": 0.7311,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        }
+      ]
+    },
+    {
+      "variant_id": "memory_stage",
+      "variant_label": "memory + stage retrieval",
+      "scenario": "G4",
+      "condition": "place_occupied",
+      "selected_candidate_id": "g4_avoid_occupied_primary",
+      "selected_before_sandbox_id": "g4_avoid_occupied_primary",
+      "risky_candidate_ids": [
+        "g4_fast_transport"
+      ],
+      "risky_candidate_selected": false,
+      "safe_candidate_selected": true,
+      "best_risky_rank": 3,
+      "selected_warn_or_block": false,
+      "warn_or_block_candidate_count": 0,
+      "warn_or_block_candidate_rate": 0.0,
+      "risky_warn_or_block_rate": 0.0,
+      "candidate_changed_by_sandbox": false,
+      "score_margin_selected_vs_best_risky": 0.172,
+      "stage_retrieval_enabled": true,
+      "stage_retrieval_summary": {
+        "enabled_candidate_count": 5,
+        "stage_count": 4,
+        "mean_stage_overlap": 0.2944,
+        "stage_specificity_score": 0.7056,
+        "support_score_avg": 0.5389,
+        "risk_score_avg": 0.7972,
+        "risk_score_max": 0.828
+      },
+      "sandbox_enabled": false,
+      "sandbox_summary": {},
+      "sandbox_calibration_enabled": true,
+      "sandbox_calibration": {
+        "calibration_id": "cal_78333f4dfb2b",
+        "source_gap_ids": [
+          "gap_491949645931"
+        ],
+        "object_pose_bias": [
+          0.04,
+          0.04,
+          -0.04
+        ],
+        "perception_noise_bias": [
+          0.08,
+          0.08,
+          0.08
+        ],
+        "actuation_delay_bias": 0.0,
+        "contact_success_bias": -1.0,
+        "slip_risk_bias": 1.0,
+        "calibration_confidence": 0.168,
+        "details": {
+          "method": "universal_grouped_gap_weighted_average",
+          "created_at": "2026-06-13T17:08:24Z",
+          "group_key": {
+            "robot_type": "mobile_dual_arm",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "object_class": "large_object"
+          },
+          "source_count": 1,
+          "total_weight": 0.84,
+          "contact_mismatch_rate": 1.0,
+          "sim_success_real_fail_rate": 1.0,
+          "matched_success_rate": 0.0,
+          "avg_object_pose_error": 0.540925,
+          "evidence": [
+            {
+              "experience_id": "exp_b7fb782456f2",
+              "source": "simulation",
+              "gap_id": "gap_491949645931",
+              "gap_score": 1.0,
+              "uncertainty": 0.5,
+              "pair_score": 0.95,
+              "weight": 0.84,
+              "outcome_gap_type": "sim_success_real_fail",
+              "contact_mismatch": true,
+              "object_pose_error": 0.540925
+            }
+          ]
+        }
+      },
+      "selected": {
+        "candidate_id": "g4_avoid_occupied_primary",
+        "is_risky": false,
+        "decision": "accept",
+        "score": 0.6768,
+        "memory_score": 0.6768,
+        "risk_score": 0.3949,
+        "stage_support_score": 0.5336,
+        "stage_risk_score": 0.8113,
+        "sandbox_score": null,
+        "critic_status": "",
+        "critic_risk_score": 0.0,
+        "calibration_risk_penalty": 0.0
+      },
+      "selected_before_sandbox": {
+        "candidate_id": "g4_avoid_occupied_primary",
+        "is_risky": false,
+        "decision": "accept",
+        "score": 0.6768,
+        "memory_score": 0.6768,
+        "risk_score": 0.3949,
+        "stage_support_score": 0.5336,
+        "stage_risk_score": 0.8113,
+        "sandbox_score": null,
+        "critic_status": "",
+        "critic_risk_score": 0.0,
+        "calibration_risk_penalty": 0.0
+      },
+      "candidate_ranking": [
+        {
+          "candidate_id": "g4_avoid_occupied_primary",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.6768,
+          "memory_score": 0.6768,
+          "risk_score": 0.3949,
+          "stage_support_score": 0.5336,
+          "stage_risk_score": 0.8113,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        },
+        {
+          "candidate_id": "g4_default",
+          "is_risky": false,
+          "decision": "review",
+          "score": 0.5173,
+          "memory_score": 0.5173,
+          "risk_score": 0.7606,
+          "stage_support_score": 0.544,
+          "stage_risk_score": 0.828,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        },
+        {
+          "candidate_id": "g4_fast_transport",
+          "is_risky": true,
+          "decision": "review",
+          "score": 0.5048,
+          "memory_score": 0.5048,
+          "risk_score": 0.6923,
+          "stage_support_score": 0.5388,
+          "stage_risk_score": 0.7611,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        },
+        {
+          "candidate_id": "g4_safer_transport",
+          "is_risky": false,
+          "decision": "review",
+          "score": 0.492,
+          "memory_score": 0.492,
+          "risk_score": 0.7128,
+          "stage_support_score": 0.5391,
+          "stage_risk_score": 0.7655,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        },
+        {
+          "candidate_id": "g4_relevel_before_place",
+          "is_risky": false,
+          "decision": "review",
+          "score": 0.4696,
+          "memory_score": 0.4696,
+          "risk_score": 0.7311,
+          "stage_support_score": 0.5391,
+          "stage_risk_score": 0.8202,
+          "sandbox_score": null,
+          "critic_status": "",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.0
+        }
+      ]
+    },
+    {
+      "variant_id": "memory_sandbox_critic",
+      "variant_label": "memory + sandbox critic",
+      "scenario": "G4",
+      "condition": "place_occupied",
+      "selected_candidate_id": "g4_avoid_occupied_primary",
+      "selected_before_sandbox_id": "g4_avoid_occupied_primary",
+      "risky_candidate_ids": [
+        "g4_fast_transport"
+      ],
+      "risky_candidate_selected": false,
+      "safe_candidate_selected": true,
+      "best_risky_rank": 5,
+      "selected_warn_or_block": false,
+      "warn_or_block_candidate_count": 1,
+      "warn_or_block_candidate_rate": 0.2,
+      "risky_warn_or_block_rate": 1.0,
+      "candidate_changed_by_sandbox": false,
+      "score_margin_selected_vs_best_risky": 0.3771,
+      "stage_retrieval_enabled": false,
+      "stage_retrieval_summary": {},
+      "sandbox_enabled": true,
+      "sandbox_summary": {
+        "candidate_count": 5,
+        "sandbox_score_delta_avg": 0.2914,
+        "sandbox_score_delta_max": 0.4751,
+        "critic_status_counts": {
+          "pass": 4,
+          "warn": 1
+        },
+        "critic_block_rate": 0.0,
+        "critic_warn_rate": 0.2,
+        "accepted_count": 4,
+        "review_count": 1,
+        "rejected_count": 0
+      },
+      "sandbox_calibration_enabled": true,
+      "sandbox_calibration": {
+        "calibration_id": "cal_78333f4dfb2b",
+        "source_gap_ids": [
+          "gap_491949645931"
+        ],
+        "object_pose_bias": [
+          0.04,
+          0.04,
+          -0.04
+        ],
+        "perception_noise_bias": [
+          0.08,
+          0.08,
+          0.08
+        ],
+        "actuation_delay_bias": 0.0,
+        "contact_success_bias": -1.0,
+        "slip_risk_bias": 1.0,
+        "calibration_confidence": 0.168,
+        "details": {
+          "method": "universal_grouped_gap_weighted_average",
+          "created_at": "2026-06-13T17:08:24Z",
+          "group_key": {
+            "robot_type": "mobile_dual_arm",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "object_class": "large_object"
+          },
+          "source_count": 1,
+          "total_weight": 0.84,
+          "contact_mismatch_rate": 1.0,
+          "sim_success_real_fail_rate": 1.0,
+          "matched_success_rate": 0.0,
+          "avg_object_pose_error": 0.540925,
+          "evidence": [
+            {
+              "experience_id": "exp_b7fb782456f2",
+              "source": "simulation",
+              "gap_id": "gap_491949645931",
+              "gap_score": 1.0,
+              "uncertainty": 0.5,
+              "pair_score": 0.95,
+              "weight": 0.84,
+              "outcome_gap_type": "sim_success_real_fail",
+              "contact_mismatch": true,
+              "object_pose_error": 0.540925
+            }
+          ]
+        }
+      },
+      "selected": {
+        "candidate_id": "g4_avoid_occupied_primary",
+        "is_risky": false,
+        "decision": "accept",
+        "score": 0.8523,
+        "memory_score": 0.7315,
+        "risk_score": 0.3949,
+        "stage_support_score": 0.0,
+        "stage_risk_score": 0.0,
+        "sandbox_score": 1.0,
+        "critic_status": "pass",
+        "critic_risk_score": 0.0,
+        "calibration_risk_penalty": 0.12
+      },
+      "selected_before_sandbox": {
+        "candidate_id": "g4_avoid_occupied_primary",
+        "is_risky": false,
+        "decision": "accept",
+        "score": 0.8523,
+        "memory_score": 0.7315,
+        "risk_score": 0.3949,
+        "stage_support_score": 0.0,
+        "stage_risk_score": 0.0,
+        "sandbox_score": 1.0,
+        "critic_status": "pass",
+        "critic_risk_score": 0.0,
+        "calibration_risk_penalty": 0.12
+      },
+      "candidate_ranking": [
+        {
+          "candidate_id": "g4_avoid_occupied_primary",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.8523,
+          "memory_score": 0.7315,
+          "risk_score": 0.3949,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": 1.0,
+          "critic_status": "pass",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.12
+        },
+        {
+          "candidate_id": "g4_default",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.7652,
+          "memory_score": 0.5731,
+          "risk_score": 0.7606,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": 1.0,
+          "critic_status": "pass",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.12
+        },
+        {
+          "candidate_id": "g4_safer_transport",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.7474,
+          "memory_score": 0.5407,
+          "risk_score": 0.7128,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": 1.0,
+          "critic_status": "pass",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.12
+        },
+        {
+          "candidate_id": "g4_relevel_before_place",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.7387,
+          "memory_score": 0.5249,
+          "risk_score": 0.7311,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": 1.0,
+          "critic_status": "pass",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.12
+        },
+        {
+          "candidate_id": "g4_fast_transport",
+          "is_risky": true,
+          "decision": "review",
+          "score": 0.4752,
+          "memory_score": 0.553,
+          "risk_score": 0.6923,
+          "stage_support_score": 0.0,
+          "stage_risk_score": 0.0,
+          "sandbox_score": 0.38,
+          "critic_status": "warn",
+          "critic_risk_score": 0.45,
+          "calibration_risk_penalty": 0.12
+        }
+      ]
+    },
+    {
+      "variant_id": "full_stage_lesson_sandbox",
+      "variant_label": "memory + lessons + stage + sandbox critic",
+      "scenario": "G4",
+      "condition": "place_occupied",
+      "selected_candidate_id": "g4_avoid_occupied_primary",
+      "selected_before_sandbox_id": "g4_avoid_occupied_primary",
+      "risky_candidate_ids": [
+        "g4_fast_transport"
+      ],
+      "risky_candidate_selected": false,
+      "safe_candidate_selected": true,
+      "best_risky_rank": 5,
+      "selected_warn_or_block": false,
+      "warn_or_block_candidate_count": 1,
+      "warn_or_block_candidate_rate": 0.2,
+      "risky_warn_or_block_rate": 1.0,
+      "candidate_changed_by_sandbox": false,
+      "score_margin_selected_vs_best_risky": 0.3736,
+      "stage_retrieval_enabled": true,
+      "stage_retrieval_summary": {
+        "enabled_candidate_count": 5,
+        "stage_count": 4,
+        "mean_stage_overlap": 0.2944,
+        "stage_specificity_score": 0.7056,
+        "support_score_avg": 0.5389,
+        "risk_score_avg": 0.7972,
+        "risk_score_max": 0.828
+      },
+      "sandbox_enabled": true,
+      "sandbox_summary": {
+        "candidate_count": 5,
+        "sandbox_score_delta_avg": 0.3183,
+        "sandbox_score_delta_max": 0.5304,
+        "critic_status_counts": {
+          "pass": 4,
+          "warn": 1
+        },
+        "critic_block_rate": 0.0,
+        "critic_warn_rate": 0.2,
+        "accepted_count": 4,
+        "review_count": 1,
+        "rejected_count": 0
+      },
+      "sandbox_calibration_enabled": true,
+      "sandbox_calibration": {
+        "calibration_id": "cal_78333f4dfb2b",
+        "source_gap_ids": [
+          "gap_491949645931"
+        ],
+        "object_pose_bias": [
+          0.04,
+          0.04,
+          -0.04
+        ],
+        "perception_noise_bias": [
+          0.08,
+          0.08,
+          0.08
+        ],
+        "actuation_delay_bias": 0.0,
+        "contact_success_bias": -1.0,
+        "slip_risk_bias": 1.0,
+        "calibration_confidence": 0.168,
+        "details": {
+          "method": "universal_grouped_gap_weighted_average",
+          "created_at": "2026-06-13T17:08:24Z",
+          "group_key": {
+            "robot_type": "mobile_dual_arm",
+            "scenario_id": "G4",
+            "condition_id": "place_occupied",
+            "object_class": "large_object"
+          },
+          "source_count": 1,
+          "total_weight": 0.84,
+          "contact_mismatch_rate": 1.0,
+          "sim_success_real_fail_rate": 1.0,
+          "matched_success_rate": 0.0,
+          "avg_object_pose_error": 0.540925,
+          "evidence": [
+            {
+              "experience_id": "exp_b7fb782456f2",
+              "source": "simulation",
+              "gap_id": "gap_491949645931",
+              "gap_score": 1.0,
+              "uncertainty": 0.5,
+              "pair_score": 0.95,
+              "weight": 0.84,
+              "outcome_gap_type": "sim_success_real_fail",
+              "contact_mismatch": true,
+              "object_pose_error": 0.540925
+            }
+          ]
+        }
+      },
+      "selected": {
+        "candidate_id": "g4_avoid_occupied_primary",
+        "is_risky": false,
+        "decision": "accept",
+        "score": 0.8574,
+        "memory_score": 0.7408,
+        "risk_score": 0.3629,
+        "stage_support_score": 0.5336,
+        "stage_risk_score": 0.8113,
+        "sandbox_score": 1.0,
+        "critic_status": "pass",
+        "critic_risk_score": 0.0,
+        "calibration_risk_penalty": 0.12
+      },
+      "selected_before_sandbox": {
+        "candidate_id": "g4_avoid_occupied_primary",
+        "is_risky": false,
+        "decision": "accept",
+        "score": 0.8574,
+        "memory_score": 0.7408,
+        "risk_score": 0.3629,
+        "stage_support_score": 0.5336,
+        "stage_risk_score": 0.8113,
+        "sandbox_score": 1.0,
+        "critic_status": "pass",
+        "critic_risk_score": 0.0,
+        "calibration_risk_penalty": 0.12
+      },
+      "candidate_ranking": [
+        {
+          "candidate_id": "g4_avoid_occupied_primary",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.8574,
+          "memory_score": 0.7408,
+          "risk_score": 0.3629,
+          "stage_support_score": 0.5336,
+          "stage_risk_score": 0.8113,
+          "sandbox_score": 1.0,
+          "critic_status": "pass",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.12
+        },
+        {
+          "candidate_id": "g4_default",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.7345,
+          "memory_score": 0.5173,
+          "risk_score": 0.7606,
+          "stage_support_score": 0.544,
+          "stage_risk_score": 0.828,
+          "sandbox_score": 1.0,
+          "critic_status": "pass",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.12
+        },
+        {
+          "candidate_id": "g4_safer_transport",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.7206,
+          "memory_score": 0.492,
+          "risk_score": 0.7128,
+          "stage_support_score": 0.5391,
+          "stage_risk_score": 0.7655,
+          "sandbox_score": 1.0,
+          "critic_status": "pass",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.12
+        },
+        {
+          "candidate_id": "g4_relevel_before_place",
+          "is_risky": false,
+          "decision": "accept",
+          "score": 0.7083,
+          "memory_score": 0.4696,
+          "risk_score": 0.7311,
+          "stage_support_score": 0.5391,
+          "stage_risk_score": 0.8202,
+          "sandbox_score": 1.0,
+          "critic_status": "pass",
+          "critic_risk_score": 0.0,
+          "calibration_risk_penalty": 0.12
+        },
+        {
+          "candidate_id": "g4_fast_transport",
+          "is_risky": true,
+          "decision": "review",
+          "score": 0.4838,
+          "memory_score": 0.5688,
+          "risk_score": 0.6603,
+          "stage_support_score": 0.5388,
+          "stage_risk_score": 0.7611,
+          "sandbox_score": 0.38,
+          "critic_status": "warn",
+          "critic_risk_score": 0.45,
+          "calibration_risk_penalty": 0.12
+        }
+      ]
+    }
+  ]
+}

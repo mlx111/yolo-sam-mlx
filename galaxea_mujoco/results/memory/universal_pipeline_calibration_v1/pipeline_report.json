@@ -1,0 +1,383 @@
+{
+  "config": "../experience_system/configs/universal_memory_pipeline_calibration_v1.json",
+  "output_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1",
+  "steps": {
+    "r1pro_tasks": [
+      {
+        "scenario": "G3",
+        "condition": "clean",
+        "control_mode": "ideal",
+        "candidate_id": "g3_default",
+        "success": true,
+        "task_success": true,
+        "experience_id": "exp_50d6a96f91ed",
+        "stored_experience_id": "exp_50d6a96f91ed",
+        "keyframe_count": 5,
+        "keyframe_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1",
+        "write_policy": {
+          "candidate_experience_id": "exp_50d6a96f91ed",
+          "decision": "write",
+          "reason": "accepted",
+          "write": true,
+          "source": "simulation",
+          "backend": "mujoco",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "success": true,
+          "write_score": 0.215,
+          "stored_experience_id": "exp_50d6a96f91ed"
+        }
+      },
+      {
+        "scenario": "G3",
+        "condition": "place_occupied",
+        "control_mode": "ideal",
+        "candidate_id": "g3_default",
+        "success": true,
+        "task_success": true,
+        "experience_id": "exp_5a2556148f7d",
+        "stored_experience_id": "exp_5a2556148f7d",
+        "keyframe_count": 5,
+        "keyframe_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1",
+        "write_policy": {
+          "candidate_experience_id": "exp_5a2556148f7d",
+          "decision": "write",
+          "reason": "accepted",
+          "write": true,
+          "source": "simulation",
+          "backend": "mujoco",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "success": true,
+          "write_score": 0.427,
+          "stored_experience_id": "exp_5a2556148f7d"
+        }
+      },
+      {
+        "scenario": "G4",
+        "condition": "clean",
+        "control_mode": "ideal",
+        "candidate_id": "g4_default",
+        "success": true,
+        "task_success": true,
+        "experience_id": "exp_a7094c40a5c9",
+        "stored_experience_id": "exp_a7094c40a5c9",
+        "keyframe_count": 5,
+        "keyframe_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1",
+        "write_policy": {
+          "candidate_experience_id": "exp_a7094c40a5c9",
+          "decision": "write",
+          "reason": "accepted",
+          "write": true,
+          "source": "simulation",
+          "backend": "mujoco",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "success": true,
+          "write_score": 0.215,
+          "stored_experience_id": "exp_a7094c40a5c9"
+        }
+      },
+      {
+        "scenario": "G4",
+        "condition": "place_occupied",
+        "control_mode": "ideal",
+        "candidate_id": "g4_default",
+        "success": true,
+        "task_success": true,
+        "experience_id": "exp_9c3954664691",
+        "stored_experience_id": "exp_9c3954664691",
+        "keyframe_count": 5,
+        "keyframe_dir": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/keyframes/G4_place_occupied_g4_default_1",
+        "write_policy": {
+          "candidate_experience_id": "exp_9c3954664691",
+          "decision": "write",
+          "reason": "accepted",
+          "write": true,
+          "source": "simulation",
+          "backend": "mujoco",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G4",
+          "condition_id": "place_occupied",
+          "success": true,
+          "write_score": 0.427,
+          "stored_experience_id": "exp_9c3954664691"
+        }
+      }
+    ],
+    "wrapper1_imports": [],
+    "real_episode_imports": [
+      {
+        "experience_id": "pseudo_real_g3_clean_success_001",
+        "stored_experience_id": "pseudo_real_g3_clean_success_001",
+        "source": "pseudo_real",
+        "backend": "pseudo_real_robot",
+        "scenario_id": "G3",
+        "condition_id": "clean",
+        "success": true,
+        "write_policy": {
+          "candidate_experience_id": "pseudo_real_g3_clean_success_001",
+          "decision": "write",
+          "reason": "preserve_real_or_pseudo_real",
+          "write": true,
+          "source": "pseudo_real",
+          "backend": "pseudo_real_robot",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "success": true,
+          "write_score": 0.402,
+          "stored_experience_id": "pseudo_real_g3_clean_success_001"
+        }
+      },
+      {
+        "experience_id": "pseudo_real_g3_grasp_miss_001",
+        "stored_experience_id": "pseudo_real_g3_grasp_miss_001",
+        "source": "pseudo_real",
+        "backend": "pseudo_real_robot",
+        "scenario_id": "G3",
+        "condition_id": "grasp_miss",
+        "success": false,
+        "write_policy": {
+          "candidate_experience_id": "pseudo_real_g3_grasp_miss_001",
+          "decision": "write",
+          "reason": "preserve_real_or_pseudo_real_failure",
+          "write": true,
+          "source": "pseudo_real",
+          "backend": "pseudo_real_robot",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G3",
+          "condition_id": "grasp_miss",
+          "success": false,
+          "write_score": 0.5495,
+          "stored_experience_id": "pseudo_real_g3_grasp_miss_001"
+        }
+      },
+      {
+        "experience_id": "pseudo_real_g3_grasp_slip_001",
+        "stored_experience_id": "pseudo_real_g3_grasp_slip_001",
+        "source": "pseudo_real",
+        "backend": "pseudo_real_robot",
+        "scenario_id": "G3",
+        "condition_id": "grasp_slip",
+        "success": false,
+        "write_policy": {
+          "candidate_experience_id": "pseudo_real_g3_grasp_slip_001",
+          "decision": "write",
+          "reason": "preserve_real_or_pseudo_real_failure",
+          "write": true,
+          "source": "pseudo_real",
+          "backend": "pseudo_real_robot",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G3",
+          "condition_id": "grasp_slip",
+          "success": false,
+          "write_score": 0.5495,
+          "stored_experience_id": "pseudo_real_g3_grasp_slip_001"
+        }
+      },
+      {
+        "experience_id": "pseudo_real_g3_place_occupied_success_001",
+        "stored_experience_id": "pseudo_real_g3_place_occupied_success_001",
+        "source": "pseudo_real",
+        "backend": "pseudo_real_robot",
+        "scenario_id": "G3",
+        "condition_id": "place_occupied",
+        "success": true,
+        "write_policy": {
+          "candidate_experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "decision": "write",
+          "reason": "preserve_real_or_pseudo_real",
+          "write": true,
+          "source": "pseudo_real",
+          "backend": "pseudo_real_robot",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "success": true,
+          "write_score": 0.402,
+          "stored_experience_id": "pseudo_real_g3_place_occupied_success_001"
+        }
+      },
+      {
+        "experience_id": "pseudo_real_g4_clean_success_001",
+        "stored_experience_id": "pseudo_real_g4_clean_success_001",
+        "source": "pseudo_real",
+        "backend": "pseudo_real_robot",
+        "scenario_id": "G4",
+        "condition_id": "clean",
+        "success": true,
+        "write_policy": {
+          "candidate_experience_id": "pseudo_real_g4_clean_success_001",
+          "decision": "write",
+          "reason": "preserve_real_or_pseudo_real",
+          "write": true,
+          "source": "pseudo_real",
+          "backend": "pseudo_real_robot",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G4",
+          "condition_id": "clean",
+          "success": true,
+          "write_score": 0.402,
+          "stored_experience_id": "pseudo_real_g4_clean_success_001"
+        }
+      },
+      {
+        "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+        "stored_experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+        "source": "pseudo_real",
+        "backend": "pseudo_real_robot",
+        "scenario_id": "G4",
+        "condition_id": "dual_arm_mismatch",
+        "success": false,
+        "write_policy": {
+          "candidate_experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+          "decision": "write",
+          "reason": "preserve_real_or_pseudo_real_failure",
+          "write": true,
+          "source": "pseudo_real",
+          "backend": "pseudo_real_robot",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G4",
+          "condition_id": "dual_arm_mismatch",
+          "success": false,
+          "write_score": 0.5495,
+          "stored_experience_id": "pseudo_real_g4_dual_arm_mismatch_001"
+        }
+      },
+      {
+        "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+        "stored_experience_id": "pseudo_real_g4_place_occupied_failure_001",
+        "source": "pseudo_real",
+        "backend": "pseudo_real_robot",
+        "scenario_id": "G4",
+        "condition_id": "place_occupied",
+        "success": false,
+        "write_policy": {
+          "candidate_experience_id": "pseudo_real_g4_place_occupied_failure_001",
+          "decision": "write",
+          "reason": "preserve_real_or_pseudo_real_failure",
+          "write": true,
+          "source": "pseudo_real",
+          "backend": "pseudo_real_robot",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G4",
+          "condition_id": "place_occupied",
+          "success": false,
+          "write_score": 0.5495,
+          "stored_experience_id": "pseudo_real_g4_place_occupied_failure_001"
+        }
+      },
+      {
+        "experience_id": "pseudo_real_g4_transport_collision_001",
+        "stored_experience_id": "pseudo_real_g4_transport_collision_001",
+        "source": "pseudo_real",
+        "backend": "pseudo_real_robot",
+        "scenario_id": "G4",
+        "condition_id": "transport_collision",
+        "success": false,
+        "write_policy": {
+          "candidate_experience_id": "pseudo_real_g4_transport_collision_001",
+          "decision": "write",
+          "reason": "preserve_real_or_pseudo_real_failure",
+          "write": true,
+          "source": "pseudo_real",
+          "backend": "pseudo_real_robot",
+          "robot_type": "mobile_dual_arm",
+          "scenario_id": "G4",
+          "condition_id": "transport_collision",
+          "success": false,
+          "write_score": 0.5495,
+          "stored_experience_id": "pseudo_real_g4_transport_collision_001"
+        }
+      }
+    ],
+    "write_policy": {
+      "decision_counts": {
+        "write": 12
+      },
+      "reason_counts": {
+        "accepted": 4,
+        "preserve_real_or_pseudo_real": 3,
+        "preserve_real_or_pseudo_real_failure": 5
+      },
+      "total_candidates": 12,
+      "stored_or_merged_count": 12
+    },
+    "pair": {
+      "min_pair_score": 0.55,
+      "pair_count": 4,
+      "pairs": [
+        {
+          "pair_id": "pair_7ba8f73c5000",
+          "sim_experience_id": "exp_9c3954664691",
+          "real_experience_id": "pseudo_real_g4_place_occupied_failure_001",
+          "paired_by": "plan_signature",
+          "pair_score": 0.95,
+          "gap_score": 0.0,
+          "validation_status": "paired",
+          "created_at": "2026-06-15T14:14:15Z",
+          "updated_at": "2026-06-15T14:14:15Z"
+        },
+        {
+          "pair_id": "pair_dc637f4f8f38",
+          "sim_experience_id": "exp_a7094c40a5c9",
+          "real_experience_id": "pseudo_real_g4_clean_success_001",
+          "paired_by": "plan_signature",
+          "pair_score": 0.95,
+          "gap_score": 0.0,
+          "validation_status": "paired",
+          "created_at": "2026-06-15T14:14:15Z",
+          "updated_at": "2026-06-15T14:14:15Z"
+        },
+        {
+          "pair_id": "pair_b2048cca52b4",
+          "sim_experience_id": "exp_50d6a96f91ed",
+          "real_experience_id": "pseudo_real_g3_clean_success_001",
+          "paired_by": "condition_id",
+          "pair_score": 0.8,
+          "gap_score": 0.0,
+          "validation_status": "paired",
+          "created_at": "2026-06-15T14:14:15Z",
+          "updated_at": "2026-06-15T14:14:15Z"
+        },
+        {
+          "pair_id": "pair_826956e2343d",
+          "sim_experience_id": "exp_5a2556148f7d",
+          "real_experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "paired_by": "condition_id",
+          "pair_score": 0.8,
+          "gap_score": 0.0,
+          "validation_status": "paired",
+          "created_at": "2026-06-15T14:14:15Z",
+          "updated_at": "2026-06-15T14:14:15Z"
+        }
+      ]
+    },
+    "critic": {
+      "thresholds": {
+        "min_object_lift": 0.05,
+        "max_place_xy_error": 0.05,
+        "max_place_z_error": 0.08,
+        "max_dual_arm_height_mismatch": 0.02,
+        "high_sim_real_gap": 0.65
+      },
+      "summary": {
+        "pass": 0,
+        "warn": 9,
+        "block": 3,
+        "unknown": 0
+      }
+    },
+    "sandbox_calibration": {
+      "group_count": 4
+    },
+    "policy_calibration": {
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/results/memory/universal_pipeline_calibration_v1/policy_risk_calibration.json",
+      "group_count": 8
+    }
+  }
+}

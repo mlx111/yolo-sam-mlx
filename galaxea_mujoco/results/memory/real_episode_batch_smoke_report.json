@@ -1,0 +1,26 @@
+{
+  "imported_count": 2,
+  "entries": [
+    {
+      "universal_experience_id": "real_ep_001",
+      "source": "pseudo_real",
+      "backend": "real_robot",
+      "robot_type": "mobile_dual_arm",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "success": true,
+      "memory_partition": "real_memory"
+    },
+    {
+      "universal_experience_id": "real_ep_002",
+      "source": "pseudo_real",
+      "backend": "real_robot",
+      "robot_type": "unknown_robot",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "success": false,
+      "memory_partition": "failed_memory"
+    }
+  ],
+  "output": "results/memory/universal_experience_real_batch_smoke.json"
+}

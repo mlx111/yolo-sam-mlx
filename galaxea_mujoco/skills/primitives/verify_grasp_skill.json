@@ -1,0 +1,14 @@
+{
+  "name": "verify_grasp",
+  "description": "Verify whether an object remains near the selected TCP and optionally moved upward enough.",
+  "parameters": {
+    "side": "Required. left or right.",
+    "object_x/object_y/object_z": "Object position in MuJoCo world coordinates.",
+    "object_body": "Optional MuJoCo body name used instead of explicit object position.",
+    "object_site": "Optional MuJoCo site name used instead of explicit object position.",
+    "object_geom": "Optional MuJoCo geom name used instead of explicit object position.",
+    "max_grasp_distance": "Required maximum object-to-TCP distance for success.",
+    "initial_object_z": "Optional object z before lift.",
+    "min_lift": "Required upward object movement threshold when initial_object_z is provided."
+  }
+}

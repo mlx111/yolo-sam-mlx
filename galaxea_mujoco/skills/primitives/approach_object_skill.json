@@ -1,0 +1,16 @@
+{
+  "name": "approach_object",
+  "description": "Move one hand TCP downward from pregrasp to the grasp pose near an object with optional explicit end-effector orientation.",
+  "parameters": {
+    "side": "Required. left or right.",
+    "object_x/object_y/object_z": "Object position in MuJoCo world coordinates.",
+    "object_body": "Optional MuJoCo body name used instead of explicit object position.",
+    "object_site": "Optional MuJoCo site name used instead of explicit object position.",
+    "object_geom": "Optional MuJoCo geom name used instead of explicit object position.",
+    "grasp_offset_x/grasp_offset_y/grasp_offset_z": "Required offset from object center to grasp TCP target.",
+    "target_quat_wxyz": "Optional explicit TCP target orientation as quaternion [w, x, y, z]. Overrides lock_orientation/current orientation.",
+    "lock_orientation": "If true and no explicit orientation is provided, preserve current TCP orientation during the move.",
+    "orientation_weight": "Pose IK orientation weight when target orientation is used.",
+    "orientation_threshold": "Orientation success threshold in radians."
+  }
+}

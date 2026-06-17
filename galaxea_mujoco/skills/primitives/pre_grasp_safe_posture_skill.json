@@ -1,0 +1,33 @@
+{
+  "name": "pre_grasp_safe_posture",
+  "description": "Move the upper body into a conservative seed posture before solving physical pregrasp IK.",
+  "default_posture": "left_pregrasp_seed",
+  "postures": {
+    "left_pregrasp_seed": [
+      0.0, 0.0, 0.0, 0.0,
+      0.0, 0.35, 0.0, -0.45, 0.0, 0.18, 0.0,
+      0.0, -0.45, 0.0, -0.55, 0.0, 0.16, 0.0
+    ],
+    "right_pregrasp_seed": [
+      0.0, 0.0, 0.0, 0.0,
+      0.0, 0.45, 0.0, -0.55, 0.0, 0.16, 0.0,
+      0.0, -0.35, 0.0, -0.45, 0.0, 0.18, 0.0
+    ],
+    "neutral_seed": [
+      0.0, 0.0, 0.0, 0.0,
+      0.0, 0.25, 0.0, -0.35, 0.0, 0.12, 0.0,
+      0.0, -0.25, 0.0, -0.35, 0.0, 0.12, 0.0
+    ]
+  },
+  "control_defaults": {
+    "steps": 1800,
+    "settle_steps": 800,
+    "max_joint_step": 0.004,
+    "fail_threshold": 0.08,
+    "direct_qpos": false
+  },
+  "parameters": {
+    "posture": "Named pregrasp seed posture.",
+    "target_qpos": "Optional explicit 18-element torso + left arm + right arm posture."
+  }
+}

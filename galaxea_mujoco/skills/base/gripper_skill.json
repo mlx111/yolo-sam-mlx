@@ -1,0 +1,20 @@
+{
+  "name": "r1pro_gripper",
+  "description": "R1Pro two-finger gripper control for the MuJoCo model.",
+  "commands": {
+    "open": 0.0,
+    "close": 0.025
+  },
+  "joints": [
+    "left_gripper_finger_joint1",
+    "left_gripper_finger_joint2",
+    "right_gripper_finger_joint1",
+    "right_gripper_finger_joint2"
+  ],
+  "actuators": [
+    "left_gripper_finger_joint1_pos",
+    "left_gripper_finger_joint2_pos",
+    "right_gripper_finger_joint1_pos",
+    "right_gripper_finger_joint2_pos"
+  ]
+}

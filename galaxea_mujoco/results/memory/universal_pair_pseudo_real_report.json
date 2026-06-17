@@ -1,0 +1,21 @@
+{
+  "input": "results/memory/universal_experience_with_pseudo_real.json",
+  "output": "results/memory/universal_experience_with_pseudo_real_paired.json",
+  "entry_count": 8,
+  "pair_count": 1,
+  "pairs": [
+    {
+      "pair_id": "pair_5ce7747b5980",
+      "sim_experience_id": "exp_5a0bab782613",
+      "real_experience_id": "pseudo_real_g4_place_occupied_v1",
+      "paired_by": "plan_signature",
+      "pair_score": 1.0,
+      "gap_score": 1.0,
+      "validation_status": "paired",
+      "created_at": "2026-06-12T11:57:03Z",
+      "updated_at": "2026-06-12T11:57:03Z",
+      "gap_type": "sim_success_real_fail",
+      "gap_uncertainty": 0.5
+    }
+  ]
+}

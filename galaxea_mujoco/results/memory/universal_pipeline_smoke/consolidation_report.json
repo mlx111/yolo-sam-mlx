@@ -1,0 +1,29 @@
+{
+  "input_count": 4,
+  "output_count": 4,
+  "removed_count": 0,
+  "merged_group_count": 0,
+  "merged_groups": [],
+  "decisions": [
+    {
+      "experience_id": "exp_6f75b5ae8f68",
+      "decision": "preserve",
+      "reason": "unique_low_risk_success"
+    },
+    {
+      "experience_id": "exp_61d07337bd53",
+      "decision": "preserve",
+      "reason": "unique_low_risk_success"
+    },
+    {
+      "experience_id": "exp_c17856dec4d1",
+      "decision": "preserve",
+      "reason": "unique_low_risk_success"
+    },
+    {
+      "experience_id": "exp_1ee29db914dc",
+      "decision": "preserve",
+      "reason": "unique_low_risk_success"
+    }
+  ]
+}

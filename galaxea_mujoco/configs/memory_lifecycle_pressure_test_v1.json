@@ -1,0 +1,11 @@
+{
+  "input": "results/memory/universal_pipeline_calibration_v1/universal_experience_library.json",
+  "output_dir": "results/memory/lifecycle_pressure_test_v1",
+  "low_value_copies": 6,
+  "hot_success_copies": 2,
+  "hot_retrieval_count": 5,
+  "stm_capacity": 10,
+  "min_retrieval_count": 3,
+  "min_write_score": 0.65,
+  "evict_batch_size": 999
+}

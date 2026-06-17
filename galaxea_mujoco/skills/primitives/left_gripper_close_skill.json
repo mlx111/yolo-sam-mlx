@@ -1,0 +1,14 @@
+{
+  "name": "left_gripper_close",
+  "description": "Close the left R1Pro gripper. The actual gripper control mode is decided by the active control profile.",
+  "side": "left",
+  "command": "close",
+  "gripper_steps": 240,
+  "direct_qpos": false,
+  "attach_on_close": false,
+  "parameters": {
+    "gripper_steps": "Number of MuJoCo steps to hold the close command.",
+    "direct_qpos": "If true, also write gripper qpos directly. The active control profile may override this.",
+    "attach_on_close": "Only honored in direct_qpos debug mode. Physical actuator mode skips attachment."
+  }
+}

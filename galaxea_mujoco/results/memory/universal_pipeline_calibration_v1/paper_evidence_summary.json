@@ -1,0 +1,521 @@
+{
+  "schema_version": "paper_evidence_summary_v1",
+  "report_dir": "results/memory/universal_pipeline_calibration_v1",
+  "claim_count": 24,
+  "supported_claim_count": 23,
+  "missing_report_count": 0,
+  "claims": [
+    {
+      "claim": "Unified experience memory stores simulation and pseudo-real episodes with gap/calibration fields.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/summary_report.json",
+      "key_metrics": {
+        "entry_count": 12,
+        "source_distribution": {
+          "pseudo_real": 8,
+          "simulation": 4
+        },
+        "gap_count": 4,
+        "calibration_count": 4
+      },
+      "safe_wording": "The memory library stores simulation and pseudo-real experiences using a unified schema with gap and calibration fields.",
+      "avoid_wording": "Do not claim true real-robot validation from this report."
+    },
+    {
+      "claim": "Real-format import and pseudo-real evidence exercise sim-real pair, gap, and sandbox calibration paths.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/real_format_evidence_pack.json",
+      "key_metrics": {
+        "real_format_entry_count": 8,
+        "pseudo_real_entry_count": 8,
+        "sim_entry_count": 4,
+        "paired_gap_count": 4,
+        "sim_real_gap_count": 4,
+        "sensor_gap_entry_count": 0,
+        "calibration_id_count": 4,
+        "calibration_with_object_pose_bias_count": 4,
+        "sandbox_calibration_application_count": 4
+      },
+      "safe_wording": "The implementation supports real-format episode import and uses pseudo-real evidence to exercise sim-real pairing, gap extraction, and sandbox calibration, and shows calibration consumed by sandbox rollout reports.",
+      "avoid_wording": "Do not claim real-robot validation or real-robot success-rate improvement unless true real-source execution reports are added."
+    },
+    {
+      "claim": "Shared real-format memory stores RGB-D, lidar, and wrist-force evidence and can derive conservative sensor-gap summaries.",
+      "status": "partial",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/real_format_evidence_pack.json",
+      "key_metrics": {
+        "sensor_evidence_entry_count": 0,
+        "rgbd_evidence_entry_count": 0,
+        "lidar_evidence_entry_count": 0,
+        "wrist_force_evidence_entry_count": 0,
+        "sensor_modality_distribution": {},
+        "sensor_gap_entry_count": 0
+      },
+      "safe_wording": "The implementation supports real-format sensor evidence fields for RGB-D, lidar, and wrist-force observations, and can derive conservative sensor-gap summaries from those stored observations.",
+      "avoid_wording": "Do not claim real-robot success-rate improvement or validated sensor-derived calibration effects from this row alone."
+    },
+    {
+      "claim": "Candidate plans can be shadow-rolled out in sandbox and scored before selection.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/sandbox_rollout_g4_place_occupied.json",
+      "key_metrics": {
+        "candidate_count": 4,
+        "selected_before_sandbox": "g4_avoid_occupied_primary",
+        "selected_after_sandbox": "g4_avoid_occupied_primary",
+        "candidate_changed_by_sandbox": false,
+        "critic_status_counts": {
+          "pass": 4
+        }
+      },
+      "safe_wording": "Candidate plans are shadow-executed in MuJoCo and fused with memory scores before selection.",
+      "avoid_wording": "Do not claim a full digital twin or real-world execution success."
+    },
+    {
+      "claim": "Stage-aware retrieval renders planner context separating generation, ranking, rewrite, and writeback evidence.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/stage_planner_context_g4.json",
+      "key_metrics": {
+        "context_count": 1,
+        "stage_context_token_count_avg": 252.0,
+        "stage_context_distinct_memory_count_avg": 6.0,
+        "stage_specificity_score_avg": 0.7056,
+        "risk_evidence_count_total": 2,
+        "critic_warning_count_total": 4
+      },
+      "safe_wording": "Planner context is assembled from stage-specific memory evidence separating positive examples, risk priors, critic evidence, and writeback histories.",
+      "avoid_wording": "Do not claim a learned multi-stage planner."
+    },
+    {
+      "claim": "Visual keyframes are used as an auxiliary retrieval signal during candidate ranking.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/visual_retrieval_ablation_g3_clean.json; results/memory/universal_pipeline_calibration_v1/visual_retrieval_ablation_g4_place_occupied.json",
+      "key_metrics": {
+        "visual_index.indexed_entry_count": 12,
+        "visual_index.indexed_image_count": 60,
+        "g3.selected_candidate_before_visual": "g3_default",
+        "g3.selected_candidate_after_visual": "g3_place_first",
+        "g3.selected_candidate_change": true,
+        "g3.retrieval_changed_rate": 0.3333,
+        "g4.candidate_score_delta_avg": 0.0882,
+        "g4.candidate_score_delta_max": 0.1396
+      },
+      "safe_wording": "Visual keyframes are indexed and used as an auxiliary retrieval signal during candidate ranking.",
+      "avoid_wording": "Do not claim broad multimodal semantic reasoning."
+    },
+    {
+      "claim": "Gap-derived calibration changes sandbox initial state and contributes an explicit risk penalty.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/sandbox_calibration_ablation_g4_place_occupied.json",
+      "key_metrics": {
+        "candidate_id": "g4_avoid_occupied_primary",
+        "object_start_delta_score_only_vs_no_calibration": 0.0,
+        "object_start_delta_full_vs_no_calibration": 0.12,
+        "sandbox_score_delta_score_only_vs_no_calibration": 0.0,
+        "sandbox_score_delta_full_vs_no_calibration": 0.0,
+        "raw_sandbox_score_delta_score_only_vs_no_calibration": -0.12,
+        "raw_sandbox_score_delta_full_vs_no_calibration": -0.12,
+        "critic_status_delta_score_only": "pass->pass",
+        "critic_status_delta_full": "pass->pass",
+        "critic_risk_delta_score_only": 0.0,
+        "critic_risk_delta_full": 0.0,
+        "calibration_risk_penalty_score_only": 0.12,
+        "calibration_risk_penalty_full": 0.12,
+        "selected_variant_without_calibration": "sandbox_no_calibration",
+        "selected_variant_with_full_calibration": "sandbox_pose_and_score_calibration",
+        "selected_candidate_delta": false,
+        "nominal_object_start": [
+          0.16,
+          0.0,
+          0.805
+        ],
+        "calibrated_object_start": [
+          0.2,
+          0.04,
+          0.765
+        ],
+        "object_pose_bias": [
+          0.04,
+          0.04,
+          -0.04
+        ]
+      },
+      "safe_wording": "Gap-derived calibration changes sandbox initialization and contributes an explicit risk penalty during candidate evaluation.",
+      "avoid_wording": "Do not claim dynamics, friction, or full contact-model calibration; this ablation covers object initial-state shift and score penalty."
+    },
+    {
+      "claim": "LLM-generated lessons are audited for grounding, validity, concision, and conflicts before policy use.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/lesson_quality_report_g4_place_occupied.json",
+      "key_metrics": {
+        "lesson_count": 1,
+        "avg_lesson_length": 7,
+        "max_lesson_length": 7,
+        "avg_field_length": 4.5,
+        "max_field_length": 7,
+        "evidence_id_valid_rate": 1.0,
+        "candidate_id_valid_rate": 1.0,
+        "skill_reference_valid_rate": 1.0,
+        "duplicate_lesson_count": 0,
+        "conflict_pair_count": 0,
+        "template_like_phrase_count": 0,
+        "actionable_lesson_rate": 1.0,
+        "concise_lesson_rate": 1.0,
+        "confidence_avg": 0.8
+      },
+      "safe_wording": "Generated lessons are checked for evidence grounding, candidate/skill validity, concision, and internal conflicts before being used for policy adjustment.",
+      "avoid_wording": "This is a static quality audit for generated lessons, not proof of learned policy rules."
+    },
+    {
+      "claim": "Sandbox critic identifies risky candidates and increases safety evidence under stress variants.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/safety_stress_g4_place_occupied.json",
+      "key_metrics": {
+        "memory_sandbox_critic.risky_candidate_selected_rate": 0.0,
+        "memory_sandbox_critic.safe_candidate_selected_rate": 1.0,
+        "memory_sandbox_critic.risky_warn_or_block_rate": 1.0,
+        "memory_sandbox_critic.critic_warn_rate_avg": 0.2,
+        "full_stage_lesson_sandbox.risky_candidate_selected_rate": 0.0,
+        "full_stage_lesson_sandbox.safe_candidate_selected_rate": 1.0,
+        "full_stage_lesson_sandbox.risky_warn_or_block_rate": 1.0,
+        "full_stage_lesson_sandbox.critic_warn_rate_avg": 0.2
+      },
+      "safe_wording": "The sandbox critic identifies unsafe candidates and increases the safety margin in stress reports.",
+      "avoid_wording": "Do not claim selection changed if memory-only already selected a safe candidate."
+    },
+    {
+      "claim": "Under adversarial ranking stress, sandbox critic redirects selection away from artificially boosted risky candidates.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/harder_safety_stress_g4_place_occupied.json",
+      "key_metrics": {
+        "memory_only_risky_selected_count": 4,
+        "sandbox_prevented_risky_selection_count": 4,
+        "sandbox_prevented_risky_selection_rate": 1.0,
+        "selection_changed_by_sandbox_count": 4,
+        "sandbox_risky_selected_count": 0
+      },
+      "safe_wording": "Under adversarial ranking stress with artificially boosted risky candidates, sandbox critic can redirect selection away from the risky candidate.",
+      "avoid_wording": "This stress test uses artificial ranking perturbations; do not claim the same selection change occurs in the unperturbed policy."
+    },
+    {
+      "claim": "Closed-loop writeback stores executed experiences and retrieves them in later ranking passes.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/writeback_benchmark_g3_clean.json",
+      "key_metrics": {
+        "round_count": 3,
+        "write_count": 3,
+        "entry_count_delta": 2,
+        "new_memory_retrieval_rate": 1.0,
+        "selected_candidate_change_rate": 0.3333,
+        "score_delta_after_writeback_avg": 0.0273,
+        "risk_delta_after_writeback_avg": -0.0471
+      },
+      "safe_wording": "Newly executed experiences can be written back and retrieved by later candidate ranking passes.",
+      "avoid_wording": "Do not claim statistically proven long-horizon success-rate improvement."
+    },
+    {
+      "claim": "The experience library represents multiple robot memory types rather than only flat episode logs.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/memory_type_coverage_report.json",
+      "key_metrics": {
+        "entry_count": 12,
+        "covered_memory_type_count_avg": 5.6667,
+        "entries_covering_all_memory_types": 8,
+        "entries_covering_all_memory_types_rate": 0.6667,
+        "temporal_memory.coverage_rate": 1.0,
+        "spatial_memory.coverage_rate": 1.0,
+        "episodic_memory.coverage_rate": 1.0,
+        "semantic_memory.coverage_rate": 1.0,
+        "perceptual_memory.coverage_rate": 1.0,
+        "sim_real_gap_memory.coverage_rate": 0.6667
+      },
+      "safe_wording": "The experience library stores multi-type robot memories, with temporal, spatial, episodic, semantic, perceptual, and sim-real gap evidence represented by explicit fields.",
+      "avoid_wording": "Do not claim broad RoboMME-scale coverage or real-robot sensor validation from this report; the report measures field-level coverage in the current library."
+    },
+    {
+      "claim": "Text-semantic summaries provide an auxiliary retrieval signal over structured experience fields.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/text_semantic_memory_report.json",
+      "key_metrics": {
+        "entry_count": 12,
+        "semantic_summary_nonempty_count": 12,
+        "semantic_summary_nonempty_rate": 1.0,
+        "avg_token_count": 148.75,
+        "semantic_signal_rate": 1.0,
+        "query_count": 9,
+        "same_scenario_topk_match_count": 31,
+        "cross_condition_topk_match_count": 36,
+        "query_token_coverage": {
+          "scenario": 12,
+          "condition": 12,
+          "task": 12,
+          "anomaly": 2,
+          "failure": 6,
+          "critic": 12,
+          "gap": 8,
+          "plan": 12
+        }
+      },
+      "safe_wording": "The system constructs explicit text-semantic summaries from scenario, condition, task, anomaly, failure taxonomy, critic, gap, and retrieval-key fields, and uses TF-IDF vectors indexed by FAISS as an auxiliary semantic retrieval signal.",
+      "avoid_wording": "Do not claim this is a learned language encoder or neural embedding benchmark; the report measures lightweight TF-IDF + FAISS semantic retrieval only."
+    },
+    {
+      "claim": "Real LLM-generated recovery-plan candidates can be semantically validated, sandboxed in parallel, critic-ranked, and exported as a validated robot plan.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/llm_plan_candidate_search_g3_clean_real_llm_report.json",
+      "key_metrics": {
+        "dry_run_llm": false,
+        "llm_provider": "doubao",
+        "num_plans_requested": 2,
+        "num_plans_normalized": 2,
+        "sandboxed_plan_count": 2,
+        "failed_worker_count": 0,
+        "final_sandbox_status": "accept",
+        "selected_plan_index": 0,
+        "rollouts_per_minute": 1.2069,
+        "search_status_counts": {
+          "accept": 2
+        },
+        "semantic_status_counts": {
+          "pass": 2
+        },
+        "critic_status_counts": {
+          "pass": 2
+        },
+        "dry_run_executor_status": "executed",
+        "dry_run_executor_success": true
+      },
+      "safe_wording": "A configured external LLM generated multiple recovery-plan candidates; the system normalized them, validated skill preconditions/effects, ran parallel MuJoCo sandbox rollouts, ranked by critic/sandbox status, and exported a validated_robot_plan for dry-run dispatch.",
+      "avoid_wording": "Do not claim real-robot execution success, arbitrary unseen-skill planning, or statistically proven superiority over all single-plan baselines."
+    },
+    {
+      "claim": "Multi-candidate LLM plan search evaluates more recovery alternatives than a single-plan LLM baseline before selecting a validated plan.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/llm_plan_search_ablation_g3_clean_real_llm.json",
+      "key_metrics": {
+        "plan_count_delta": 1,
+        "sandboxed_plan_count_delta": 1,
+        "accepted_plan_count_delta": 1,
+        "best_sandbox_score_delta": 0.0,
+        "unique_step_sequence_delta": 1,
+        "single_final_status": "accept",
+        "multi_final_status": "accept",
+        "single_plan_real_llm.plan_count": 1,
+        "single_plan_real_llm.sandboxed_plan_count": 1,
+        "single_plan_real_llm.accepted_plan_count": 1,
+        "single_plan_real_llm.review_plan_count": 0,
+        "single_plan_real_llm.rejected_plan_count": 0,
+        "single_plan_real_llm.best_sandbox_score": 1.0,
+        "single_plan_real_llm.candidate_diversity_unique_step_sequences": 1,
+        "single_plan_real_llm.failed_worker_count": 0,
+        "single_plan_real_llm.final_sandbox_status": "accept",
+        "multi_plan_real_llm_parallel_sandbox.plan_count": 2,
+        "multi_plan_real_llm_parallel_sandbox.sandboxed_plan_count": 2,
+        "multi_plan_real_llm_parallel_sandbox.accepted_plan_count": 2,
+        "multi_plan_real_llm_parallel_sandbox.review_plan_count": 0,
+        "multi_plan_real_llm_parallel_sandbox.rejected_plan_count": 0,
+        "multi_plan_real_llm_parallel_sandbox.best_sandbox_score": 1.0,
+        "multi_plan_real_llm_parallel_sandbox.candidate_diversity_unique_step_sequences": 2,
+        "multi_plan_real_llm_parallel_sandbox.failed_worker_count": 0,
+        "multi_plan_real_llm_parallel_sandbox.final_sandbox_status": "accept"
+      },
+      "safe_wording": "The multi-candidate search evaluates more LLM-generated recovery alternatives than a single-plan baseline, runs valid candidates through parallel sandbox rollout, and selects a critic-approved validated plan.",
+      "avoid_wording": "Do not claim a success-rate improvement from this small G3 clean ablation alone; both variants succeeded in the current smoke."
+    },
+    {
+      "claim": "Field-atomic execution experiences are converted into parameter priors for later LLM planning.",
+      "status": "supported",
+      "primary_report": "/tmp/field_atomic_memory_report.json",
+      "key_metrics": {
+        "field_atomic_entry_count": 3,
+        "field_atomic_success_count": 3,
+        "field_atomic_failure_count": 0,
+        "prior_action_count": 0
+      },
+      "safe_wording": "The system stores successful and failed field atomic experiences and uses them as explicit parameter priors for later planning.",
+      "avoid_wording": "Do not claim this proves improved real-robot success without a real-robot ablation."
+    },
+    {
+      "claim": "Cold-start and writeback rounds show whether field-atomic memory is exposed to the planner as explicit context.",
+      "status": "supported",
+      "primary_report": "/tmp/field_atomic_ablation.json",
+      "key_metrics": {
+        "dry_run_llm": true,
+        "cold_memory_count": 0,
+        "warm_memory_count": 3,
+        "warm_prior_action_count": 3,
+        "parameter_changed_count": 0,
+        "action_set_changed": false,
+        "cold_write_count": 3,
+        "warm_write_count": 3
+      },
+      "safe_wording": "Field atomic writeback can be reloaded as explicit planner_input priors in a subsequent planning round.",
+      "avoid_wording": "Do not claim parameter improvement from dry-run LLM if the mock plan is deterministic; use real LLM or varied goals for parameter-change evidence."
+    },
+    {
+      "claim": "Field-atomic execution traces expose action-level tracking error, gripper commands, and direct-qpos usage for debugging.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/field_atomic_trace_summary.json",
+      "key_metrics": {
+        "trace_count": 10,
+        "action_count": 5,
+        "success_count": 10,
+        "failure_count": 0,
+        "direct_qpos_true_count": 0,
+        "direct_qpos_false_count": 10,
+        "final_error": {
+          "count": 4,
+          "min": 0.001971,
+          "median": 0.001998,
+          "mean": 0.001998,
+          "max": 0.002026
+        },
+        "action_kind_counts": {
+          "base": 2,
+          "torso": 2,
+          "gripper": 2,
+          "sensor": 4
+        }
+      },
+      "safe_wording": "Field-atomic executions expose action-level trace summaries, including final tracking error, gripper command, control mode, and direct-qpos usage for onsite debugging.",
+      "avoid_wording": "Do not claim these summaries prove real-robot tracking accuracy; they summarize MuJoCo or stored experience traces only."
+    },
+    {
+      "claim": "Rewrite-loop ablation reports separate supported component evidence from missing true sequential LLM rewrite evidence.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/rewrite_loop_ablation_report.json",
+      "key_metrics": {
+        "variant_count": 5,
+        "status_counts": {
+          "supported": 5
+        },
+        "sequential_rewrite_report_count": 1,
+        "has_single_plan_baseline": true,
+        "has_multi_candidate_critic_ranking": true,
+        "has_sequential_critic_feedback_rewrite": true,
+        "has_failure_memory_ranking_evidence": true,
+        "has_parameter_prior_evidence": true,
+        "has_true_sequential_rewrite_evidence": true,
+        "has_successful_sequential_rewrite_evidence": false,
+        "single_plan_no_feedback.rewrite_rounds": 0,
+        "single_plan_no_feedback.final_sandbox_status": "accept",
+        "sequential_critic_feedback_rewrite.rewrite_rounds": 1,
+        "sequential_critic_feedback_rewrite.final_sandbox_status": "reject",
+        "sequential_critic_feedback_rewrite.critic_feedback_history_count": 2,
+        "sequential_critic_feedback_rewrite.sandbox_status_changed": false,
+        "multi_candidate_critic_ranking.final_sandbox_status": "accept",
+        "multi_candidate_critic_ranking.sandboxed_plan_count": 2,
+        "critic_plus_failure_memory.changed_rate": 0.375,
+        "critic_plus_failure_memory.failure_evidence_count": 17,
+        "critic_failure_memory_parameter_priors.warm_memory_count": 3,
+        "critic_failure_memory_parameter_priors.warm_prior_action_count": 3,
+        "critic_failure_memory_parameter_priors.parameter_changed_count": 0
+      },
+      "safe_wording": "Existing reports support single-plan validation, multi-candidate critic ranking, memory-backed risk evidence, field-atomic parameter-prior exposure, and a dry-run sequential critic-feedback rewrite attempt.",
+      "avoid_wording": "Do not claim critic-feedback rewriting improves recovery unless the underlying report has rewrite_rounds > 0 and final_sandbox_status=accept under a real LLM or clearly stated dry-run setting."
+    },
+    {
+      "claim": "Physical sandbox rollouts can sweep control and scene perturbations to expose sensitivity to pose, delay, gain, and gripper effects.",
+      "status": "supported",
+      "primary_report": "/tmp/physical_sandbox_perturbation_report.json",
+      "key_metrics": {
+        "rollout_count": 6,
+        "success_count": 0,
+        "task_success_count": 6,
+        "failure_label_counts": {
+          "object_not_lifted": 6,
+          "skill_failed:verify_grasp": 6,
+          "verify_grasp": 6
+        },
+        "nominal.success_rate": 0.0,
+        "nominal.success_rate_delta_vs_nominal": 0.0,
+        "pose_noise_x_plus_2cm.success_rate": 0.0,
+        "pose_noise_x_plus_2cm.success_rate_delta_vs_nominal": 0.0,
+        "pose_noise_y_plus_2cm.success_rate": 0.0,
+        "pose_noise_y_plus_2cm.success_rate_delta_vs_nominal": 0.0,
+        "control_delay_3_steps.success_rate": 0.0,
+        "control_delay_3_steps.success_rate_delta_vs_nominal": 0.0,
+        "low_gain_0_75.success_rate": 0.0,
+        "low_gain_0_75.success_rate_delta_vs_nominal": 0.0,
+        "gripper_underclose_1cm.success_rate": 0.0,
+        "gripper_underclose_1cm.success_rate_delta_vs_nominal": 0.0
+      },
+      "safe_wording": "The physical MuJoCo sandbox can sweep pose, delay, gain, and gripper perturbations and report which failures are sensitive to those controls.",
+      "avoid_wording": "Do not claim real-driver calibration or real-robot robustness without measured hardware response data."
+    },
+    {
+      "claim": "Core skill defaults are audited to prefer physical actuator execution over direct-qpos shortcuts.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/physical_default_audit_report.json",
+      "key_metrics": {
+        "file_count": 26,
+        "direct_qpos_true_total": 0,
+        "direct_qpos_false_total": 20
+      },
+      "safe_wording": "Core base, torso, arm, gripper, and field atomic defaults have been audited to prefer physical control over direct-qpos shortcuts.",
+      "avoid_wording": "Do not claim that every explicit debug or test path is physical-only; the audit concerns defaults, not every possible parameter override."
+    },
+    {
+      "claim": "Memory writeback is auditable through explicit write, skip, merge, and reject decisions.",
+      "status": "supported",
+      "primary_report": "/tmp/write_policy_audit_report.json",
+      "key_metrics": {
+        "entry_count": 3,
+        "decision_counts": {
+          "write": 3
+        },
+        "reason_counts": {
+          "preserve_field_atomic_experience": 3
+        },
+        "preserved_reason_counts": {
+          "preserve_field_atomic_experience": 3
+        },
+        "memory_role_counts": {
+          "field_atomic_success": 3
+        }
+      },
+      "safe_wording": "The write policy is auditable: each candidate entry receives an explicit write, skip, merge, or reject decision with a reason.",
+      "avoid_wording": "Do not claim the write policy is learned or globally optimal; it is an explicit engineering gate."
+    },
+    {
+      "claim": "Write-policy pressure tests exercise all lifecycle decisions: write, merge, skip, and reject.",
+      "status": "supported",
+      "primary_report": "results/memory/universal_pipeline_calibration_v1/write_policy_pressure_report.json",
+      "key_metrics": {
+        "case_count": 6,
+        "stored_library_entry_count": 3,
+        "decision_counts": {
+          "write": 3,
+          "merge": 1,
+          "skip": 1,
+          "reject": 1
+        },
+        "reason_counts": {
+          "preserve_failure_taxonomy": 1,
+          "preserve_field_atomic_experience": 1,
+          "accepted": 1,
+          "duplicate_low_risk_success": 1,
+          "low_value_success": 1,
+          "missing_required_fields": 1
+        },
+        "expected_decisions_present": {
+          "write": true,
+          "merge": true,
+          "skip": true,
+          "reject": true
+        }
+      },
+      "safe_wording": "A deterministic pressure test constructs representative experiences that trigger write, merge, skip, and reject decisions, showing that writeback is not a plain append-only log.",
+      "avoid_wording": "Do not claim the handcrafted pressure cases prove optimal memory lifecycle policy."
+    },
+    {
+      "claim": "Runtime scene observations have a fixed schema for converting onsite RGB-D/LiDAR outputs into sandbox scene construction inputs.",
+      "status": "supported",
+      "primary_report": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/experience_system/templates/field_runtime_scene_observation_template.json",
+      "key_metrics": {
+        "schema_exists": true
+      },
+      "safe_wording": "The implementation defines a field runtime observation template for converting onsite perception outputs into sandbox scene inputs.",
+      "avoid_wording": "Do not claim automatic high-fidelity scene reconstruction until real perception outputs are mapped and validated onsite."
+    }
+  ]
+}

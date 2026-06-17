@@ -1,0 +1,12 @@
+{
+  "name": "open_gripper_release",
+  "description": "Release a grasped object by opening the selected gripper and settling briefly.",
+  "parameters": {
+    "side": "left or right gripper.",
+    "gripper_steps": "Number of MuJoCo steps to ramp the open command.",
+    "settle_steps": "Number of MuJoCo steps to settle after opening."
+  },
+  "gripper_steps": 360,
+  "settle_steps": 240,
+  "direct_qpos": false
+}

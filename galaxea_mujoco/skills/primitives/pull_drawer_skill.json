@@ -1,0 +1,18 @@
+{
+  "name": "pull_drawer",
+  "description": "Open a drawer by commanding its slide joint position actuator.",
+  "joint_name": "drawer_slide_joint",
+  "actuator_name": "drawer_slide_joint_pos",
+  "target_open": 0.25,
+  "steps": 500,
+  "settle_steps": 120,
+  "tolerance": 0.02,
+  "parameters": {
+    "joint_name": "Drawer slide joint name.",
+    "actuator_name": "Drawer position actuator name.",
+    "target_open": "Target slide displacement.",
+    "steps": "Command ramp steps.",
+    "settle_steps": "Hold steps after ramp.",
+    "tolerance": "Allowed final joint error."
+  }
+}

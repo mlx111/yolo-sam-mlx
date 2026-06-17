@@ -1,0 +1,20 @@
+{
+  "name": "recover_from_contact",
+  "description": "Recover from contact by retreating the selected TCP along a world-frame vector.",
+  "default_retreat": [0.0, 0.0, 0.08],
+  "control_defaults": {
+    "servo_steps": 1200,
+    "settle_steps": 500,
+    "fail_threshold": 0.04,
+    "orientation_weight": 0.02,
+    "orientation_threshold": 1.0,
+    "max_cart_step": 0.006,
+    "max_joint_step": 0.012,
+    "runtime_damping": 50.0,
+    "runtime_armature": 0.05
+  },
+  "parameters": {
+    "side": "Required. left or right.",
+    "retreat_dx/retreat_dy/retreat_dz": "Optional world-frame retreat vector. Defaults to upward retreat."
+  }
+}

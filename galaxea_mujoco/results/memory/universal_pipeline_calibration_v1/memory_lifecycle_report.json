@@ -1,0 +1,87 @@
+{
+  "input_count": 12,
+  "stm_capacity": 30,
+  "initialized": 12,
+  "promoted": [
+    "exp_bbed526ab28b",
+    "exp_ddaf34a39edc",
+    "exp_6a115cd94118",
+    "exp_b7fb782456f2",
+    "pseudo_real_g3_clean_success_001",
+    "pseudo_real_g3_grasp_miss_001",
+    "pseudo_real_g3_grasp_slip_001",
+    "pseudo_real_g3_place_occupied_success_001",
+    "pseudo_real_g4_clean_success_001",
+    "pseudo_real_g4_dual_arm_mismatch_001",
+    "pseudo_real_g4_place_occupied_failure_001",
+    "pseudo_real_g4_transport_collision_001"
+  ],
+  "evicted": [],
+  "preserved": [],
+  "decisions": [
+    {
+      "experience_id": "exp_bbed526ab28b",
+      "decision": "promote",
+      "reason": "validated_success"
+    },
+    {
+      "experience_id": "exp_ddaf34a39edc",
+      "decision": "promote",
+      "reason": "validated_success"
+    },
+    {
+      "experience_id": "exp_6a115cd94118",
+      "decision": "promote",
+      "reason": "validated_success"
+    },
+    {
+      "experience_id": "exp_b7fb782456f2",
+      "decision": "promote",
+      "reason": "failure_or_failure_taxonomy"
+    },
+    {
+      "experience_id": "pseudo_real_g3_clean_success_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_miss_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pseudo_real_g3_grasp_slip_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pseudo_real_g3_place_occupied_success_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pseudo_real_g4_clean_success_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pseudo_real_g4_place_occupied_failure_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pseudo_real_g4_transport_collision_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    }
+  ],
+  "output_count": 12,
+  "removed_count": 0,
+  "stm_count": 0,
+  "ltm_count": 12
+}

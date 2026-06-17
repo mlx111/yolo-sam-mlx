@@ -1,0 +1,27 @@
+{
+  "name": "grasp_handle",
+  "description": "Move one TCP to the drawer handle target and close the selected gripper.",
+  "handle_site": "handle_site",
+  "handle_geom": "drawer_handle_collision_geom",
+  "handle_offset": [0.0, 0.0, 0.0],
+  "gripper_steps": 240,
+  "direct_qpos": false,
+  "control_defaults": {
+    "servo_steps": 1800,
+    "settle_steps": 800,
+    "fail_threshold": 0.05,
+    "orientation_weight": 0.01,
+    "orientation_threshold": 1.5,
+    "max_cart_step": 0.006,
+    "max_joint_step": 0.012,
+    "runtime_damping": 50.0,
+    "runtime_armature": 0.05
+  },
+  "parameters": {
+    "side": "Required. left or right.",
+    "handle_site": "Optional handle site name.",
+    "handle_geom": "Optional handle geom fallback.",
+    "handle_offset_x/y/z": "Optional world-frame offset from the handle center.",
+    "gripper_steps": "Number of gripper close steps."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "base_move_to_region",
+  "description": "Move the planar mobile base to a named region or explicit base pose.",
+  "base_skill_config": "skills/base/base_motion_skill.json",
+  "default_region": "table_front",
+  "regions": {
+    "home": [0.0, 0.0, 0.0],
+    "table_front": [-0.35, 0.08, 0.0],
+    "shelf_front": [-0.55, 0.0, 0.0],
+    "place_front": [-0.25, -0.25, 0.0]
+  },
+  "control_defaults": {
+    "steps": 900,
+    "settle_steps": 120,
+    "max_joint_step": 0.01,
+    "fail_threshold": 0.02,
+    "direct_qpos": false
+  },
+  "parameters": {
+    "region": "Named region from the regions map.",
+    "base_x/base_y/base_yaw": "Explicit target base pose.",
+    "target_qpos": "Optional [base_x, base_y, base_yaw] target."
+  }
+}

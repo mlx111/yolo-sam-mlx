@@ -1,0 +1,204 @@
+{
+  "experience_library": "results/memory/universal_pipeline_calibration_v1/universal_experience_library.json",
+  "policy_calibration": "results/memory/universal_pipeline_calibration_v1/policy_risk_calibration.json",
+  "execute": false,
+  "visual_index_dir": "results/memory/universal_pipeline_calibration_v1/visual_index",
+  "query_images": [
+    "results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1/before_task.png"
+  ],
+  "visual_score_count": 2,
+  "comparison_count": 1,
+  "changed_count": 0,
+  "comparisons": [
+    {
+      "scenario": "G3",
+      "condition": "clean",
+      "baseline_candidate": {
+        "candidate_id": "g3_default",
+        "decision": "accept",
+        "candidate_score": 0.8681,
+        "risk_score": 0.4093,
+        "support_score": 1.0,
+        "match_count": 5
+      },
+      "memory_selected_candidate": {
+        "candidate_id": "g3_default",
+        "decision": "accept",
+        "candidate_score": 0.8681,
+        "risk_score": 0.4093,
+        "support_score": 1.0,
+        "match_count": 5
+      },
+      "candidate_changed": false,
+      "score_delta": 0.0,
+      "risk_delta": 0.0,
+      "memory_decision": "accept",
+      "baseline_executed": false,
+      "memory_executed": false,
+      "baseline_success": null,
+      "memory_success": null,
+      "skill_sequence_diff": {
+        "first_difference_index": -1,
+        "baseline_only": [],
+        "memory_only": [],
+        "baseline_length": 11,
+        "memory_length": 11
+      },
+      "baseline_risk_evidence": [
+        {
+          "experience_id": "pseudo_real_g3_clean_success_001",
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "source": "pseudo_real",
+          "success": true,
+          "retrieval_score": 0.6082,
+          "action_overlap": 0.9167,
+          "risk_transfer_weight": 0.9167,
+          "critic_risk": 0.55,
+          "gap_uncertainty": 0.4
+        },
+        {
+          "experience_id": "exp_7631324402d4",
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "source": "simulation",
+          "success": true,
+          "retrieval_score": 0.569,
+          "action_overlap": 1.0,
+          "risk_transfer_weight": 1.0,
+          "critic_risk": 0.55,
+          "gap_uncertainty": 0.4
+        },
+        {
+          "experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "source": "pseudo_real",
+          "success": true,
+          "retrieval_score": 0.4282,
+          "action_overlap": 0.9167,
+          "risk_transfer_weight": 0.2085,
+          "critic_risk": 0.55,
+          "gap_uncertainty": 0.4
+        },
+        {
+          "experience_id": "exp_67fcdaf04d8d",
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "source": "simulation",
+          "success": true,
+          "retrieval_score": 0.3874,
+          "action_overlap": 1.0,
+          "risk_transfer_weight": 0.2275,
+          "critic_risk": 0.55,
+          "gap_uncertainty": 0.4
+        },
+        {
+          "experience_id": "pseudo_real_g3_grasp_miss_001",
+          "scenario_id": "G3",
+          "condition_id": "grasp_miss",
+          "source": "pseudo_real",
+          "success": false,
+          "retrieval_score": 0.2594,
+          "action_overlap": 0.9167,
+          "risk_transfer_weight": 0.2979,
+          "critic_risk": 0.61,
+          "gap_uncertainty": 0.0
+        }
+      ],
+      "memory_risk_evidence": [
+        {
+          "experience_id": "pseudo_real_g3_clean_success_001",
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "source": "pseudo_real",
+          "success": true,
+          "retrieval_score": 0.6082,
+          "action_overlap": 0.9167,
+          "risk_transfer_weight": 0.9167,
+          "critic_risk": 0.55,
+          "gap_uncertainty": 0.4
+        },
+        {
+          "experience_id": "exp_7631324402d4",
+          "scenario_id": "G3",
+          "condition_id": "clean",
+          "source": "simulation",
+          "success": true,
+          "retrieval_score": 0.569,
+          "action_overlap": 1.0,
+          "risk_transfer_weight": 1.0,
+          "critic_risk": 0.55,
+          "gap_uncertainty": 0.4
+        },
+        {
+          "experience_id": "pseudo_real_g3_place_occupied_success_001",
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "source": "pseudo_real",
+          "success": true,
+          "retrieval_score": 0.4282,
+          "action_overlap": 0.9167,
+          "risk_transfer_weight": 0.2085,
+          "critic_risk": 0.55,
+          "gap_uncertainty": 0.4
+        },
+        {
+          "experience_id": "exp_67fcdaf04d8d",
+          "scenario_id": "G3",
+          "condition_id": "place_occupied",
+          "source": "simulation",
+          "success": true,
+          "retrieval_score": 0.3874,
+          "action_overlap": 1.0,
+          "risk_transfer_weight": 0.2275,
+          "critic_risk": 0.55,
+          "gap_uncertainty": 0.4
+        },
+        {
+          "experience_id": "pseudo_real_g3_grasp_miss_001",
+          "scenario_id": "G3",
+          "condition_id": "grasp_miss",
+          "source": "pseudo_real",
+          "success": false,
+          "retrieval_score": 0.2594,
+          "action_overlap": 0.9167,
+          "risk_transfer_weight": 0.2979,
+          "critic_risk": 0.61,
+          "gap_uncertainty": 0.0
+        }
+      ],
+      "visual_scores": {
+        "exp_7631324402d4": 0.9999998807907104,
+        "exp_67fcdaf04d8d": 0.9870388507843018
+      },
+      "visual_weight": 0.12,
+      "candidate_ranking": [
+        {
+          "candidate_id": "g3_default",
+          "decision": "accept",
+          "candidate_score": 0.8681,
+          "risk_score": 0.4093,
+          "support_score": 1.0,
+          "match_count": 5
+        },
+        {
+          "candidate_id": "g3_cautious_place",
+          "decision": "accept",
+          "candidate_score": 0.8654,
+          "risk_score": 0.4187,
+          "support_score": 1.0,
+          "match_count": 5
+        },
+        {
+          "candidate_id": "g3_place_first",
+          "decision": "accept",
+          "candidate_score": 0.853,
+          "risk_score": 0.3609,
+          "support_score": 0.9517,
+          "match_count": 5
+        }
+      ]
+    }
+  ]
+}

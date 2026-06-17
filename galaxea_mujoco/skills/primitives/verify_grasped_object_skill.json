@@ -1,0 +1,12 @@
+{
+  "name": "verify_grasped_object",
+  "description": "Verify that the object near the selected TCP is the expected object.",
+  "max_grasp_distance": 0.08,
+  "parameters": {
+    "side": "left or right. Defaults to left.",
+    "expected_object_body": "Expected MuJoCo body near the TCP.",
+    "expected_label": "Optional semantic label expected near the TCP.",
+    "object_bodies/object_geoms/object_sites": "Optional candidate lists.",
+    "max_grasp_distance": "Maximum object-to-TCP distance for success."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "verify_drawer_open",
+  "description": "Verify that a drawer slide joint is open beyond a threshold.",
+  "joint_name": "drawer_slide_joint",
+  "min_open": 0.18,
+  "parameters": {
+    "joint_name": "Drawer slide joint name.",
+    "min_open": "Minimum slide displacement required for success."
+  }
+}

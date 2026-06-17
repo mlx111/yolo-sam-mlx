@@ -1,0 +1,24 @@
+{
+  "name": "regrasp_deeper",
+  "description": "Move the selected TCP slightly deeper along the approach direction, then close the gripper.",
+  "deeper_distance": 0.025,
+  "gripper_steps": 240,
+  "direct_qpos": false,
+  "control_defaults": {
+    "servo_steps": 1200,
+    "settle_steps": 500,
+    "fail_threshold": 0.04,
+    "orientation_weight": 0.02,
+    "orientation_threshold": 1.0,
+    "max_cart_step": 0.004,
+    "max_joint_step": 0.01,
+    "runtime_damping": 50.0,
+    "runtime_armature": 0.05
+  },
+  "parameters": {
+    "side": "Required. left or right.",
+    "approach_dx/approach_dy/approach_dz": "Required approach direction.",
+    "deeper_distance": "Distance to move deeper along the approach direction.",
+    "gripper_steps": "Number of steps to close the gripper after moving."
+  }
+}

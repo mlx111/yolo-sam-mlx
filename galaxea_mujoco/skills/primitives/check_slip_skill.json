@@ -1,0 +1,14 @@
+{
+  "name": "check_slip",
+  "description": "Detect whether an object has dropped or moved too far from the selected TCP.",
+  "max_drop": 0.03,
+  "max_tcp_distance": 0.10,
+  "parameters": {
+    "side": "Required. left or right.",
+    "object_body/object_geom/object_site": "Object reference.",
+    "previous_object_z": "Optional previous object z height.",
+    "previous_object_pos": "Optional previous object position.",
+    "max_drop": "Maximum allowed downward object motion.",
+    "max_tcp_distance": "Maximum allowed object-to-TCP distance."
+  }
+}

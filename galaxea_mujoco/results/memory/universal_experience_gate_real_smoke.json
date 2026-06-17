@@ -1,0 +1,480 @@
+{
+  "schema_version": "universal_experience_library_v1",
+  "updated_at": "2026-06-12T14:44:19Z",
+  "entry_count": 2,
+  "entries": [
+    {
+      "schema_version": "universal_experience_v1",
+      "experience_id": "real_ep_001",
+      "created_at": "2026-06-12T14:44:19Z",
+      "updated_at": "2026-06-12T14:44:19Z",
+      "source": "pseudo_real",
+      "domain": "real_robot_episode",
+      "backend": "real_robot",
+      "validation_status": "real_executed",
+      "memory_partition": "real_memory",
+      "robot": {
+        "robot_id": "r1pro_real_001",
+        "robot_type": "mobile_dual_arm",
+        "embodiment_tags": [],
+        "backend": "real_robot",
+        "kinematic_groups": {},
+        "end_effectors": {},
+        "mobile_base": {},
+        "torso": {},
+        "grippers": {},
+        "joints": {},
+        "metadata": {}
+      },
+      "embodiment": {},
+      "scenario": {
+        "scenario_id": "G4",
+        "name": ""
+      },
+      "condition": {
+        "condition_id": "place_occupied",
+        "name": ""
+      },
+      "task": {
+        "stage": "place"
+      },
+      "anomaly": {},
+      "skill_sequence": [
+        {
+          "name": "detect-place",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": true,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "action": "detect-place"
+          }
+        },
+        {
+          "name": "choose-alternate-place",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": true,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "action": "choose-alternate-place"
+          }
+        },
+        {
+          "name": "place-object",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": true,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "action": "place-object",
+            "success": true
+          }
+        }
+      ],
+      "action_trace": [],
+      "observation_trace": [],
+      "state_before": {},
+      "state_after": {},
+      "sensor_summary": {
+        "joint_positions": [],
+        "joint_velocities": [],
+        "end_effector_pose": {},
+        "gripper_state": {
+          "left": "open",
+          "right": "open"
+        },
+        "contact_state": {
+          "left": false,
+          "right": false
+        },
+        "force_torque": {},
+        "timestamps": {},
+        "sensor_modalities": [],
+        "raw_refs": {}
+      },
+      "spatial_state": {},
+      "object_state": {
+        "objects": {
+          "target_cube": {
+            "observed_position": [
+              0.1,
+              0.2,
+              0.3
+            ]
+          }
+        },
+        "target_object": "target_cube",
+        "object_class": "cube",
+        "spatial_relations": [],
+        "support_relations": [],
+        "occupancy": {},
+        "metadata": {}
+      },
+      "result": {
+        "success": true,
+        "recovery_success": true,
+        "task_success": true,
+        "failure_reason": "",
+        "attempt_count": 1
+      },
+      "execution_feedback": {},
+      "key_slices": [],
+      "keyframes": [
+        {
+          "stage": "before",
+          "image_path": "/tmp/real_episode_batch_smoke/ep1/keyframes/before_recovery.jpg"
+        },
+        {
+          "stage": "after",
+          "image_path": "/tmp/real_episode_batch_smoke/ep1/keyframes/after_recovery.jpg"
+        }
+      ],
+      "retrieval_key": {
+        "source": "pseudo_real",
+        "backend": "real_robot",
+        "robot_id": "r1pro_real_001",
+        "robot_type": "mobile_dual_arm",
+        "embodiment_tags": [],
+        "scenario_id": "G4",
+        "condition_id": "place_occupied",
+        "task_stage": "place",
+        "task_name": "",
+        "object_class": "cube",
+        "target_object": "target_cube",
+        "plan_signature": "detect-place->choose-alternate-place->place-object",
+        "memory_type": "episodic",
+        "memory_role": "real_success_prior",
+        "failure_type": "",
+        "critic_status": "",
+        "pair_status": "",
+        "gap_type": "",
+        "real_episode_ref": "real_ep_001"
+      },
+      "memory_tags": {
+        "memory_type": "episodic",
+        "memory_scope": "condition",
+        "memory_role": "real_success_prior"
+      },
+      "memory_gate": {
+        "anomaly_score": 0.85,
+        "failure_score": 0.0,
+        "sim_real_gap_score": 0.0,
+        "recovery_utility_score": 1.0,
+        "surprise_score": 0.0,
+        "write_score": 0.402,
+        "write_decision": "stm_only",
+        "trigger_events": [
+          "condition_injection",
+          "anomaly_detected",
+          "task_success",
+          "validated_execution"
+        ],
+        "explanation": {
+          "weights": {
+            "anomaly": 0.22,
+            "failure": 0.23,
+            "sim_real_gap": 0.22,
+            "recovery_utility": 0.15,
+            "surprise": 0.08,
+            "validation": 0.1
+          },
+          "recovery_success": true,
+          "task_success": true,
+          "condition_id": "place_occupied",
+          "validation_status": "real_executed",
+          "validation_score": 0.65
+        }
+      },
+      "critic_result": {
+        "overall_status": "",
+        "critic_risk_score": 0.0,
+        "rule_flags": [],
+        "feedback_for_rewrite": "",
+        "evidence": {}
+      },
+      "failure_taxonomy": {},
+      "sim_real_pair": {},
+      "sim_real_gap": {
+        "gap_id": "",
+        "gap_score": 0.0,
+        "uncertainty": 0.0,
+        "outcome_gap": {},
+        "pose_gap": {},
+        "contact_gap": {},
+        "perception_gap": {},
+        "actuation_gap": {},
+        "robot_state_gap": {},
+        "timing_gap": {},
+        "scene_reconstruction_gap": {},
+        "evidence": {}
+      },
+      "sandbox_calibration": {
+        "calibration_id": "",
+        "source_gap_ids": [],
+        "object_pose_bias": [],
+        "perception_noise_bias": [],
+        "actuation_delay_bias": 0.0,
+        "contact_success_bias": 0.0,
+        "slip_risk_bias": 0.0,
+        "calibration_confidence": 0.0,
+        "details": {}
+      },
+      "real_episode_ref": {
+        "raw_episode_id": "real_ep_001",
+        "hdf5_path": "/data/real_ep_001.h5",
+        "episode_dir": "/tmp/real_episode_batch_smoke/ep1"
+      },
+      "raw_refs": {
+        "keyframes_dir": "/tmp/real_episode_batch_smoke/ep1/keyframes",
+        "episode_dir": "/tmp/real_episode_batch_smoke/ep1",
+        "real_episode_ref": {
+          "raw_episode_id": "real_ep_001",
+          "hdf5_path": "/data/real_ep_001.h5"
+        },
+        "raw_episode_id": "real_ep_001",
+        "hdf5_path": "/data/real_ep_001.h5"
+      },
+      "metadata": {
+        "raw_episode_id": "real_ep_001",
+        "operator": "",
+        "device": "",
+        "source_format": "generic_real_episode"
+      }
+    },
+    {
+      "schema_version": "universal_experience_v1",
+      "experience_id": "real_ep_002",
+      "created_at": "2026-06-12T14:44:19Z",
+      "updated_at": "2026-06-12T14:44:19Z",
+      "source": "pseudo_real",
+      "domain": "real_robot_episode",
+      "backend": "real_robot",
+      "validation_status": "pseudo_real_executed",
+      "memory_partition": "failed_memory",
+      "robot": {
+        "robot_id": "real_robot_unknown",
+        "robot_type": "unknown_robot",
+        "embodiment_tags": [],
+        "backend": "real_robot",
+        "kinematic_groups": {},
+        "end_effectors": {},
+        "mobile_base": {},
+        "torso": {},
+        "grippers": {},
+        "joints": {},
+        "metadata": {}
+      },
+      "embodiment": {},
+      "scenario": {
+        "scenario_id": "G3",
+        "name": ""
+      },
+      "condition": {
+        "condition_id": "clean",
+        "name": ""
+      },
+      "task": {
+        "name": "g3_pick",
+        "stage": "grasp",
+        "object_class": ""
+      },
+      "anomaly": {},
+      "skill_sequence": [
+        {
+          "name": "approach-object",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": true,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "action": "approach-object"
+          }
+        },
+        {
+          "name": "gripper-close",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": false,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "action": "gripper-close",
+            "success": false
+          }
+        }
+      ],
+      "action_trace": [],
+      "observation_trace": [],
+      "state_before": {},
+      "state_after": {},
+      "sensor_summary": {
+        "joint_positions": [],
+        "joint_velocities": [],
+        "end_effector_pose": {},
+        "gripper_state": {},
+        "contact_state": {},
+        "force_torque": {},
+        "timestamps": {},
+        "sensor_modalities": [],
+        "raw_refs": {}
+      },
+      "spatial_state": {},
+      "object_state": {
+        "objects": {},
+        "target_object": "",
+        "object_class": "",
+        "spatial_relations": [],
+        "support_relations": [],
+        "occupancy": {},
+        "metadata": {}
+      },
+      "result": {
+        "success": false,
+        "recovery_success": false,
+        "task_success": false,
+        "failure_reason": "gripper_miss",
+        "attempt_count": 1
+      },
+      "execution_feedback": {},
+      "key_slices": [],
+      "keyframes": [
+        {
+          "stage": "frame_a",
+          "image_path": "/tmp/real_episode_batch_smoke/ep2/frames/frame_a.png",
+          "description": "frame_a",
+          "used_for_retrieval": true
+        }
+      ],
+      "retrieval_key": {
+        "source": "pseudo_real",
+        "backend": "real_robot",
+        "robot_id": "real_robot_unknown",
+        "robot_type": "unknown_robot",
+        "embodiment_tags": [],
+        "scenario_id": "G3",
+        "condition_id": "clean",
+        "task_stage": "grasp",
+        "task_name": "g3_pick",
+        "object_class": "",
+        "target_object": "",
+        "plan_signature": "approach-object->gripper-close",
+        "memory_type": "episodic",
+        "memory_role": "real_failure_case",
+        "failure_type": "gripper_miss",
+        "critic_status": "",
+        "pair_status": "",
+        "gap_type": "",
+        "real_episode_ref": "real_ep_002"
+      },
+      "memory_tags": {
+        "memory_type": "episodic",
+        "memory_scope": "condition",
+        "memory_role": "real_failure_case"
+      },
+      "memory_gate": {
+        "anomaly_score": 0.85,
+        "failure_score": 1.0,
+        "sim_real_gap_score": 0.0,
+        "recovery_utility_score": 0.45,
+        "surprise_score": 0.0,
+        "write_score": 0.5495,
+        "write_decision": "ltm_candidate",
+        "trigger_events": [
+          "anomaly_detected",
+          "recovery_failed",
+          "validated_execution"
+        ],
+        "explanation": {
+          "weights": {
+            "anomaly": 0.22,
+            "failure": 0.23,
+            "sim_real_gap": 0.22,
+            "recovery_utility": 0.15,
+            "surprise": 0.08,
+            "validation": 0.1
+          },
+          "recovery_success": false,
+          "task_success": false,
+          "condition_id": "clean",
+          "validation_status": "pseudo_real_executed",
+          "validation_score": 0.65
+        }
+      },
+      "critic_result": {
+        "overall_status": "",
+        "critic_risk_score": 0.0,
+        "rule_flags": [],
+        "feedback_for_rewrite": "",
+        "evidence": {}
+      },
+      "failure_taxonomy": {
+        "failure_type": "gripper_miss"
+      },
+      "sim_real_pair": {},
+      "sim_real_gap": {
+        "gap_id": "",
+        "gap_score": 0.0,
+        "uncertainty": 0.0,
+        "outcome_gap": {},
+        "pose_gap": {},
+        "contact_gap": {},
+        "perception_gap": {},
+        "actuation_gap": {},
+        "robot_state_gap": {},
+        "timing_gap": {},
+        "scene_reconstruction_gap": {},
+        "evidence": {}
+      },
+      "sandbox_calibration": {
+        "calibration_id": "",
+        "source_gap_ids": [],
+        "object_pose_bias": [],
+        "perception_noise_bias": [],
+        "actuation_delay_bias": 0.0,
+        "contact_success_bias": 0.0,
+        "slip_risk_bias": 0.0,
+        "calibration_confidence": 0.0,
+        "details": {}
+      },
+      "real_episode_ref": {
+        "raw_episode_id": "real_ep_002",
+        "episode_dir": "/tmp/real_episode_batch_smoke/ep2"
+      },
+      "raw_refs": {
+        "frames_dir": "/tmp/real_episode_batch_smoke/ep2/frames",
+        "episode_dir": "/tmp/real_episode_batch_smoke/ep2"
+      },
+      "metadata": {
+        "raw_episode_id": "real_ep_002",
+        "operator": "",
+        "device": "",
+        "source_format": "generic_real_episode"
+      }
+    }
+  ]
+}

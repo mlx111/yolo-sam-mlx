@@ -1,0 +1,72 @@
+{
+  "experience_library": "results/memory/universal_experience_with_pseudo_real_paired_critic_calibrated.json",
+  "policy_calibration": "results/memory/policy_risk_calibration_v1.json",
+  "execute": true,
+  "comparison_count": 1,
+  "changed_count": 1,
+  "comparisons": [
+    {
+      "scenario": "G3",
+      "condition": "clean",
+      "baseline_candidate": {
+        "candidate_id": "g3_default",
+        "decision": "accept",
+        "candidate_score": 0.875,
+        "risk_score": 0.0,
+        "support_score": 1.0,
+        "match_count": 2
+      },
+      "memory_selected_candidate": {
+        "candidate_id": "g3_place_first",
+        "decision": "accept",
+        "candidate_score": 0.875,
+        "risk_score": 0.0,
+        "support_score": 1.0,
+        "match_count": 2
+      },
+      "candidate_changed": true,
+      "score_delta": 0.0,
+      "risk_delta": 0.0,
+      "memory_decision": "accept",
+      "baseline_executed": true,
+      "memory_executed": true,
+      "baseline_success": true,
+      "memory_success": true,
+      "skill_sequence_diff": {
+        "first_difference_index": 2,
+        "baseline_only": [],
+        "memory_only": [],
+        "baseline_length": 11,
+        "memory_length": 11
+      },
+      "baseline_risk_evidence": [],
+      "memory_risk_evidence": [],
+      "candidate_ranking": [
+        {
+          "candidate_id": "g3_place_first",
+          "decision": "accept",
+          "candidate_score": 0.875,
+          "risk_score": 0.0,
+          "support_score": 1.0,
+          "match_count": 2
+        },
+        {
+          "candidate_id": "g3_default",
+          "decision": "accept",
+          "candidate_score": 0.875,
+          "risk_score": 0.0,
+          "support_score": 1.0,
+          "match_count": 2
+        },
+        {
+          "candidate_id": "g3_cautious_place",
+          "decision": "accept",
+          "candidate_score": 0.875,
+          "risk_score": 0.0,
+          "support_score": 1.0,
+          "match_count": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,436 @@
+{
+  "input_count": 44,
+  "stm_capacity": 10,
+  "initialized": 42,
+  "promoted": [
+    "pressure_protected_failure_000_exp_b7fb782456f2",
+    "pressure_protected_failure_001_pseudo_real_g3_grasp_miss_001",
+    "pressure_protected_failure_002_pseudo_real_g3_grasp_slip_001",
+    "pressure_protected_failure_003_pseudo_real_g4_dual_arm_mismatch_001",
+    "pressure_protected_failure_004_pseudo_real_g4_place_occupied_failure_001",
+    "pressure_protected_failure_005_pseudo_real_g4_transport_collision_001",
+    "pressure_hot_success_000_exp_bbed526ab28b",
+    "pressure_hot_success_001_exp_ddaf34a39edc"
+  ],
+  "evicted": [
+    "pressure_low_success_000_000_exp_bbed526ab28b",
+    "pressure_low_success_000_001_exp_ddaf34a39edc",
+    "pressure_low_success_000_002_exp_6a115cd94118",
+    "pressure_low_success_000_003_pseudo_real_g3_clean_success_001",
+    "pressure_low_success_000_004_pseudo_real_g3_place_occupied_success_001",
+    "pressure_low_success_000_005_pseudo_real_g4_clean_success_001",
+    "pressure_low_success_001_000_exp_bbed526ab28b",
+    "pressure_low_success_001_001_exp_ddaf34a39edc",
+    "pressure_low_success_001_002_exp_6a115cd94118",
+    "pressure_low_success_001_003_pseudo_real_g3_clean_success_001",
+    "pressure_low_success_001_004_pseudo_real_g3_place_occupied_success_001",
+    "pressure_low_success_001_005_pseudo_real_g4_clean_success_001",
+    "pressure_low_success_002_000_exp_bbed526ab28b",
+    "pressure_low_success_002_001_exp_ddaf34a39edc",
+    "pressure_low_success_002_002_exp_6a115cd94118",
+    "pressure_low_success_002_003_pseudo_real_g3_clean_success_001",
+    "pressure_low_success_002_004_pseudo_real_g3_place_occupied_success_001",
+    "pressure_low_success_002_005_pseudo_real_g4_clean_success_001",
+    "pressure_low_success_003_000_exp_bbed526ab28b",
+    "pressure_low_success_003_001_exp_ddaf34a39edc",
+    "pressure_low_success_003_002_exp_6a115cd94118",
+    "pressure_low_success_003_003_pseudo_real_g3_clean_success_001",
+    "pressure_low_success_003_004_pseudo_real_g3_place_occupied_success_001",
+    "pressure_low_success_003_005_pseudo_real_g4_clean_success_001",
+    "pressure_low_success_004_000_exp_bbed526ab28b",
+    "pressure_low_success_004_001_exp_ddaf34a39edc"
+  ],
+  "preserved": [],
+  "decisions": [
+    {
+      "experience_id": "pressure_protected_failure_000_exp_b7fb782456f2",
+      "decision": "promote",
+      "reason": "failure_or_failure_taxonomy"
+    },
+    {
+      "experience_id": "pressure_protected_failure_001_pseudo_real_g3_grasp_miss_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pressure_protected_failure_002_pseudo_real_g3_grasp_slip_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pressure_protected_failure_003_pseudo_real_g4_dual_arm_mismatch_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pressure_protected_failure_004_pseudo_real_g4_place_occupied_failure_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pressure_protected_failure_005_pseudo_real_g4_transport_collision_001",
+      "decision": "promote",
+      "reason": "real_or_pseudo_real_source"
+    },
+    {
+      "experience_id": "pressure_hot_success_000_exp_bbed526ab28b",
+      "decision": "promote",
+      "reason": "frequently_retrieved_success"
+    },
+    {
+      "experience_id": "pressure_hot_success_001_exp_ddaf34a39edc",
+      "decision": "promote",
+      "reason": "frequently_retrieved_success"
+    },
+    {
+      "experience_id": "pressure_low_success_000_000_exp_bbed526ab28b",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_000_001_exp_ddaf34a39edc",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_000_002_exp_6a115cd94118",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_000_003_pseudo_real_g3_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_000_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_000_005_pseudo_real_g4_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_001_000_exp_bbed526ab28b",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_001_001_exp_ddaf34a39edc",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_001_002_exp_6a115cd94118",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_001_003_pseudo_real_g3_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_001_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_001_005_pseudo_real_g4_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_002_000_exp_bbed526ab28b",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_002_001_exp_ddaf34a39edc",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_002_002_exp_6a115cd94118",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_002_003_pseudo_real_g3_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_002_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_002_005_pseudo_real_g4_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_003_000_exp_bbed526ab28b",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_003_001_exp_ddaf34a39edc",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_003_002_exp_6a115cd94118",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_003_003_pseudo_real_g3_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_003_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_003_005_pseudo_real_g4_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_004_000_exp_bbed526ab28b",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_004_001_exp_ddaf34a39edc",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_004_002_exp_6a115cd94118",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_004_003_pseudo_real_g3_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_004_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_004_005_pseudo_real_g4_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_005_000_exp_bbed526ab28b",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_005_001_exp_ddaf34a39edc",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_005_002_exp_6a115cd94118",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_005_003_pseudo_real_g3_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_005_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_005_005_pseudo_real_g4_clean_success_001",
+      "decision": "keep",
+      "reason": "not_promotion_eligible",
+      "tier": "stm"
+    },
+    {
+      "experience_id": "pressure_low_success_000_000_exp_bbed526ab28b",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_000_001_exp_ddaf34a39edc",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_000_002_exp_6a115cd94118",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_000_003_pseudo_real_g3_clean_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_000_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_000_005_pseudo_real_g4_clean_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_001_000_exp_bbed526ab28b",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_001_001_exp_ddaf34a39edc",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_001_002_exp_6a115cd94118",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_001_003_pseudo_real_g3_clean_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_001_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_001_005_pseudo_real_g4_clean_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_002_000_exp_bbed526ab28b",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_002_001_exp_ddaf34a39edc",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_002_002_exp_6a115cd94118",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_002_003_pseudo_real_g3_clean_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_002_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_002_005_pseudo_real_g4_clean_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_003_000_exp_bbed526ab28b",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_003_001_exp_ddaf34a39edc",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_003_002_exp_6a115cd94118",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_003_003_pseudo_real_g3_clean_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_003_004_pseudo_real_g3_place_occupied_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_003_005_pseudo_real_g4_clean_success_001",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_004_000_exp_bbed526ab28b",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    },
+    {
+      "experience_id": "pressure_low_success_004_001_exp_ddaf34a39edc",
+      "decision": "evict",
+      "reason": "stm_capacity_overflow"
+    }
+  ],
+  "output_count": 18,
+  "removed_count": 26,
+  "stm_count": 10,
+  "ltm_count": 8
+}

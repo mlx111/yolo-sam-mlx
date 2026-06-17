@@ -1,0 +1,13 @@
+{
+  "name": "select_correct_object",
+  "description": "Select the intended object from candidates using target name, label, or nearest target position.",
+  "require_unique": false,
+  "parameters": {
+    "objects": "Optional PerceptionObject or dict candidates.",
+    "object_bodies/object_geoms/object_sites": "Optional candidate references.",
+    "target_name": "Optional exact or fuzzy target object name.",
+    "target_label": "Optional semantic label.",
+    "target_position": "Optional position used to choose nearest candidate.",
+    "require_unique": "Fail if label-only selection is ambiguous."
+  }
+}

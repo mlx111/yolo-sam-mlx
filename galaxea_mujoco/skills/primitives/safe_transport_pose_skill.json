@@ -1,0 +1,28 @@
+{
+  "name": "safe_transport_pose",
+  "description": "Move torso and both arms to a conservative upper-body posture for transport.",
+  "default_posture": "carry_center",
+  "postures": {
+    "carry_center": [
+      0.0, 0.0, 0.0, 0.0,
+      0.0, 0.65, 0.0, -0.75, 0.0, 0.25, 0.0,
+      0.0, -0.65, 0.0, -0.75, 0.0, 0.25, 0.0
+    ],
+    "home": [
+      0.0, 0.0, 0.0, 0.0,
+      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+    ]
+  },
+  "control_defaults": {
+    "steps": 1800,
+    "settle_steps": 1200,
+    "max_joint_step": 0.006,
+    "fail_threshold": 0.08,
+    "direct_qpos": false
+  },
+  "parameters": {
+    "posture": "Named posture. Defaults to carry_center.",
+    "target_qpos": "Optional explicit 18-element torso + left arm + right arm posture."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "verify_place_zone",
+  "description": "Verify whether an object is within the requested placement zone tolerance.",
+  "parameters": {
+    "side": "Required. left or right, used for result metadata.",
+    "object_x/object_y/object_z": "Object position in MuJoCo world coordinates.",
+    "object_body": "Optional MuJoCo body name used instead of explicit object position.",
+    "object_site": "Optional MuJoCo site name used instead of explicit object position.",
+    "object_geom": "Optional MuJoCo geom name used instead of explicit object position.",
+    "place_x/place_y/place_z": "Target placement zone center in MuJoCo world coordinates.",
+    "max_xy_error": "Required maximum allowed horizontal distance from zone center.",
+    "max_z_error": "Required maximum allowed vertical distance from zone center."
+  }
+}

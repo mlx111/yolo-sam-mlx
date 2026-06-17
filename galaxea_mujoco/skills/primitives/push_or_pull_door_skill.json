@@ -1,0 +1,18 @@
+{
+  "name": "push_or_pull_door",
+  "description": "Command a slide drawer or hinge door joint to a target open position.",
+  "joint_name": "drawer_slide_joint",
+  "actuator_name": "drawer_slide_joint_pos",
+  "target_open": 0.25,
+  "target_angle": 0.8,
+  "steps": 500,
+  "settle_steps": 120,
+  "tolerance": 0.02,
+  "parameters": {
+    "joint_name": "Drawer slide or door hinge joint.",
+    "actuator_name": "Position actuator for the joint.",
+    "target_open": "Slide joint target displacement.",
+    "target_angle": "Hinge joint target angle.",
+    "target_qpos": "Explicit target joint qpos override."
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "schema_version": "universal_experience_library_v1",
+  "updated_at": "2026-06-12T14:27:16Z",
+  "entry_count": 1,
+  "entries": [
+    {
+      "schema_version": "universal_experience_v1",
+      "experience_id": "real_smoke_g4_place_occupied_001",
+      "created_at": "2026-06-12T14:27:16Z",
+      "updated_at": "2026-06-12T14:27:16Z",
+      "source": "pseudo_real",
+      "domain": "real_robot_episode",
+      "backend": "real_robot",
+      "validation_status": "pseudo_real_executed",
+      "memory_partition": "failed_memory",
+      "robot": {
+        "robot_id": "r1pro_real_001",
+        "robot_type": "mobile_dual_arm",
+        "embodiment_tags": [
+          "mobile_base",
+          "torso",
+          "dual_arm",
+          "gripper"
+        ],
+        "backend": "real_robot",
+        "kinematic_groups": {},
+        "end_effectors": {},
+        "mobile_base": {},
+        "torso": {},
+        "grippers": {},
+        "joints": {},
+        "metadata": {}
+      },
+      "embodiment": {},
+      "scenario": {
+        "scenario_id": "G4",
+        "name": "R1Pro G4 real smoke"
+      },
+      "condition": {
+        "condition_id": "place_occupied",
+        "name": "place_occupied"
+      },
+      "task": {
+        "name": "r1pro_g4_task_chain",
+        "stage": "task_chain"
+      },
+      "anomaly": {},
+      "skill_sequence": [
+        {
+          "name": "dual_arm_pregrasp",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": true,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "name": "dual_arm_pregrasp",
+            "success": true
+          }
+        },
+        {
+          "name": "dual_arm_approach",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": true,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "name": "dual_arm_approach",
+            "success": true
+          }
+        },
+        {
+          "name": "dual_gripper_close",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": true,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "name": "dual_gripper_close",
+            "success": true
+          }
+        },
+        {
+          "name": "dual_arm_synchronized_lift",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": true,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "name": "dual_arm_synchronized_lift",
+            "success": true
+          }
+        },
+        {
+          "name": "segmented_transport",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": true,
+          "error": null,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "name": "segmented_transport",
+            "success": true
+          }
+        },
+        {
+          "name": "dual_arm_place",
+          "primitive_type": "",
+          "phase": "",
+          "inputs": {},
+          "outputs": {},
+          "success": false,
+          "error": 0.04,
+          "duration": null,
+          "safety_flags": [],
+          "message": "",
+          "raw": {
+            "name": "dual_arm_place",
+            "success": false,
+            "error": 0.04
+          }
+        }
+      ],
+      "action_trace": [],
+      "observation_trace": [],
+      "state_before": {},
+      "state_after": {},
+      "sensor_summary": {
+        "joint_positions": [
+          0.1,
+          0.2,
+          0.3
+        ],
+        "joint_velocities": [],
+        "end_effector_pose": {},
+        "gripper_state": {
+          "left": {
+            "state": "open"
+          },
+          "right": {
+            "state": "open"
+          }
+        },
+        "contact_state": {},
+        "force_torque": {},
+        "timestamps": {},
+        "sensor_modalities": [
+          "joint",
+          "gripper",
+          "vision"
+        ],
+        "raw_refs": {}
+      },
+      "spatial_state": {},
+      "object_state": {
+        "objects": {
+          "large_object_body": {
+            "observed_position": [
+              -0.1,
+              -0.2,
+              0.9
+            ]
+          }
+        },
+        "target_object": "large_object_body",
+        "object_class": "large_object",
+        "spatial_relations": [],
+        "support_relations": [],
+        "occupancy": {
+          "selected_place_site": "alternate_place_zone_site",
+          "place_occupied": true
+        },
+        "metadata": {}
+      },
+      "result": {
+        "success": false,
+        "recovery_success": false,
+        "task_success": false,
+        "failure_reason": "real placement miss"
+      },
+      "execution_feedback": {
+        "observed_pos": [
+          -0.1,
+          -0.2,
+          0.9
+        ],
+        "selected_place_site": "alternate_place_zone_site"
+      },
+      "key_slices": [],
+      "keyframes": [],
+      "retrieval_key": {
+        "source": "pseudo_real",
+        "backend": "real_robot",
+        "robot_id": "r1pro_real_001",
+        "robot_type": "mobile_dual_arm",
+        "embodiment_tags": [
+          "mobile_base",
+          "torso",
+          "dual_arm",
+          "gripper"
+        ],
+        "scenario_id": "G4",
+        "condition_id": "place_occupied",
+        "task_stage": "task_chain",
+        "task_name": "r1pro_g4_task_chain",
+        "object_class": "large_object",
+        "target_object": "large_object_body",
+        "plan_signature": "dual_arm_pregrasp->dual_arm_approach->dual_gripper_close->dual_arm_synchronized_lift->segmented_transport->dual_arm_place",
+        "memory_type": "episodic",
+        "memory_role": "real_failure_case",
+        "failure_type": "real placement miss",
+        "critic_status": "",
+        "pair_status": "",
+        "gap_type": ""
+      },
+      "memory_tags": {
+        "memory_type": "episodic",
+        "memory_scope": "condition",
+        "memory_role": "real_failure_case"
+      },
+      "memory_gate": {
+        "anomaly_score": 0.85,
+        "failure_score": 1.0,
+        "sim_real_gap_score": 0.0,
+        "recovery_utility_score": 0.45,
+        "surprise_score": 0.0,
+        "write_score": 0.53,
+        "write_decision": "ltm_candidate",
+        "trigger_events": [
+          "condition_injection",
+          "anomaly_detected",
+          "recovery_failed"
+        ],
+        "explanation": {
+          "weights": {
+            "anomaly": 0.25,
+            "failure": 0.25,
+            "sim_real_gap": 0.25,
+            "recovery_utility": 0.15,
+            "surprise": 0.1
+          },
+          "recovery_success": false,
+          "task_success": false,
+          "condition_id": "place_occupied"
+        }
+      },
+      "critic_result": {
+        "overall_status": "",
+        "critic_risk_score": 0.0,
+        "rule_flags": [],
+        "feedback_for_rewrite": "",
+        "evidence": {}
+      },
+      "failure_taxonomy": {
+        "failure_type": "real placement miss"
+      },
+      "sim_real_pair": {},
+      "sim_real_gap": {
+        "gap_id": "",
+        "gap_score": 0.0,
+        "uncertainty": 0.0,
+        "outcome_gap": {},
+        "pose_gap": {},
+        "contact_gap": {},
+        "perception_gap": {},
+        "actuation_gap": {},
+        "robot_state_gap": {},
+        "timing_gap": {},
+        "scene_reconstruction_gap": {},
+        "evidence": {}
+      },
+      "sandbox_calibration": {
+        "calibration_id": "",
+        "source_gap_ids": [],
+        "object_pose_bias": [],
+        "perception_noise_bias": [],
+        "actuation_delay_bias": 0.0,
+        "contact_success_bias": 0.0,
+        "slip_risk_bias": 0.0,
+        "calibration_confidence": 0.0,
+        "details": {}
+      },
+      "raw_refs": {
+        "robot_log_path": "/tmp/r1pro_real_episode_smoke/robot_log.jsonl",
+        "episode_dir": "/tmp/r1pro_real_episode_smoke"
+      },
+      "metadata": {
+        "raw_episode_id": "real_smoke_g4_place_occupied_001",
+        "operator": "",
+        "device": "",
+        "source_format": "generic_real_episode"
+      }
+    }
+  ]
+}

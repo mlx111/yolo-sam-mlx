@@ -1,0 +1,81 @@
+{
+  "schema_version": "field_runtime_scene_observation_v1",
+  "scene_id": "real_scene_001",
+  "timestamp": "2026-01-01T00:00:00+08:00",
+  "coordinate_frame": {
+    "world_frame": "mujoco_world",
+    "robot_base_frame": "r1pro_base_link",
+    "camera_frame": "external_head_rgbd_camera",
+    "lidar_frame": "base_lidar_site",
+    "units": "meter_radian",
+    "notes": "All positions must be transformed into the MuJoCo/world frame before runtime XML generation."
+  },
+  "robot_state": {
+    "base_pose_xyyaw": [0.0, 0.0, 0.0],
+    "torso_qpos": [0.0, 0.0, 0.0, 0.0],
+    "left_arm_qpos": [],
+    "right_arm_qpos": [],
+    "left_gripper_state": "open",
+    "right_gripper_state": "open"
+  },
+  "table": {
+    "pose": [0.2, 0.0, 0.737],
+    "size": [0.35, 0.35, 0.025]
+  },
+  "objects": [
+    {
+      "name": "target_object",
+      "class": "unknown_object",
+      "pose": [0.12, 0.08, 0.79],
+      "size": [0.025, 0.025, 0.025],
+      "geom_type": "box",
+      "mass": 0.05,
+      "confidence": 0.8,
+      "source": "rgbd_detection",
+      "freejoint": true
+    }
+  ],
+  "obstacles": [
+    {
+      "name": "observed_obstacle_0",
+      "class": "unknown_obstacle",
+      "pose": [0.02, 0.24, 0.795],
+      "size": [0.03, 0.03, 0.025],
+      "geom_type": "box",
+      "confidence": 0.7,
+      "source": "rgbd_or_lidar"
+    }
+  ],
+  "place_zones": [
+    {
+      "name": "primary_place_zone",
+      "pose": [0.02, 0.24, 0.805],
+      "size": [0.075, 0.055, 0.008],
+      "confidence": 0.8,
+      "source": "operator_or_perception"
+    }
+  ],
+  "sensor_refs": {
+    "rgb_path": "camera/rgb_0001.png",
+    "depth_path": "camera/depth_0001.npy",
+    "lidar_path": "lidar/scan_0001.json",
+    "detection_path": "perception/detections_0001.json",
+    "calibration_path": "calibration/extrinsics.json"
+  },
+  "calibration": {
+    "camera_to_world": [],
+    "lidar_to_world": [],
+    "pose_uncertainty_xyz": [0.02, 0.02, 0.02],
+    "yaw_uncertainty_rad": 0.1
+  },
+  "runtime_scene": {
+    "robot_model_include": "model.xml",
+    "timestep": 0.005,
+    "target_object": "target_object"
+  },
+  "metadata": {
+    "operator": "",
+    "site": "",
+    "notes": "Fill this template from real RGB-D/LiDAR observations before building runtime_sandbox_scene_v1."
+  }
+}

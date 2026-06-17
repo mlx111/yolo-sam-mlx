@@ -1,0 +1,25 @@
+{
+  "name": "place_object",
+  "description": "Move one hand TCP to a placement pose above a target place zone with optional explicit end-effector orientation.",
+  "parameters": {
+    "side": "Required. left or right arm.",
+    "place_x/place_y/place_z": "Target placement zone center in MuJoCo world coordinates.",
+    "target_x/target_y/target_z": "Alternative placement target keys.",
+    "place_offset_x/place_offset_y/place_offset_z": "Required TCP offset from the place zone.",
+    "target_quat_wxyz": "Optional explicit TCP target orientation as quaternion [w, x, y, z]. Overrides lock_orientation/current orientation.",
+    "lock_orientation": "If true and no explicit orientation is provided, preserve current TCP orientation during the move.",
+    "orientation_weight": "Pose IK orientation weight when target orientation is used.",
+    "orientation_threshold": "Orientation success threshold in radians."
+  },
+  "control_defaults": {
+    "servo_steps": 2500,
+    "settle_steps": 1500,
+    "fail_threshold": 0.035,
+    "orientation_weight": 0.02,
+    "orientation_threshold": 1.0,
+    "max_cart_step": 0.006,
+    "max_joint_step": 0.012,
+    "runtime_damping": 50.0,
+    "runtime_armature": 0.05
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "resync_grippers",
+  "description": "Command both grippers to the same open or close state.",
+  "command": "close",
+  "gripper_steps": 240,
+  "direct_qpos": false,
+  "parameters": {
+    "command": "open or close.",
+    "gripper_steps": "Number of interpolation steps.",
+    "direct_qpos": "Use direct qpos gripper command when true."
+  }
+}

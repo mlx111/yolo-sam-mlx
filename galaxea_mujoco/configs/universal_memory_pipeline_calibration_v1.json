@@ -1,0 +1,85 @@
+{
+  "output_dir": "results/memory/universal_pipeline_calibration_v1",
+  "strict_quality": true,
+  "check_refs": false,
+  "consolidate": true,
+  "memory_lifecycle": {
+    "enabled": true,
+    "stm_capacity": 30,
+    "min_retrieval_count": 3,
+    "min_write_score": 0.65,
+    "promote_real": true,
+    "promote_failures": true,
+    "promote_validated_success": true,
+    "evict_batch_size": 5
+  },
+  "r1pro_tasks": [
+    {
+      "scenario": "G3",
+      "condition": "clean",
+      "candidate_id": "g3_default",
+      "keyframe_dir": "results/memory/universal_pipeline_calibration_v1/keyframes"
+    },
+    {
+      "scenario": "G3",
+      "condition": "place_occupied",
+      "candidate_id": "g3_default",
+      "keyframe_dir": "results/memory/universal_pipeline_calibration_v1/keyframes"
+    }
+  ],
+  "wrapper1_imports": [],
+  "real_episode_imports": [
+    {
+      "batch_dir": "data/pseudo_real/r1pro_calibration_v1",
+      "source": "pseudo_real",
+      "backend": "pseudo_real_robot"
+    }
+  ],
+  "min_pair_score": 0.55,
+  "critic_thresholds": {
+    "min_object_lift": 0.05,
+    "max_place_xy_error": 0.05,
+    "max_place_z_error": 0.08,
+    "high_sim_real_gap": 0.65
+  },
+  "summary_top_k": 10,
+  "visual_index": {
+    "enabled": true,
+    "index_dir": "results/memory/universal_pipeline_calibration_v1/visual_index",
+    "report": "results/memory/universal_pipeline_calibration_v1/visual_index_report.json",
+    "eval": {
+      "enabled": true,
+      "all_keyframes": true,
+      "top_k": 5,
+      "report": "results/memory/universal_pipeline_calibration_v1/visual_retrieval_eval_report.json"
+    }
+  },
+  "policy_smoke": [
+    {
+      "scenario": "G3",
+      "condition": "clean",
+      "execute_on": "review",
+      "execute": true
+    },
+    {
+      "scenario": "G3",
+      "condition": "grasp_miss",
+      "execute_on": "review",
+      "execute": false
+    }
+  ],
+  "policy_comparison": [
+    {
+      "scenario": "G3",
+      "condition": "clean",
+      "execute_on": "review",
+      "execute": false
+    },
+    {
+      "scenario": "G3",
+      "condition": "grasp_miss",
+      "execute_on": "review",
+      "execute": false
+    }
+  ]
+}

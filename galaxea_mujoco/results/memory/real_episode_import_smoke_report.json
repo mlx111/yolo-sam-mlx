@@ -1,0 +1,11 @@
+{
+  "universal_experience_id": "real_smoke_g4_place_occupied_001",
+  "source": "pseudo_real",
+  "backend": "real_robot",
+  "robot_type": "mobile_dual_arm",
+  "scenario_id": "G4",
+  "condition_id": "place_occupied",
+  "success": false,
+  "memory_partition": "failed_memory",
+  "output": "results/memory/universal_experience_real_import_smoke.json"
+}

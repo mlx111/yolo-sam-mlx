@@ -1,0 +1,10 @@
+{
+  "name": "infer_hinge_or_slide_direction",
+  "description": "Infer whether the mechanism is a slide drawer or hinge door from the MuJoCo joint type and axis.",
+  "joint_name": "drawer_slide_joint",
+  "expected_type": "slide",
+  "parameters": {
+    "joint_name": "MuJoCo joint name to inspect.",
+    "expected_type": "Expected type, usually slide or hinge."
+  }
+}

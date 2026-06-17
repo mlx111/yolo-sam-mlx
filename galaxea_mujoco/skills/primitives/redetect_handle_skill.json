@@ -1,0 +1,10 @@
+{
+  "name": "redetect_handle",
+  "description": "Re-detect a drawer or door handle pose after the drawer/door moves.",
+  "handle_site": "handle_site",
+  "handle_geom": "drawer_handle_collision_geom",
+  "parameters": {
+    "handle_site": "Preferred MuJoCo site name for the handle center.",
+    "handle_geom": "Fallback MuJoCo geom name for the handle."
+  }
+}

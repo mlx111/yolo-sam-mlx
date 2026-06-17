@@ -1,0 +1,73 @@
+{
+  "episode_dir": "data/pseudo_real/r1pro_calibration_v1",
+  "sim_keyframe_dir": "results/memory/universal_pipeline_calibration_v1/keyframes",
+  "dry_run": false,
+  "episode_count": 8,
+  "keyframe_count": 40,
+  "episodes": [
+    {
+      "episode_id": "pseudo_real_g3_clean_success_001",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "source_dir": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1",
+      "keyframe_count": 5,
+      "episode_path": "data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_clean_success_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g3_grasp_miss_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "source_dir": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1",
+      "keyframe_count": 5,
+      "episode_path": "data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_miss_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g3_grasp_slip_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "source_dir": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_clean_g3_default_1",
+      "keyframe_count": 5,
+      "episode_path": "data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_slip_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g3_place_occupied_success_001",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "source_dir": "results/memory/universal_pipeline_calibration_v1/keyframes/G3_place_occupied_g3_default_1",
+      "keyframe_count": 5,
+      "episode_path": "data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_place_occupied_success_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g4_clean_success_001",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "source_dir": "results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1",
+      "keyframe_count": 5,
+      "episode_path": "data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_clean_success_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "scenario_id": "G4",
+      "condition_id": "dual_arm_mismatch",
+      "source_dir": "results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1",
+      "keyframe_count": 5,
+      "episode_path": "data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_dual_arm_mismatch_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g4_place_occupied_failure_001",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "source_dir": "results/memory/universal_pipeline_calibration_v1/keyframes/G4_place_occupied_g4_default_1",
+      "keyframe_count": 5,
+      "episode_path": "data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_place_occupied_failure_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g4_transport_collision_001",
+      "scenario_id": "G4",
+      "condition_id": "transport_collision",
+      "source_dir": "results/memory/universal_pipeline_calibration_v1/keyframes/G4_clean_g4_default_1",
+      "keyframe_count": 5,
+      "episode_path": "data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_transport_collision_001/episode.json"
+    }
+  ]
+}

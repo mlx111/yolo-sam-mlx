@@ -1,0 +1,69 @@
+{
+  "episode_count": 8,
+  "episodes": [
+    {
+      "episode_id": "pseudo_real_g3_clean_success_001",
+      "scenario_id": "G3",
+      "condition_id": "clean",
+      "success": true,
+      "failure_type": "",
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_clean_success_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g3_place_occupied_success_001",
+      "scenario_id": "G3",
+      "condition_id": "place_occupied",
+      "success": true,
+      "failure_type": "",
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_place_occupied_success_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g3_grasp_miss_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_miss",
+      "success": false,
+      "failure_type": "grasp_miss",
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_miss_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g3_grasp_slip_001",
+      "scenario_id": "G3",
+      "condition_id": "grasp_slip",
+      "success": false,
+      "failure_type": "grasp_slip",
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g3_grasp_slip_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g4_clean_success_001",
+      "scenario_id": "G4",
+      "condition_id": "clean",
+      "success": true,
+      "failure_type": "",
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_clean_success_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g4_place_occupied_failure_001",
+      "scenario_id": "G4",
+      "condition_id": "place_occupied",
+      "success": false,
+      "failure_type": "place_occupied",
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_place_occupied_failure_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g4_transport_collision_001",
+      "scenario_id": "G4",
+      "condition_id": "transport_collision",
+      "success": false,
+      "failure_type": "transport_collision",
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_transport_collision_001/episode.json"
+    },
+    {
+      "episode_id": "pseudo_real_g4_dual_arm_mismatch_001",
+      "scenario_id": "G4",
+      "condition_id": "dual_arm_mismatch",
+      "success": false,
+      "failure_type": "dual_arm_mismatch",
+      "path": "/home/mlx/mujoco/YOLO_World-SAM-GraspNet/galaxea_mujoco/data/pseudo_real/r1pro_calibration_v1/pseudo_real_g4_dual_arm_mismatch_001/episode.json"
+    }
+  ]
+}

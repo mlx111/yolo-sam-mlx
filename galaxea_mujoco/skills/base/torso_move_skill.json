@@ -1,0 +1,25 @@
+{
+  "name": "r1pro_torso_move_to_posture",
+  "description": "Move the R1Pro torso joints to a target posture. Defaults to direct-qpos torso posture control; actuator closed-loop control is available with direct_qpos=false.",
+  "joints": [
+    "torso_joint1",
+    "torso_joint2",
+    "torso_joint3",
+    "torso_joint4"
+  ],
+  "parameters": {
+    "torso_joint1": "Target torso_joint1 angle in radians.",
+    "torso_joint2": "Target torso_joint2 angle in radians.",
+    "torso_joint3": "Target torso_joint3 angle in radians.",
+    "torso_joint4": "Target torso_joint4 angle in radians.",
+    "target_qpos": "Required four-element target posture array in joint order, unless all four named torso joint targets are supplied."
+  },
+  "control_defaults": {
+    "steps": 900,
+    "settle_steps": 900,
+    "max_joint_step": 0.004,
+    "fail_threshold": 0.02,
+    "closed_loop_gain": 1.0,
+    "direct_qpos": false
+  }
+}

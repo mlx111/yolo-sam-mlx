@@ -1,0 +1,11 @@
+{
+  "name": "redetect_target_pose",
+  "description": "Re-read a target pose after scene changes, with candidate search fallback.",
+  "parameters": {
+    "object_body/object_geom/object_site": "Preferred exact target reference.",
+    "target_name": "Optional target name for exact or fuzzy matching.",
+    "target_label": "Optional semantic label for candidate matching.",
+    "object_bodies/object_geoms/object_sites": "Optional explicit candidate lists.",
+    "workspace_bounds": "Optional [[xmin,xmax], [ymin,ymax], [zmin,zmax]] filter."
+  }
+}

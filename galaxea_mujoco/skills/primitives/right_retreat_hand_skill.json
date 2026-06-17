@@ -1,0 +1,19 @@
+{
+  "name": "retreat_right_hand",
+  "description": "Move the right hand TCP away from the current place or contact region.",
+  "side": "right",
+  "parameters": {
+    "retreat_dx/retreat_dy/retreat_dz": "Required world-frame retreat vector."
+  },
+  "control_defaults": {
+    "servo_steps": 1800,
+    "settle_steps": 1000,
+    "fail_threshold": 0.04,
+    "orientation_weight": 0.02,
+    "orientation_threshold": 1.0,
+    "max_cart_step": 0.006,
+    "max_joint_step": 0.012,
+    "runtime_damping": 50.0,
+    "runtime_armature": 0.05
+  }
+}

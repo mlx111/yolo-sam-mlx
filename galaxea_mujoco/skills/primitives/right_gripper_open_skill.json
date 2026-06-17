@@ -1,0 +1,12 @@
+{
+  "name": "right_gripper_open",
+  "description": "Open the right R1Pro gripper. The actual gripper control mode is decided by the active control profile.",
+  "side": "right",
+  "command": "open",
+  "gripper_steps": 240,
+  "direct_qpos": false,
+  "parameters": {
+    "gripper_steps": "Number of MuJoCo steps to hold the open command.",
+    "direct_qpos": "If true, also write gripper qpos directly. The active control profile may override this."
+  }
+}

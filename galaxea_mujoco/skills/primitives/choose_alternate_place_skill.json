@@ -1,0 +1,16 @@
+{
+  "name": "choose_alternate_place",
+  "description": "Choose the first unoccupied placement site from primary and alternate sites.",
+  "place_sites": ["place_zone_site", "alternate_place_zone_site"],
+  "candidate_bodies": ["place_obstacle_body", "large_object_body"],
+  "exclude_bodies": ["large_object_body"],
+  "occupancy_radius": 0.12,
+  "z_tolerance": 0.12,
+  "parameters": {
+    "place_sites": "Ordered candidate placement sites.",
+    "candidate_bodies": "Bodies to check for occupancy.",
+    "exclude_bodies": "Bodies ignored during occupancy detection.",
+    "occupancy_radius": "Maximum xy distance from a site to count as occupied.",
+    "z_tolerance": "Maximum z distance from a site to count as occupied."
+  }
+}

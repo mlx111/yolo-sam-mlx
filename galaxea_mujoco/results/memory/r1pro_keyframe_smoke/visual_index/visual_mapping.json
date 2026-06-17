@@ -1,0 +1,21 @@
+{
+  "model_name": "openai/clip-vit-base-patch32",
+  "dim": 512,
+  "next_id": 5,
+  "id_to_eid": {
+    "0": "exp_9c7e44a0e761",
+    "1": "exp_9c7e44a0e761",
+    "2": "exp_9c7e44a0e761",
+    "3": "exp_9c7e44a0e761",
+    "4": "exp_9c7e44a0e761"
+  },
+  "eid_to_ids": {
+    "exp_9c7e44a0e761": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+}
