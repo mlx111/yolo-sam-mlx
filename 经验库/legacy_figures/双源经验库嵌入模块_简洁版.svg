@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2454b8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#dc2626"/>
+    </marker>
+    <style>
+      .t { font-family: "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif; fill:#111827; }
+      .title { font-size:34px; font-weight:700; fill:#7c4700; }
+      .head { font-size:24px; font-weight:700; }
+      .body { font-size:19px; }
+      .small { font-size:16px; fill:#4b5563; }
+      .mem { fill:#fff1c7; stroke:#b7791f; stroke-width:4; rx:26; ry:26; }
+      .field { fill:#fffaf0; stroke:#b7791f; stroke-width:1; rx:10; ry:10; }
+      .sim { fill:#eaf3ff; stroke:#2454b8; stroke-width:2; rx:18; ry:18; }
+      .real { fill:#dcfce7; stroke:#16a34a; stroke-width:2; rx:18; ry:18; }
+      .gap { fill:#ede9fe; stroke:#7c3aed; stroke-width:2; rx:18; ry:18; }
+      .use { fill:#eaf3ff; stroke:#2454b8; stroke-width:2; rx:18; ry:18; }
+      .cal { fill:#fee2e2; stroke:#dc2626; stroke-width:2; rx:18; ry:18; }
+      .a { stroke:#2454b8; stroke-width:4; fill:none; marker-end:url(#arrow); }
+      .ag { stroke:#16a34a; stroke-width:4; fill:none; marker-end:url(#arrowGreen); }
+      .ap { stroke:#7c3aed; stroke-width:4; fill:none; marker-end:url(#arrowPurple); }
+      .ar { stroke:#dc2626; stroke-width:3; fill:none; marker-end:url(#arrowRed); }
+    </style>
+  </defs>
+  <rect width="1180" height="620" fill="#ffffff"/>
+  <text x="590" y="62" text-anchor="middle" class="t title">双源经验库 MemoryV3+</text>
+  <text x="590" y="97" text-anchor="middle" class="t body" fill="#4b5563">仿真经验与真机经验统一存储、对齐校准，并反向服务异常恢复策略</text>
+
+  <rect x="365" y="155" width="450" height="310" class="mem"/>
+  <text x="590" y="214" text-anchor="middle" class="t head" fill="#7c4700">统一经验条目</text>
+  <rect x="420" y="230" width="340" height="34" class="field"/><text x="590" y="253" text-anchor="middle" class="t small">任务阶段 task_stage</text>
+  <rect x="420" y="271" width="340" height="34" class="field"/><text x="590" y="294" text-anchor="middle" class="t small">动作序列 skill_sequence</text>
+  <rect x="420" y="312" width="340" height="34" class="field"/><text x="590" y="335" text-anchor="middle" class="t small">执行反馈 execution_feedback</text>
+  <rect x="420" y="353" width="340" height="34" class="field"/><text x="590" y="376" text-anchor="middle" class="t small">关键帧 keyframes</text>
+  <rect x="420" y="394" width="340" height="34" class="field"/><text x="590" y="417" text-anchor="middle" class="t small">传感器摘要 sensor_summary</text>
+  <rect x="420" y="435" width="340" height="34" class="field"/><text x="590" y="458" text-anchor="middle" class="t small">原始数据引用 raw_refs</text>
+
+  <rect x="55" y="165" width="245" height="115" class="sim"/>
+  <text x="177" y="219" text-anchor="middle" class="t head" fill="#123b8c">仿真经验</text>
+  <text x="177" y="248" text-anchor="middle" class="t small">simulation experience</text>
+  <text x="177" y="272" text-anchor="middle" class="t small">图像 / 日志 / 状态</text>
+
+  <rect x="55" y="340" width="245" height="115" class="real"/>
+  <text x="177" y="393" text-anchor="middle" class="t head" fill="#0f7a35">真机/伪真机经验</text>
+  <text x="177" y="423" text-anchor="middle" class="t small">real experience</text>
+  <text x="177" y="447" text-anchor="middle" class="t small">视频 / 日志 / 传感器</text>
+
+  <rect x="880" y="145" width="250" height="120" class="gap"/>
+  <text x="1005" y="199" text-anchor="middle" class="t head" fill="#4c1d95">Sim-Real Gap</text>
+  <text x="1005" y="228" text-anchor="middle" class="t small">pose / contact / perception</text>
+  <text x="1005" y="253" text-anchor="middle" class="t small">actuation / robot_state</text>
+
+  <rect x="880" y="330" width="250" height="145" class="use"/>
+  <text x="1005" y="386" text-anchor="middle" class="t head" fill="#123b8c">经验检索与使用</text>
+  <text x="1005" y="421" text-anchor="middle" class="t small">相似异常检索</text>
+  <text x="1005" y="446" text-anchor="middle" class="t small">成功方案复用</text>
+  <text x="1005" y="471" text-anchor="middle" class="t small">失败风险提示</text>
+
+  <rect x="310" y="515" width="560" height="70" class="cal"/>
+  <text x="590" y="557" text-anchor="middle" class="t body" fill="#dc2626">真机反馈校准经验可信度：成功经验加权，失败或 gap 大的方案降权</text>
+  <text x="590" y="582" text-anchor="middle" class="t small" fill="#111827">形成“采集 → 入库 → 校准 → 检索 → 再执行”的闭环</text>
+
+  <path d="M300 222 L365 245" class="a"/>
+  <path d="M300 397 L365 375" class="ag"/>
+  <path d="M815 250 L880 205" class="ap"/>
+  <path d="M815 380 L880 400" class="a"/>
+  <path d="M1005 475 L870 540" class="ar"/>
+  <path d="M310 540 L177 455" class="ar"/>
+</svg>

@@ -1,0 +1,227 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{array}
+
+\title{Experience-Guided Robot Anomaly Recovery with Sim-Real Dual-Source Memory}
+
+\author{
+\IEEEauthorblockN{Anonymous Authors}
+\IEEEauthorblockA{Paper draft aligned with the current R1Pro \texttt{experience\_system} implementation}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Large language models can propose robot recovery actions, but a plausible plan is not necessarily executable, safe, or supported by prior experience. We present an experience-guided anomaly recovery system that stores simulation, pseudo-real, and real-format robot episodes in a unified memory schema. The system retrieves stage-specific evidence, generates single or multi-candidate LLM recovery plans, validates plans with skill precondition/effect semantics, runs valid candidates through parallel MuJoCo sandbox rollout, applies motion/contact/task critics, and exports a \texttt{validated\_robot\_plan} only after critic-backed selection. Current implementation evidence contains 15 generated claim-level reports, with 14 supported implementation claims and one partial sensor-evidence claim. We position the system as a reproducible implementation and evaluation framework for evidence-guided robot anomaly recovery, not as proof of real-robot success-rate improvement.
+\end{abstract}
+
+\section{Introduction}
+Robot anomaly recovery is physically grounded and history-dependent. A recovery step that is plausible in language may repeat a known failure, ignore sim-real uncertainty, or create unsafe motion. This motivates a pre-execution pipeline in which memory, failure risk, and sandbox evidence constrain planning before a plan is dispatched.
+
+The current implementation treats recovery as candidate selection:
+\begin{enumerate}
+    \item retrieve experience memory and construct stage-aware planner input;
+    \item generate single or multi-candidate LLM recovery plans;
+    \item validate schema, allowed skills, and skill precondition/effect facts;
+    \item shadow-roll out valid candidates in parallel MuJoCo sandbox workers;
+    \item rank candidates by critic status, sandbox score, and risk;
+    \item export a \texttt{validated\_robot\_plan\_v1}.
+\end{enumerate}
+
+The strongest supported claim is that the system ranks anomaly-recovery candidates using memory support, failure risk, stage-specific retrieval evidence, gap-calibrated sandbox rollout, motion-level critic feedback, and LLM multi-candidate plan search.
+
+This paper is intentionally written around generated evidence reports rather than manually selected examples. Each main claim is linked to a report under \texttt{results/memory/universal\_pipeline\_calibration\_v1/}. This makes the current contribution narrower but easier to audit: the paper claims implementation support for a memory-sandbox recovery pipeline, while deferring real-robot success claims until true robot episodes are imported.
+
+\section{Contributions}
+This draft focuses on implementation-backed contributions:
+\begin{enumerate}
+    \item A unified experience schema for simulation, pseudo-real, and real-format robot episodes.
+    \item Sim-real pair and gap representations that calibrate sandbox rollout through object initial-state shifts and explicit risk penalties.
+    \item LLM recovery-plan generation with skill semantic validation and parallel sandbox candidate search.
+    \item Multi-type robot memory evidence covering temporal, spatial, episodic, semantic, perceptual, and sim-real gap fields.
+    \item Reproducible evidence reports for sandbox rollout, safety stress, writeback, calibration ablation, memory coverage, text-semantic retrieval, and paper appendices.
+\end{enumerate}
+
+\section{Related Work}
+Retrieval-augmented planning uses past experience as contextual evidence for LLM agents. RAP retrieves contextual memories to condition multimodal planning decisions~\cite{kagaya2024rap}. Our system adopts the same high-level principle, but uses structured robot experience entries and separates retrieved evidence by planning stage.
+
+Robot memory systems motivate richer representations than flat logs. RoboMemory proposes multi-memory organization for embodied lifelong learning~\cite{lei2025robomemory}, while RoboMME and RoboMemArena benchmark memory capabilities for robotic policies~\cite{dai2026robomme,lei2026robomemarena}. Our implementation follows this direction by reporting coverage over temporal, spatial, episodic, semantic, perceptual, and sim-real gap memory fields.
+
+LLM robot programs need safety and executability checks. RoboCritics highlights expert-informed critics for reliable LLM robot programming~\cite{kim2026robocritics}. Our system implements a rule-based motion/contact/task critic and uses it after MuJoCo sandbox rollout. We do not claim a learned critic.
+
+Episodic memory verbalization and cognitive robotics work motivate the use of structured experience as reusable evidence~\cite{episodic2025verbalization,gwt2024episodic}. Reflection-based embodied agents also suggest that execution histories can improve future decisions~\cite{wang2025evolvable}. Our contribution is to connect such experience evidence to candidate recovery selection through semantic validation and sandbox critic ranking.
+
+\section{System Overview}
+Figure~\ref{fig:pipeline} summarizes the current implementation. The system is not a direct LLM-to-robot executor. LLM outputs are candidates that must pass structured validation and sandbox critic evaluation.
+
+\begin{figure*}[t]
+    \centering
+    % Convert experience_system_flow.svg to PDF/PNG before final camera-ready build.
+    \fbox{\parbox{0.92\linewidth}{\centering Current pipeline figure source: \texttt{experience\_system\_flow.svg}}}
+    \caption{Current experience-guided anomaly recovery pipeline. Memory evidence and stage context condition LLM candidate generation. Candidate plans are semantically validated, sandboxed in parallel, critic-ranked, and exported as a validated robot plan.}
+    \label{fig:pipeline}
+\end{figure*}
+
+\subsection{Experience Memory}
+Each \texttt{ExperienceEntry} stores robot, scenario, condition, task, anomaly metadata, skill sequence, observation/action traces, sensor summaries, memory gates, critic results, failure taxonomy, sim-real gap fields, sandbox calibration, and real-format references. The library currently contains simulation and pseudo-real entries; real-format fields are implemented for future true robot episodes.
+
+The memory library is partitioned by evidence role. Successful and validated episodes provide positive support; failed episodes provide risk priors; pseudo-real entries exercise real-format schemas and sim-real pairing; and calibration records connect gap evidence to sandbox rollout. This design avoids treating failure memory as a hard blocker only. Instead, failure evidence contributes risk scores that can alter candidate ranking.
+
+\subsection{Stage-Aware Retrieval}
+The system constructs planner context for candidate generation, candidate ranking, sandbox rewrite, and execution writeback. This is deterministic evidence construction rather than a learned stage planner.
+
+The planner input separates positive memory IDs for candidate generation, failure and gap memory IDs for candidate ranking, critic warning IDs for sandbox rewrite, and recent execution IDs for writeback context. This separation is used both by the LLM prompt and by deterministic report generation.
+
+\subsection{LLM Recovery Plans}
+The LLM is configured through \texttt{experience\_system/.env}. It receives allowed skill names, candidate steps, and planner input, and must return JSON. Plans are normalized and checked for schema validity, allowed skill names, evidence grounding, confidence range, and skill semantic feasibility.
+
+Two LLM paths are implemented. The single-plan loop generates one recovery plan, validates it, rolls it out, and optionally rewrites after critic feedback. The multi-candidate search path asks the LLM for a \texttt{plans[]} array, validates each plan, rolls out valid plans in parallel, and selects the best critic-approved plan. The latter path better reflects candidate search because the sandbox critic can compare alternatives instead of only accepting or rejecting one proposal.
+
+\subsection{Skill Semantic Validation}
+The validator uses skill \texttt{requires}, \texttt{effects}, and \texttt{consumes} facts. It is not a fixed G3/G4 ordering rule. For example, a placement action is rejected if the current simulated fact state does not contain a selected place site and lifted object. Unknown skills require explicit metadata before they can be safely validated.
+
+Validation simulates a symbolic fact state. For a skill $a_i$ with required facts $R_i$, effects $E_i$, and consumed facts $C_i$, the validator checks $R_i \subseteq S_i$, then updates the state as:
+\begin{equation}
+S_{i+1} = (S_i \setminus C_i) \cup E_i .
+\end{equation}
+Plans with missing required facts are rejected before sandbox rollout. Optional missing facts produce warnings. This keeps the validator general at the mechanism level while still requiring accurate skill metadata for new skills.
+
+\subsection{Parallel Sandbox and Critic}
+Valid candidates are executed in MuJoCo. Parallel sweep and plan search use subprocess workers so each rollout has isolated MuJoCo state and output directories. The critic reports task success, sandbox score, contact loss, slip proxies, motion risks, joint-limit risks, and final accept/review/reject status.
+
+The sandbox score is not treated as real-world success probability. It is an implementation signal that combines task completion, critic risk, and calibration penalties. The critic exposes interpretable flags such as contact loss during transport, slip risk, joint-limit risk, and unsafe motion. Candidate search ranks plans by accept/review/reject status, sandbox score, critic risk, and plan confidence.
+
+\section{Method}
+\subsection{Memory-Conditioned Candidate Search}
+Given scenario $x$, condition $c$, memory library $\mathcal{M}$, and allowed skill set $\mathcal{A}$, the system builds stage-aware planner input $P$ from retrieved memory. The LLM proposes candidate plans $\Pi = \{\pi_1,\ldots,\pi_N\}$, where each plan is a sequence of allowed skills and metadata:
+\begin{equation}
+\pi_i = \{(a_{i1}, \theta_{i1}), \ldots, (a_{iT}, \theta_{iT})\}, \quad a_{it}\in\mathcal{A}.
+\end{equation}
+Each plan is normalized to a JSON schema and checked against allowed skills and grounded evidence IDs.
+
+\subsection{Pre-Sandbox Validation}
+The semantic validator rejects physically impossible plans before MuJoCo execution. This is useful because an LLM can otherwise propose an action that appears plausible textually but lacks required physical preconditions. For example, a placement skill requires that an object has been lifted and that a place site has been selected.
+
+\subsection{Sandbox Rollout}
+Valid plans are executed by the general R1Pro task-plan executor. Each candidate receives a sandbox report containing task success, critic status, sandbox score, critic risk score, skill trace, contact stability, motion critic metrics, trajectory trace paths, and experience-entry output. Robust sweeps additionally combine candidates with perturbations over object pose, friction, mass, control gains, delay, gripper closure bias, and contact solver parameters.
+
+\subsection{Critic-Based Selection}
+The selected plan is the highest-ranked candidate after sandbox evaluation. The ranking prioritizes accepted plans, then sandbox score, then lower critic risk, then LLM confidence. The selected plan is exported as \texttt{validated\_robot\_plan\_v1}. A dry-run executor verifies dispatch compatibility without moving a real robot.
+
+\subsection{Writeback}
+Executed or sandbox-validated experiences can be written back into memory with lifecycle metadata. This enables later retrieval and ranking passes to see new evidence. The current writeback benchmark verifies retrieval of newly written experiences; it does not prove long-horizon real-world improvement.
+
+\section{Experiments and Evidence}
+All evidence reports are generated under:
+\begin{verbatim}
+galaxea_mujoco/results/memory/
+  universal_pipeline_calibration_v1/
+\end{verbatim}
+
+The paper evidence summary currently reports \texttt{claim\_count=15}, \texttt{supported\_claim\_count=14}, and \texttt{missing\_report\_count=0}. The only partial row is sensor evidence because no true robot sensor episode has been imported yet.
+
+\begin{table*}[t]
+\centering
+\caption{Claim-level implementation evidence. The table summarizes generated evidence reports, not manually curated demonstrations.}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{0.14\linewidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}}
+\toprule
+Claims & Evidence target & Status & Safe interpretation \\
+\midrule
+C01--C02 & Unified experience memory and lifecycle/writeback reports & Supported & The system stores and retrieves structured simulation, pseudo-real, and real-format entries. \\
+C03 & Sensor evidence report & Partial & Sensor fields are supported, but true robot sensor episodes are not yet imported. \\
+C04--C07 & Sandbox rollout, stage retrieval, visual evidence, and gap calibration reports & Supported & Candidate ranking uses retrieved evidence and calibrated MuJoCo rollout; this is not a full digital twin. \\
+C08--C11 & Failure lessons, safety stress, critic traces, and writeback reports & Supported & Failure memory and critic evidence can alter candidate ranking and produce feedback. \\
+C12--C13 & Memory coverage and text-semantic retrieval reports & Supported & The memory library contains multiple memory types and supports TF-IDF/FAISS text retrieval. \\
+C14--C15 & Real LLM multi-candidate search and single-vs-multi ablation reports & Supported & A configured external LLM can generate multiple candidates that are validated, sandboxed, and ranked. \\
+\bottomrule
+\end{tabularx}
+\label{tab:claim_evidence}
+\end{table*}
+
+\subsection{Candidate Sandbox Rollout}
+For G4/place\_occupied, candidate sandbox rollout evaluates four candidates. It supports the claim that candidates can be shadow-executed and scored before selection, but it does not imply a full digital twin.
+
+The rollout report records the candidate selected before sandbox, the candidate selected after sandbox, per-candidate memory score, sandbox score, combined score, critic status, critic risk score, and whether sandbox evidence changed the decision. This makes sandbox use auditable: a candidate is not merely labeled successful, but is accompanied by traceable risk and critic fields.
+
+\subsection{Parallel Sandbox Sweep}
+The G4/place\_occupied parallel sweep evaluates four candidates and eight rollouts using four workers. It reports \texttt{failed\_worker\_count=0} and \texttt{determinism\_check\_pass=true}.
+
+A rollout job is the pair of one candidate plan and one perturbation profile. Subprocess workers isolate MuJoCo state, random seeds, output directories, and exception handling. The sweep report includes rollout throughput, worker failures, determinism checks, selected candidate ID, and per-rollout critic summaries. This supports engineering scalability for candidate search, rather than a new control policy.
+
+\subsection{Real LLM Multi-Candidate Search}
+In a real Doubao G3/clean run, the LLM generated two distinct plans. One inserted \texttt{verify\_grasp} before lift; another inserted a second \texttt{detect\_place\_occupancy} before placement. Both passed semantic validation and MuJoCo critic checks. The system exported a dry-run dispatchable \texttt{validated\_robot\_plan}.
+
+The generated report records \texttt{dry\_run\_llm=false}, \texttt{llm\_provider=doubao}, \texttt{num\_plans\_requested=2}, \texttt{num\_plans\_normalized=2}, \texttt{sandboxed\_plan\_count=2}, \texttt{failed\_worker\_count=0}, and \texttt{final\_sandbox\_status=accept}. Both candidates passed semantic validation and critic evaluation. This evidence shows that the current pipeline can use a real configured LLM endpoint for candidate generation without importing code from the older wrapper.
+
+\subsection{Single-Plan vs Multi-Plan Ablation}
+A small G3/clean ablation compares a real LLM single-plan baseline with real LLM multi-candidate search. Both variants succeeded, so this is not a success-rate improvement claim. The supported claim is narrower: multi-candidate search evaluates more alternatives before selection.
+
+\begin{table}[t]
+\centering
+\caption{LLM plan-search ablation on G3/clean.}
+\begin{tabular}{lrrrr}
+\toprule
+Variant & Plans & Sandboxed & Accepted & Best score \\
+\midrule
+Single plan & 1 & 1 & 1 & 1.0 \\
+Multi-plan search & 2 & 2 & 2 & 1.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The ablation reports \texttt{plan\_count=1}, \texttt{accepted=1}, and \texttt{best\_score=1.0} for the single-plan variant, and \texttt{plan\_count=2}, \texttt{accepted=2}, and \texttt{best\_score=1.0} for the multi-plan variant. Therefore the correct conclusion is not that multi-plan search improved this easy case, but that it exposed an additional valid alternative for sandbox comparison.
+
+\subsection{Memory Coverage and Semantic Retrieval}
+The memory coverage report counts entries over six memory categories: temporal, spatial, episodic, semantic, perceptual, and sim-real gap. The current report contains 12 entries, an average coverage of 5.6667 categories per entry, and 8 entries that cover all six categories. This supports the claim that the system is a multi-type robot memory implementation rather than a flat episode log.
+
+The text-semantic retrieval report provides natural-language summaries and a FAISS-backed retrieval index over TF-IDF vectors. It reports \texttt{semantic\_summary\_nonempty\_rate=1.0} and \texttt{semantic\_signal\_rate=1.0}. This is a lightweight semantic retrieval layer; it should not be described as learned embedding retrieval unless the vectorizer is replaced.
+
+\subsection{Safety Stress and Writeback}
+Adversarial safety stress artificially boosts risky candidates and shows that the sandbox critic can redirect selection away from risky choices in four cases. The repeated writeback benchmark shows that newly written experiences can be retrieved in later ranking passes. These reports should not be interpreted as statistically proven long-horizon real-world improvement.
+
+\section{Claim Boundaries}
+Safe claims include:
+\begin{itemize}
+    \item Candidate plans are shadow-executed in MuJoCo and scored before selection.
+    \item A configured external LLM can generate multiple recovery-plan candidates that are semantically validated, sandboxed in parallel, critic-ranked, and exported as a dry-run dispatchable validated robot plan.
+    \item Gap-derived calibration changes sandbox initialization and contributes an explicit risk penalty.
+    \item The memory library stores multiple robot memory types rather than only flat episode logs.
+\end{itemize}
+
+Claims to avoid include:
+\begin{itemize}
+    \item real-robot success-rate improvement;
+    \item full digital-twin calibration;
+    \item learned critic;
+    \item arbitrary unseen-skill planning without metadata;
+    \item statistically proven long-horizon real-world recovery improvement.
+\end{itemize}
+
+\section{Limitations}
+The current real branch is real-format and pseudo-real evidence, not true real-robot validation. The sandbox is a pre-execution evaluation layer, not a full digital twin. The critic is rule-based. Text-semantic retrieval uses TF-IDF with FAISS rather than learned neural embeddings. Real robot episodes are required before claiming sensor-derived calibration benefits or real-world recovery improvement.
+
+\section{Reproducibility}
+Primary generated artifacts include:
+\begin{itemize}
+    \item \texttt{paper\_evidence\_summary.json}
+    \item \texttt{paper\_evidence\_appendix.md}
+    \item \texttt{llm\_plan\_candidate\_search\_g3\_clean\_real\_llm\_report.json}
+    \item \texttt{llm\_plan\_search\_ablation\_g3\_clean\_real\_llm.json}
+    \item \texttt{sandbox\_sweep\_g4\_place\_occupied\_parallel\_report.json}
+    \item \texttt{memory\_type\_coverage\_report.json}
+    \item \texttt{text\_semantic\_memory\_report.json}
+\end{itemize}
+
+\section{Conclusion}
+The current system demonstrates an implementation-backed pipeline for evidence-guided robot anomaly recovery. It combines dual-source memory, LLM candidate generation, skill semantic validation, sandbox rollout, critic ranking, and validated plan export. Future work requires true robot episodes to move sensor evidence and real execution claims from implementation support to real-world validation.
+
+\bibliographystyle{IEEEtran}
+\bibliography{../references}
+
+\end{document}

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="860" viewBox="0 0 1500 860">
+  <defs>
+    <style>
+      .bg { fill: #f7f3ea; }
+      .title { font: 700 34px Georgia, serif; fill: #1e2a24; }
+      .subtitle { font: 18px Georgia, serif; fill: #56645b; }
+      .label { font: 700 18px Georgia, serif; fill: #1f2b25; }
+      .small { font: 14px Georgia, serif; fill: #46554c; }
+      .tiny { font: 12px Georgia, serif; fill: #5f6d64; }
+      .box { fill: #fffdf7; stroke: #31453b; stroke-width: 2; rx: 20; }
+      .memory { fill: #e7f0df; stroke: #526b45; }
+      .planner { fill: #e6edf4; stroke: #425f78; }
+      .validator { fill: #fbefd2; stroke: #8c6d24; }
+      .sandbox { fill: #eadfd8; stroke: #7b5142; }
+      .critic { fill: #f2d8d4; stroke: #8a3f36; }
+      .output { fill: #dfeee8; stroke: #2f6657; }
+      .evidence { fill: #f4f0e6; stroke: #9b8b65; stroke-dasharray: 5 5; }
+      .arrow { stroke: #24352d; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .softarrow { stroke: #6b746e; stroke-width: 2; fill: none; marker-end: url(#arrowSoft); stroke-dasharray: 6 6; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#24352d"/>
+    </marker>
+    <marker id="arrowSoft" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#6b746e"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1500" height="860"/>
+  <text class="title" x="70" y="70">Experience-Guided Robot Anomaly Recovery</text>
+  <text class="subtitle" x="72" y="102">Current R1Pro experience_system pipeline: memory evidence constrains LLM planning before sandbox-critic validation.</text>
+
+  <rect class="box memory" x="70" y="160" width="260" height="180"/>
+  <text class="label" x="95" y="198">Unified Experience Memory</text>
+  <text class="small" x="95" y="232">simulation / pseudo-real / real-format</text>
+  <text class="small" x="95" y="260">failure risk + Top-O memory</text>
+  <text class="small" x="95" y="288">sim-real gap + calibration</text>
+  <text class="small" x="95" y="316">visual / text-semantic evidence</text>
+
+  <rect class="box evidence" x="70" y="410" width="260" height="170"/>
+  <text class="label" x="95" y="448">Stage Planner Context</text>
+  <text class="small" x="95" y="482">candidate generation evidence</text>
+  <text class="small" x="95" y="510">ranking risk priors</text>
+  <text class="small" x="95" y="538">sandbox rewrite feedback</text>
+  <text class="small" x="95" y="566">writeback history</text>
+
+  <rect class="box planner" x="420" y="235" width="270" height="210"/>
+  <text class="label" x="452" y="274">LLM Candidate Planner</text>
+  <text class="small" x="452" y="310">single-plan loop</text>
+  <text class="small" x="452" y="338">multi-candidate plans[] search</text>
+  <text class="small" x="452" y="366">allowed skill names only</text>
+  <text class="small" x="452" y="394">structured JSON recovery_plan</text>
+  <text class="tiny" x="452" y="424">verified: real Doubao G3 clean, 2 plans</text>
+
+  <rect class="box validator" x="780" y="175" width="265" height="175"/>
+  <text class="label" x="812" y="214">Semantic Validator</text>
+  <text class="small" x="812" y="250">schema and evidence-id checks</text>
+  <text class="small" x="812" y="278">skill requires/effects facts</text>
+  <text class="small" x="812" y="306">reject impossible plans early</text>
+  <text class="tiny" x="812" y="332">not fixed to G3/G4 order rules</text>
+
+  <rect class="box sandbox" x="780" y="430" width="265" height="185"/>
+  <text class="label" x="812" y="470">Parallel MuJoCo Sandbox</text>
+  <text class="small" x="812" y="506">subprocess rollout workers</text>
+  <text class="small" x="812" y="534">candidate × perturbation jobs</text>
+  <text class="small" x="812" y="562">gap-calibrated initial state</text>
+  <text class="tiny" x="812" y="590">G4: 8 rollouts, 4 workers, no failures</text>
+
+  <rect class="box critic" x="1135" y="235" width="270" height="210"/>
+  <text class="label" x="1168" y="274">Motion / Contact Critic</text>
+  <text class="small" x="1168" y="310">task success and sandbox score</text>
+  <text class="small" x="1168" y="338">collision / joint / pose risk</text>
+  <text class="small" x="1168" y="366">contact loss and slip proxies</text>
+  <text class="small" x="1168" y="394">critic-ranked plan selection</text>
+  <text class="tiny" x="1168" y="424">outputs accept / review / reject</text>
+
+  <rect class="box output" x="1135" y="545" width="270" height="160"/>
+  <text class="label" x="1168" y="584">Validated Robot Plan</text>
+  <text class="small" x="1168" y="620">validated_robot_plan_v1</text>
+  <text class="small" x="1168" y="648">dry-run executor boundary</text>
+  <text class="small" x="1168" y="676">writeback after execution</text>
+
+  <path class="arrow" d="M330 250 C365 250 382 285 420 300"/>
+  <path class="arrow" d="M330 500 C365 500 382 395 420 372"/>
+  <path class="arrow" d="M690 340 C725 335 745 270 780 260"/>
+  <path class="arrow" d="M913 350 L913 430"/>
+  <path class="arrow" d="M1045 520 C1085 510 1108 405 1135 372"/>
+  <path class="arrow" d="M1270 445 L1270 545"/>
+  <path class="softarrow" d="M1270 705 C1040 805 350 785 200 580"/>
+
+  <rect class="box evidence" x="420" y="650" width="625" height="115"/>
+  <text class="label" x="452" y="688">Paper Evidence Reports</text>
+  <text class="small" x="452" y="720">paper_evidence_summary: 15 claims, 14 supported, 1 partial sensor-evidence row</text>
+  <text class="small" x="452" y="748">ablation: single-plan vs multi-plan search; safety stress; writeback; memory coverage</text>
+  <path class="softarrow" d="M735 650 C690 580 690 470 780 520"/>
+</svg>
