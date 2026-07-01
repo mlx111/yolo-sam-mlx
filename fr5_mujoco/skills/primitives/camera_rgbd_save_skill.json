@@ -1,0 +1,9 @@
+{
+  "name": "camera_rgbd_save",
+  "description": "Render and save current FR5 ee_camera RGB-D observation.",
+  "parameters": {
+    "stage": "optional str"
+  },
+  "preconditions": [],
+  "effects": []
+}

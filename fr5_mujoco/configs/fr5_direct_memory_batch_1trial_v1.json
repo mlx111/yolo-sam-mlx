@@ -1,0 +1,18 @@
+{
+  "scenario_id": "fr5_direct_recovery",
+  "condition_id": "direct",
+  "methods": ["direct_llm_weak", "direct_memory", "hierarchical_no_failed"],
+  "trials_per_method": 1,
+  "seed_start": 3100,
+  "output_dir": "fr5_mujoco/results/fr5_direct_memory_batch",
+  "experience_read": "fr5_mujoco/results/memory/fr5_experience_library.json",
+  "rolling_memory": true,
+  "experience_save_mode": "all",
+  "scene_xml": "fr5_mujoco/assets/scene.xml",
+  "target_class": "apple",
+  "place_target": "plate",
+  "no_viewer": true,
+  "no_llm": false,
+  "recovery_candidate_count": 1,
+  "continue_on_failure": false
+}

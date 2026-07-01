@@ -1,0 +1,12 @@
+{
+  "name": "go_camera_ready",
+  "description": "Move FR5 to the selected initial posture where ee_camera sees the apple.",
+  "parameters": {
+    "q": "optional list[float]",
+    "duration": "optional float seconds"
+  },
+  "preconditions": [],
+  "effects": [
+    "camera_ready_reached"
+  ]
+}

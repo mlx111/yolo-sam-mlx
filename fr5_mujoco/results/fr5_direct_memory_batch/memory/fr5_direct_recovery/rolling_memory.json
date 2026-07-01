@@ -1,0 +1,788 @@
+{
+  "schema_version": "memory_v3_plus",
+  "stm_capacity": 30,
+  "consolidation_counters": {},
+  "entries": [
+    {
+      "schema_version": "memory_v3_plus",
+      "experience_id": "fr5_e4d90fa17b4d",
+      "episode_type": "anomaly_recovery",
+      "condition_id": "direct",
+      "scenario_id": "fr5_direct_recovery",
+      "available_actions": [
+        "approach_object",
+        "camera_rgbd_save",
+        "close_gripper",
+        "create_fixed_vertical_grasp",
+        "detect_object_pose",
+        "go_home",
+        "lift",
+        "move_lifted_object_to",
+        "move_to_pregrasp",
+        "open_gripper"
+      ],
+      "skill_sequence": [
+        {
+          "action": "camera_rgbd_save",
+          "parameters": {},
+          "success": true,
+          "status": "rgbd_saved",
+          "message": "rgbd_saved"
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "apple"
+          },
+          "success": true,
+          "status": "object_pose_detected",
+          "message": "object_pose_detected"
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "plate"
+          },
+          "success": true,
+          "status": "object_pose_detected",
+          "message": "object_pose_detected"
+        },
+        {
+          "action": "create_fixed_vertical_grasp",
+          "parameters": {},
+          "success": true,
+          "status": "fixed_vertical_grasp_created",
+          "message": "fixed_vertical_grasp_created"
+        },
+        {
+          "action": "move_to_pregrasp",
+          "parameters": {
+            "dx": 0.0,
+            "dy": 0.0,
+            "dz": 0.08
+          },
+          "success": false,
+          "status": "final_pose_error_exceeded",
+          "message": "final_pose_error_exceeded"
+        }
+      ],
+      "result": {
+        "task_success": false,
+        "failure_reason": "final_pose_error_exceeded",
+        "success": false,
+        "z_change": 0.0,
+        "time_cost": 80.89892315864563,
+        "attempts": 1
+      },
+      "status": "failure",
+      "source": "simulation",
+      "domain": "simulation",
+      "source_run_id": "",
+      "source_trial_id": "",
+      "confidence_score": 0.35,
+      "memory_partition": "failed_memory",
+      "created_at": "2026-07-01T14:39:53Z",
+      "updated_at": "2026-07-01T14:39:53Z",
+      "summary": "Failed FR5 direct recovery: final_pose_error_exceeded",
+      "text_summary": "Failed FR5 direct recovery: final_pose_error_exceeded; condition_id=direct; scenario_id=fr5_direct_recovery; status=failure; validation_status=failed; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"create_fixed_vertical_grasp\"}, {\"action\": \"move_to_pregrasp\"}]; failure_reason=final_pose_error_exceeded",
+      "text_embedding_id": "",
+      "embeddings": {},
+      "anomaly": {
+        "type": "final_pose_error_exceeded",
+        "injection_step": "",
+        "description": "Failed FR5 direct recovery: final_pose_error_exceeded",
+        "condition_id": "direct",
+        "scenario_id": "fr5_direct_recovery",
+        "params": {}
+      },
+      "scene": {
+        "objects": [
+          "apple",
+          "pear",
+          "plate"
+        ],
+        "camera_view": "sim_camera",
+        "scene_name": "apple_pear_runtime_refined",
+        "xml_path": ""
+      },
+      "task": {
+        "name": "ur5e_anomaly_recovery",
+        "stage": "",
+        "object_class": "apple",
+        "scene_name": "apple_pear_runtime_refined",
+        "condition": "",
+        "trial_index": 0,
+        "condition_id": "direct",
+        "scenario_id": "fr5_direct_recovery",
+        "condition_name": "",
+        "strategy_family": ""
+      },
+      "perception": {
+        "before_anomaly": {
+          "object_pos": null,
+          "confidence": 0.0,
+          "detection_ok": false,
+          "mask_nonzero": 0
+        },
+        "after_anomaly": null,
+        "detection_method": ""
+      },
+      "reconstruction_artifacts": {
+        "reconstruction_type": "",
+        "object_positions": {},
+        "object_quats": {},
+        "camera_poses": {},
+        "scene_out": "",
+        "scene_out_refined": "",
+        "runtime_pose_calibration_path": "",
+        "sim_intrinsics_json": "",
+        "mesh_quats": {},
+        "support_height_adjustments": {},
+        "reconstruction_signature": "",
+        "virtual_scene_built": false,
+        "recovery_pos": [],
+        "condition": ""
+      },
+      "recovery_plan": {
+        "condition": "",
+        "steps": [
+          {
+            "type": "camera_rgbd_save",
+            "params": {}
+          },
+          {
+            "type": "detect_object_pose",
+            "params": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "type": "detect_object_pose",
+            "params": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "type": "create_fixed_vertical_grasp",
+            "params": {}
+          },
+          {
+            "type": "move_to_pregrasp",
+            "params": {
+              "dx": 0.0,
+              "dy": 0.0,
+              "dz": 0.08
+            }
+          }
+        ]
+      },
+      "execution_feedback": {
+        "task_success": false,
+        "apple_z_after_recovery": null,
+        "execution_deviation": {},
+        "contact_after_close": {},
+        "contact_after_lift": {},
+        "time_costs": {},
+        "failure_reason": "final_pose_error_exceeded",
+        "observed_pos": null,
+        "task_success_criteria": {},
+        "virtual_validation_success": null
+      },
+      "sensor_summary": {
+        "joint_positions": [],
+        "joint_velocities": [],
+        "end_effector_pose": {},
+        "gripper_state": {},
+        "contact_state": {},
+        "force_torque": {},
+        "timestamps": {},
+        "sensor_modalities": [],
+        "raw_refs": {}
+      },
+      "key_slices": [],
+      "keyframes": [],
+      "anomaly_state": {
+        "condition_id": "direct",
+        "scenario_id": "fr5_direct_recovery",
+        "available_actions": [
+          "approach_object",
+          "camera_rgbd_save",
+          "close_gripper",
+          "create_fixed_vertical_grasp",
+          "detect_object_pose",
+          "go_home",
+          "lift",
+          "move_lifted_object_to",
+          "move_to_pregrasp",
+          "open_gripper"
+        ],
+        "robot": "fr5",
+        "target_class": "apple",
+        "place_target": "plate",
+        "grasp_orientation_policy": "fixed_vertical_down"
+      },
+      "retrieval_key": {
+        "condition_id": "direct",
+        "scenario_id": "fr5_direct_recovery",
+        "task_stage": "",
+        "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"create_fixed_vertical_grasp\"}, {\"action\": \"move_to_pregrasp\"}]",
+        "contact_pattern": "no_contact",
+        "task_success": false,
+        "failure_type": "final_pose_error_exceeded",
+        "gap_type": "",
+        "gap_uncertainty_bucket": "",
+        "critic_status": "warn",
+        "critic_flags": [
+          "final_pose_error_exceeded"
+        ],
+        "memory_type": "episodic",
+        "memory_role": "failure_case",
+        "real_validated": false,
+        "pair_status": ""
+      },
+      "failure_taxonomy": {
+        "failure_stage": "recovery_execution",
+        "failure_type": "final_pose_error_exceeded",
+        "failure_reason": "final_pose_error_exceeded",
+        "rule_critic": {
+          "enabled": true,
+          "rule_flags": [
+            {
+              "rule": "final_pose_error_exceeded",
+              "stage": "recovery_execution",
+              "severity": "block"
+            }
+          ]
+        },
+        "llm_critic": {
+          "enabled": true,
+          "model": "doubao-seed-1-6-vision-250815",
+          "error": "critic_json_parse_failed",
+          "parse_error_type": "RuntimeError",
+          "raw_text": ""
+        }
+      },
+      "validation_status": "failed",
+      "validation_source": "fr5_mujoco_direct",
+      "metadata": {
+        "robot": "fr5",
+        "source_tool": "fr5_run_experiment_v4",
+        "method": "direct_llm_weak",
+        "memory_policy": "none"
+      },
+      "validation_evidence": {
+        "actions": [
+          {
+            "action": "camera_rgbd_save",
+            "success": true,
+            "status": "rgbd_saved",
+            "message": "rgbd_saved",
+            "parameters": {},
+            "raw_result": {
+              "result": null,
+              "skill_record": {
+                "skill": "camera_rgbd_save",
+                "success": true,
+                "reason": "rgbd_saved",
+                "extra": {
+                  "camera_name": "ee_camera",
+                  "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+                  "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+                  "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+                  "intrinsics": {
+                    "fx": 579.4112549695428,
+                    "fy": 579.4112549695428,
+                    "cx": 319.5,
+                    "cy": 239.5,
+                    "width": 640,
+                    "height": 480,
+                    "fovy": 45.0
+                  },
+                  "camera_pose": {
+                    "name": "ee_camera",
+                    "xpos": [
+                      0.08961730082340014,
+                      -0.043538187752496696,
+                      0.9854978259929588
+                    ],
+                    "xmat": [
+                      [
+                        0.5104131900603195,
+                        0.7406035279412359,
+                        -0.43701806577468105
+                      ],
+                      [
+                        -0.8499201442567853,
+                        0.35715774363233616,
+                        -0.38739397846376505
+                      ],
+                      [
+                        -0.13082096085480255,
+                        0.5691614538638872,
+                        0.8117518805870256
+                      ]
+                    ]
+                  },
+                  "rgb_shape": [
+                    480,
+                    640,
+                    3
+                  ],
+                  "depth_shape": [
+                    480,
+                    640
+                  ],
+                  "depth_min_m": 0.8805750608444214,
+                  "depth_max_m": 1.9539916515350342
+                }
+              }
+            },
+            "index": 0
+          },
+          {
+            "action": "detect_object_pose",
+            "success": true,
+            "status": "object_pose_detected",
+            "message": "object_pose_detected",
+            "parameters": {
+              "target_class": "apple"
+            },
+            "raw_result": {
+              "result": null,
+              "skill_record": {
+                "skill": "detect_object_pose",
+                "success": true,
+                "reason": "object_pose_detected",
+                "extra": {
+                  "target_class": "apple",
+                  "observed_pos": [
+                    0.5578779429845138,
+                    0.3158211668663563,
+                    0.027529702511372378
+                  ],
+                  "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_mask.png",
+                  "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_annotated.png",
+                  "point_cloud_info": {
+                    "state": "success",
+                    "info": "point cloud generated: 987 points",
+                    "x": 0.5578779429845138,
+                    "y": 0.3158211668663563,
+                    "z": 0.027529702511372378,
+                    "x_min": 0.5241725830327071,
+                    "y_min": 0.2733394078604296,
+                    "z_min": -1.4642776957618509e-07,
+                    "x_max": 0.5915833029363206,
+                    "y_max": 0.358302925872283,
+                    "z_max": 0.05505955145051433,
+                    "point_count": 987
+                  }
+                }
+              }
+            },
+            "index": 1
+          },
+          {
+            "action": "detect_object_pose",
+            "success": true,
+            "status": "object_pose_detected",
+            "message": "object_pose_detected",
+            "parameters": {
+              "target_class": "plate"
+            },
+            "raw_result": {
+              "result": null,
+              "skill_record": {
+                "skill": "detect_object_pose",
+                "success": true,
+                "reason": "object_pose_detected",
+                "extra": {
+                  "target_class": "plate",
+                  "observed_pos": [
+                    0.4092429692076476,
+                    0.413536842509845,
+                    0.02399997837229778
+                  ],
+                  "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_mask.png",
+                  "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_annotated.png",
+                  "point_cloud_info": {
+                    "state": "success",
+                    "info": "point cloud generated: 5505 points",
+                    "x": 0.4092429692076476,
+                    "y": 0.413536842509845,
+                    "z": 0.02399997837229778,
+                    "x_min": 0.32002861512825453,
+                    "y_min": 0.3200118322975648,
+                    "z_min": -1.9680267659971662e-07,
+                    "x_max": 0.4984573232870406,
+                    "y_max": 0.5070618527221252,
+                    "z_max": 0.04800015354727216,
+                    "point_count": 5505
+                  }
+                }
+              }
+            },
+            "index": 2
+          },
+          {
+            "action": "create_fixed_vertical_grasp",
+            "success": true,
+            "status": "fixed_vertical_grasp_created",
+            "message": "fixed_vertical_grasp_created",
+            "parameters": {},
+            "raw_result": {
+              "result": null,
+              "skill_record": {
+                "skill": "create_fixed_vertical_grasp",
+                "success": true,
+                "reason": "fixed_vertical_grasp_created",
+                "extra": {
+                  "target_class": "apple",
+                  "target_pos": [
+                    0.5578779429845138,
+                    0.3158211668663563,
+                    0.027529702511372378
+                  ],
+                  "pregrasp_height": 0.08,
+                  "orientation_source": "fixed_vertical_down",
+                  "yaw": -0.393,
+                  "quat": [
+                    0.0,
+                    0.980755916177706,
+                    -0.19523788792759608,
+                    0.0
+                  ]
+                }
+              }
+            },
+            "index": 3
+          },
+          {
+            "action": "move_to_pregrasp",
+            "success": false,
+            "status": "final_pose_error_exceeded",
+            "message": "final_pose_error_exceeded",
+            "parameters": {
+              "dx": 0.0,
+              "dy": 0.0,
+              "dz": 0.08
+            },
+            "raw_result": {
+              "result": null,
+              "skill_record": {
+                "skill": "cartesian_move",
+                "success": false,
+                "reason": "final_pose_error_exceeded",
+                "contact": {
+                  "left_contact": false,
+                  "right_contact": false,
+                  "contact_count": 1,
+                  "pairs": [
+                    [
+                      "floor",
+                      "apple0"
+                    ]
+                  ]
+                },
+                "gripper_action": 0.0,
+                "object_pos": null,
+                "target_pos": [
+                  0.5578779429845138,
+                  0.3158211668663563,
+                  0.10752970251137238
+                ],
+                "final_pos": [
+                  0.5400085860001137,
+                  0.3125404213834012,
+                  0.09390691683139261
+                ],
+                "pos_error": 0.02270809326303112,
+                "target_joint": null,
+                "final_joint": null,
+                "joint_error": null,
+                "extra": {
+                  "duration": 1.0,
+                  "ik_failed_count": 0
+                }
+              }
+            },
+            "index": 4
+          }
+        ],
+        "skill_results": [
+          {
+            "skill": "camera_rgbd_save",
+            "success": true,
+            "reason": "rgbd_saved",
+            "extra": {
+              "camera_name": "ee_camera",
+              "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+              "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+              "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+              "intrinsics": {
+                "fx": 579.4112549695428,
+                "fy": 579.4112549695428,
+                "cx": 319.5,
+                "cy": 239.5,
+                "width": 640,
+                "height": 480,
+                "fovy": 45.0
+              },
+              "camera_pose": {
+                "name": "ee_camera",
+                "xpos": [
+                  0.08961730082340014,
+                  -0.043538187752496696,
+                  0.9854978259929588
+                ],
+                "xmat": [
+                  [
+                    0.5104131900603195,
+                    0.7406035279412359,
+                    -0.43701806577468105
+                  ],
+                  [
+                    -0.8499201442567853,
+                    0.35715774363233616,
+                    -0.38739397846376505
+                  ],
+                  [
+                    -0.13082096085480255,
+                    0.5691614538638872,
+                    0.8117518805870256
+                  ]
+                ]
+              },
+              "rgb_shape": [
+                480,
+                640,
+                3
+              ],
+              "depth_shape": [
+                480,
+                640
+              ],
+              "depth_min_m": 0.8805750608444214,
+              "depth_max_m": 1.9539916515350342
+            }
+          },
+          {
+            "skill": "detect_object_pose",
+            "success": true,
+            "reason": "object_pose_detected",
+            "extra": {
+              "target_class": "apple",
+              "observed_pos": [
+                0.5578779429845138,
+                0.3158211668663563,
+                0.027529702511372378
+              ],
+              "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_mask.png",
+              "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_annotated.png",
+              "point_cloud_info": {
+                "state": "success",
+                "info": "point cloud generated: 987 points",
+                "x": 0.5578779429845138,
+                "y": 0.3158211668663563,
+                "z": 0.027529702511372378,
+                "x_min": 0.5241725830327071,
+                "y_min": 0.2733394078604296,
+                "z_min": -1.4642776957618509e-07,
+                "x_max": 0.5915833029363206,
+                "y_max": 0.358302925872283,
+                "z_max": 0.05505955145051433,
+                "point_count": 987
+              }
+            }
+          },
+          {
+            "skill": "detect_object_pose",
+            "success": true,
+            "reason": "object_pose_detected",
+            "extra": {
+              "target_class": "plate",
+              "observed_pos": [
+                0.4092429692076476,
+                0.413536842509845,
+                0.02399997837229778
+              ],
+              "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_mask.png",
+              "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_annotated.png",
+              "point_cloud_info": {
+                "state": "success",
+                "info": "point cloud generated: 5505 points",
+                "x": 0.4092429692076476,
+                "y": 0.413536842509845,
+                "z": 0.02399997837229778,
+                "x_min": 0.32002861512825453,
+                "y_min": 0.3200118322975648,
+                "z_min": -1.9680267659971662e-07,
+                "x_max": 0.4984573232870406,
+                "y_max": 0.5070618527221252,
+                "z_max": 0.04800015354727216,
+                "point_count": 5505
+              }
+            }
+          },
+          {
+            "skill": "create_fixed_vertical_grasp",
+            "success": true,
+            "reason": "fixed_vertical_grasp_created",
+            "extra": {
+              "target_class": "apple",
+              "target_pos": [
+                0.5578779429845138,
+                0.3158211668663563,
+                0.027529702511372378
+              ],
+              "pregrasp_height": 0.08,
+              "orientation_source": "fixed_vertical_down",
+              "yaw": -0.393,
+              "quat": [
+                0.0,
+                0.980755916177706,
+                -0.19523788792759608,
+                0.0
+              ]
+            }
+          },
+          {
+            "skill": "cartesian_move",
+            "success": false,
+            "reason": "final_pose_error_exceeded",
+            "contact": {
+              "left_contact": false,
+              "right_contact": false,
+              "contact_count": 1,
+              "pairs": [
+                [
+                  "floor",
+                  "apple0"
+                ]
+              ]
+            },
+            "gripper_action": 0.0,
+            "object_pos": null,
+            "target_pos": [
+              0.5578779429845138,
+              0.3158211668663563,
+              0.10752970251137238
+            ],
+            "final_pos": [
+              0.5400085860001137,
+              0.3125404213834012,
+              0.09390691683139261
+            ],
+            "pos_error": 0.02270809326303112,
+            "target_joint": null,
+            "final_joint": null,
+            "joint_error": null,
+            "extra": {
+              "duration": 1.0,
+              "ik_failed_count": 0
+            }
+          }
+        ]
+      },
+      "promotion_history": [],
+      "memory_tier": "stm",
+      "memory_gate": {
+        "anomaly_score": 0.0,
+        "failure_score": 0.0,
+        "sim_real_gap_score": 0.0,
+        "recovery_utility_score": 0.0,
+        "surprise_score": 0.0,
+        "write_score": 0.0,
+        "write_decision": "",
+        "trigger_events": [],
+        "explanation": {}
+      },
+      "sim_real_gap": {
+        "gap_id": "",
+        "gap_score": 0.0,
+        "pose_gap": {},
+        "contact_gap": {},
+        "outcome_gap": {},
+        "perception_gap": {},
+        "actuation_gap": {},
+        "robot_state_gap": {},
+        "scene_reconstruction_gap": {},
+        "uncertainty": 0.0,
+        "evidence": {}
+      },
+      "sim_real_pair": {
+        "pair_id": "",
+        "sim_experience_id": "",
+        "real_experience_id": "",
+        "paired_by": "",
+        "pair_score": 0.0,
+        "gap_score": 0.0,
+        "validation_status": "",
+        "created_at": "",
+        "updated_at": ""
+      },
+      "sandbox_calibration": {
+        "calibration_id": "",
+        "source_gap_ids": [],
+        "object_pose_bias": [],
+        "gripper_delay_bias": 0.0,
+        "slip_risk_bias": 0.0,
+        "contact_success_bias": 0.0,
+        "perception_noise_bias": [],
+        "applied_to_candidate": false,
+        "calibration_confidence": 0.0,
+        "details": {}
+      },
+      "critic_result": {
+        "overall_status": "warn",
+        "critic_risk_score": 0.45,
+        "collision": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "joint": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "gripper_contact": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "end_effector_pose": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "rule_flags": [
+          {
+            "rule": "final_pose_error_exceeded",
+            "stage": "recovery_execution",
+            "severity": "block"
+          }
+        ],
+        "feedback_for_rewrite": ""
+      },
+      "real_episode_ref": {
+        "raw_episode_id": "",
+        "hdf5_path": "",
+        "video_dir": "",
+        "keyframe_dir": "",
+        "robot_log_path": "",
+        "time_range": [],
+        "sensor_modalities": [],
+        "metadata": {}
+      },
+      "memory_tags": {
+        "memory_type": "episodic",
+        "memory_scope": "condition",
+        "memory_role": "failure_case"
+      }
+    }
+  ]
+}

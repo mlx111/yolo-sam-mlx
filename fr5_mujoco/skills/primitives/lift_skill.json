@@ -1,0 +1,13 @@
+{
+  "name": "lift",
+  "description": "Lift grasped object vertically.",
+  "parameters": {
+    "lift_height": "required float meters"
+  },
+  "preconditions": [
+    "close_gripper"
+  ],
+  "effects": [
+    "object_lifted"
+  ]
+}

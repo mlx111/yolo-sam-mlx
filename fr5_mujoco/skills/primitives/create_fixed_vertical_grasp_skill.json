@@ -1,0 +1,13 @@
+{
+  "name": "create_fixed_vertical_grasp",
+  "description": "Create fixed vertical-down grasp and pregrasp poses from the latest detected target.",
+  "parameters": {
+    "pregrasp_height": "optional float",
+    "grasp_descend_m": "optional float",
+    "top_band_m": "optional float",
+    "top_fallback_quantile": "optional float"
+  },
+  "preconditions": [],
+  "effects": [
+  ]
+}

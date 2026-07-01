@@ -1,0 +1,11 @@
+{
+  "conditions": ["U4-5"],
+  "methods": ["direct_llm_weak"],
+  "trials_per_method": 5,
+  "seed_start": 5300,
+  "output_dir": "results/u4_u45_direct_5trials_promptv2",
+  "noise_scale": 0.0,
+  "no_viewer": true,
+  "no_inject": false,
+  "rolling_memory": false
+}

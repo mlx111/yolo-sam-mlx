@@ -1,0 +1,15 @@
+{
+  "name": "move_to_pregrasp",
+  "description": "Move TCP to a pregrasp pose offset from the current grasp point.",
+  "parameters": {
+    "dx": "required float meters",
+    "dy": "required float meters",
+    "dz": "required float meters"
+  },
+  "preconditions": [
+    "detect_object_pose"
+  ],
+  "effects": [
+    "pregrasp_reached"
+  ]
+}

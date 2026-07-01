@@ -1,0 +1,8 @@
+{
+  "name": "open_gripper",
+  "description": "Open FR5 gripper and release the physically held target.",
+  "parameters": {},
+  "preconditions": [],
+  "effects": [
+  ]
+}

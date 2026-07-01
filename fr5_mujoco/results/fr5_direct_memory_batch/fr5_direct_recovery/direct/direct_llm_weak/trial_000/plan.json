@@ -1,0 +1,62 @@
+{
+  "steps": [
+    {
+      "action": "camera_rgbd_save",
+      "parameters": {}
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "apple"
+      }
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "plate"
+      }
+    },
+    {
+      "action": "create_fixed_vertical_grasp",
+      "parameters": {}
+    },
+    {
+      "action": "move_to_pregrasp",
+      "parameters": {
+        "dx": 0.0,
+        "dy": 0.0,
+        "dz": 0.08
+      }
+    },
+    {
+      "action": "approach_object",
+      "parameters": {
+        "dx": 0.0,
+        "dy": 0.0,
+        "dz": 0.0
+      }
+    },
+    {
+      "action": "close_gripper",
+      "parameters": {}
+    },
+    {
+      "action": "lift",
+      "parameters": {
+        "lift_height": 0.1
+      }
+    },
+    {
+      "action": "move_lifted_object_to",
+      "parameters": {
+        "target": "plate"
+      }
+    },
+    {
+      "action": "open_gripper",
+      "parameters": {}
+    }
+  ],
+  "method": "direct_llm_weak",
+  "memory_policy": "none"
+}

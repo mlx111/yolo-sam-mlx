@@ -1,0 +1,41 @@
+<mujoco model="fr5 scene">
+  <compiler angle="radian"/>
+
+  <option gravity="0 0 -9.81" timestep="0.002"/>
+ <statistic center="1.8 1.1 1.7" extent="0.8" meansize="0.08" />
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="120" elevation="-20"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8" width="300" height="300"/>
+     <texture type="2d" colorspace="linear" name="apple_tex" file="../assets/fruit/mesh/red-apple.png"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="5 5" reflectance="0.2"/>
+    <model name="fr5_robot" file="fr5_robot.xml"/>
+    <mesh name="apple" content_type="model/stl" file="/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/assets/fruit/stl/apple.stl" scale="0.705 0.705 0.705"/><material name="apple_mat" texture="apple_tex"/>
+  </asset>
+
+  <worldbody>
+    <light name="key_light" pos="0 -1 2" dir="0 0 -1" directional="true"/>
+   
+    <geom name="floor" size="0 0 0.05" type="plane" material="groundplane"/>
+    <geom name="x-aixs" size="0.01 0.5" pos="0.5 0 0" quat="0.707107 0 -0.707107 0" type="cylinder" contype="0" conaffinity="0" group="2" rgba="1 0 0 1"/>
+    <geom name="y-aixs" size="0.01 0.5" pos="0 0.5 0" quat="0.707107 0.707107 0 0" type="cylinder" contype="0" conaffinity="0" group="2" rgba="0 1 0 1"/>
+    <geom name="z-aixs" size="0.01 0.5" pos="0 0 0.5" quat="0 1 0 0" type="cylinder" contype="0" conaffinity="0" group="2" rgba="0 0 1 1"/>
+
+    <body name="robot" pos="0 0 0" euler="0 0 0">
+      <attach model="fr5_robot" body="base_link" prefix=""/>
+    </body>
+    <body name="plate" pos="0.4 0.4 0.04">
+      <geom name="plate_geom" size="0.08 0.008" type="cylinder" rgba="0.92 0.88 0.82 1"/>
+    </body>
+      <body name="apple0" pos="0.560126 0.299633 0.041" quat="-0.687132 0.687132 0.166882 -0.166882">
+      <joint name="apple0_joint" type="free" damping="0.1"/>
+      <geom name="apple0" type="mesh" material="apple_mat" mesh="apple"/>
+    </body>
+  </worldbody>
+</mujoco>

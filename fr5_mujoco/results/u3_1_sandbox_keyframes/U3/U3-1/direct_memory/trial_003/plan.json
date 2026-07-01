@@ -1,0 +1,100 @@
+{
+  "plan_id": "recovery_20260701_141103_2357",
+  "condition": "direct",
+  "scenario_id": "U3",
+  "condition_id": "U3-1",
+  "detection_info": {
+    "perceived_apple_z": null,
+    "z_threshold": 0.03,
+    "detection_method": "oracle",
+    "detection_tier": "oracle"
+  },
+  "steps": [
+    {
+      "action": "camera_rgbd_save",
+      "parameters": {}
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "apple"
+      }
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "plate"
+      }
+    },
+    {
+      "action": "close_gripper",
+      "parameters": {}
+    },
+    {
+      "action": "lift",
+      "parameters": {
+        "lift_height": 0.1
+      }
+    },
+    {
+      "action": "move_lifted_object_to",
+      "parameters": {
+        "target": "plate"
+      }
+    },
+    {
+      "action": "open_gripper",
+      "parameters": {}
+    },
+    {
+      "action": "go_home",
+      "parameters": {}
+    }
+  ],
+  "result": {
+    "success": true,
+    "apple_z_after_recovery": 0.32867271384460345
+  },
+  "skill_steps": [
+    {
+      "action": "camera_rgbd_save",
+      "parameters": {}
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "apple"
+      }
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "plate"
+      }
+    },
+    {
+      "action": "close_gripper",
+      "parameters": {}
+    },
+    {
+      "action": "lift",
+      "parameters": {
+        "lift_height": 0.1
+      }
+    },
+    {
+      "action": "move_lifted_object_to",
+      "parameters": {
+        "target": "plate"
+      }
+    },
+    {
+      "action": "open_gripper",
+      "parameters": {}
+    },
+    {
+      "action": "go_home",
+      "parameters": {}
+    }
+  ]
+}

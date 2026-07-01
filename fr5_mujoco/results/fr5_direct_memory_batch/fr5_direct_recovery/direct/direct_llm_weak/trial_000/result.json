@@ -1,0 +1,1297 @@
+{
+  "schema_version": "fr5_experiment_v4_result_v1",
+  "method": "direct_llm_weak",
+  "memory_policy": "none",
+  "scenario_id": "fr5_direct_recovery",
+  "condition_id": "direct",
+  "scene_xml": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/assets/scene.xml",
+  "target_class": "apple",
+  "place_target": "plate",
+  "task_success": false,
+  "failure_reason": "final_pose_error_exceeded",
+  "executed_plan_source": "fallback_planner_error",
+  "llm_recovery_steps": [],
+  "executed_recovery_steps": [
+    {
+      "action": "camera_rgbd_save",
+      "parameters": {},
+      "success": true,
+      "status": "rgbd_saved",
+      "message": "rgbd_saved"
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "apple"
+      },
+      "success": true,
+      "status": "object_pose_detected",
+      "message": "object_pose_detected"
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "plate"
+      },
+      "success": true,
+      "status": "object_pose_detected",
+      "message": "object_pose_detected"
+    },
+    {
+      "action": "create_fixed_vertical_grasp",
+      "parameters": {},
+      "success": true,
+      "status": "fixed_vertical_grasp_created",
+      "message": "fixed_vertical_grasp_created"
+    },
+    {
+      "action": "move_to_pregrasp",
+      "parameters": {
+        "dx": 0.0,
+        "dy": 0.0,
+        "dz": 0.08
+      },
+      "success": false,
+      "status": "final_pose_error_exceeded",
+      "message": "final_pose_error_exceeded"
+    }
+  ],
+  "retrieved_memories": [],
+  "candidate_plans": [],
+  "candidate_rejections": [],
+  "field_atomic_reports": [
+    {
+      "action": "camera_rgbd_save",
+      "success": true,
+      "status": "rgbd_saved",
+      "message": "rgbd_saved",
+      "parameters": {},
+      "raw_result": {
+        "result": null,
+        "skill_record": {
+          "skill": "camera_rgbd_save",
+          "success": true,
+          "reason": "rgbd_saved",
+          "extra": {
+            "camera_name": "ee_camera",
+            "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+            "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+            "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+            "intrinsics": {
+              "fx": 579.4112549695428,
+              "fy": 579.4112549695428,
+              "cx": 319.5,
+              "cy": 239.5,
+              "width": 640,
+              "height": 480,
+              "fovy": 45.0
+            },
+            "camera_pose": {
+              "name": "ee_camera",
+              "xpos": [
+                0.08961730082340014,
+                -0.043538187752496696,
+                0.9854978259929588
+              ],
+              "xmat": [
+                [
+                  0.5104131900603195,
+                  0.7406035279412359,
+                  -0.43701806577468105
+                ],
+                [
+                  -0.8499201442567853,
+                  0.35715774363233616,
+                  -0.38739397846376505
+                ],
+                [
+                  -0.13082096085480255,
+                  0.5691614538638872,
+                  0.8117518805870256
+                ]
+              ]
+            },
+            "rgb_shape": [
+              480,
+              640,
+              3
+            ],
+            "depth_shape": [
+              480,
+              640
+            ],
+            "depth_min_m": 0.8805750608444214,
+            "depth_max_m": 1.9539916515350342
+          }
+        }
+      },
+      "index": 0
+    },
+    {
+      "action": "detect_object_pose",
+      "success": true,
+      "status": "object_pose_detected",
+      "message": "object_pose_detected",
+      "parameters": {
+        "target_class": "apple"
+      },
+      "raw_result": {
+        "result": null,
+        "skill_record": {
+          "skill": "detect_object_pose",
+          "success": true,
+          "reason": "object_pose_detected",
+          "extra": {
+            "target_class": "apple",
+            "observed_pos": [
+              0.5578779429845138,
+              0.3158211668663563,
+              0.027529702511372378
+            ],
+            "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_mask.png",
+            "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_annotated.png",
+            "point_cloud_info": {
+              "state": "success",
+              "info": "point cloud generated: 987 points",
+              "x": 0.5578779429845138,
+              "y": 0.3158211668663563,
+              "z": 0.027529702511372378,
+              "x_min": 0.5241725830327071,
+              "y_min": 0.2733394078604296,
+              "z_min": -1.4642776957618509e-07,
+              "x_max": 0.5915833029363206,
+              "y_max": 0.358302925872283,
+              "z_max": 0.05505955145051433,
+              "point_count": 987
+            }
+          }
+        }
+      },
+      "index": 1
+    },
+    {
+      "action": "detect_object_pose",
+      "success": true,
+      "status": "object_pose_detected",
+      "message": "object_pose_detected",
+      "parameters": {
+        "target_class": "plate"
+      },
+      "raw_result": {
+        "result": null,
+        "skill_record": {
+          "skill": "detect_object_pose",
+          "success": true,
+          "reason": "object_pose_detected",
+          "extra": {
+            "target_class": "plate",
+            "observed_pos": [
+              0.4092429692076476,
+              0.413536842509845,
+              0.02399997837229778
+            ],
+            "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_mask.png",
+            "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_annotated.png",
+            "point_cloud_info": {
+              "state": "success",
+              "info": "point cloud generated: 5505 points",
+              "x": 0.4092429692076476,
+              "y": 0.413536842509845,
+              "z": 0.02399997837229778,
+              "x_min": 0.32002861512825453,
+              "y_min": 0.3200118322975648,
+              "z_min": -1.9680267659971662e-07,
+              "x_max": 0.4984573232870406,
+              "y_max": 0.5070618527221252,
+              "z_max": 0.04800015354727216,
+              "point_count": 5505
+            }
+          }
+        }
+      },
+      "index": 2
+    },
+    {
+      "action": "create_fixed_vertical_grasp",
+      "success": true,
+      "status": "fixed_vertical_grasp_created",
+      "message": "fixed_vertical_grasp_created",
+      "parameters": {},
+      "raw_result": {
+        "result": null,
+        "skill_record": {
+          "skill": "create_fixed_vertical_grasp",
+          "success": true,
+          "reason": "fixed_vertical_grasp_created",
+          "extra": {
+            "target_class": "apple",
+            "target_pos": [
+              0.5578779429845138,
+              0.3158211668663563,
+              0.027529702511372378
+            ],
+            "pregrasp_height": 0.08,
+            "orientation_source": "fixed_vertical_down",
+            "yaw": -0.393,
+            "quat": [
+              0.0,
+              0.980755916177706,
+              -0.19523788792759608,
+              0.0
+            ]
+          }
+        }
+      },
+      "index": 3
+    },
+    {
+      "action": "move_to_pregrasp",
+      "success": false,
+      "status": "final_pose_error_exceeded",
+      "message": "final_pose_error_exceeded",
+      "parameters": {
+        "dx": 0.0,
+        "dy": 0.0,
+        "dz": 0.08
+      },
+      "raw_result": {
+        "result": null,
+        "skill_record": {
+          "skill": "cartesian_move",
+          "success": false,
+          "reason": "final_pose_error_exceeded",
+          "contact": {
+            "left_contact": false,
+            "right_contact": false,
+            "contact_count": 1,
+            "pairs": [
+              [
+                "floor",
+                "apple0"
+              ]
+            ]
+          },
+          "gripper_action": 0.0,
+          "object_pos": null,
+          "target_pos": [
+            0.5578779429845138,
+            0.3158211668663563,
+            0.10752970251137238
+          ],
+          "final_pos": [
+            0.5400085860001137,
+            0.3125404213834012,
+            0.09390691683139261
+          ],
+          "pos_error": 0.02270809326303112,
+          "target_joint": null,
+          "final_joint": null,
+          "joint_error": null,
+          "extra": {
+            "duration": 1.0,
+            "ik_failed_count": 0
+          }
+        }
+      },
+      "index": 4
+    }
+  ],
+  "metrics": {
+    "skill_results": [
+      {
+        "skill": "camera_rgbd_save",
+        "success": true,
+        "reason": "rgbd_saved",
+        "extra": {
+          "camera_name": "ee_camera",
+          "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+          "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+          "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+          "intrinsics": {
+            "fx": 579.4112549695428,
+            "fy": 579.4112549695428,
+            "cx": 319.5,
+            "cy": 239.5,
+            "width": 640,
+            "height": 480,
+            "fovy": 45.0
+          },
+          "camera_pose": {
+            "name": "ee_camera",
+            "xpos": [
+              0.08961730082340014,
+              -0.043538187752496696,
+              0.9854978259929588
+            ],
+            "xmat": [
+              [
+                0.5104131900603195,
+                0.7406035279412359,
+                -0.43701806577468105
+              ],
+              [
+                -0.8499201442567853,
+                0.35715774363233616,
+                -0.38739397846376505
+              ],
+              [
+                -0.13082096085480255,
+                0.5691614538638872,
+                0.8117518805870256
+              ]
+            ]
+          },
+          "rgb_shape": [
+            480,
+            640,
+            3
+          ],
+          "depth_shape": [
+            480,
+            640
+          ],
+          "depth_min_m": 0.8805750608444214,
+          "depth_max_m": 1.9539916515350342
+        }
+      },
+      {
+        "skill": "detect_object_pose",
+        "success": true,
+        "reason": "object_pose_detected",
+        "extra": {
+          "target_class": "apple",
+          "observed_pos": [
+            0.5578779429845138,
+            0.3158211668663563,
+            0.027529702511372378
+          ],
+          "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_mask.png",
+          "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_annotated.png",
+          "point_cloud_info": {
+            "state": "success",
+            "info": "point cloud generated: 987 points",
+            "x": 0.5578779429845138,
+            "y": 0.3158211668663563,
+            "z": 0.027529702511372378,
+            "x_min": 0.5241725830327071,
+            "y_min": 0.2733394078604296,
+            "z_min": -1.4642776957618509e-07,
+            "x_max": 0.5915833029363206,
+            "y_max": 0.358302925872283,
+            "z_max": 0.05505955145051433,
+            "point_count": 987
+          }
+        }
+      },
+      {
+        "skill": "detect_object_pose",
+        "success": true,
+        "reason": "object_pose_detected",
+        "extra": {
+          "target_class": "plate",
+          "observed_pos": [
+            0.4092429692076476,
+            0.413536842509845,
+            0.02399997837229778
+          ],
+          "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_mask.png",
+          "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_annotated.png",
+          "point_cloud_info": {
+            "state": "success",
+            "info": "point cloud generated: 5505 points",
+            "x": 0.4092429692076476,
+            "y": 0.413536842509845,
+            "z": 0.02399997837229778,
+            "x_min": 0.32002861512825453,
+            "y_min": 0.3200118322975648,
+            "z_min": -1.9680267659971662e-07,
+            "x_max": 0.4984573232870406,
+            "y_max": 0.5070618527221252,
+            "z_max": 0.04800015354727216,
+            "point_count": 5505
+          }
+        }
+      },
+      {
+        "skill": "create_fixed_vertical_grasp",
+        "success": true,
+        "reason": "fixed_vertical_grasp_created",
+        "extra": {
+          "target_class": "apple",
+          "target_pos": [
+            0.5578779429845138,
+            0.3158211668663563,
+            0.027529702511372378
+          ],
+          "pregrasp_height": 0.08,
+          "orientation_source": "fixed_vertical_down",
+          "yaw": -0.393,
+          "quat": [
+            0.0,
+            0.980755916177706,
+            -0.19523788792759608,
+            0.0
+          ]
+        }
+      },
+      {
+        "skill": "cartesian_move",
+        "success": false,
+        "reason": "final_pose_error_exceeded",
+        "contact": {
+          "left_contact": false,
+          "right_contact": false,
+          "contact_count": 1,
+          "pairs": [
+            [
+              "floor",
+              "apple0"
+            ]
+          ]
+        },
+        "gripper_action": 0.0,
+        "object_pos": null,
+        "target_pos": [
+          0.5578779429845138,
+          0.3158211668663563,
+          0.10752970251137238
+        ],
+        "final_pos": [
+          0.5400085860001137,
+          0.3125404213834012,
+          0.09390691683139261
+        ],
+        "pos_error": 0.02270809326303112,
+        "target_joint": null,
+        "final_joint": null,
+        "joint_error": null,
+        "extra": {
+          "duration": 1.0,
+          "ik_failed_count": 0
+        }
+      }
+    ],
+    "scenario_id": "fr5_direct_recovery",
+    "condition_id": "direct",
+    "target_class": "apple",
+    "place_target": "plate",
+    "scene_xml": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/assets/scene.xml",
+    "camera_ready_q": [
+      0.17417,
+      -1.18453,
+      -0.4864,
+      -2.49164,
+      1.88242,
+      -0.23681
+    ],
+    "camera_ready_result": {
+      "action": "go_camera_ready",
+      "success": true,
+      "status": "camera_ready_reached",
+      "message": "camera_ready_reached",
+      "parameters": {},
+      "raw_result": {
+        "result": null,
+        "skill_record": {
+          "skill": "go_camera_ready",
+          "success": true,
+          "reason": "camera_ready_reached",
+          "extra": {
+            "target_joint": [
+              0.17417,
+              -1.18453,
+              -0.4864,
+              -2.49164,
+              1.88242,
+              -0.23681
+            ]
+          }
+        }
+      }
+    },
+    "planner_error": "LLM request failed: <urlopen error [Errno 1] Operation not permitted>",
+    "executed_plan_source": "fallback_planner_error",
+    "last_camera_rgbd": {
+      "camera_name": "ee_camera",
+      "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+      "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+      "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+      "intrinsics": {
+        "fx": 579.4112549695428,
+        "fy": 579.4112549695428,
+        "cx": 319.5,
+        "cy": 239.5,
+        "width": 640,
+        "height": 480,
+        "fovy": 45.0
+      },
+      "camera_pose": {
+        "name": "ee_camera",
+        "xpos": [
+          0.08961730082340014,
+          -0.043538187752496696,
+          0.9854978259929588
+        ],
+        "xmat": [
+          [
+            0.5104131900603195,
+            0.7406035279412359,
+            -0.43701806577468105
+          ],
+          [
+            -0.8499201442567853,
+            0.35715774363233616,
+            -0.38739397846376505
+          ],
+          [
+            -0.13082096085480255,
+            0.5691614538638872,
+            0.8117518805870256
+          ]
+        ]
+      },
+      "rgb_shape": [
+        480,
+        640,
+        3
+      ],
+      "depth_shape": [
+        480,
+        640
+      ],
+      "depth_min_m": 0.8805750608444214,
+      "depth_max_m": 1.9539916515350342
+    },
+    "detected_objects": {
+      "apple": {
+        "target_class": "apple",
+        "position": [
+          0.5578779429845138,
+          0.3158211668663563,
+          0.027529702511372378
+        ],
+        "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_mask.png",
+        "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_annotated.png",
+        "candidate": {
+          "detector": "grounding_dino",
+          "prompt": "red apple.",
+          "label": "red apple",
+          "score": 0.8527231216430664,
+          "xyxy": [
+            335.11907958984375,
+            258.4686584472656,
+            372.18878173828125,
+            294.2191467285156
+          ],
+          "mask_score": 1.5449746696210358,
+          "mask_stats": {
+            "area": 987,
+            "foreground_iou": 0.003271570154794657,
+            "bbox_fill": 0.740990990990991,
+            "component_count": 1
+          }
+        },
+        "candidate_count": 2,
+        "point_cloud_info": {
+          "state": "success",
+          "info": "point cloud generated: 987 points",
+          "x": 0.5578779429845138,
+          "y": 0.3158211668663563,
+          "z": 0.027529702511372378,
+          "x_min": 0.5241725830327071,
+          "y_min": 0.2733394078604296,
+          "z_min": -1.4642776957618509e-07,
+          "x_max": 0.5915833029363206,
+          "y_max": 0.358302925872283,
+          "z_max": 0.05505955145051433,
+          "point_count": 987
+        },
+        "camera": {
+          "camera_name": "ee_camera",
+          "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+          "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+          "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+          "intrinsics": {
+            "fx": 579.4112549695428,
+            "fy": 579.4112549695428,
+            "cx": 319.5,
+            "cy": 239.5,
+            "width": 640,
+            "height": 480,
+            "fovy": 45.0
+          },
+          "camera_pose": {
+            "name": "ee_camera",
+            "xpos": [
+              0.08961730082340014,
+              -0.043538187752496696,
+              0.9854978259929588
+            ],
+            "xmat": [
+              [
+                0.5104131900603195,
+                0.7406035279412359,
+                -0.43701806577468105
+              ],
+              [
+                -0.8499201442567853,
+                0.35715774363233616,
+                -0.38739397846376505
+              ],
+              [
+                -0.13082096085480255,
+                0.5691614538638872,
+                0.8117518805870256
+              ]
+            ]
+          },
+          "rgb_shape": [
+            480,
+            640,
+            3
+          ],
+          "depth_shape": [
+            480,
+            640
+          ],
+          "depth_min_m": 0.8805750608444214,
+          "depth_max_m": 1.9539916515350342
+        }
+      },
+      "plate": {
+        "target_class": "plate",
+        "position": [
+          0.4092429692076476,
+          0.413536842509845,
+          0.02399997837229778
+        ],
+        "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_mask.png",
+        "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_annotated.png",
+        "candidate": {
+          "detector": "grounding_dino",
+          "prompt": "one plate.",
+          "label": "plate",
+          "score": 0.8434091210365295,
+          "xyxy": [
+            224.06549072265625,
+            279.71405029296875,
+            312.6019287109375,
+            363.57342529296875
+          ],
+          "mask_score": 1.5233007546236963,
+          "mask_stats": {
+            "area": 5505,
+            "foreground_iou": 0.00023117698388924344,
+            "bbox_fill": 0.7363563402889246,
+            "component_count": 1
+          }
+        },
+        "candidate_count": 2,
+        "point_cloud_info": {
+          "state": "success",
+          "info": "point cloud generated: 5505 points",
+          "x": 0.4092429692076476,
+          "y": 0.413536842509845,
+          "z": 0.02399997837229778,
+          "x_min": 0.32002861512825453,
+          "y_min": 0.3200118322975648,
+          "z_min": -1.9680267659971662e-07,
+          "x_max": 0.4984573232870406,
+          "y_max": 0.5070618527221252,
+          "z_max": 0.04800015354727216,
+          "point_count": 5505
+        },
+        "camera": {
+          "camera_name": "ee_camera",
+          "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+          "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+          "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+          "intrinsics": {
+            "fx": 579.4112549695428,
+            "fy": 579.4112549695428,
+            "cx": 319.5,
+            "cy": 239.5,
+            "width": 640,
+            "height": 480,
+            "fovy": 45.0
+          },
+          "camera_pose": {
+            "name": "ee_camera",
+            "xpos": [
+              0.08961730082340014,
+              -0.043538187752496696,
+              0.9854978259929588
+            ],
+            "xmat": [
+              [
+                0.5104131900603195,
+                0.7406035279412359,
+                -0.43701806577468105
+              ],
+              [
+                -0.8499201442567853,
+                0.35715774363233616,
+                -0.38739397846376505
+              ],
+              [
+                -0.13082096085480255,
+                0.5691614538638872,
+                0.8117518805870256
+              ]
+            ]
+          },
+          "rgb_shape": [
+            480,
+            640,
+            3
+          ],
+          "depth_shape": [
+            480,
+            640
+          ],
+          "depth_min_m": 0.8805750608444214,
+          "depth_max_m": 1.9539916515350342
+        }
+      }
+    },
+    "last_perception_scene": {
+      "target_class": "plate",
+      "position": [
+        0.4092429692076476,
+        0.413536842509845,
+        0.02399997837229778
+      ],
+      "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_mask.png",
+      "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_annotated.png",
+      "candidate": {
+        "detector": "grounding_dino",
+        "prompt": "one plate.",
+        "label": "plate",
+        "score": 0.8434091210365295,
+        "xyxy": [
+          224.06549072265625,
+          279.71405029296875,
+          312.6019287109375,
+          363.57342529296875
+        ],
+        "mask_score": 1.5233007546236963,
+        "mask_stats": {
+          "area": 5505,
+          "foreground_iou": 0.00023117698388924344,
+          "bbox_fill": 0.7363563402889246,
+          "component_count": 1
+        }
+      },
+      "candidate_count": 2,
+      "point_cloud_info": {
+        "state": "success",
+        "info": "point cloud generated: 5505 points",
+        "x": 0.4092429692076476,
+        "y": 0.413536842509845,
+        "z": 0.02399997837229778,
+        "x_min": 0.32002861512825453,
+        "y_min": 0.3200118322975648,
+        "z_min": -1.9680267659971662e-07,
+        "x_max": 0.4984573232870406,
+        "y_max": 0.5070618527221252,
+        "z_max": 0.04800015354727216,
+        "point_count": 5505
+      },
+      "camera": {
+        "camera_name": "ee_camera",
+        "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+        "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+        "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+        "intrinsics": {
+          "fx": 579.4112549695428,
+          "fy": 579.4112549695428,
+          "cx": 319.5,
+          "cy": 239.5,
+          "width": 640,
+          "height": 480,
+          "fovy": 45.0
+        },
+        "camera_pose": {
+          "name": "ee_camera",
+          "xpos": [
+            0.08961730082340014,
+            -0.043538187752496696,
+            0.9854978259929588
+          ],
+          "xmat": [
+            [
+              0.5104131900603195,
+              0.7406035279412359,
+              -0.43701806577468105
+            ],
+            [
+              -0.8499201442567853,
+              0.35715774363233616,
+              -0.38739397846376505
+            ],
+            [
+              -0.13082096085480255,
+              0.5691614538638872,
+              0.8117518805870256
+            ]
+          ]
+        },
+        "rgb_shape": [
+          480,
+          640,
+          3
+        ],
+        "depth_shape": [
+          480,
+          640
+        ],
+        "depth_min_m": 0.8805750608444214,
+        "depth_max_m": 1.9539916515350342
+      }
+    },
+    "last_detected_object": {
+      "target_class": "plate",
+      "position": [
+        0.4092429692076476,
+        0.413536842509845,
+        0.02399997837229778
+      ],
+      "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_mask.png",
+      "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_annotated.png",
+      "candidate": {
+        "detector": "grounding_dino",
+        "prompt": "one plate.",
+        "label": "plate",
+        "score": 0.8434091210365295,
+        "xyxy": [
+          224.06549072265625,
+          279.71405029296875,
+          312.6019287109375,
+          363.57342529296875
+        ],
+        "mask_score": 1.5233007546236963,
+        "mask_stats": {
+          "area": 5505,
+          "foreground_iou": 0.00023117698388924344,
+          "bbox_fill": 0.7363563402889246,
+          "component_count": 1
+        }
+      },
+      "candidate_count": 2,
+      "point_cloud_info": {
+        "state": "success",
+        "info": "point cloud generated: 5505 points",
+        "x": 0.4092429692076476,
+        "y": 0.413536842509845,
+        "z": 0.02399997837229778,
+        "x_min": 0.32002861512825453,
+        "y_min": 0.3200118322975648,
+        "z_min": -1.9680267659971662e-07,
+        "x_max": 0.4984573232870406,
+        "y_max": 0.5070618527221252,
+        "z_max": 0.04800015354727216,
+        "point_count": 5505
+      },
+      "camera": {
+        "camera_name": "ee_camera",
+        "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+        "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+        "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+        "intrinsics": {
+          "fx": 579.4112549695428,
+          "fy": 579.4112549695428,
+          "cx": 319.5,
+          "cy": 239.5,
+          "width": 640,
+          "height": 480,
+          "fovy": 45.0
+        },
+        "camera_pose": {
+          "name": "ee_camera",
+          "xpos": [
+            0.08961730082340014,
+            -0.043538187752496696,
+            0.9854978259929588
+          ],
+          "xmat": [
+            [
+              0.5104131900603195,
+              0.7406035279412359,
+              -0.43701806577468105
+            ],
+            [
+              -0.8499201442567853,
+              0.35715774363233616,
+              -0.38739397846376505
+            ],
+            [
+              -0.13082096085480255,
+              0.5691614538638872,
+              0.8117518805870256
+            ]
+          ]
+        },
+        "rgb_shape": [
+          480,
+          640,
+          3
+        ],
+        "depth_shape": [
+          480,
+          640
+        ],
+        "depth_min_m": 0.8805750608444214,
+        "depth_max_m": 1.9539916515350342
+      }
+    },
+    "observed_pos": [
+      0.4092429692076476,
+      0.413536842509845,
+      0.02399997837229778
+    ],
+    "perceived_position": [
+      0.4092429692076476,
+      0.413536842509845,
+      0.02399997837229778
+    ],
+    "object_observed_pos": [
+      0.4092429692076476,
+      0.413536842509845,
+      0.02399997837229778
+    ],
+    "grasp_target_pos": [
+      0.5578779429845138,
+      0.3158211668663563,
+      0.027529702511372378
+    ],
+    "tcp_grasp_pos": [
+      0.5578779429845138,
+      0.3158211668663563,
+      0.027529702511372378
+    ],
+    "tcp_pregrasp_pos": [
+      0.5578779429845138,
+      0.3158211668663563,
+      0.10752970251137238
+    ],
+    "executed_recovery_steps": [
+      {
+        "action": "camera_rgbd_save",
+        "parameters": {},
+        "success": true,
+        "status": "rgbd_saved",
+        "message": "rgbd_saved"
+      },
+      {
+        "action": "detect_object_pose",
+        "parameters": {
+          "target_class": "apple"
+        },
+        "success": true,
+        "status": "object_pose_detected",
+        "message": "object_pose_detected"
+      },
+      {
+        "action": "detect_object_pose",
+        "parameters": {
+          "target_class": "plate"
+        },
+        "success": true,
+        "status": "object_pose_detected",
+        "message": "object_pose_detected"
+      },
+      {
+        "action": "create_fixed_vertical_grasp",
+        "parameters": {},
+        "success": true,
+        "status": "fixed_vertical_grasp_created",
+        "message": "fixed_vertical_grasp_created"
+      },
+      {
+        "action": "move_to_pregrasp",
+        "parameters": {
+          "dx": 0.0,
+          "dy": 0.0,
+          "dz": 0.08
+        },
+        "success": false,
+        "status": "final_pose_error_exceeded",
+        "message": "final_pose_error_exceeded"
+      }
+    ],
+    "field_atomic_reports": [
+      {
+        "action": "camera_rgbd_save",
+        "success": true,
+        "status": "rgbd_saved",
+        "message": "rgbd_saved",
+        "parameters": {},
+        "raw_result": {
+          "result": null,
+          "skill_record": {
+            "skill": "camera_rgbd_save",
+            "success": true,
+            "reason": "rgbd_saved",
+            "extra": {
+              "camera_name": "ee_camera",
+              "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_rgb.png",
+              "depth_npy_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_m.npy",
+              "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/camera_rgbd/fr5_ee_camera_depth_mm.png",
+              "intrinsics": {
+                "fx": 579.4112549695428,
+                "fy": 579.4112549695428,
+                "cx": 319.5,
+                "cy": 239.5,
+                "width": 640,
+                "height": 480,
+                "fovy": 45.0
+              },
+              "camera_pose": {
+                "name": "ee_camera",
+                "xpos": [
+                  0.08961730082340014,
+                  -0.043538187752496696,
+                  0.9854978259929588
+                ],
+                "xmat": [
+                  [
+                    0.5104131900603195,
+                    0.7406035279412359,
+                    -0.43701806577468105
+                  ],
+                  [
+                    -0.8499201442567853,
+                    0.35715774363233616,
+                    -0.38739397846376505
+                  ],
+                  [
+                    -0.13082096085480255,
+                    0.5691614538638872,
+                    0.8117518805870256
+                  ]
+                ]
+              },
+              "rgb_shape": [
+                480,
+                640,
+                3
+              ],
+              "depth_shape": [
+                480,
+                640
+              ],
+              "depth_min_m": 0.8805750608444214,
+              "depth_max_m": 1.9539916515350342
+            }
+          }
+        },
+        "index": 0
+      },
+      {
+        "action": "detect_object_pose",
+        "success": true,
+        "status": "object_pose_detected",
+        "message": "object_pose_detected",
+        "parameters": {
+          "target_class": "apple"
+        },
+        "raw_result": {
+          "result": null,
+          "skill_record": {
+            "skill": "detect_object_pose",
+            "success": true,
+            "reason": "object_pose_detected",
+            "extra": {
+              "target_class": "apple",
+              "observed_pos": [
+                0.5578779429845138,
+                0.3158211668663563,
+                0.027529702511372378
+              ],
+              "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_mask.png",
+              "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_apple_annotated.png",
+              "point_cloud_info": {
+                "state": "success",
+                "info": "point cloud generated: 987 points",
+                "x": 0.5578779429845138,
+                "y": 0.3158211668663563,
+                "z": 0.027529702511372378,
+                "x_min": 0.5241725830327071,
+                "y_min": 0.2733394078604296,
+                "z_min": -1.4642776957618509e-07,
+                "x_max": 0.5915833029363206,
+                "y_max": 0.358302925872283,
+                "z_max": 0.05505955145051433,
+                "point_count": 987
+              }
+            }
+          }
+        },
+        "index": 1
+      },
+      {
+        "action": "detect_object_pose",
+        "success": true,
+        "status": "object_pose_detected",
+        "message": "object_pose_detected",
+        "parameters": {
+          "target_class": "plate"
+        },
+        "raw_result": {
+          "result": null,
+          "skill_record": {
+            "skill": "detect_object_pose",
+            "success": true,
+            "reason": "object_pose_detected",
+            "extra": {
+              "target_class": "plate",
+              "observed_pos": [
+                0.4092429692076476,
+                0.413536842509845,
+                0.02399997837229778
+              ],
+              "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_mask.png",
+              "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/fr5_mujoco/output/grounded_sam2/fr5_ee_camera_rgb_plate_annotated.png",
+              "point_cloud_info": {
+                "state": "success",
+                "info": "point cloud generated: 5505 points",
+                "x": 0.4092429692076476,
+                "y": 0.413536842509845,
+                "z": 0.02399997837229778,
+                "x_min": 0.32002861512825453,
+                "y_min": 0.3200118322975648,
+                "z_min": -1.9680267659971662e-07,
+                "x_max": 0.4984573232870406,
+                "y_max": 0.5070618527221252,
+                "z_max": 0.04800015354727216,
+                "point_count": 5505
+              }
+            }
+          }
+        },
+        "index": 2
+      },
+      {
+        "action": "create_fixed_vertical_grasp",
+        "success": true,
+        "status": "fixed_vertical_grasp_created",
+        "message": "fixed_vertical_grasp_created",
+        "parameters": {},
+        "raw_result": {
+          "result": null,
+          "skill_record": {
+            "skill": "create_fixed_vertical_grasp",
+            "success": true,
+            "reason": "fixed_vertical_grasp_created",
+            "extra": {
+              "target_class": "apple",
+              "target_pos": [
+                0.5578779429845138,
+                0.3158211668663563,
+                0.027529702511372378
+              ],
+              "pregrasp_height": 0.08,
+              "orientation_source": "fixed_vertical_down",
+              "yaw": -0.393,
+              "quat": [
+                0.0,
+                0.980755916177706,
+                -0.19523788792759608,
+                0.0
+              ]
+            }
+          }
+        },
+        "index": 3
+      },
+      {
+        "action": "move_to_pregrasp",
+        "success": false,
+        "status": "final_pose_error_exceeded",
+        "message": "final_pose_error_exceeded",
+        "parameters": {
+          "dx": 0.0,
+          "dy": 0.0,
+          "dz": 0.08
+        },
+        "raw_result": {
+          "result": null,
+          "skill_record": {
+            "skill": "cartesian_move",
+            "success": false,
+            "reason": "final_pose_error_exceeded",
+            "contact": {
+              "left_contact": false,
+              "right_contact": false,
+              "contact_count": 1,
+              "pairs": [
+                [
+                  "floor",
+                  "apple0"
+                ]
+              ]
+            },
+            "gripper_action": 0.0,
+            "object_pos": null,
+            "target_pos": [
+              0.5578779429845138,
+              0.3158211668663563,
+              0.10752970251137238
+            ],
+            "final_pos": [
+              0.5400085860001137,
+              0.3125404213834012,
+              0.09390691683139261
+            ],
+            "pos_error": 0.02270809326303112,
+            "target_joint": null,
+            "final_joint": null,
+            "joint_error": null,
+            "extra": {
+              "duration": 1.0,
+              "ik_failed_count": 0
+            }
+          }
+        },
+        "index": 4
+      }
+    ],
+    "task_success_criteria": {
+      "type": "apple_on_plate",
+      "apple_pos": [
+        0.5570351848352468,
+        0.30938190652859365,
+        0.02727912581167577
+      ],
+      "plate_pos": [
+        0.4,
+        0.4,
+        0.04
+      ],
+      "apple_z": 0.02727912581167577,
+      "xy_error_to_plate": 0.1813055105081825,
+      "on_plate": false,
+      "contact": {
+        "left_contact": false,
+        "right_contact": false,
+        "contact_count": 1,
+        "pairs": [
+          [
+            "floor",
+            "apple0"
+          ]
+        ]
+      }
+    },
+    "task_success": false,
+    "time_costs": {
+      "total": 80.899
+    },
+    "experience_saved": true,
+    "experience_id": "fr5_e4d90fa17b4d"
+  },
+  "trial_id": "direct_direct_llm_weak_000",
+  "seed": 3100,
+  "experience_save_mode": "all",
+  "strategy_family": ""
+}
