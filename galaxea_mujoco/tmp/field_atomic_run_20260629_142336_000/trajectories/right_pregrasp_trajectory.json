@@ -1,0 +1,2641 @@
+{
+  "schema_version": "torso_frame_cartesian_trajectory_v1",
+  "side": "right",
+  "torso_frame": "torso_link4",
+  "control_frame": "grasp_tool",
+  "mode": "top_then_down",
+  "orientation_mode": "vertical_down",
+  "target_kind": "pregrasp",
+  "start_torso": [
+    -0.000517482,
+    -0.252089651,
+    -0.410029992
+  ],
+  "target_torso": [
+    0.458799577,
+    0.096699265,
+    -0.322439387
+  ],
+  "pregrasp_offset_torso": [
+    0.05,
+    0.05,
+    0.1
+  ],
+  "pregrasp_torso": [
+    0.508799577,
+    0.146699265,
+    -0.222439387
+  ],
+  "waypoints": [
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.410029992
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.409841625
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.408632192
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.405665863
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.400487911
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.392891644
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.382885329
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.370659125
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.356552008
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.341018705
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.324596619
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.30787276
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.291450675
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.275917372
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.261810255
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.24958405
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.239577735
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.231981468
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.226803517
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.223837187
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.222627754
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000517482,
+        -0.252089651,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000506542,
+        -0.252081085,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000431673,
+        -0.252022464,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        -0.000233594,
+        -0.25186737,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.000142035,
+        -0.251573257,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.00074474,
+        -0.251101346,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.001619378,
+        -0.250416517,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.002806262,
+        -0.249487201,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.004341307,
+        -0.24828528,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.006256157,
+        -0.246785976,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.008578326,
+        -0.244967747,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.01133133,
+        -0.242812179,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.014534825,
+        -0.240303882,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.01820474,
+        -0.237430384,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.022353416,
+        -0.234182022,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.026989738,
+        -0.23055184,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.032119271,
+        -0.22653548,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.037744397,
+        -0.222131076,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.043864451,
+        -0.21733915,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.050475854,
+        -0.212162504,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.057572249,
+        -0.206606115,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.065144638,
+        -0.200677028,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.073181518,
+        -0.194384251,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.081669013,
+        -0.187738649,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.090591012,
+        -0.180752835,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.099929305,
+        -0.173441067,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.109663717,
+        -0.165819144,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.119772245,
+        -0.157904292,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.130231191,
+        -0.149715068,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.1410153,
+        -0.141271245,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.152097894,
+        -0.132593712,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.163451008,
+        -0.123704365,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.175045526,
+        -0.114626002,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.186851316,
+        -0.105382215,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.198837364,
+        -0.095997289,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.210971912,
+        -0.086496089,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.223222592,
+        -0.076903958,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.235556564,
+        -0.067246612,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.247940644,
+        -0.057550031,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.260341451,
+        -0.047840354,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.272725532,
+        -0.038143773,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.285059503,
+        -0.028486427,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.297310184,
+        -0.018894297,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.309444732,
+        -0.009393097,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.32143078,
+        -8.17e-06,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.333236569,
+        0.009235616,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.344831088,
+        0.018313979,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.356184202,
+        0.027203326,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.367266796,
+        0.035880859,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.378050904,
+        0.044324682,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.38850985,
+        0.052513907,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.398618378,
+        0.060428758,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.40835279,
+        0.068050682,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.417691084,
+        0.075362449,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.426613083,
+        0.082348263,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.435100577,
+        0.088993866,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.443137457,
+        0.095286643,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.450709846,
+        0.101215729,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.457806241,
+        0.106772118,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.464417644,
+        0.111948764,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.470537698,
+        0.11674069,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.476162825,
+        0.121145094,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.481292358,
+        0.125161455,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.485928679,
+        0.128791637,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.490077355,
+        0.132039998,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.493747271,
+        0.134913497,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.496950766,
+        0.137421793,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.49970377,
+        0.139577361,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.502025939,
+        0.141395591,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.503940789,
+        0.142894894,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.505475833,
+        0.144096815,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.506662718,
+        0.145026131,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.507537355,
+        0.145710961,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.508140061,
+        0.146182872,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.508515689,
+        0.146476984,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.508713769,
+        0.146632078,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.508788637,
+        0.146690699,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.508799577,
+        0.146699265,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    },
+    {
+      "position_torso": [
+        0.508799577,
+        0.146699265,
+        -0.222439387
+      ],
+      "xmat_world": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          -0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "torso_frame": "torso_link4",
+      "control_frame": "grasp_tool"
+    }
+  ],
+  "metadata": {
+    "step_distance": 0.005,
+    "max_num_points": 100,
+    "safe_lift": 0.0,
+    "clearance_z": 0.1,
+    "side_offset_y": 0.0,
+    "side_offset_x": -0.06,
+    "sequential": false,
+    "axis_order": "xyz"
+  }
+}

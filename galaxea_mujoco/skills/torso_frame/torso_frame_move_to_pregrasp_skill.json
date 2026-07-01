@@ -1,0 +1,22 @@
+{
+  "name": "torso_frame_move_to_pregrasp",
+  "description": "Move the TCP to a torso-frame pregrasp waypoint.",
+  "parameters": {
+    "side": "left or right",
+    "torso_frame": "torso_link4 by default",
+    "position_input_path": "Optional compact perception JSON path",
+    "position_key": "median_reference by default",
+    "target_torso": "Explicit torso-frame [x, y, z] target",
+    "pregrasp_offset_torso": "Required [x, y, z] offset from grasp pose to pregrasp pose",
+    "pregrasp_offset_x": "Required x offset from grasp pose if pregrasp_offset_torso is not used",
+    "pregrasp_offset_y": "Required y offset from grasp pose if pregrasp_offset_torso is not used",
+    "pregrasp_offset_z": "Required z offset from grasp pose if pregrasp_offset_torso is not used",
+    "control_mode": "actuator/site_servo/direct_qpos",
+    "orientation_weight": "Orientation IK weight",
+    "orientation_threshold": "Orientation threshold",
+    "steps": "Execution steps",
+    "settle_steps": "Settling steps",
+    "max_joint_step": "Maximum joint step",
+    "fail_threshold": "Target final error threshold"
+  }
+}

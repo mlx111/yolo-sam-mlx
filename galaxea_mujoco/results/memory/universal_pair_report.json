@@ -1,7 +1,0 @@
-{
-  "input": "results/memory/universal_experience_v1.json",
-  "output": "results/memory/universal_experience_paired_v1.json",
-  "entry_count": 7,
-  "pair_count": 0,
-  "pairs": []
-}

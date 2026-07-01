@@ -62,8 +62,19 @@ class R1ProArmIKSkill:
     """Pinocchio IK + MuJoCo actuator control for one R1Pro arm."""
 
     def __init__(self, urdf_path: str | Path = "urdf/r1_pro_with_gripper.urdf"):
-        self.urdf_path = Path(urdf_path)
+        self.urdf_path = self._resolve_urdf_path(urdf_path)
         self.pin_model = pin.buildModelFromUrdf(str(self.urdf_path))
+
+    @staticmethod
+    def _resolve_urdf_path(urdf_path: str | Path) -> Path:
+        path = Path(urdf_path)
+        if path.is_absolute() or path.exists():
+            return path
+        package_root = Path(__file__).resolve().parents[2]
+        package_path = package_root / path
+        if package_path.exists():
+            return package_path
+        return path
 
     def frame_name(self, side: ArmSide) -> str:
         return f"{side}_hand_tcp"
@@ -533,6 +544,8 @@ class R1ProArmIKSkill:
                 raise ValueError(f"MuJoCo actuator not found: {name}_pos")
             if force_scale != 1.0:
                 model.actuator_forcerange[actuator_id] *= force_scale
+                if bool(model.jnt_actfrclimited[joint_id]):
+                    model.jnt_actfrcrange[joint_id] *= force_scale
 
     def capture_locked_posture(
         self,
@@ -551,8 +564,7 @@ class R1ProArmIKSkill:
             qpos_id = model.jnt_qposadr[joint_id]
             dof_id = model.jnt_dofadr[joint_id]
             if model.jnt_type[joint_id] == mujoco.mjtJoint.mjJNT_FREE:
-                qpos_size = 7
-                qvel_size = 6
+                continue
             elif model.jnt_type[joint_id] == mujoco.mjtJoint.mjJNT_BALL:
                 qpos_size = 4
                 qvel_size = 3

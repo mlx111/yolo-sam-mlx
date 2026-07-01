@@ -9,7 +9,7 @@ from skills.base.arm_ik_skill import load_skill
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Move an R1Pro hand TCP to a target position.")
-    parser.add_argument("--model", default="model.xml")
+    parser.add_argument("--model", default="model/model.xml")
     parser.add_argument("--urdf", default="urdf/r1_pro_with_gripper.urdf")
     parser.add_argument("--side", choices=["left", "right"], default="left")
     parser.add_argument("--viewer", action="store_true")

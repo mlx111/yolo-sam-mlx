@@ -1,0 +1,12 @@
+[
+  {
+    "action": "head_camera_rgbd_save",
+    "parameters": {
+      "camera_name": "head_top_work_camera",
+      "width": 640,
+      "height": 480,
+      "output_dir": "output/head_camera_rgbd",
+      "prefix": "head_top"
+    }
+  }
+]

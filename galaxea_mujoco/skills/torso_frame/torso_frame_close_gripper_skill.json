@@ -1,0 +1,9 @@
+{
+  "name": "torso_frame_close_gripper",
+  "description": "Close the torso-frame selected side gripper.",
+  "parameters": {
+    "side": "left or right",
+    "gripper_steps": "Number of close steps",
+    "direct_qpos": "Whether to write gripper qpos directly"
+  }
+}

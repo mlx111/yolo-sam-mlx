@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "2026-06-28T09:56:56.238862Z",
+  "input_ply": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_zcopy_filled_aligned.ply",
+  "output_stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_watertight_voxel.stl",
+  "output_mesh_ply": "",
+  "watertight": true,
+  "is_volume": true,
+  "volume_m3": 0.0003058525667155489,
+  "mesh_vertices": 133,
+  "mesh_faces": 262,
+  "bbox_input_m": [
+    0.06643681465790738,
+    0.07479534246827765,
+    0.09181761093055725
+  ],
+  "bbox_mesh_m": [
+    0.06643681465790738,
+    0.07479534246827765,
+    0.09181761093055725
+  ],
+  "bbox_rel_error": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "fit_mean_mm": 5.744453351534018,
+  "fit_p90_mm": 16.76320212973423,
+  "fallback_used": true,
+  "config": {
+    "voxel_mm": 1.2,
+    "padding_vox": 2,
+    "close_iters": 2,
+    "open_iters": 0,
+    "smooth_iters": 8,
+    "smooth_lambda": 0.5,
+    "target_faces": 20000,
+    "max_split_faces": 300000,
+    "fallback": "convex_hull",
+    "force_convex_hull": "off",
+    "sample_points": 30000
+  }
+}

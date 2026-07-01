@@ -11,7 +11,7 @@ import numpy as np
 class R1ProEnv:
     """Small MuJoCo environment wrapper matching the UR5e env control style."""
 
-    def __init__(self, model_path: str | Path = "r1pro_grasp_scene.xml"):
+    def __init__(self, model_path: str | Path = "r1pro_g3_sorting_scene.xml"):
         self.model_path = Path(model_path)
         self.model: mujoco.MjModel | None = None
         self.data: mujoco.MjData | None = None
@@ -55,4 +55,3 @@ class R1ProEnv:
         if self.viewer is not None:
             self.viewer.close()
             self.viewer = None
-

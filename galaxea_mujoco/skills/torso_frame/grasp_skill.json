@@ -1,0 +1,29 @@
+{
+  "name": "torso_frame_grasp",
+  "description": "Execute continuous grasp using a target expressed in torso_link4 coordinates.",
+  "parameters": {
+    "side": "Required. left or right.",
+    "target_x/target_y/target_z": "Target object position in torso_frame coordinates.",
+    "target_torso": "Alternative [x, y, z] target in torso_frame coordinates.",
+    "center_reference": "Alternative [x, y, z] target from perception output.",
+    "median_reference": "Alternative [x, y, z] target from perception output.",
+    "position_input_path": "Alternative compact perception JSON path. Reads position_key from this file.",
+    "position_key": "Position field to read from position_input_path. Defaults to median_reference.",
+    "torso_frame": "Reference body/site name. Defaults to torso_link4.",
+    "object_body": "Optional MuJoCo object body used when use_object_target is true.",
+    "use_object_target": "If true, ignore explicit target and read object_body from MuJoCo state.",
+    "grasp_offset_x/grasp_offset_y/grasp_offset_z": "Offset from object center to grasp target in torso_frame coordinates.",
+    "enable_visual_grasp_correction": "If true, add visual_grasp_offset_z when target comes from perception.",
+    "visual_grasp_offset_z": "Additional torso-frame z offset for visual targets. Defaults to 0.0 and should be passed explicitly.",
+    "settle_before_steps": "Simulation steps to settle before grasp execution. Defaults to 1500.",
+    "pregrasp_offset_torso": "Required [x, y, z] offset from grasp pose to pregrasp pose.",
+    "pregrasp_offset_x/pregrasp_offset_y/pregrasp_offset_z": "Required offset components if pregrasp_offset_torso is not used.",
+    "lift_height": "Lift distance in torso +Z after closing gripper.",
+    "control_mode": "actuator, site_servo, or direct_qpos.",
+    "attach_on_close": "Simulation-only shortcut. If true with direct_qpos, attach object_body to gripper after close.",
+    "topdown_mode": "vertical_down, forward_parallel, or current. palm_down and x_forward are legacy aliases.",
+    "waypoint_count": "Number of Cartesian waypoints.",
+    "waypoint_steps": "Simulation steps per waypoint.",
+    "fail_threshold": "Position error threshold in meters."
+  }
+}

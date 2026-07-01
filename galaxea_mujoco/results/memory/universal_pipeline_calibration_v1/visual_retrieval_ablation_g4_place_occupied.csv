@@ -1,5 +1,0 @@
-candidate_id,score_without_visual,score_with_visual,candidate_score_delta,risk_without_visual,risk_with_visual,risk_score_delta,decision_without_visual,decision_with_visual,retrieval_changed,top_match_overlap
-g4_avoid_occupied_primary,0.7315,0.7316,0.0001,0.3949,0.3962,0.0013,accept,accept,False,1.0
-g4_default,0.5731,0.6586,0.0855,0.7606,0.7617,0.0011,rewrite,rewrite,False,1.0
-g4_relevel_before_place,0.5249,0.6645,0.1396,0.7311,0.7322,0.0011,rewrite,rewrite,False,1.0
-g4_safer_transport,0.5407,0.6681,0.1274,0.7128,0.7139,0.0011,rewrite,rewrite,False,1.0

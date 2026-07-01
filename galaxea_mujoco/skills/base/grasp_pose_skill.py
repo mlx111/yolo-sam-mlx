@@ -7,7 +7,7 @@ import mujoco
 import numpy as np
 
 
-GraspMode = Literal["topdown", "side_x", "side_y", "current_rotation"]
+GraspMode = Literal["topdown", "side_x", "current_rotation"]
 
 
 @dataclass(frozen=True)
@@ -150,11 +150,6 @@ def _rotation_for_mode(
         approach_axis = np.array([-1.0, 0.0, 0.0], dtype=np.float64)
         y_axis = np.array([0.0, 0.0, 1.0], dtype=np.float64)
         return _basis_from_approach_and_y(approach_axis, y_axis), approach_axis, "x_forward"
-    if grasp_mode == "side_y":
-        approach_axis = np.array([0.0, -1.0 if side == "left" else 1.0, 0.0], dtype=np.float64)
-        y_axis = np.array([0.0, 0.0, 1.0], dtype=np.float64)
-        return _basis_from_approach_and_y(approach_axis, y_axis), approach_axis, "x_side"
-
     # Match the stable R1Pro top-down convention in continuous_grasp_executor:
     # y axis points up, z axis points laterally, and approach is world -Z.
     y_axis = np.array([0.0, 0.0, 1.0], dtype=np.float64)
@@ -181,8 +176,6 @@ def _estimate_grasp_width(
 ) -> float:
     if grasp_mode == "side_x":
         width = 2.0 * float(half_extents[1]) + float(margin)
-    elif grasp_mode == "side_y":
-        width = 2.0 * float(half_extents[0]) + float(margin)
     else:
         width = 2.0 * min(float(half_extents[0]), float(half_extents[1])) + float(margin)
     return float(np.clip(width, min_width, max_width))

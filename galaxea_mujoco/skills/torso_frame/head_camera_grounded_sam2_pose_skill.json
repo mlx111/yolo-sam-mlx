@@ -1,0 +1,21 @@
+{
+  "name": "torso_frame_head_camera_grounded_sam2_pose",
+  "description": "Detect a target object in saved head-camera RGB-D and output its pose in torso_link4 coordinates.",
+  "parameters": {
+    "rgb_path": "Saved RGB image path.",
+    "depth_path": "Saved depth NPY path in meters.",
+    "metadata_path": "Saved head-camera metadata JSON path.",
+    "target_class": "Text prompt/class for Grounded-SAM2.",
+    "output_dir": "Output directory for mask, annotated image, point cloud, and reports.",
+    "prefix": "Output filename prefix.",
+    "grounded_sam2_root": "Grounded-SAM-2 root containing model code, weights, BERT, and GroundingDINO config.",
+    "box_threshold": "GroundingDINO box threshold.",
+    "text_threshold": "GroundingDINO text threshold.",
+    "max_depth_m": "Maximum accepted depth in meters.",
+    "min_valid_depth_points": "Minimum valid masked depth points required for success.",
+    "save_point_cloud": "Whether to save masked world point cloud.",
+    "position_output_path": "Compact pose JSON output path.",
+    "reference_frame": "MuJoCo body/site frame for local output. Defaults to torso_link4."
+  }
+}
+

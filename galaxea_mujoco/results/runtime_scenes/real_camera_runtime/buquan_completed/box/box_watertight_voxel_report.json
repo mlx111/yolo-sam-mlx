@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "2026-06-28T09:48:51.086256Z",
+  "input_ply": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/box/box_zcopy_filled_aligned.ply",
+  "output_stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/box/box_watertight_voxel.stl",
+  "output_mesh_ply": "",
+  "watertight": true,
+  "is_volume": true,
+  "volume_m3": 0.00021680977461458828,
+  "mesh_vertices": 76,
+  "mesh_faces": 148,
+  "bbox_input_m": [
+    0.05597130233234876,
+    0.06563286733705231,
+    0.08352216321175446
+  ],
+  "bbox_mesh_m": [
+    0.05597130233234876,
+    0.06563286733705231,
+    0.08352216321175446
+  ],
+  "bbox_rel_error": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "fit_mean_mm": 4.726951858287156,
+  "fit_p90_mm": 13.279809037328375,
+  "fallback_used": true,
+  "config": {
+    "voxel_mm": 1.2,
+    "padding_vox": 2,
+    "close_iters": 2,
+    "open_iters": 0,
+    "smooth_iters": 8,
+    "smooth_lambda": 0.5,
+    "target_faces": 20000,
+    "max_split_faces": 300000,
+    "fallback": "convex_hull",
+    "force_convex_hull": "off",
+    "sample_points": 30000
+  }
+}

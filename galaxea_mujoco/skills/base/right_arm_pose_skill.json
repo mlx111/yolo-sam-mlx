@@ -1,0 +1,24 @@
+{
+  "name": "r1pro_right_arm_move_to_pose",
+  "description": "Move the right arm TCP to an absolute MuJoCo world pose using Pinocchio IK.",
+  "side": "right",
+  "frame": "right_hand_tcp",
+  "urdf_path": "urdf/r1_pro_with_gripper.urdf",
+  "parameters": {
+    "target_x": "Absolute target x position in MuJoCo world coordinates.",
+    "target_y": "Absolute target y position in MuJoCo world coordinates.",
+    "target_z": "Absolute target z position in MuJoCo world coordinates.",
+    "target_quat_wxyz": "Target orientation as a unit quaternion in wxyz order.",
+    "orientation_weight": "Optional orientation weight when solving pose IK.",
+    "orientation_threshold": "Optional orientation success threshold in radians."
+  },
+  "control_defaults": {
+    "steps": 1500,
+    "settle_steps": 3000,
+    "max_joint_step": 0.006,
+    "fail_threshold": 0.02,
+    "direct_qpos": false,
+    "orientation_threshold": 0.15,
+    "orientation_weight": 0.35
+  }
+}

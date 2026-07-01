@@ -1,0 +1,17 @@
+<mujoco model="real_camera_runtime_scene">
+  <include file="model/model.xml" />
+  <asset>
+    <mesh name="apple" file="runtime_completed/apple_completed.stl" />
+    <material name="apple_mat" rgba="0.9 0.12 0.08 1" />
+  </asset>
+  <option timestep="0.005" impratio="10" integrator="implicitfast" cone="elliptic" solver="PGS" />
+  <worldbody>
+    <light name="scene_key_light" pos="0 0 3" dir="0 0 -1" diffuse="0.7 0.7 0.7" />
+    <geom name="grasp_table" type="box" pos="0.28 0.08 0.837" size="0.18 0.60 0.035" rgba="0 0 0 1" condim="3" friction="1.0 0.02 0.002" priority="1" solref="0.004 1" solimp="0.95 0.99 0.001" />
+    <body name="apple_0" pos="0.601636289 0.203106745 0.780495175" quat="1 0 0 0">
+      <freejoint name="apple_0_freejoint" />
+      <geom name="apple_0_geom" type="mesh" mesh="apple" material="apple_mat" mass="0.05" condim="6" friction="1 0.02 0.002" priority="1" solref="0.004 1" solimp="0.95 0.99 0.001" />
+      <site name="apple_0_site" pos="0 0 0" size="0.012" rgba="1 1 0.1 1" />
+    </body>
+  </worldbody>
+</mujoco>

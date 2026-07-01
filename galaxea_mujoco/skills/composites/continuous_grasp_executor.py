@@ -42,7 +42,7 @@ class R1ProContinuousGraspExecutor:
         pregrasp_distance: float = 0.12,
         auto_grasp_table_clearance: bool = True,
         pad_table_clearance: float = 0.010,
-        lift_height: float = 0.30,
+        lift_height: float = 0.10,
         waypoint_count: int = 20,
         waypoint_steps: int = 60,
         solve_iterations: int = 120,

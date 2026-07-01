@@ -1,0 +1,9 @@
+{
+  "name": "torso_frame_open_gripper",
+  "description": "Open the torso-frame selected side gripper.",
+  "parameters": {
+    "side": "left or right",
+    "gripper_steps": "Number of open steps",
+    "direct_qpos": "Whether to write gripper qpos directly"
+  }
+}

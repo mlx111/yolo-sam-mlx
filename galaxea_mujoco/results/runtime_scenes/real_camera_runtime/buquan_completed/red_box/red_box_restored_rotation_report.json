@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-06-28T09:52:59.388154Z",
+  "object": "red_box",
+  "returncode": 0,
+  "inputs": {
+    "source_stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_watertight_voxel.stl",
+    "pipeline_report": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_pipeline_report.json"
+  },
+  "geometry": {
+    "inverse_rotation_3x3": [
+      [
+        0.975520654841677,
+        -0.015280013843796137,
+        0.21937632769291085
+      ],
+      [
+        -0.015280013843796137,
+        0.9904622112414956,
+        0.13693476285696893
+      ],
+      [
+        -0.21937632769291085,
+        -0.13693476285696893,
+        0.9659828660831726
+      ]
+    ]
+  },
+  "outputs": {
+    "restored_stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_watertight_voxel_restored.stl",
+    "runner_report": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_runner_report.json"
+  }
+}

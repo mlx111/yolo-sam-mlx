@@ -1,0 +1,152 @@
+{
+  "timestamp_utc": "2026-06-28T09:48:30.329502Z",
+  "config": {
+    "object_name": "green",
+    "input_root": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/buquan_runtime/inputs",
+    "calib_pdf": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco",
+    "extrinsics_json": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco",
+    "camera": "left",
+    "camera_model": "sim",
+    "sim_intrinsics_json": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_sim_intrinsics.json",
+    "left_depth_rel": "dleft001.png",
+    "left_mask_tpl": "left_mask_{obj}.png",
+    "right_depth_rel": "dleft001.png",
+    "right_mask_tpl": "left_mask_{obj}.png",
+    "depth_scale": 1000.0,
+    "depth_trunc_m": 6.0,
+    "voxel_size_m": 0.0015,
+    "stat_k": 20,
+    "stat_std_ratio": 2.0,
+    "radius_m": 0.006,
+    "radius_min_neighbors": 6,
+    "cluster_radius_m": 0.005,
+    "tail_bin_m": 0.0012,
+    "tail_min_support": 8,
+    "tail_max_remove_ratio": 0.03,
+    "center_mode": "mean",
+    "align_axis": "minor",
+    "copy_source": "cleaned_raw",
+    "copy_times": 10,
+    "copy_step_m": 0.0025,
+    "copy_direction": "both",
+    "copy_voxel_m": 0.0008,
+    "output_dir": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/green",
+    "save_report": true
+  },
+  "inputs": {
+    "input_root": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/buquan_runtime/inputs",
+    "camera_selected": "left",
+    "selected_depth": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/buquan_runtime/inputs/dleft001.png",
+    "selected_color": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/buquan_runtime/inputs/cleft001.png",
+    "selected_mask": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/buquan_runtime/inputs/left_mask_green.png",
+    "camera_model": "sim",
+    "sim_intrinsics_json": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_sim_intrinsics.json"
+  },
+  "calibration": {
+    "selected_intrinsics_name": "sim_left_intrinsics",
+    "selected_intrinsics": [
+      [
+        385.78,
+        0.0,
+        327.58
+      ],
+      [
+        0.0,
+        385.22,
+        238.69
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "raw_points_source": "sim_metric_depth_mask_pinhole"
+  },
+  "counts": {
+    "mask_pixels": 1089,
+    "raw_points": 1089,
+    "raw_after_stat_radius": 972,
+    "raw_largest_cluster_points": 971,
+    "raw_tail_trimmed_points": 946,
+    "preprocessed_points": 866,
+    "aligned_raw_points": 1089,
+    "aligned_cleaned_raw_points": 946,
+    "aligned_processed_points": 866,
+    "copy_base_points": 946,
+    "filled_points": 19866
+  },
+  "outlier_filter": {
+    "cluster_filter": {
+      "applied": true,
+      "largest_component_size": 971,
+      "input_points": 972
+    },
+    "tail_trim": {
+      "applied": true,
+      "input_points": 971,
+      "output_points": 946,
+      "removed_points": 25,
+      "removed_ratio": 0.025746652935118436,
+      "left_trim_mm": 3.599999999999999,
+      "right_trim_mm": 3.570705231643212,
+      "tail_bin_mm": 1.2,
+      "tail_min_support": 8
+    }
+  },
+  "geometry": {
+    "center_translation_xyz_m": [
+      -0.2510247607887659,
+      0.4122076942505979,
+      0.9280196304849883
+    ],
+    "rotation_to_z_3x3": [
+      [
+        0.980761837079219,
+        0.038899037415328665,
+        0.19129318810808826
+      ],
+      [
+        0.038899037415328665,
+        0.9213472139689252,
+        -0.3867895761229981
+      ],
+      [
+        -0.19129318810808826,
+        0.3867895761229981,
+        0.9021090510481442
+      ]
+    ],
+    "pca_eigenvalues": [
+      0.00040642432323713276,
+      0.0003419710070081338,
+      7.414118362757143e-05
+    ],
+    "copy_shifts_z_m": [
+      0.0,
+      0.0025,
+      -0.0025,
+      0.005,
+      -0.005,
+      0.0075,
+      -0.0075,
+      0.01,
+      -0.01,
+      0.0125,
+      -0.0125,
+      0.015,
+      -0.015,
+      0.0175,
+      -0.0175,
+      0.02,
+      -0.02,
+      0.0225,
+      -0.0225,
+      0.025,
+      -0.025
+    ]
+  },
+  "outputs": {
+    "zcopy_filled_aligned_ply": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/green/green_zcopy_filled_aligned.ply"
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "action": "head_camera_rgbd_save",
+    "parameters": {
+      "camera_name": "head_top_work_camera",
+      "width": 640,
+      "height": 480,
+      "output_dir": "output/head_camera_rgbd",
+      "prefix": "head_top"
+    }
+  },
+  {
+    "action": "head_camera_grounded_sam2_pose",
+    "parameters": {
+      "rgb_path": "output/head_camera_rgbd/head_top_rgb.png",
+      "depth_path": "output/head_camera_rgbd/head_top_depth.npy",
+      "metadata_path": "output/head_camera_rgbd/head_top_metadata.json",
+      "target_class": "red sphere",
+      "output_dir": "output/head_camera_grounded_sam2_pose",
+      "prefix": "head_top_apple",
+      "box_threshold": 0.2,
+      "text_threshold": 0.2,
+      "max_depth_m": 5.0,
+      "min_valid_depth_points": 32,
+      "save_point_cloud": true,
+      "position_output_path": "output/head_camera_grounded_sam2_pose/object_position.json"
+    }
+  }
+]

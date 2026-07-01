@@ -1,0 +1,17 @@
+{
+  "name": "torso_frame_lift",
+  "description": "Lift the TCP upward in torso coordinates.",
+  "parameters": {
+    "side": "left or right",
+    "torso_frame": "torso_link4",
+    "position_input_path": "Optional compact perception JSON path",
+    "position_key": "median_reference",
+    "target_torso": "Explicit torso-frame [x, y, z] start pose",
+    "lift_height": "Lift distance along torso +Z",
+    "control_mode": "actuator/site_servo/direct_qpos",
+    "steps": "Execution steps",
+    "settle_steps": "Settling steps",
+    "max_joint_step": "Maximum joint step",
+    "fail_threshold": "Target final error threshold"
+  }
+}

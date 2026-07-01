@@ -1,0 +1,54 @@
+[
+  {
+    "action": "head_camera_rgbd_save",
+    "parameters": {
+      "camera_name": "head_top_work_camera",
+      "width": 640,
+      "height": 480,
+      "output_dir": "output/head_camera_rgbd",
+      "prefix": "head_top"
+    }
+  },
+  {
+    "action": "head_camera_grounded_sam2_pose",
+    "parameters": {
+      "rgb_path": "output/head_camera_rgbd/head_top_rgb.png",
+      "depth_path": "output/head_camera_rgbd/head_top_depth.npy",
+      "metadata_path": "output/head_camera_rgbd/head_top_metadata.json",
+      "target_class": "red sphere",
+      "output_dir": "output/head_camera_grounded_sam2_pose",
+      "prefix": "head_top_target",
+      "reference_frame": "torso_link4",
+      "box_threshold": 0.2,
+      "text_threshold": 0.2,
+      "max_depth_m": 5.0,
+      "min_valid_depth_points": 32,
+      "save_point_cloud": true,
+      "position_output_path": "output/head_camera_grounded_sam2_pose/object_position.json"
+    }
+  },
+  {
+    "action": "torso_frame_grasp",
+    "parameters": {
+      "side": "right",
+      "torso_frame": "torso_link4",
+      "position_input_path": "output/head_camera_grounded_sam2_pose/object_position.json",
+      "position_key": "median_reference",
+      "grasp_offset_x": 0.0,
+      "grasp_offset_y": 0.0,
+      "grasp_offset_z": 0.0,
+      "enable_visual_grasp_correction": true,
+      "visual_grasp_offset_z": 0.027,
+      "settle_before_steps": 1500,
+      "pregrasp_distance": 0.12,
+      "lift_height": 0.10,
+      "control_mode": "actuator",
+      "close_direct_qpos": false,
+      "attach_on_close": false,
+      "topdown_mode": "palm_down",
+      "waypoint_count": 20,
+      "waypoint_steps": 60,
+      "fail_threshold": 0.002
+    }
+  }
+]

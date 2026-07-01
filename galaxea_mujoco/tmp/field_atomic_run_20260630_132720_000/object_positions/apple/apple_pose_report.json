@@ -1,0 +1,94 @@
+{
+  "success": true,
+  "target_class": "apple",
+  "object_body": null,
+  "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260630_132720_000/head_camera_rgbd/head_top_rgb.png",
+  "depth_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260630_132720_000/head_camera_rgbd/head_top_depth.npy",
+  "metadata_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260630_132720_000/head_camera_rgbd/head_top_metadata.json",
+  "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260630_132720_000/object_positions/apple/apple_mask.png",
+  "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260630_132720_000/object_positions/apple/apple_annotated.png",
+  "report_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260630_132720_000/object_positions/apple/apple_pose_report.json",
+  "position_output_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260630_132720_000/object_positions/apple/object_position.json",
+  "point_cloud_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260630_132720_000/object_positions/apple/apple_points_world.npy",
+  "bbox_xyxy": [
+    268.31005859375,
+    287.6322937011719,
+    296.51007080078125,
+    318.6058044433594
+  ],
+  "mask_pixel_count": 744,
+  "valid_depth_count": 744,
+  "valid_depth_ratio": 1.0,
+  "center_camera_cv": [
+    -0.096264962,
+    0.165814069,
+    0.889866811
+  ],
+  "center_world": [
+    0.568079207,
+    0.194144335,
+    0.812137298
+  ],
+  "median_world": [
+    0.567147216,
+    0.193586049,
+    0.819043898
+  ],
+  "bounds_world_min": [
+    0.535530555,
+    0.162605214,
+    0.750302153
+  ],
+  "bounds_world_max": [
+    0.617977258,
+    0.23589386,
+    0.834550859
+  ],
+  "reference_frame": "torso_link4",
+  "center_reference": [
+    0.259298813,
+    0.046264962,
+    -0.328560525
+  ],
+  "median_reference": [
+    0.258271427,
+    0.045708825,
+    -0.321627149
+  ],
+  "bounds_reference_min": [
+    0.227130415,
+    0.014730903,
+    -0.390591953
+  ],
+  "bounds_reference_max": [
+    0.309570367,
+    0.088005249,
+    -0.306065781
+  ],
+  "depth_stats_m": {
+    "min": 0.8713669776916504,
+    "max": 0.9636548757553101,
+    "median": 0.882427990436554
+  },
+  "candidate": {
+    "detector": "grounding_dino",
+    "prompt": "red apple.",
+    "label": "red apple",
+    "score": 0.8885149955749512,
+    "xyxy": [
+      268.31005859375,
+      287.6322937011719,
+      296.51007080078125,
+      318.6058044433594
+    ],
+    "mask_score": 1.6324728617611002,
+    "mask_stats": {
+      "area": 744,
+      "foreground_iou": 0.0050225979924402135,
+      "bbox_fill": 0.8275862068965517,
+      "component_count": 1
+    }
+  },
+  "candidate_count": 2,
+  "message": "object position estimated from head camera RGB-D"
+}

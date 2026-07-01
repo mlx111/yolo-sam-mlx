@@ -1,0 +1,17 @@
+{
+  "env": {
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "6000",
+    "ANTHROPIC_AUTH_TOKEN": "sk-7aiDpJuymUubMofNuSVpRad8kW7wArufb3xPO6XR6QbwCdG0",
+    "ANTHROPIC_BASE_URL": "https://anyrouter.top",
+    "ANTHROPIC_MODEL": "claude-opus-4-6",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-8",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-opus-4-6",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-7"
+  },
+  "permissions": {
+    "allow": [],
+    "deny": []
+  },
+  "model": "sonnet"
+}

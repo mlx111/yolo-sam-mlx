@@ -1,0 +1,220 @@
+{
+  "status": "success",
+  "color_image_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/camera/color_2026-06-25T00_40_21.png",
+  "depth_image_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/camera/depth_2026-06-25T00_40_21.png",
+  "scene_out": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/scence/real_camera_runtime_scene.xml",
+  "objects": [
+    "apple",
+    "red_box"
+  ],
+  "object_positions_m": {
+    "apple": [
+      0.6211471256889185,
+      -0.10514930789569184,
+      0.7807111412768785
+    ],
+    "red_box": [
+      0.5898874785510444,
+      -0.19192866400539163,
+      0.7486242972071085
+    ]
+  },
+  "camera_intrinsics": {
+    "fx": 385.78,
+    "fy": 385.22,
+    "cx": 327.58,
+    "cy": 238.69
+  },
+  "camera_extrinsics": {
+    "camera_to_tcp_pose": [
+      0,
+      0,
+      0,
+      -1.5707963267948966,
+      0,
+      -1.5707963267948966
+    ],
+    "tcp_pose": [
+      150,
+      -50,
+      570,
+      0,
+      0.6981317007977318,
+      0
+    ],
+    "base_to_world_pose": [
+      0,
+      0,
+      1148,
+      0,
+      0,
+      0
+    ]
+  },
+  "grounded_sam2_root": "/home/lt/malanxuan/yolo-sam-mlx/Grounded-SAM-2",
+  "target_coordinate_system": "world",
+  "downsample_scale": 1.0,
+  "mesh_rotation_mode": "world_x180_current_x180",
+  "mesh_quats": {
+    "apple": [
+      -0.2988362387301199,
+      0.6408563820557885,
+      0.6408563820557885,
+      -0.29883623873011983
+    ],
+    "red_box": [
+      -0.2988362387301199,
+      0.6408563820557885,
+      0.6408563820557885,
+      -0.29883623873011983
+    ]
+  },
+  "completed_mesh_reports": {
+    "apple": {
+      "status": "success",
+      "object_name": "apple",
+      "returncode": 0,
+      "stdout": "[INFO] zcopy ply: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_zcopy_filled_aligned.ply\n[INFO] stl: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_watertight_voxel.stl\n[INFO] restored stl: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_watertight_voxel_restored.stl\n[INFO] runner report: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_runner_report.json\n[INFO] restored report: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_restored_rotation_report.json\n",
+      "stderr": "",
+      "runner_report": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_runner_report.json",
+      "restored_stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_watertight_voxel_restored.stl",
+      "installed_mesh": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/model/meshes/runtime_completed/apple_completed.stl",
+      "outputs": {
+        "zcopy_ply": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_zcopy_filled_aligned.ply",
+        "stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_watertight_voxel.stl",
+        "restored_stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_watertight_voxel_restored.stl",
+        "runner_report": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_runner_report.json",
+        "restored_report": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/apple/apple_restored_rotation_report.json"
+      }
+    },
+    "red_box": {
+      "status": "success",
+      "object_name": "red_box",
+      "returncode": 0,
+      "stdout": "[INFO] zcopy ply: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_zcopy_filled_aligned.ply\n[INFO] stl: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_watertight_voxel.stl\n[INFO] restored stl: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_watertight_voxel_restored.stl\n[INFO] runner report: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_runner_report.json\n[INFO] restored report: /home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_restored_rotation_report.json\n",
+      "stderr": "",
+      "runner_report": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_runner_report.json",
+      "restored_stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_watertight_voxel_restored.stl",
+      "installed_mesh": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/model/meshes/runtime_completed/red_box_completed.stl",
+      "outputs": {
+        "zcopy_ply": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_zcopy_filled_aligned.ply",
+        "stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_watertight_voxel.stl",
+        "restored_stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_watertight_voxel_restored.stl",
+        "runner_report": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_runner_report.json",
+        "restored_report": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/buquan_completed/red_box/red_box_restored_rotation_report.json"
+      }
+    }
+  },
+  "object_reports": {
+    "apple": {
+      "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/masks/color_2026-06-25T00_40_21_apple_mask.png",
+      "buquan_clean_mask_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/masks/color_2026-06-25T00_40_21_apple_buquan_clean_mask.png",
+      "buquan_clean_mask_stats": {
+        "raw_mask_pixels": 1083,
+        "clean_mask_pixels": 998,
+        "median_depth": 941.0,
+        "depth_band_tolerance_mm": 40.0,
+        "reason": "depth_band_largest_component_morphology"
+      },
+      "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/annotated/color_2026-06-25T00_40_21_apple_annotated.png",
+      "point_cloud_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/point_clouds/color_2026-06-25T00_40_21_apple_world.npy",
+      "point_cloud_ply_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/point_clouds/color_2026-06-25T00_40_21_apple_world.ply",
+      "candidate": {
+        "detector": "grounding_dino",
+        "prompt": "apple.",
+        "label": "apple",
+        "score": 0.8934980034828186,
+        "xyxy": [
+          331.5773010253906,
+          388.68328857421875,
+          365.3846130371094,
+          424.8726806640625
+        ],
+        "mask_score": 1.6681959729764584,
+        "mask_stats": {
+          "area": 1083,
+          "foreground_iou": 0.0044416555932870715,
+          "bbox_fill": 0.9116161616161617,
+          "component_count": 1
+        }
+      },
+      "candidate_count": 2,
+      "point_cloud_info": {
+        "state": "success",
+        "info": "point cloud generated: 1064 points",
+        "x": 621.1471256889185,
+        "y": -105.14930789569183,
+        "z": 780.7111412768785,
+        "x_min": 576.9428695470194,
+        "y_min": -149.3912592669397,
+        "z_min": 748.3154651305682,
+        "x_max": 665.3513818308176,
+        "y_max": -60.90735652444396,
+        "z_max": 813.1068174231888,
+        "point_count": 1064,
+        "point_cloud": {
+          "array_shape": [
+            1064,
+            3
+          ],
+          "array_dtype": "float64"
+        }
+      }
+    },
+    "red_box": {
+      "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/masks/color_2026-06-25T00_40_21_red_box_mask.png",
+      "buquan_clean_mask_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/masks/color_2026-06-25T00_40_21_red_box_buquan_clean_mask.png",
+      "buquan_clean_mask_stats": {
+        "raw_mask_pixels": 85870,
+        "clean_mask_pixels": 85857,
+        "median_depth": 971.0,
+        "depth_band_tolerance_mm": 40.0,
+        "reason": "depth_band_too_small_fallback_raw"
+      },
+      "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/annotated/color_2026-06-25T00_40_21_red_box_annotated.png",
+      "point_cloud_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/point_clouds/color_2026-06-25T00_40_21_red_box_world.npy",
+      "point_cloud_ply_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/point_clouds/color_2026-06-25T00_40_21_red_box_world.ply",
+      "candidate": {
+        "detector": "grounding_dino",
+        "prompt": "red_box.",
+        "label": "red _ box",
+        "score": 0.2586512267589569,
+        "xyxy": [
+          56.90228271484375,
+          303.5950012207031,
+          638.4984130859375,
+          478.9371643066406
+        ],
+        "mask_score": 1.3879196112298318,
+        "mask_stats": {
+          "area": 85870,
+          "foreground_iou": 0.3521744836524107,
+          "bbox_fill": 0.8445537251044997,
+          "component_count": 1
+        }
+      },
+      "candidate_count": 3,
+      "point_cloud_info": {
+        "state": "success",
+        "info": "point cloud generated: 24818 points",
+        "x": 589.8874785510444,
+        "y": -191.92866400539162,
+        "z": 748.6242972071085,
+        "x_min": 491.6878480568371,
+        "y_min": -806.7074498418788,
+        "z_min": 707.1474969115236,
+        "x_max": 688.0871090452517,
+        "y_max": 422.8501218310955,
+        "z_max": 790.1010975026934,
+        "point_count": 24818,
+        "point_cloud": {
+          "array_shape": [
+            24818,
+            3
+          ],
+          "array_dtype": "float64"
+        }
+      }
+    }
+  }
+}

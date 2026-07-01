@@ -14,7 +14,6 @@ from skills.primitives.move_to_pregrasp_skill import load_skill as load_pregrasp
 from skills.primitives.pre_grasp_safe_posture_skill import load_skill as load_pregrasp_safe_posture
 from skills.primitives.right_vertical_lift_skill import load_skill as load_right_lift
 from skills.primitives.torso_set_height_skill import load_skill as load_torso_height
-from skills.primitives.torso_turn_to_target_skill import load_skill as load_torso_turn
 from skills.primitives.verify_grasp_skill import load_skill as load_verify_grasp
 
 
@@ -147,20 +146,7 @@ class AdjustTorsoForReachSkill:
             },
             step_callback=step_callback,
         )
-        turn = load_torso_turn().execute_recovery_action(
-            model,
-            data,
-            {
-                "object_body": object_body,
-                "steps": int(params.get("torso_turn_steps", 300)),
-                "settle_steps": int(params.get("torso_turn_settle_steps", 80)),
-                "max_joint_step": float(params.get("torso_max_joint_step", 0.004)),
-                "fail_threshold": float(params.get("torso_fail_threshold", 0.05)),
-                "direct_qpos": bool(params.get("direct_qpos", False)),
-            },
-            step_callback=step_callback,
-        )
-        return _finish(self.name, [_step("torso_set_height", height), _step("torso_turn_to_target", turn)])
+        return _finish(self.name, [_step("torso_set_height", height)])
 
 
 class RetryPregraspWithSaferOffsetSkill:

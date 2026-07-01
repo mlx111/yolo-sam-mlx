@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "camera_name": "head_top_work_camera",
+  "width": 640,
+  "height": 480,
+  "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260629_170449_000/head_camera_rgbd/head_top_rgb.png",
+  "depth_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260629_170449_000/head_camera_rgbd/head_top_depth.npy",
+  "depth_png_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260629_170449_000/head_camera_rgbd/head_top_depth_meters.png",
+  "metadata_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/tmp/field_atomic_run_20260629_170449_000/head_camera_rgbd/head_top_metadata.json",
+  "camera_position": [
+    0.358349093,
+    0.146488162,
+    1.711344223
+  ],
+  "camera_xmat": [
+    [
+      0.000167059,
+      0.955572835,
+      -0.294755031
+    ],
+    [
+      -0.999999986,
+      0.000159644,
+      -4.9222e-05
+    ],
+    [
+      2.1e-08,
+      0.294755035,
+      0.955572849
+    ]
+  ],
+  "intrinsics": {
+    "fx": 342.75552161810754,
+    "fy": 342.75552161810754,
+    "cx": 319.5,
+    "cy": 239.5,
+    "width": 640,
+    "height": 480,
+    "fovy": 70.0
+  },
+  "depth_min": 0.18050478398799896,
+  "depth_max": 2.281991720199585,
+  "depth_median": 1.153588056564331,
+  "valid_depth_count": 307200,
+  "message": "RGB-D capture saved"
+}

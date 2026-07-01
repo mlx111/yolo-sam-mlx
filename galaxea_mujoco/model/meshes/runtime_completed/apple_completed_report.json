@@ -1,0 +1,50 @@
+{
+  "status": "success",
+  "object_name": "apple",
+  "point_cloud_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/results/runtime_scenes/real_camera_runtime/point_clouds/color_2026-06-24T02_33_20_apple_world.npy",
+  "output_stl": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/model/meshes/runtime_completed/apple_completed.stl",
+  "output_zcopy_ply": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/model/meshes/runtime_completed/apple_zcopy_completed_local.ply",
+  "output_report": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/model/meshes/runtime_completed/apple_completed_report.json",
+  "method": "convex_hull",
+  "fallback_used": false,
+  "completion": {
+    "type": "zcopy",
+    "copy_times": 20,
+    "copy_step_m": 0.0015,
+    "copy_direction": "neg",
+    "copy_voxel_m": 0.0008,
+    "raw_point_count": 1075,
+    "completed_point_count": 22575,
+    "mesh_origin": [
+      0.6016362892313837,
+      0.20310674477681584,
+      0.7804951754052178
+    ],
+    "align_axis": "minor",
+    "pca_eigenvalues": [
+      538.5835392934463,
+      396.9115963951324,
+      131.26692865325757
+    ],
+    "rotation_to_z_3x3": [
+      [
+        0.7716172202633709,
+        -0.12948183442457598,
+        0.6227690743322682
+      ],
+      [
+        -0.12948183442457598,
+        0.9265901506878613,
+        0.3530795196574281
+      ],
+      [
+        -0.6227690743322682,
+        -0.3530795196574281,
+        0.6982073709512322
+      ]
+    ]
+  },
+  "point_count": 22575,
+  "vertex_count": 22575,
+  "face_count": 300
+}

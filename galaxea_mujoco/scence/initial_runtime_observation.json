@@ -1,0 +1,129 @@
+{
+  "schema_version": "field_runtime_scene_observation_v1",
+  "scene_id": "scene_0624",
+  "coordinate_frame": {
+    "world_frame": "world",
+    "units": "meter_radian",
+    "notes": "Task-start observation generated from real RGB-D before anomaly replay."
+  },
+  "robot_state": {},
+  "objects": [
+    {
+      "name": "apple0",
+      "class": "apple",
+      "pose": [
+        0.6016362892313837,
+        0.20310674477681584,
+        0.7804951754052178
+      ],
+      "settled_pose": [
+        0.550523312,
+        0.179081331,
+        0.795668845
+      ],
+      "size": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "geom_type": "mesh",
+      "mass": 0.05,
+      "confidence": null,
+      "source": "rgbd_grounded_sam2_buquan",
+      "freejoint": true,
+      "mesh_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/model/meshes/runtime_completed/apple_completed.stl",
+      "mesh_quat_wxyz": [
+        -0.2988362387301199,
+        0.6408563820557885,
+        0.6408563820557885,
+        -0.29883623873011983
+      ],
+      "mesh_rotation_mode": "world_x180_current_x180"
+    },
+    {
+      "name": "red_box_0",
+      "class": "red_box",
+      "pose": [
+        0.5202421109690792,
+        -0.056444268754212226,
+        0.7832120402452256
+      ],
+      "settled_pose": [
+        0.520351084,
+        -0.0564629,
+        0.774986713
+      ],
+      "size": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "geom_type": "mesh",
+      "mass": 0.05,
+      "confidence": null,
+      "source": "rgbd_grounded_sam2_buquan",
+      "freejoint": true,
+      "mesh_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/model/meshes/runtime_completed/red_box_completed.stl",
+      "mesh_quat_wxyz": [
+        -0.2988362387301199,
+        0.6408563820557885,
+        0.6408563820557885,
+        -0.29883623873011983
+      ],
+      "mesh_rotation_mode": "world_x180_current_x180"
+    }
+  ],
+  "obstacles": [],
+  "place_zones": [],
+  "sensor_refs": {
+    "rgb_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/camera/color_2026-06-24T02_33_20.png",
+    "depth_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/camera/depth_2026-06-24T02_33_20.png",
+    "runtime_scene_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/scence/scene_0624.xml",
+    "runtime_scene_report_path": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/scence/scene_0624_report.json"
+  },
+  "calibration": {
+    "camera_intrinsics": {
+      "fx": 385.78,
+      "fy": 385.22,
+      "cx": 327.58,
+      "cy": 238.69
+    },
+    "camera_extrinsics": {
+      "camera_to_tcp_pose": [
+        0,
+        0,
+        0,
+        -1.5707963267948966,
+        0,
+        -1.5707963267948966
+      ],
+      "tcp_pose": [
+        150,
+        -50,
+        570,
+        0,
+        0.6981317007977318,
+        0
+      ],
+      "base_to_world_pose": [
+        0,
+        0,
+        1148,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "runtime_scene": {
+    "scene_out": "/home/lt/malanxuan/yolo-sam-mlx/galaxea_mujoco/scence/scene_0624.xml",
+    "target_object": "apple0",
+    "generator": "build_runtime_scene_from_real_camera"
+  },
+  "metadata": {
+    "table_policy": "fixed_scene2_template",
+    "mesh_rotation_mode": "world_x180_current_x180",
+    "task_start_runtime_scene": true,
+    "settled_pose_source": "mujoco_settle_after_scene_generation"
+  }
+}

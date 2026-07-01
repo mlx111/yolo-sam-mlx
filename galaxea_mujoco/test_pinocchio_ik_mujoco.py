@@ -132,7 +132,7 @@ def make_arm_qpos_trajectory(pin_model, side, q_start, q_target, steps):
 
 def main():
     parser = argparse.ArgumentParser(description="Test Pinocchio IK targets in MuJoCo.")
-    parser.add_argument("--model", default="model.xml")
+    parser.add_argument("--model", default="model/model.xml")
     parser.add_argument("--urdf", default="urdf/r1_pro_with_gripper.urdf")
     parser.add_argument("--side", choices=["left", "right"], default="left")
     parser.add_argument("--viewer", action="store_true")

@@ -1,5 +1,5 @@
 <mujoco model="r1pro_g3_sorting_scene">
-  <include file="model.xml"/>
+  <include file="model/model.xml"/>
   <option timestep="0.005" impratio="10" integrator="implicitfast" cone="elliptic" solver="PGS"/>
 
   <worldbody>

@@ -1,0 +1,12 @@
+{
+  "name": "torso_frame_head_camera_rgbd_save",
+  "description": "Capture RGB-D from the MuJoCo head camera and save RGB, depth, and metadata for torso-frame perception.",
+  "parameters": {
+    "camera_name": "Optional MuJoCo camera name. Defaults to head_top_work_camera.",
+    "width": "Optional image width. Defaults to 640.",
+    "height": "Optional image height. Defaults to 480.",
+    "output_dir": "Output directory for RGB-D files.",
+    "prefix": "Output filename prefix."
+  }
+}
+

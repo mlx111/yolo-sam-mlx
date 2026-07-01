@@ -44,6 +44,21 @@ def _condition_hit(results: list[tuple[str, float]], by_id: dict, entry, top_k: 
     return False
 
 
+def _scenario_hit(results: list[tuple[str, float]], by_id: dict, entry, top_k: int) -> bool:
+    for experience_id, _score in results[:top_k]:
+        match = by_id.get(experience_id)
+        if match is not None and match.scenario_id == entry.scenario_id:
+            return True
+    return False
+
+
+def _first_scenario_hit(results: list[tuple[str, float]], by_id: dict, entry) -> bool:
+    if not results:
+        return False
+    match = by_id.get(results[0][0])
+    return bool(match and match.scenario_id == entry.scenario_id)
+
+
 def _first_condition_hit(results: list[tuple[str, float]], by_id: dict, entry) -> bool:
     if not results:
         return False
@@ -113,6 +128,8 @@ def evaluate_visual_retrieval(
                 "visual_topk": top_ids,
                 "top1_self_hit": bool(top_ids and top_ids[0] == entry.experience_id),
                 "topk_self_hit": entry.experience_id in top_ids,
+                "top1_same_scenario": _first_scenario_hit(visual_results, by_id, entry),
+                "topk_same_scenario": _scenario_hit(visual_results, by_id, entry, top_k),
                 "top1_same_condition": _first_condition_hit(visual_results, by_id, entry),
                 "topk_same_condition": _condition_hit(visual_results, by_id, entry, top_k),
                 "rank_without_visual": rank_without,
@@ -138,8 +155,11 @@ def evaluate_visual_retrieval(
         "top_k": top_k,
         "visual_weight": visual_weight,
         "query_count": query_count,
+        "primary_quality_metric": "topk_same_scenario/topk_same_condition and rank_delta_avg; top1_self_hit is diagnostic only.",
         "top1_self_hit_rate": rate("top1_self_hit"),
         "topk_self_hit_rate": rate("topk_self_hit"),
+        "top1_same_scenario_rate": rate("top1_same_scenario"),
+        "topk_same_scenario_rate": rate("topk_same_scenario"),
         "top1_same_condition_rate": rate("top1_same_condition"),
         "topk_same_condition_rate": rate("topk_same_condition"),
         "rank_delta_avg": round(mean(rank_deltas), 4) if rank_deltas else 0.0,
@@ -175,6 +195,8 @@ def main() -> None:
         "query_count",
         "top1_self_hit_rate",
         "topk_self_hit_rate",
+        "top1_same_scenario_rate",
+        "topk_same_scenario_rate",
         "top1_same_condition_rate",
         "topk_same_condition_rate",
         "rank_delta_avg",
