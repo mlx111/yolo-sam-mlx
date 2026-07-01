@@ -15,8 +15,8 @@ if str(ROOT) not in sys.path:
 
 from experience_adapters import R1ProMujocoAdapter
 from experience_core import ExperienceLibrary, load_lesson_library, load_policy_risk_calibration
-from source.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration, summarize_sandbox_fusion
-from source.run_r1pro_memory_policy_smoke import (
+from source.legacy_r1pro.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration, summarize_sandbox_fusion
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import (
     adjust_candidate_with_lessons,
     candidates_for_scenario,
     evaluate_candidate,
@@ -26,7 +26,7 @@ from source.run_r1pro_memory_policy_smoke import (
     select_sandbox_candidate,
     selection_rank,
 )
-from source.run_r1pro_task_chain import run_task_chain
+from source.legacy_r1pro.run_r1pro_task_chain import run_task_chain
 
 
 def parse_args() -> argparse.Namespace:

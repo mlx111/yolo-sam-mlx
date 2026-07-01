@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import base64
 import json
 import os
 from pathlib import Path
@@ -131,6 +132,22 @@ def _request_payload(messages: list[dict[str, Any]], *, model: str, temperature:
     }
 
 
+def encode_image_data_url(path: str | Path) -> str:
+    image_path = Path(path)
+    suffix = image_path.suffix.lower()
+    mime = "image/png" if suffix == ".png" else "image/jpeg"
+    with image_path.open("rb") as f:
+        data = base64.b64encode(f.read()).decode("utf-8")
+    return f"data:{mime};base64,{data}"
+
+
+def build_image_block(path: str | Path) -> dict[str, Any]:
+    return {
+        "type": "image_url",
+        "image_url": {"url": encode_image_data_url(path)},
+    }
+
+
 def _chat_completions_url(base_url: str) -> str:
     base_url = base_url.rstrip("/")
     if base_url.endswith("/chat/completions"):
@@ -158,6 +175,60 @@ def invoke_llm(
     if system_prompt:
         messages.append({"role": "system", "content": system_prompt})
     messages.append({"role": "user", "content": prompt})
+
+    payload = _request_payload(messages, model=final_model, temperature=temperature)
+    req = request.Request(
+        _chat_completions_url(config["base_url"]),
+        data=json.dumps(payload).encode("utf-8"),
+        method="POST",
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+        },
+    )
+    try:
+        with request.urlopen(req, timeout=int(_env_str("EXPERIENCE_LLM_TIMEOUT", default="120") or "120")) as resp:
+            body = resp.read().decode("utf-8")
+    except error.HTTPError as exc:
+        raise RuntimeError(f"LLM request failed with HTTP {exc.code}: {exc.read().decode('utf-8', errors='ignore')[:500]}") from exc
+    except Exception as exc:
+        raise RuntimeError(f"LLM request failed: {exc}") from exc
+
+    try:
+        response = json.loads(body)
+    except Exception as exc:
+        raise RuntimeError(f"LLM response was not valid JSON: {body[:500]}") from exc
+
+    choices = response.get("choices") or []
+    if not choices:
+        raise RuntimeError(f"LLM response missing choices: {response}")
+    message = choices[0].get("message") or {}
+    content = message.get("content")
+    if not isinstance(content, str) or not content.strip():
+        raise RuntimeError(f"LLM response missing message content: {response}")
+    return content
+
+
+def invoke_multimodal_llm(
+    content_blocks: list[dict[str, Any]],
+    *,
+    provider: str = "doubao",
+    model: str = "",
+    system_prompt: str = "",
+    temperature: float = 0.2,
+) -> str:
+    config = provider_config(provider)
+    api_key = config["api_key"]
+    if not api_key:
+        raise RuntimeError(f"Missing API key for provider {config['provider']}")
+    final_model = model or config["model"]
+    if not final_model:
+        raise RuntimeError(f"Missing model for provider {config['provider']}")
+
+    messages: list[dict[str, Any]] = []
+    if system_prompt:
+        messages.append({"role": "system", "content": system_prompt})
+    messages.append({"role": "user", "content": content_blocks})
 
     payload = _request_payload(messages, model=final_model, temperature=temperature)
     req = request.Request(

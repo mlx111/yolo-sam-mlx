@@ -107,7 +107,7 @@ def infer_standard_failure_type(entry: ExperienceEntry) -> str:
 def standardize_failure_taxonomy(entry: ExperienceEntry) -> ExperienceEntry:
     taxonomy = dict(entry.failure_taxonomy or {})
     raw_failure_type = taxonomy.get("failure_type") or entry.result.get("failure_reason") or ""
-    success = bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    success = bool(entry.result.get("success", entry.result.get("task_success", False)))
     outcome_type = str(entry.sim_real_gap.outcome_gap.get("type") or "")
     if success and outcome_type != "sim_success_real_fail" and not is_actionable_failure_type(raw_failure_type):
         entry.failure_taxonomy = {}

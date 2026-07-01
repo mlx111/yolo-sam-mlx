@@ -121,7 +121,6 @@ def _episode(
         "skill_sequence": skills,
         "result": {
             "success": success,
-            "recovery_success": success,
             "task_success": success,
             "failure_reason": failure_type,
             "attempt_count": 1,

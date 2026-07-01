@@ -11,7 +11,11 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from experience_core import ExperienceLibrary, RetrievalQuery
+from experience_core import ExperienceLibrary
+try:
+    from experience_system.ur5e_core import UR5E_NAMESPACE, build_ur5e_retrieval_query
+except ModuleNotFoundError:  # pragma: no cover - script-root fallback
+    from ur5e_core import UR5E_NAMESPACE, build_ur5e_retrieval_query
 
 
 def parse_args() -> argparse.Namespace:
@@ -21,6 +25,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--condition-id", default="")
     parser.add_argument("--robot-type", default="")
     parser.add_argument("--backend", default="")
+    parser.add_argument("--skill-namespace", default="")
     parser.add_argument("--task-stage", default="")
     parser.add_argument("--source", default="")
     parser.add_argument("--memory-role", default="")
@@ -67,11 +72,12 @@ def main() -> None:
             float("-inf") if args.nearest_obstacle_min is None else args.nearest_obstacle_min,
             float("inf") if args.nearest_obstacle_max is None else args.nearest_obstacle_max,
         )
-    query = RetrievalQuery(
+    query = build_ur5e_retrieval_query(
         scenario_id=args.scenario_id,
         condition_id=args.condition_id,
-        robot_type=args.robot_type,
-        backend=args.backend,
+        robot_type=args.robot_type or "fixed_single_arm",
+        backend=args.backend or "mujoco",
+        skill_namespace=args.skill_namespace or UR5E_NAMESPACE,
         task_stage=args.task_stage,
         source=args.source,
         memory_role=args.memory_role,

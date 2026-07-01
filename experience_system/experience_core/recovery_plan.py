@@ -7,7 +7,8 @@ import json
 from typing import Any
 
 from .llm_provider import JSON_ONLY_LINE, invoke_llm, parse_json_payload
-from .skill_semantics import validate_skill_semantic_plan
+from .schema import GALAXEA_R1PRO_TORSO_NAMESPACE
+from .skill_semantics import default_galaxea_field_atomic_skill_semantics, validate_skill_semantic_plan
 
 
 def stable_plan_id(*parts: Any) -> str:
@@ -42,28 +43,6 @@ def recovery_skill_parameter_guidance() -> dict[str, Any]:
         },
         "adjust_torso_for_reach": {
             "height_level": ["low", "mid", "high"],
-            "torso_turn_steps": [120, 600],
-        },
-        "retry_pregrasp_with_safer_offset": {
-            "safe_pregrasp_distance": [0.02, 0.08],
-            "posture": ["left_pregrasp_seed", "right_pregrasp_seed", "neutral_seed"],
-            "pregrasp_segment_count": [4, 10],
-        },
-        "slow_cartesian_approach": {
-            "approach_velocity_limit": [0.1, 0.5],
-            "approach_segment_count": [6, 14],
-            "approach_force_scale": [0.2, 0.8],
-        },
-        "recover_from_joint_limit": {
-            "lateral_offset": [-0.08, 0.08],
-            "forward_offset": [-0.08, 0.02],
-            "yaw_delta": [-0.15, 0.15],
-            "height_level": ["low", "mid", "high"],
-            "safe_pregrasp_distance": [0.02, 0.08],
-        },
-        "retry_lift_after_grasp_check": {
-            "retry_lift_dz": [0.08, 0.18],
-            "lift_tolerance": [0.02, 0.06],
         },
     }
 
@@ -276,11 +255,46 @@ def normalize_recovery_plan(
 def validate_recovery_plan_semantics(plan: dict[str, Any]) -> dict[str, Any]:
     """Validate a recovery plan through skill precondition/effect semantics."""
 
-    result = validate_skill_semantic_plan(plan)
+    skill_namespace = str(plan.get("skill_namespace") or "") if isinstance(plan, dict) else ""
+    semantics = default_galaxea_field_atomic_skill_semantics() if skill_namespace == GALAXEA_R1PRO_TORSO_NAMESPACE else None
+    result = validate_skill_semantic_plan(plan, skill_semantics=semantics)
+    _apply_goal_completion_checks(result, plan)
     result["schema_version"] = "recovery_plan_semantic_validation_v2"
     result["scenario"] = str(plan.get("scenario") or "").upper() if isinstance(plan, dict) else ""
     result["validator"] = "skill_precondition_effect_graph"
+    result["skill_namespace"] = skill_namespace
     return result
+
+
+def _apply_goal_completion_checks(result: dict[str, Any], plan: dict[str, Any]) -> None:
+    if not isinstance(plan, dict):
+        return
+    goal = str(plan.get("goal") or "").lower()
+    final_facts = {str(item) for item in result.get("final_facts") or []}
+    issues = result.setdefault("issues", [])
+    required: list[tuple[str, str]] = []
+    if any(token in goal for token in ("lift", "提升", "抬起", "抓取")):
+        required.append(("lift_attempted", "goal requires grasp-and-lift completion, but plan never reaches lift."))
+    if any(token in goal for token in ("place", "放置", "放到", "放在")):
+        required.extend([
+            ("transport_attempted", "goal requires moving toward the placement target, but plan never transports."),
+            ("place_lowered", "goal requires lowering before release, but plan never lowers the held object."),
+            ("object_released", "goal requires releasing the object at placement, but plan never opens the gripper."),
+        ])
+    for fact, message in required:
+        if fact in final_facts:
+            continue
+        issues.append({
+            "severity": "fatal",
+            "code": "goal_completion_missing",
+            "message": message,
+            "missing_fact": fact,
+        })
+    fatal_count = sum(1 for issue in issues if issue.get("severity") == "fatal")
+    warning_count = sum(1 for issue in issues if issue.get("severity") == "warning")
+    result["fatal_count"] = fatal_count
+    result["warning_count"] = warning_count
+    result["status"] = "fail" if fatal_count else "warn" if warning_count else "pass"
 
 
 def recovery_plan_to_candidate(

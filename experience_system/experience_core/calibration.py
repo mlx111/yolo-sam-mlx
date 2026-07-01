@@ -222,3 +222,31 @@ def apply_calibration_to_position(position: Any, calibration: SandboxCalibration
     while len(bias_vector) < 3:
         bias_vector.append(0.0)
     return [float(pos[i] + bias_vector[i]) for i in range(3)]
+
+
+def calibrated_attach_distance(base_distance: float, calibration: SandboxCalibration | dict[str, Any] | None) -> float:
+    """Wrapper1-compatible attach-distance calibration helper.
+
+    Galaxea physical grasping code does not use fake attachment. This helper is
+    kept for memory/sandbox compatibility with wrapper1 reports.
+    """
+
+    if isinstance(calibration, SandboxCalibration):
+        details = calibration.details if isinstance(calibration.details, dict) else {}
+        contact_success_bias = calibration.contact_success_bias
+        slip_risk_bias = calibration.slip_risk_bias
+    elif isinstance(calibration, dict):
+        details = calibration.get("details") if isinstance(calibration.get("details"), dict) else {}
+        contact_success_bias = _numeric(calibration.get("contact_success_bias"), 0.0)
+        slip_risk_bias = _numeric(calibration.get("slip_risk_bias"), 0.0)
+    else:
+        details = {}
+        contact_success_bias = 0.0
+        slip_risk_bias = 0.0
+    gripper_gap = _numeric(details.get("avg_gripper_closure_gap"), 0.0)
+    adjusted = float(base_distance)
+    if gripper_gap > 0.0:
+        adjusted += min(gripper_gap * 0.5, 0.02)
+    if contact_success_bias < 0.0 or slip_risk_bias > 0.0:
+        adjusted -= min(0.01 * abs(contact_success_bias) + 0.01 * slip_risk_bias, 0.015)
+    return _clamp(adjusted, 0.025, 0.065)

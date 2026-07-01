@@ -1,7 +1,7 @@
 {
   "schema_version": "runtime_sandbox_scene_v1",
   "scene_id": "r1pro_runtime_scene_example",
-  "robot_model_include": "model.xml",
+  "robot_model_include": "model/model.xml",
   "timestep": 0.005,
   "table_pose": [0.2, 0.0, 0.737],
   "table_size": [0.35, 0.35, 0.025],

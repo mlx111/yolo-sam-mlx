@@ -1,0 +1,3135 @@
+{
+  "schema_version": "memory_v3_plus",
+  "stm_capacity": 30,
+  "consolidation_counters": {},
+  "entries": [
+    {
+      "schema_version": "memory_v3_plus",
+      "experience_id": "0f4a8e32",
+      "episode_type": "anomaly_recovery",
+      "condition_id": "U3-1",
+      "scenario_id": "U3",
+      "available_actions": [
+        "approach_object",
+        "camera_rgbd_save",
+        "close_gripper",
+        "create_fixed_vertical_grasp",
+        "detect_object_pose",
+        "go_home",
+        "lift",
+        "move_lifted_object_to",
+        "move_to_pregrasp",
+        "open_gripper"
+      ],
+      "skill_sequence": [
+        {
+          "action": "camera_rgbd_save",
+          "parameters": {}
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "apple"
+          }
+        },
+        {
+          "action": "close_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "lift",
+          "parameters": {
+            "lift_height": 0.1
+          }
+        },
+        {
+          "action": "go_home",
+          "parameters": {}
+        }
+      ],
+      "result": {
+        "task_success": false,
+        "failure_reason": "最终状态未满足闭环要求：目标 apple 最终没有稳定位于 plate 的允许范围内。；任务结束时夹爪仍未打开，说明目标没有被释放到最终位置。",
+        "success": false,
+        "z_change": 0.0,
+        "time_cost": 229.397,
+        "attempts": 1
+      },
+      "status": "failure",
+      "source": "simulation",
+      "domain": "simulation",
+      "source_run_id": "",
+      "source_trial_id": "",
+      "confidence_score": 0.35,
+      "memory_partition": "failed_memory",
+      "created_at": "2026-07-01T06:04:04Z",
+      "updated_at": "2026-07-01T06:04:04Z",
+      "summary": "条件 U3-1 下完成异常处理评估，完整任务闭环结果为 失败。",
+      "text_summary": "条件 U3-1 下完成异常处理评估，完整任务闭环结果为 失败。; condition_id=U3-1; scenario_id=U3; status=failure; validation_status=failed; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"go_home\"}]; failure_reason=最终状态未满足闭环要求：目标 apple 最终没有稳定位于 plate 的允许范围内。；任务结束时夹爪仍未打开，说明目标没有被释放到最终位置。; criteria=condition_final_outcome, lift=0.3312267468711635, pinch=0.034235590166140445",
+      "text_embedding_id": "",
+      "embeddings": {},
+      "anomaly": {
+        "type": "gripper_fail",
+        "injection_step": "after_gripper_close",
+        "description": "gripper_not_closing",
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "params": {}
+      },
+      "scene": {
+        "objects": [
+          "apple",
+          "pear",
+          "plate"
+        ],
+        "camera_view": "sim_camera",
+        "scene_name": "apple_pear_runtime_refined",
+        "xml_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml"
+      },
+      "task": {
+        "name": "ur5e_anomaly_recovery",
+        "stage": "gripper_close",
+        "object_class": "apple",
+        "scene_name": "apple_pear_runtime_refined",
+        "condition": "direct",
+        "trial_index": 0,
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "condition_name": "gripper_not_closing",
+        "strategy_family": ""
+      },
+      "perception": {
+        "before_anomaly": {
+          "object_pos": [
+            0.0,
+            0.0,
+            0.02777295426167739
+          ],
+          "confidence": 0.2212,
+          "detection_ok": true,
+          "mask_nonzero": 1106
+        },
+        "after_anomaly": null,
+        "detection_method": "oracle"
+      },
+      "reconstruction_artifacts": {
+        "reconstruction_type": "unknown",
+        "object_positions": {},
+        "object_quats": {},
+        "camera_poses": {},
+        "scene_out": "",
+        "scene_out_refined": "",
+        "runtime_pose_calibration_path": "",
+        "sim_intrinsics_json": "",
+        "mesh_quats": {},
+        "support_height_adjustments": {},
+        "reconstruction_signature": "U3-1:direct",
+        "virtual_scene_built": false,
+        "recovery_pos": [],
+        "condition": "direct"
+      },
+      "recovery_plan": {
+        "condition": "direct",
+        "steps": [
+          {
+            "type": "camera_rgbd_save",
+            "params": {}
+          },
+          {
+            "type": "detect_object_pose",
+            "params": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "type": "close_gripper",
+            "params": {}
+          },
+          {
+            "type": "lift",
+            "params": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "type": "go_home",
+            "params": {}
+          }
+        ]
+      },
+      "execution_feedback": {
+        "task_success": false,
+        "apple_z_after_recovery": 0.32867271384460345,
+        "execution_deviation": {},
+        "contact_after_close": {
+          "left_contact": true,
+          "right_contact": true
+        },
+        "contact_after_lift": {
+          "left_contact": true,
+          "right_contact": true
+        },
+        "time_costs": {
+          "pre_recovery": 4.436,
+          "recovery": 229.397,
+          "total": 233.98
+        },
+        "failure_reason": "最终状态未满足闭环要求：目标 apple 最终没有稳定位于 plate 的允许范围内。；任务结束时夹爪仍未打开，说明目标没有被释放到最终位置。",
+        "observed_pos": null,
+        "task_success_criteria": {
+          "type": "condition_final_outcome",
+          "condition_id": "U3-1",
+          "scenario_id": "U3",
+          "success_criteria": "u3_gripper_recovered_and_lifted",
+          "success": false,
+          "apple_pos": [
+            0.4954983467978256,
+            0.1364169388506139,
+            0.3616849163860615
+          ],
+          "apple_quat": [
+            -0.5998315788813677,
+            0.5301764440010645,
+            -0.4438567293041876,
+            0.4026241660090236
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist": 0.28034971797025016,
+          "apple_z": 0.3616849163860615,
+          "orientation_error": 0.8946154717180256,
+          "orientation_ok": false,
+          "on_plate": false,
+          "gripper_open": false,
+          "gripper_action": 254.1999999999941,
+          "near_home": true,
+          "joint_error": 0.0,
+          "pinch_distance": 0.034235590166140445,
+          "lift_from_table": 0.3312267468711635,
+          "perception_error_to_apple": null,
+          "physical_evidence": {
+            "final_object": {
+              "apple_pos": [
+                0.4954983467978256,
+                0.1364169388506139,
+                0.3616849163860615
+              ],
+              "apple_quat": [
+                -0.5998315788813677,
+                0.5301764440010645,
+                -0.4438567293041876,
+                0.4026241660090236
+              ],
+              "apple_z": 0.3616849163860615,
+              "xy_dist_to_plate": 0.28034971797025016,
+              "on_plate": false,
+              "orientation_error": 0.8946154717180256,
+              "orientation_ok": false,
+              "lift_from_table": 0.3312267468711635
+            },
+            "gripper": {
+              "gripper_open": false,
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.034235590166140445
+            },
+            "robot": {
+              "near_home": true,
+              "joint_error": 0.0
+            },
+            "perception": {
+              "perceived_position": null,
+              "perception_error_to_apple": null,
+              "perception_failure": {}
+            },
+            "contacts": {
+              "contact_after_close": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "contact_after_lift": {
+                "left_contact": true,
+                "right_contact": true
+              }
+            },
+            "condition": {
+              "condition_injection": {},
+              "success_criteria": "u3_gripper_recovered_and_lifted"
+            },
+            "u2_grasp": {
+              "grasp_geometry_failure": {},
+              "grasp_verification": {},
+              "grasp_pose_adjustment": {},
+              "pregrasp_adjustment": {}
+            },
+            "u3_gripper": {
+              "gripper_state_check": {},
+              "gripper_force_adjustment": {},
+              "slip_recovery": {}
+            },
+            "u4_placement": {
+              "placement_verification": {},
+              "place_prepose": {},
+              "place_object_skill": {},
+              "release_object_skill": {}
+            },
+            "u5_path": {
+              "retreat_skill": {},
+              "safe_waypoint": {},
+              "path_replan": {},
+              "obstacle_avoidance": {},
+              "progress_validation": {},
+              "strategy_switch": {}
+            }
+          },
+          "failed_predicates": [
+            "not_on_plate",
+            "gripper_not_open"
+          ],
+          "failure_descriptions": {
+            "not_on_plate": "目标 apple 最终没有稳定位于 plate 的允许范围内。",
+            "gripper_not_open": "任务结束时夹爪仍未打开，说明目标没有被释放到最终位置。"
+          }
+        },
+        "virtual_validation_success": false
+      },
+      "sensor_summary": {
+        "joint_positions": [
+          0.004685068338170113,
+          0.01675806928609916,
+          1.576542619635648,
+          0.0047397428072283275,
+          -1.5708473949347896,
+          -0.022851292146094472
+        ],
+        "joint_velocities": [
+          -0.024246587753361363,
+          -0.02907655723092462,
+          0.02606772019258421,
+          0.0017286777568589612,
+          0.0001197446402688086,
+          0.11766812253192566
+        ],
+        "end_effector_pose": {
+          "pinch_site_pos": [
+            0.4916342728307594,
+            0.13636522821395677,
+            0.32766812799545897
+          ],
+          "pinch_site_xmat": [
+            [
+              0.9992162520339766,
+              0.028719441928082592,
+              -0.027241059570237744
+            ],
+            [
+              0.028723734380556944,
+              -0.9995873610749845,
+              -0.00023379987339841856
+            ],
+            [
+              -0.027236533450587297,
+              -0.0005488483261172523,
+              -0.9996288661353808
+            ]
+          ]
+        },
+        "gripper_state": {
+          "driver_joints": {
+            "right_driver_joint": {
+              "position": 0.47718649327003915,
+              "velocity": -0.03146782663209953
+            },
+            "left_driver_joint": {
+              "position": 0.47751123697978837,
+              "velocity": -0.03552136440171421
+            }
+          },
+          "pinch_distance": 0.034235590166140445
+        },
+        "contact_state": {
+          "contact_after_close": {
+            "left_contact": true,
+            "right_contact": true
+          },
+          "contact_after_lift": {
+            "left_contact": true,
+            "right_contact": true
+          }
+        },
+        "force_torque": {},
+        "timestamps": {
+          "time_costs": {
+            "pre_recovery": 4.436,
+            "recovery": 229.397,
+            "total": 233.98
+          }
+        },
+        "sensor_modalities": [
+          "sim_qpos",
+          "sim_qvel",
+          "sim_site_pose",
+          "sim_contact",
+          "sim_rgb"
+        ],
+        "raw_refs": {
+          "result_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_000/result.json"
+        }
+      },
+      "key_slices": [
+        {
+          "slice_id": "before_anomaly",
+          "stage": "before_anomaly",
+          "description": "提起前的正常抓取状态",
+          "timestamp": 0.0,
+          "data": {
+            "apple_z_before_lift": 0.030458169514898013,
+            "perceived_z_before_lift": 0.02777295426167739
+          }
+        },
+        {
+          "slice_id": "anomaly_detected",
+          "stage": "anomaly_detected",
+          "description": "异常检测完成",
+          "timestamp": 4.436,
+          "data": {
+            "detection_method": "oracle",
+            "perceived_position": null
+          }
+        },
+        {
+          "slice_id": "recovery_finished",
+          "stage": "recovery_finished",
+          "description": "恢复执行结束",
+          "timestamp": 233.98,
+          "data": {
+            "task_success": false,
+            "apple_z_after_recovery": 0.32867271384460345
+          }
+        }
+      ],
+      "keyframes": [
+        {
+          "stage": "before_recovery",
+          "image_path": "keyframes/before_recovery.jpg",
+          "description": "恢复规划前的场景图像",
+          "used_for_retrieval": true
+        },
+        {
+          "stage": "after_recovery",
+          "image_path": "keyframes/after_recovery.jpg",
+          "description": "恢复执行后的场景图像",
+          "used_for_retrieval": false
+        },
+        {
+          "stage": "after_close",
+          "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+          "description": "候选 1 执行后图像: after_close",
+          "used_for_retrieval": false
+        },
+        {
+          "stage": "after_lift",
+          "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+          "description": "候选 1 执行后图像: after_lift",
+          "used_for_retrieval": false
+        }
+      ],
+      "anomaly_state": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "available_actions": [
+          "approach_object",
+          "camera_rgbd_save",
+          "close_gripper",
+          "create_fixed_vertical_grasp",
+          "detect_object_pose",
+          "go_home",
+          "lift",
+          "move_lifted_object_to",
+          "move_to_pregrasp",
+          "open_gripper"
+        ],
+        "grasp_orientation_policy": "fixed_downward_no_graspnet"
+      },
+      "retrieval_key": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "task_stage": "gripper_close",
+        "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"go_home\"}]",
+        "contact_pattern": "contact_close_and_lift",
+        "task_success": false,
+        "failure_type": "任务流程缺失（放置阶段未执行）",
+        "gap_type": "",
+        "gap_uncertainty_bucket": "",
+        "critic_status": "warn",
+        "critic_flags": [
+          "virtual_validation_failed"
+        ],
+        "memory_type": "",
+        "memory_role": "",
+        "real_validated": false,
+        "pair_status": ""
+      },
+      "failure_taxonomy": {
+        "failure_type": "任务流程缺失（放置阶段未执行）",
+        "failure_diagnostics": {
+          "failed_predicates": [
+            "not_on_plate",
+            "gripper_not_open"
+          ],
+          "failure_descriptions": {
+            "not_on_plate": "目标 apple 最终没有稳定位于 plate 的允许范围内。",
+            "gripper_not_open": "任务结束时夹爪仍未打开，说明目标没有被释放到最终位置。"
+          },
+          "task_success_criteria": {
+            "type": "condition_final_outcome",
+            "condition_id": "U3-1",
+            "scenario_id": "U3",
+            "success_criteria": "u3_gripper_recovered_and_lifted",
+            "success": false,
+            "apple_pos": [
+              0.4954983467978256,
+              0.1364169388506139,
+              0.3616849163860615
+            ],
+            "apple_quat": [
+              -0.5998315788813677,
+              0.5301764440010645,
+              -0.4438567293041876,
+              0.4026241660090236
+            ],
+            "plate_pos": [
+              0.4,
+              0.4,
+              0.04
+            ],
+            "xy_dist": 0.28034971797025016,
+            "apple_z": 0.3616849163860615,
+            "orientation_error": 0.8946154717180256,
+            "orientation_ok": false,
+            "on_plate": false,
+            "gripper_open": false,
+            "gripper_action": 254.1999999999941,
+            "near_home": true,
+            "joint_error": 0.0,
+            "pinch_distance": 0.034235590166140445,
+            "lift_from_table": 0.3312267468711635,
+            "perception_error_to_apple": null,
+            "physical_evidence": {
+              "final_object": {
+                "apple_pos": [
+                  0.4954983467978256,
+                  0.1364169388506139,
+                  0.3616849163860615
+                ],
+                "apple_quat": [
+                  -0.5998315788813677,
+                  0.5301764440010645,
+                  -0.4438567293041876,
+                  0.4026241660090236
+                ],
+                "apple_z": 0.3616849163860615,
+                "xy_dist_to_plate": 0.28034971797025016,
+                "on_plate": false,
+                "orientation_error": 0.8946154717180256,
+                "orientation_ok": false,
+                "lift_from_table": 0.3312267468711635
+              },
+              "gripper": {
+                "gripper_open": false,
+                "gripper_action": 254.1999999999941,
+                "pinch_distance": 0.034235590166140445
+              },
+              "robot": {
+                "near_home": true,
+                "joint_error": 0.0
+              },
+              "perception": {
+                "perceived_position": null,
+                "perception_error_to_apple": null,
+                "perception_failure": {}
+              },
+              "contacts": {
+                "contact_after_close": {
+                  "left_contact": true,
+                  "right_contact": true
+                },
+                "contact_after_lift": {
+                  "left_contact": true,
+                  "right_contact": true
+                }
+              },
+              "condition": {
+                "condition_injection": {},
+                "success_criteria": "u3_gripper_recovered_and_lifted"
+              },
+              "u2_grasp": {
+                "grasp_geometry_failure": {},
+                "grasp_verification": {},
+                "grasp_pose_adjustment": {},
+                "pregrasp_adjustment": {}
+              },
+              "u3_gripper": {
+                "gripper_state_check": {},
+                "gripper_force_adjustment": {},
+                "slip_recovery": {}
+              },
+              "u4_placement": {
+                "placement_verification": {},
+                "place_prepose": {},
+                "place_object_skill": {},
+                "release_object_skill": {}
+              },
+              "u5_path": {
+                "retreat_skill": {},
+                "safe_waypoint": {},
+                "path_replan": {},
+                "obstacle_avoidance": {},
+                "progress_validation": {},
+                "strategy_switch": {}
+              }
+            },
+            "failed_predicates": [
+              "not_on_plate",
+              "gripper_not_open"
+            ],
+            "failure_descriptions": {
+              "not_on_plate": "目标 apple 最终没有稳定位于 plate 的允许范围内。",
+              "gripper_not_open": "任务结束时夹爪仍未打开，说明目标没有被释放到最终位置。"
+            }
+          },
+          "llm_plan_error": "",
+          "invalid_skill_steps": []
+        },
+        "candidate_failures": {
+          "physical_failure_critics": [
+            {
+              "candidate_id": 1,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "task_completion",
+                "failure_type": "任务流程缺失（放置阶段未执行）",
+                "root_cause": "恢复计划未包含将提升后的苹果移动到盘子（move_lifted_object_to）和打开夹爪（open_gripper）的阶段，导致苹果未完成放置闭环",
+                "corrective_direction": "在恢复步骤的go_home之后，添加move_lifted_object_to（target为盘子）和open_gripper步骤，以完成放置和释放操作",
+                "missing_phases": [
+                  "move_lifted_object_to",
+                  "open_gripper"
+                ],
+                "failed_predicates": [
+                  "on_plate（苹果未放置到盘子上）"
+                ],
+                "failure_evidence": {
+                  "recovery_steps": [
+                    "camera_rgbd_save",
+                    "detect_object_pose",
+                    "close_gripper",
+                    "lift",
+                    "go_home"
+                  ],
+                  "candidate_sandbox_final_result.on_plate": null,
+                  "task_goal": "异常恢复后使苹果完成抓取、提升、搬运、放置闭环并让机械臂回安全状态"
+                },
+                "task_goal": "异常恢复后使目标物体（苹果）完成抓取、提升、搬运和放置闭环，并让机械臂回到安全状态，最后把苹果放到盘子上面",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "不足以从日志判断具体参数错误。",
+                      "impact": "",
+                      "parameter_lesson": ""
+                    }
+                  ],
+                  "overall_lesson": "恢复计划需确保包含完整的任务闭环步骤（抓取、提升、搬运、放置、释放），参数设置需配合后续步骤的执行需求"
+                }
+              }
+            },
+            {
+              "candidate_id": 2,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "抓取恢复失败（close_gripper无接触）",
+                "root_cause": "异常注入后，open_gripper操作导致苹果位置（z轴）和机械臂抓取位姿（pinch_distance）偏离，close_gripper时机械臂与苹果无接触，无法完成抓取恢复，后续流程中断",
+                "corrective_direction": "恢复流程中，open_gripper后应先执行detect_object_pose获取苹果当前位置，再通过create_fixed_vertical_grasp重新规划抓取位姿，调整move_to_pregrasp/approach_object的位置参数，确保close_gripper时机械臂与苹果接触",
+                "missing_phases": [
+                  "detect_object_pose",
+                  "create_fixed_vertical_grasp",
+                  "move_to_pregrasp",
+                  "approach_object"
+                ],
+                "failed_predicates": [
+                  "contact_after_close为true",
+                  "apple_on_plate为true",
+                  "task_success为true"
+                ],
+                "failure_evidence": {
+                  "open_gripper后apple_z变化": "0.3287071927628408 → 0.030574524499451004",
+                  "open_gripper后pinch_distance变化": "0.03513331782072465 → 0.6312218557274547",
+                  "close_gripper_error": "no_contact_after_close",
+                  "apple_on_plate": "null",
+                  "task_success": "false"
+                },
+                "task_goal": "异常恢复后完成苹果的抓取、提升、搬运、放置闭环，将苹果放置到盘子上并使机械臂回到安全状态",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "恢复步骤未包含位置调整参数设置，导致close_gripper时机械臂与苹果位置偏离，无接触",
+                      "impact": "无法完成抓取恢复，后续提升、搬运、放置流程中断",
+                      "parameter_lesson": "异常恢复时，若物体位置因操作改变，需重新检测位置并调整抓取相关的位置参数（如move_to_pregrasp的dx/dy/dz），确保close_gripper时有接触"
+                    }
+                  ],
+                  "overall_lesson": "异常恢复流程中，当物体位置因操作（如open_gripper）发生变化时，需补充物体位置检测和抓取位姿参数调整步骤，避免直接执行close_gripper导致无接触失败"
+                }
+              }
+            },
+            {
+              "candidate_id": 3,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "恢复流程缺失物体检测步骤导致抓取位姿创建失败",
+                "root_cause": "恢复流程中未执行detect_object_pose获取苹果位姿，直接执行create_fixed_vertical_grasp，导致该技能因物体检测不可用而异常，无法完成恢复抓取，后续任务无法推进",
+                "corrective_direction": "在recovery_steps中添加detect_object_pose(target_class=\"apple\")步骤，确保create_fixed_vertical_grasp能获取到物体位姿后再执行",
+                "missing_phases": [
+                  "detect_object_pose"
+                ],
+                "failed_predicates": [
+                  "on_plate（苹果未放置到盘子上）",
+                  "apple_z_after_recovery（恢复后苹果z坐标无变化，提升或放置未完成）"
+                ],
+                "failure_evidence": {
+                  "virtual_step_error": "object_detection_unavailable_run_detect_object_pose_first",
+                  "recovery_step_missing_detect": true,
+                  "apple_z_after_recovery": 0.0,
+                  "sandbox_z_change": 0.0
+                },
+                "task_goal": "异常恢复后使苹果完成抓取、提升、搬运、放置闭环，机械臂回安全状态，最终将苹果放在盘子上",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "create_fixed_vertical_grasp",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "该技能需要依赖detect_object_pose的输出（物体位姿）来创建抓取位姿，但恢复流程未执行该检测，导致技能因输入不足而失败",
+                      "impact": "技能执行失败，无法完成恢复抓取，后续任务（提升、搬运、放置）无法推进",
+                      "parameter_lesson": "恢复流程中，create_fixed_vertical_grasp的执行必须确保已通过detect_object_pose获取目标物体位姿，否则会因输入不足而失败"
+                    }
+                  ],
+                  "overall_lesson": "恢复流程中物体位姿相关技能的执行顺序需严格保证前序检测步骤完成，以提供必要的位姿信息，避免因输入缺失导致技能执行失败"
+                }
+              }
+            }
+          ],
+          "llm_selector": {
+            "selected_candidate_id": 1,
+            "candidate_scores": [
+              {
+                "candidate_id": 1,
+                "score": 60,
+                "task_success": false,
+                "reason": "完成抓取（夹爪闭合后苹果随机械臂移动）、提升、移动（go_home）步骤，物理上苹果位置和高度有变化，机械臂动作有效，但因缺少move_lifted_object_to和open_gripper步骤未完成任务闭环"
+              },
+              {
+                "candidate_id": 2,
+                "score": 30,
+                "task_success": false,
+                "reason": "open_gripper导致苹果位置异常（z轴大幅下降），close_gripper因无接触执行异常，抓取恢复失败，后续流程中断"
+              },
+              {
+                "candidate_id": 3,
+                "score": 20,
+                "task_success": false,
+                "reason": "未执行detect_object_pose导致create_fixed_vertical_grasp因物体位姿缺失而失败，恢复流程未推进，物理无有效动作"
+              }
+            ],
+            "ranking_reason": "候选1虽未完成任务闭环，但物理执行中完成了抓取、提升、移动（go_home）步骤，苹果位置和高度有变化，机械臂动作有效；候选2因open_gripper导致苹果位置异常，close_gripper无接触失败，抓取恢复未完成；候选3因缺少物体检测导致抓取位姿创建失败，恢复流程未推进。候选1物理效果最好，最有继续执行价值，故选择。",
+            "selection_confidence": 0.7,
+            "error": ""
+          }
+        },
+        "llm_critic": {
+          "enabled": true,
+          "model": "doubao-seed-1-6-vision-250815",
+          "failure_stage": "task_completion",
+          "failure_type": "任务流程缺失（放置阶段未执行）",
+          "root_cause": "恢复计划未包含将提升后的苹果移动到盘子（move_lifted_object_to）和打开夹爪（open_gripper）的阶段，导致苹果未完成放置闭环且未被释放",
+          "corrective_direction": "在恢复步骤的go_home之后，添加move_lifted_object_to（target参数设为盘子位置）和open_gripper步骤，以完成苹果的搬运放置和释放操作",
+          "missing_phases": [
+            "move_lifted_object_to",
+            "open_gripper"
+          ],
+          "failed_predicates": [
+            "not_on_plate",
+            "gripper_not_open"
+          ],
+          "failure_evidence": {
+            "recovery_steps": [
+              "camera_rgbd_save",
+              "detect_object_pose",
+              "close_gripper",
+              "lift",
+              "go_home"
+            ],
+            "task_success_criteria.on_plate": false,
+            "task_success_criteria.gripper_open": false,
+            "sandbox_physical_failures.candidate_1.on_plate": null,
+            "sandbox_physical_failures.candidate_1.xy_dist_to_plate": 0.28034971797025016
+          },
+          "task_goal": "异常恢复后使目标物体（苹果）完成抓取、提升、搬运和放置闭环，并让机械臂回到安全状态，最后将苹果放置到盘子上面",
+          "parameter_failure_summary": {
+            "items": [
+              {
+                "action": "unknown",
+                "bad_keys": [],
+                "bad_values": {},
+                "expected_direction": {},
+                "reason": "从执行日志和恢复结果看，无明确参数错误证据，参数问题不足以判断。",
+                "impact": "无明确参数导致的失败影响，失败主因是流程缺失。",
+                "parameter_lesson": "恢复计划的参数设置需配合后续流程的执行需求，确保各步骤参数能支持任务闭环完成。"
+              }
+            ],
+            "overall_lesson": "恢复计划需确保包含完整的任务闭环步骤（抓取、提升、搬运、放置、释放），参数设置需与后续步骤的执行需求相匹配，避免因流程缺失导致任务失败。"
+          }
+        },
+        "failure_stage": "task_completion",
+        "failed_predicates": [
+          "not_on_plate",
+          "gripper_not_open"
+        ],
+        "failure_evidence": {
+          "recovery_steps": [
+            "camera_rgbd_save",
+            "detect_object_pose",
+            "close_gripper",
+            "lift",
+            "go_home"
+          ],
+          "task_success_criteria.on_plate": false,
+          "task_success_criteria.gripper_open": false,
+          "sandbox_physical_failures.candidate_1.on_plate": null,
+          "sandbox_physical_failures.candidate_1.xy_dist_to_plate": 0.28034971797025016
+        },
+        "corrective_direction": "在恢复步骤的go_home之后，添加move_lifted_object_to（target参数设为盘子位置）和open_gripper步骤，以完成苹果的搬运放置和释放操作",
+        "missing_phases": [
+          "move_lifted_object_to",
+          "open_gripper"
+        ],
+        "rule_critic": {
+          "enabled": true,
+          "rule_flags": [
+            {
+              "rule": "virtual_validation_failed",
+              "stage": "candidate_mujoco_execution",
+              "evidence": "candidate recovery plan failed in MuJoCo execution",
+              "label_cn": "MuJoCo候选评估未通过",
+              "description_cn": "候选恢复方案在 MuJoCo 中执行失败；该结果作为本轮物理执行证据。"
+            }
+          ],
+          "flag_count": 1
+        },
+        "cluster_id": "noise"
+      },
+      "validation_status": "failed",
+      "validation_source": "direct",
+      "metadata": {
+        "condition": "direct",
+        "noise_scale": 0.0,
+        "candidate_rejections": [],
+        "candidate_plan_failure_type": "",
+        "candidate_plan_failure_evidence": {},
+        "sandbox_keyframes": [
+          {
+            "candidate_id": 1,
+            "stage": "after_close",
+            "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+            "description": "候选 1 执行后图像: after_close",
+            "used_for_retrieval": false
+          },
+          {
+            "candidate_id": 1,
+            "stage": "after_lift",
+            "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+            "description": "候选 1 执行后图像: after_lift",
+            "used_for_retrieval": false
+          }
+        ]
+      },
+      "validation_evidence": {
+        "virtual_validation_success": false,
+        "task_success_criteria": {
+          "type": "condition_final_outcome",
+          "condition_id": "U3-1",
+          "scenario_id": "U3",
+          "success_criteria": "u3_gripper_recovered_and_lifted",
+          "success": false,
+          "apple_pos": [
+            0.4954983467978256,
+            0.1364169388506139,
+            0.3616849163860615
+          ],
+          "apple_quat": [
+            -0.5998315788813677,
+            0.5301764440010645,
+            -0.4438567293041876,
+            0.4026241660090236
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist": 0.28034971797025016,
+          "apple_z": 0.3616849163860615,
+          "orientation_error": 0.8946154717180256,
+          "orientation_ok": false,
+          "on_plate": false,
+          "gripper_open": false,
+          "gripper_action": 254.1999999999941,
+          "near_home": true,
+          "joint_error": 0.0,
+          "pinch_distance": 0.034235590166140445,
+          "lift_from_table": 0.3312267468711635,
+          "perception_error_to_apple": null,
+          "physical_evidence": {
+            "final_object": {
+              "apple_pos": [
+                0.4954983467978256,
+                0.1364169388506139,
+                0.3616849163860615
+              ],
+              "apple_quat": [
+                -0.5998315788813677,
+                0.5301764440010645,
+                -0.4438567293041876,
+                0.4026241660090236
+              ],
+              "apple_z": 0.3616849163860615,
+              "xy_dist_to_plate": 0.28034971797025016,
+              "on_plate": false,
+              "orientation_error": 0.8946154717180256,
+              "orientation_ok": false,
+              "lift_from_table": 0.3312267468711635
+            },
+            "gripper": {
+              "gripper_open": false,
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.034235590166140445
+            },
+            "robot": {
+              "near_home": true,
+              "joint_error": 0.0
+            },
+            "perception": {
+              "perceived_position": null,
+              "perception_error_to_apple": null,
+              "perception_failure": {}
+            },
+            "contacts": {
+              "contact_after_close": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "contact_after_lift": {
+                "left_contact": true,
+                "right_contact": true
+              }
+            },
+            "condition": {
+              "condition_injection": {},
+              "success_criteria": "u3_gripper_recovered_and_lifted"
+            },
+            "u2_grasp": {
+              "grasp_geometry_failure": {},
+              "grasp_verification": {},
+              "grasp_pose_adjustment": {},
+              "pregrasp_adjustment": {}
+            },
+            "u3_gripper": {
+              "gripper_state_check": {},
+              "gripper_force_adjustment": {},
+              "slip_recovery": {}
+            },
+            "u4_placement": {
+              "placement_verification": {},
+              "place_prepose": {},
+              "place_object_skill": {},
+              "release_object_skill": {}
+            },
+            "u5_path": {
+              "retreat_skill": {},
+              "safe_waypoint": {},
+              "path_replan": {},
+              "obstacle_avoidance": {},
+              "progress_validation": {},
+              "strategy_switch": {}
+            }
+          },
+          "failed_predicates": [
+            "not_on_plate",
+            "gripper_not_open"
+          ],
+          "failure_descriptions": {
+            "not_on_plate": "目标 apple 最终没有稳定位于 plate 的允许范围内。",
+            "gripper_not_open": "任务结束时夹爪仍未打开，说明目标没有被释放到最终位置。"
+          }
+        },
+        "keyframes": [
+          {
+            "stage": "before_recovery",
+            "image_path": "keyframes/before_recovery.jpg",
+            "description": "恢复规划前的场景图像",
+            "used_for_retrieval": true
+          },
+          {
+            "stage": "after_recovery",
+            "image_path": "keyframes/after_recovery.jpg",
+            "description": "恢复执行后的场景图像",
+            "used_for_retrieval": false
+          }
+        ],
+        "result_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_000/result.json"
+      },
+      "promotion_history": [],
+      "memory_tier": "stm",
+      "memory_gate": {
+        "anomaly_score": 0.75,
+        "failure_score": 0.65,
+        "sim_real_gap_score": 0.0,
+        "recovery_utility_score": 0.45,
+        "surprise_score": 0.75,
+        "write_score": 0.4925,
+        "write_decision": "stm_only",
+        "trigger_events": [
+          "anomaly_detected",
+          "virtual_validation_failed",
+          "task_failed"
+        ],
+        "explanation": {
+          "weights": {
+            "anomaly": 0.25,
+            "failure": 0.25,
+            "sim_real_gap": 0.25,
+            "recovery_utility": 0.15,
+            "surprise": 0.1
+          },
+          "validation_status": "failed",
+          "step_count": 5,
+          "has_structured_evidence": true,
+          "task_success": false
+        }
+      },
+      "sim_real_gap": {
+        "gap_id": "",
+        "gap_score": 0.0,
+        "pose_gap": {},
+        "contact_gap": {},
+        "outcome_gap": {},
+        "perception_gap": {},
+        "actuation_gap": {},
+        "robot_state_gap": {},
+        "scene_reconstruction_gap": {},
+        "uncertainty": 0.0,
+        "evidence": {}
+      },
+      "sim_real_pair": {
+        "pair_id": "",
+        "sim_experience_id": "",
+        "real_experience_id": "",
+        "paired_by": "",
+        "pair_score": 0.0,
+        "gap_score": 0.0,
+        "validation_status": "",
+        "created_at": "",
+        "updated_at": ""
+      },
+      "sandbox_calibration": {
+        "calibration_id": "",
+        "source_gap_ids": [],
+        "object_pose_bias": [],
+        "gripper_delay_bias": 0.0,
+        "slip_risk_bias": 0.0,
+        "contact_success_bias": 0.0,
+        "perception_noise_bias": [],
+        "applied_to_candidate": false,
+        "calibration_confidence": 0.0,
+        "details": {}
+      },
+      "critic_result": {
+        "overall_status": "warn",
+        "critic_risk_score": 0.52,
+        "collision": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "joint": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "gripper_contact": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "end_effector_pose": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "rule_flags": [
+          {
+            "rule": "virtual_validation_failed",
+            "stage": "candidate_mujoco_execution",
+            "evidence": "candidate recovery plan failed in MuJoCo execution",
+            "label_cn": "MuJoCo候选评估未通过",
+            "description_cn": "候选恢复方案在 MuJoCo 中执行失败；该结果作为本轮物理执行证据。"
+          }
+        ],
+        "feedback_for_rewrite": "failure_type=任务流程缺失（放置阶段未执行）；failure_stage=task_completion；root_cause=恢复计划未包含将提升后的苹果移动到盘子（move_lifted_object_to）和打开夹爪（open_gripper）的阶段，导致苹果未完成放置闭环且未被释放；corrective_direction=在恢复步骤的go_home之后，添加move_lifted_object_to（target参数设为盘子位置）和open_gripper步骤，以完成苹果的搬运放置和释放操作；missing_phases=move_lifted_object_to, open_gripper"
+      },
+      "real_episode_ref": {
+        "raw_episode_id": "",
+        "hdf5_path": "",
+        "video_dir": "",
+        "keyframe_dir": "",
+        "robot_log_path": "",
+        "time_range": [],
+        "sensor_modalities": [],
+        "metadata": {}
+      },
+      "memory_tags": {}
+    },
+    {
+      "schema_version": "memory_v3_plus",
+      "experience_id": "e7fee17f",
+      "episode_type": "anomaly_recovery",
+      "condition_id": "U3-1",
+      "scenario_id": "U3",
+      "available_actions": [
+        "approach_object",
+        "camera_rgbd_save",
+        "close_gripper",
+        "create_fixed_vertical_grasp",
+        "detect_object_pose",
+        "go_home",
+        "lift",
+        "move_lifted_object_to",
+        "move_to_pregrasp",
+        "open_gripper"
+      ],
+      "skill_sequence": [
+        {
+          "action": "camera_rgbd_save",
+          "parameters": {}
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "apple"
+          }
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "plate"
+          }
+        },
+        {
+          "action": "close_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "lift",
+          "parameters": {
+            "lift_height": 0.1
+          }
+        },
+        {
+          "action": "move_lifted_object_to",
+          "parameters": {
+            "target": "plate"
+          }
+        },
+        {
+          "action": "open_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "go_home",
+          "parameters": {}
+        }
+      ],
+      "result": {
+        "task_success": true,
+        "failure_reason": "",
+        "success": true,
+        "z_change": 0.0,
+        "time_cost": 186.437,
+        "attempts": 1
+      },
+      "status": "success",
+      "source": "simulation",
+      "domain": "simulation",
+      "source_run_id": "",
+      "source_trial_id": "",
+      "confidence_score": 0.85,
+      "memory_partition": "validated_memory",
+      "created_at": "2026-07-01T06:08:04Z",
+      "updated_at": "2026-07-01T06:08:04Z",
+      "summary": "条件 U3-1 下完成异常处理评估，完整任务闭环结果为 成功。",
+      "text_summary": "条件 U3-1 下完成异常处理评估，完整任务闭环结果为 成功。; condition_id=U3-1; scenario_id=U3; status=success; validation_status=simulation_validated; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]; criteria=candidate_condition_final_outcome, lift=None, pinch=None",
+      "text_embedding_id": "",
+      "embeddings": {},
+      "anomaly": {
+        "type": "gripper_fail",
+        "injection_step": "after_gripper_close",
+        "description": "gripper_not_closing",
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "params": {}
+      },
+      "scene": {
+        "objects": [
+          "apple",
+          "pear",
+          "plate"
+        ],
+        "camera_view": "sim_camera",
+        "scene_name": "apple_pear_runtime_refined",
+        "xml_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml"
+      },
+      "task": {
+        "name": "ur5e_anomaly_recovery",
+        "stage": "gripper_close",
+        "object_class": "apple",
+        "scene_name": "apple_pear_runtime_refined",
+        "condition": "direct",
+        "trial_index": 0,
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "condition_name": "gripper_not_closing",
+        "strategy_family": ""
+      },
+      "perception": {
+        "before_anomaly": {
+          "object_pos": [
+            0.0,
+            0.0,
+            0.02777295426167739
+          ],
+          "confidence": 0.2212,
+          "detection_ok": true,
+          "mask_nonzero": 1106
+        },
+        "after_anomaly": null,
+        "detection_method": "oracle"
+      },
+      "reconstruction_artifacts": {
+        "reconstruction_type": "unknown",
+        "object_positions": {},
+        "object_quats": {},
+        "camera_poses": {},
+        "scene_out": "",
+        "scene_out_refined": "",
+        "runtime_pose_calibration_path": "",
+        "sim_intrinsics_json": "",
+        "mesh_quats": {},
+        "support_height_adjustments": {},
+        "reconstruction_signature": "U3-1:direct",
+        "virtual_scene_built": false,
+        "recovery_pos": [],
+        "condition": "direct"
+      },
+      "recovery_plan": {
+        "condition": "direct",
+        "steps": [
+          {
+            "type": "camera_rgbd_save",
+            "params": {}
+          },
+          {
+            "type": "detect_object_pose",
+            "params": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "type": "detect_object_pose",
+            "params": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "type": "close_gripper",
+            "params": {}
+          },
+          {
+            "type": "lift",
+            "params": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "type": "move_lifted_object_to",
+            "params": {
+              "target": "plate"
+            }
+          },
+          {
+            "type": "open_gripper",
+            "params": {}
+          },
+          {
+            "type": "go_home",
+            "params": {}
+          }
+        ]
+      },
+      "execution_feedback": {
+        "task_success": true,
+        "apple_z_after_recovery": 0.32867271384460345,
+        "execution_deviation": {},
+        "contact_after_close": {
+          "left_contact": true,
+          "right_contact": true
+        },
+        "contact_after_lift": {
+          "left_contact": true,
+          "right_contact": true
+        },
+        "time_costs": {
+          "pre_recovery": 4.569,
+          "recovery": 186.437,
+          "total": 191.043
+        },
+        "failure_reason": "",
+        "observed_pos": null,
+        "task_success_criteria": {
+          "type": "candidate_condition_final_outcome",
+          "condition_id": "U3-1",
+          "scenario_id": "U3",
+          "success": true,
+          "candidate_id": 1,
+          "apple_pos": [
+            0.4025250254264928,
+            0.37718734516904195,
+            0.07888705765508842
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist": 0.022951971023005183,
+          "apple_z": 0.07888705765508842,
+          "on_plate": true,
+          "gripper_open": true,
+          "gripper_action": 0.0,
+          "near_home": true,
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "physical_evidence": {
+            "candidate_final_result": {
+              "candidate_id": 1,
+              "on_plate": true,
+              "xy_dist_to_plate": 0.022951971023005183,
+              "z_after": 0.07888705765508842,
+              "score": 100.0
+            },
+            "final_check": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "plate_pos": [
+                0.4,
+                0.4,
+                0.04
+              ],
+              "xy_dist_to_plate": 0.022951971023005183,
+              "apple_z": 0.07888705765508842,
+              "on_plate": true,
+              "released": true
+            },
+            "open_gripper": {
+              "apple_pos": [
+                0.4023856010401529,
+                0.3772177711306744,
+                0.0788855074018507
+              ],
+              "pinch_pos": [
+                0.40481632377344906,
+                0.37501080172678586,
+                0.059142546395946516
+              ],
+              "tcp_pos": [
+                0.41078247741457735,
+                0.37828531383095054,
+                0.08999999999999994
+              ],
+              "apple_z": 0.0788855074018507,
+              "pinch_distance": 0.020014085945566334,
+              "apple_to_pinch_xy": 0.0032831580765876616,
+              "last_skill_result": {
+                "skill": "open_gripper",
+                "success": true,
+                "reason": "gripper_opened",
+                "contact": {
+                  "left_contact": false,
+                  "right_contact": false
+                },
+                "gripper_action": 0.0,
+                "pinch_distance": 0.020014085945566334,
+                "object_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "extra": {}
+              }
+            },
+            "go_home": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "pinch_pos": [
+                0.4903084377241769,
+                0.138369303821998,
+                0.32537677505565077
+              ],
+              "tcp_pos": [
+                0.492,
+                0.134,
+                0.358
+              ],
+              "apple_z": 0.07888705765508842,
+              "pinch_distance": 0.3542557905407796,
+              "apple_to_pinch_xy": 0.25444053204523764,
+              "last_skill_result": {
+                "skill": "joint_move",
+                "success": true,
+                "reason": "ok"
+              }
+            }
+          }
+        },
+        "virtual_validation_success": true
+      },
+      "sensor_summary": {
+        "joint_positions": [
+          0.26909703401922525,
+          0.32494007146188697,
+          1.296957314102418,
+          -0.01792158085848334,
+          -1.5708262272802993,
+          -1.3017057292627014
+        ],
+        "joint_velocities": [
+          -2.6359825653456103e-05,
+          -0.0010354142918864286,
+          -0.017190781298342738,
+          0.01904049211333518,
+          -3.581074640892586e-05,
+          3.939824311182495e-08
+        ],
+        "end_effector_pose": {
+          "pinch_site_pos": [
+            0.5609819156400359,
+            0.2936890918620252,
+            0.2936852824873435
+          ],
+          "pinch_site_xmat": [
+            [
+              -0.00015897364929391377,
+              0.9994924777843146,
+              -0.03185532263136296
+            ],
+            [
+              0.9999601243088181,
+              -0.00012554505066437693,
+              -0.008929391397589016
+            ],
+            [
+              -0.008928858811175881,
+              -0.03185547191629169,
+              -0.9994526023725779
+            ]
+          ]
+        },
+        "gripper_state": {
+          "driver_joints": {
+            "right_driver_joint": {
+              "position": 0.48437018217590916,
+              "velocity": 0.052315382341252416
+            },
+            "left_driver_joint": {
+              "position": 0.4847510230277811,
+              "velocity": 0.05396933828323518
+            }
+          }
+        },
+        "contact_state": {
+          "contact_after_close": {
+            "left_contact": true,
+            "right_contact": true
+          },
+          "contact_after_lift": {
+            "left_contact": true,
+            "right_contact": true
+          }
+        },
+        "force_torque": {},
+        "timestamps": {
+          "time_costs": {
+            "pre_recovery": 4.569,
+            "recovery": 186.437,
+            "total": 191.043
+          }
+        },
+        "sensor_modalities": [
+          "sim_qpos",
+          "sim_qvel",
+          "sim_site_pose",
+          "sim_contact",
+          "sim_rgb"
+        ],
+        "raw_refs": {
+          "result_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_001/result.json"
+        }
+      },
+      "key_slices": [
+        {
+          "slice_id": "before_anomaly",
+          "stage": "before_anomaly",
+          "description": "提起前的正常抓取状态",
+          "timestamp": 0.0,
+          "data": {
+            "apple_z_before_lift": 0.030458169514898013,
+            "perceived_z_before_lift": 0.02777295426167739
+          }
+        },
+        {
+          "slice_id": "anomaly_detected",
+          "stage": "anomaly_detected",
+          "description": "异常检测完成",
+          "timestamp": 4.569,
+          "data": {
+            "detection_method": "oracle",
+            "perceived_position": null
+          }
+        },
+        {
+          "slice_id": "recovery_finished",
+          "stage": "recovery_finished",
+          "description": "恢复执行结束",
+          "timestamp": 191.043,
+          "data": {
+            "task_success": true,
+            "apple_z_after_recovery": 0.32867271384460345
+          }
+        }
+      ],
+      "keyframes": [
+        {
+          "stage": "before_recovery",
+          "image_path": "keyframes/before_recovery.jpg",
+          "description": "恢复规划前的场景图像",
+          "used_for_retrieval": true
+        },
+        {
+          "stage": "after_recovery",
+          "image_path": "keyframes/after_recovery.jpg",
+          "description": "恢复执行后的场景图像",
+          "used_for_retrieval": false
+        },
+        {
+          "stage": "after_close",
+          "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+          "description": "候选 1 执行后图像: after_close",
+          "used_for_retrieval": false
+        },
+        {
+          "stage": "after_lift",
+          "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+          "description": "候选 1 执行后图像: after_lift",
+          "used_for_retrieval": false
+        },
+        {
+          "stage": "after_move_lifted",
+          "image_path": "sandbox_keyframes/candidate_001_after_move_lifted.jpg",
+          "description": "候选 1 执行后图像: after_move_lifted",
+          "used_for_retrieval": false
+        }
+      ],
+      "anomaly_state": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "available_actions": [
+          "approach_object",
+          "camera_rgbd_save",
+          "close_gripper",
+          "create_fixed_vertical_grasp",
+          "detect_object_pose",
+          "go_home",
+          "lift",
+          "move_lifted_object_to",
+          "move_to_pregrasp",
+          "open_gripper"
+        ],
+        "grasp_orientation_policy": "fixed_downward_no_graspnet"
+      },
+      "retrieval_key": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "task_stage": "gripper_close",
+        "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]",
+        "contact_pattern": "contact_close_and_lift",
+        "task_success": true,
+        "failure_type": "",
+        "gap_type": "",
+        "gap_uncertainty_bucket": "",
+        "critic_status": "pass",
+        "critic_flags": [],
+        "memory_type": "",
+        "memory_role": "",
+        "real_validated": false,
+        "pair_status": ""
+      },
+      "failure_taxonomy": {
+        "failure_diagnostics": {
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "task_success_criteria": {
+            "type": "candidate_condition_final_outcome",
+            "condition_id": "U3-1",
+            "scenario_id": "U3",
+            "success": true,
+            "candidate_id": 1,
+            "apple_pos": [
+              0.4025250254264928,
+              0.37718734516904195,
+              0.07888705765508842
+            ],
+            "plate_pos": [
+              0.4,
+              0.4,
+              0.04
+            ],
+            "xy_dist": 0.022951971023005183,
+            "apple_z": 0.07888705765508842,
+            "on_plate": true,
+            "gripper_open": true,
+            "gripper_action": 0.0,
+            "near_home": true,
+            "failed_predicates": [],
+            "failure_descriptions": {},
+            "physical_evidence": {
+              "candidate_final_result": {
+                "candidate_id": 1,
+                "on_plate": true,
+                "xy_dist_to_plate": 0.022951971023005183,
+                "z_after": 0.07888705765508842,
+                "score": 100.0
+              },
+              "final_check": {
+                "apple_pos": [
+                  0.4025250254264928,
+                  0.37718734516904195,
+                  0.07888705765508842
+                ],
+                "plate_pos": [
+                  0.4,
+                  0.4,
+                  0.04
+                ],
+                "xy_dist_to_plate": 0.022951971023005183,
+                "apple_z": 0.07888705765508842,
+                "on_plate": true,
+                "released": true
+              },
+              "open_gripper": {
+                "apple_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "pinch_pos": [
+                  0.40481632377344906,
+                  0.37501080172678586,
+                  0.059142546395946516
+                ],
+                "tcp_pos": [
+                  0.41078247741457735,
+                  0.37828531383095054,
+                  0.08999999999999994
+                ],
+                "apple_z": 0.0788855074018507,
+                "pinch_distance": 0.020014085945566334,
+                "apple_to_pinch_xy": 0.0032831580765876616,
+                "last_skill_result": {
+                  "skill": "open_gripper",
+                  "success": true,
+                  "reason": "gripper_opened",
+                  "contact": {
+                    "left_contact": false,
+                    "right_contact": false
+                  },
+                  "gripper_action": 0.0,
+                  "pinch_distance": 0.020014085945566334,
+                  "object_pos": [
+                    0.4023856010401529,
+                    0.3772177711306744,
+                    0.0788855074018507
+                  ],
+                  "extra": {}
+                }
+              },
+              "go_home": {
+                "apple_pos": [
+                  0.4025250254264928,
+                  0.37718734516904195,
+                  0.07888705765508842
+                ],
+                "pinch_pos": [
+                  0.4903084377241769,
+                  0.138369303821998,
+                  0.32537677505565077
+                ],
+                "tcp_pos": [
+                  0.492,
+                  0.134,
+                  0.358
+                ],
+                "apple_z": 0.07888705765508842,
+                "pinch_distance": 0.3542557905407796,
+                "apple_to_pinch_xy": 0.25444053204523764,
+                "last_skill_result": {
+                  "skill": "joint_move",
+                  "success": true,
+                  "reason": "ok"
+                }
+              }
+            }
+          },
+          "llm_plan_error": "",
+          "invalid_skill_steps": []
+        },
+        "candidate_failures": {
+          "physical_failure_critics": [
+            {
+              "candidate_id": 2,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "恢复流程前置检测步骤缺失导致抓取位姿创建失败",
+                "root_cause": "恢复步骤执行create_fixed_vertical_grasp前未执行detect_object_pose（及前置的camera_rgbd_save），无法获取目标物体位姿，导致位姿创建失败，后续流程无法推进",
+                "corrective_direction": "恢复流程中在create_fixed_vertical_grasp前补充执行camera_rgbd_save和detect_object_pose以获取物体位姿；后续需补充move_lifted_object_to（搬运苹果到盘子）、open_gripper（放置苹果）、go_home（机械臂回安全状态）等流程",
+                "missing_phases": [
+                  "camera_rgbd_save",
+                  "detect_object_pose",
+                  "move_lifted_object_to",
+                  "open_gripper"
+                ],
+                "failed_predicates": [
+                  "on_plate（苹果未放置到盘子上）",
+                  "go_home（机械臂未回到安全状态）",
+                  "lift（提升动作未有效完成，z_change为0）"
+                ],
+                "failure_evidence": {
+                  "recovery_step_error": "object_detection_unavailable_run_detect_object_pose_first",
+                  "apple_z_after_recovery": 0.0,
+                  "z_change": 0.0,
+                  "create_fixed_vertical_grasp_status": "exception",
+                  "on_plate": null
+                },
+                "task_goal": "异常恢复后完成苹果的抓取、提升、搬运、放置闭环，将苹果放置到盘子上并使机械臂回到安全状态",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "本次失败由流程缺失导致，非参数配置问题",
+                      "impact": "参数未对失败证据产生影响，流程缺失直接导致恢复步骤执行失败",
+                      "parameter_lesson": "本次失败非参数问题，流程步骤完整性对恢复成功更关键"
+                    }
+                  ],
+                  "overall_lesson": "参数问题非本次失败主因，需优先确保流程步骤完整，特别是检测和位姿创建的前置步骤"
+                }
+              }
+            },
+            {
+              "candidate_id": 3,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "流程缺失（检测与闭环阶段缺失）",
+                "root_cause": "恢复流程未执行detect_object_pose获取目标位姿，导致approach_object因缺少位姿参考执行失败；且任务闭环所需的move_lifted_object_to（搬运）、open_gripper（放置）、go_home（回安全状态）阶段均未执行，无法满足任务目标。",
+                "corrective_direction": "在recovery_steps中，先执行detect_object_pose（target_class=apple）获取苹果位姿，再执行detect_object_pose（target_class=plate）获取盘子位姿；完成approach_object后，依次执行lift（lift_height需确保苹果离开初始位置）、move_lifted_object_to（target=plate）",
+                "missing_phases": [
+                  "detect_object_pose",
+                  "lift",
+                  "move_lifted_object_to",
+                  "open_gripper"
+                ],
+                "failed_predicates": [
+                  "on_plate",
+                  "apple_z_change>0",
+                  "go_home_executed"
+                ],
+                "failure_evidence": {
+                  "step_trace_error": "approach_object requires detect_object_pose to create T_wo first",
+                  "z_change": 0.0,
+                  "on_plate": null,
+                  "recovery_steps": [
+                    "approach_object"
+                  ],
+                  "retrieved_memory_failure_type": "任务流程缺失（放置阶段未执行）"
+                },
+                "task_goal": "异常恢复后使苹果完成抓取、提升、搬运、放置闭环并放至盘子，机械臂回到安全状态",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "approach_object",
+                      "bad_keys": [],
+                      "bad_values": {
+                        "dx": 0.0,
+                        "dy": 0.0,
+                        "dz": -0.02
+                      },
+                      "expected_direction": {
+                        "dx": "keep",
+                        "dy": "keep",
+                        "dz": "keep（或根据detect_object_pose结果调整）"
+                      },
+                      "reason": "因恢复流程缺失detect_object_pose，导致approach_object无法基于目标位姿使用dx/dy/dz参数，参数未生效",
+                      "impact": "z_change为0，苹果未被有效接近或提升，任务目标未推进",
+                      "parameter_lesson": ""
+                    }
+                  ],
+                  "overall_lesson": "参数调整需依赖目标位姿检测结果，流程中需确保detect_object_pose先于approach_object执行以提供位姿参考，避免参数无效导致动作失败"
+                }
+              }
+            }
+          ],
+          "llm_selector": {
+            "selected_candidate_id": 1,
+            "candidate_scores": [
+              {
+                "candidate_id": 1,
+                "score": 100,
+                "task_success": true,
+                "reason": "候选1完成了抓取、提升、搬运苹果到盘子、释放苹果、机械臂回安全状态的完整任务闭环，物理执行结果显示苹果在盘子上（on_plate=true），任务成功参数均为true，动作序列执行无异常且最终效果符合目标"
+              },
+              {
+                "candidate_id": 2,
+                "score": 0,
+                "task_success": false,
+                "reason": "候选2因流程缺失（未先执行检测步骤）导致抓取位姿创建失败，后续流程无法推进，任务未完成"
+              },
+              {
+                "candidate_id": 3,
+                "score": 0,
+                "task_success": false,
+                "reason": "候选3因未先执行检测步骤导致接近物体动作失败，且任务闭环所需后续动作均未有效执行，任务未完成"
+              }
+            ],
+            "ranking_reason": "候选1是唯一任务闭环成功（task_success=true）的候选，其物理执行结果验证了苹果被成功放置到盘子且机械臂回到安全状态；候选2和3因流程缺失或动作执行失败导致任务未完成，因此优先选择候选1",
+            "selection_confidence": 1.0,
+            "error": ""
+          }
+        }
+      },
+      "validation_status": "simulation_validated",
+      "validation_source": "direct",
+      "metadata": {
+        "condition": "direct",
+        "noise_scale": 0.0,
+        "candidate_rejections": [],
+        "candidate_plan_failure_type": "",
+        "candidate_plan_failure_evidence": {},
+        "sandbox_keyframes": [
+          {
+            "candidate_id": 1,
+            "stage": "after_close",
+            "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+            "description": "候选 1 执行后图像: after_close",
+            "used_for_retrieval": false
+          },
+          {
+            "candidate_id": 1,
+            "stage": "after_lift",
+            "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+            "description": "候选 1 执行后图像: after_lift",
+            "used_for_retrieval": false
+          },
+          {
+            "candidate_id": 1,
+            "stage": "after_move_lifted",
+            "image_path": "sandbox_keyframes/candidate_001_after_move_lifted.jpg",
+            "description": "候选 1 执行后图像: after_move_lifted",
+            "used_for_retrieval": false
+          }
+        ]
+      },
+      "validation_evidence": {
+        "virtual_validation_success": true,
+        "task_success_criteria": {
+          "type": "candidate_condition_final_outcome",
+          "condition_id": "U3-1",
+          "scenario_id": "U3",
+          "success": true,
+          "candidate_id": 1,
+          "apple_pos": [
+            0.4025250254264928,
+            0.37718734516904195,
+            0.07888705765508842
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist": 0.022951971023005183,
+          "apple_z": 0.07888705765508842,
+          "on_plate": true,
+          "gripper_open": true,
+          "gripper_action": 0.0,
+          "near_home": true,
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "physical_evidence": {
+            "candidate_final_result": {
+              "candidate_id": 1,
+              "on_plate": true,
+              "xy_dist_to_plate": 0.022951971023005183,
+              "z_after": 0.07888705765508842,
+              "score": 100.0
+            },
+            "final_check": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "plate_pos": [
+                0.4,
+                0.4,
+                0.04
+              ],
+              "xy_dist_to_plate": 0.022951971023005183,
+              "apple_z": 0.07888705765508842,
+              "on_plate": true,
+              "released": true
+            },
+            "open_gripper": {
+              "apple_pos": [
+                0.4023856010401529,
+                0.3772177711306744,
+                0.0788855074018507
+              ],
+              "pinch_pos": [
+                0.40481632377344906,
+                0.37501080172678586,
+                0.059142546395946516
+              ],
+              "tcp_pos": [
+                0.41078247741457735,
+                0.37828531383095054,
+                0.08999999999999994
+              ],
+              "apple_z": 0.0788855074018507,
+              "pinch_distance": 0.020014085945566334,
+              "apple_to_pinch_xy": 0.0032831580765876616,
+              "last_skill_result": {
+                "skill": "open_gripper",
+                "success": true,
+                "reason": "gripper_opened",
+                "contact": {
+                  "left_contact": false,
+                  "right_contact": false
+                },
+                "gripper_action": 0.0,
+                "pinch_distance": 0.020014085945566334,
+                "object_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "extra": {}
+              }
+            },
+            "go_home": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "pinch_pos": [
+                0.4903084377241769,
+                0.138369303821998,
+                0.32537677505565077
+              ],
+              "tcp_pos": [
+                0.492,
+                0.134,
+                0.358
+              ],
+              "apple_z": 0.07888705765508842,
+              "pinch_distance": 0.3542557905407796,
+              "apple_to_pinch_xy": 0.25444053204523764,
+              "last_skill_result": {
+                "skill": "joint_move",
+                "success": true,
+                "reason": "ok"
+              }
+            }
+          }
+        },
+        "keyframes": [
+          {
+            "stage": "before_recovery",
+            "image_path": "keyframes/before_recovery.jpg",
+            "description": "恢复规划前的场景图像",
+            "used_for_retrieval": true
+          },
+          {
+            "stage": "after_recovery",
+            "image_path": "keyframes/after_recovery.jpg",
+            "description": "恢复执行后的场景图像",
+            "used_for_retrieval": false
+          }
+        ],
+        "result_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_001/result.json"
+      },
+      "promotion_history": [],
+      "memory_tier": "stm",
+      "memory_gate": {
+        "anomaly_score": 0.75,
+        "failure_score": 0.0,
+        "sim_real_gap_score": 0.0,
+        "recovery_utility_score": 1.0,
+        "surprise_score": 0.0,
+        "write_score": 0.3375,
+        "write_decision": "stm_only",
+        "trigger_events": [
+          "anomaly_detected",
+          "virtual_validation_passed",
+          "task_success"
+        ],
+        "explanation": {
+          "weights": {
+            "anomaly": 0.25,
+            "failure": 0.25,
+            "sim_real_gap": 0.25,
+            "recovery_utility": 0.15,
+            "surprise": 0.1
+          },
+          "validation_status": "simulation_validated",
+          "step_count": 8,
+          "has_structured_evidence": true,
+          "task_success": true
+        }
+      },
+      "sim_real_gap": {
+        "gap_id": "",
+        "gap_score": 0.0,
+        "pose_gap": {},
+        "contact_gap": {},
+        "outcome_gap": {},
+        "perception_gap": {},
+        "actuation_gap": {},
+        "robot_state_gap": {},
+        "scene_reconstruction_gap": {},
+        "uncertainty": 0.0,
+        "evidence": {}
+      },
+      "sim_real_pair": {
+        "pair_id": "",
+        "sim_experience_id": "",
+        "real_experience_id": "",
+        "paired_by": "",
+        "pair_score": 0.0,
+        "gap_score": 0.0,
+        "validation_status": "",
+        "created_at": "",
+        "updated_at": ""
+      },
+      "sandbox_calibration": {
+        "calibration_id": "",
+        "source_gap_ids": [],
+        "object_pose_bias": [],
+        "gripper_delay_bias": 0.0,
+        "slip_risk_bias": 0.0,
+        "contact_success_bias": 0.0,
+        "perception_noise_bias": [],
+        "applied_to_candidate": false,
+        "calibration_confidence": 0.0,
+        "details": {}
+      },
+      "critic_result": {
+        "overall_status": "pass",
+        "critic_risk_score": 0.0,
+        "collision": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "joint": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "gripper_contact": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "end_effector_pose": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "rule_flags": [],
+        "feedback_for_rewrite": ""
+      },
+      "real_episode_ref": {
+        "raw_episode_id": "",
+        "hdf5_path": "",
+        "video_dir": "",
+        "keyframe_dir": "",
+        "robot_log_path": "",
+        "time_range": [],
+        "sensor_modalities": [],
+        "metadata": {}
+      },
+      "memory_tags": {}
+    },
+    {
+      "schema_version": "memory_v3_plus",
+      "experience_id": "0e16041b",
+      "episode_type": "anomaly_recovery",
+      "condition_id": "U3-1",
+      "scenario_id": "U3",
+      "available_actions": [
+        "approach_object",
+        "camera_rgbd_save",
+        "close_gripper",
+        "create_fixed_vertical_grasp",
+        "detect_object_pose",
+        "go_home",
+        "lift",
+        "move_lifted_object_to",
+        "move_to_pregrasp",
+        "open_gripper"
+      ],
+      "skill_sequence": [
+        {
+          "action": "camera_rgbd_save",
+          "parameters": {}
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "apple"
+          }
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "plate"
+          }
+        },
+        {
+          "action": "close_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "lift",
+          "parameters": {
+            "lift_height": 0.1
+          }
+        },
+        {
+          "action": "move_lifted_object_to",
+          "parameters": {
+            "target": "plate"
+          }
+        },
+        {
+          "action": "open_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "go_home",
+          "parameters": {}
+        }
+      ],
+      "result": {
+        "task_success": true,
+        "failure_reason": "",
+        "success": true,
+        "z_change": 0.0,
+        "time_cost": 165.011,
+        "attempts": 1
+      },
+      "status": "success",
+      "source": "simulation",
+      "domain": "simulation",
+      "source_run_id": "",
+      "source_trial_id": "",
+      "confidence_score": 0.85,
+      "memory_partition": "validated_memory",
+      "created_at": "2026-07-01T06:10:56Z",
+      "updated_at": "2026-07-01T06:10:56Z",
+      "summary": "条件 U3-1 下完成异常处理评估，完整任务闭环结果为 成功。",
+      "text_summary": "条件 U3-1 下完成异常处理评估，完整任务闭环结果为 成功。; condition_id=U3-1; scenario_id=U3; status=success; validation_status=simulation_validated; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]; criteria=candidate_condition_final_outcome, lift=None, pinch=None",
+      "text_embedding_id": "",
+      "embeddings": {},
+      "anomaly": {
+        "type": "gripper_fail",
+        "injection_step": "after_gripper_close",
+        "description": "gripper_not_closing",
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "params": {}
+      },
+      "scene": {
+        "objects": [
+          "apple",
+          "pear",
+          "plate"
+        ],
+        "camera_view": "sim_camera",
+        "scene_name": "apple_pear_runtime_refined",
+        "xml_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml"
+      },
+      "task": {
+        "name": "ur5e_anomaly_recovery",
+        "stage": "gripper_close",
+        "object_class": "apple",
+        "scene_name": "apple_pear_runtime_refined",
+        "condition": "direct",
+        "trial_index": 0,
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "condition_name": "gripper_not_closing",
+        "strategy_family": ""
+      },
+      "perception": {
+        "before_anomaly": {
+          "object_pos": [
+            0.0,
+            0.0,
+            0.02777295426167739
+          ],
+          "confidence": 0.2212,
+          "detection_ok": true,
+          "mask_nonzero": 1106
+        },
+        "after_anomaly": null,
+        "detection_method": "oracle"
+      },
+      "reconstruction_artifacts": {
+        "reconstruction_type": "unknown",
+        "object_positions": {},
+        "object_quats": {},
+        "camera_poses": {},
+        "scene_out": "",
+        "scene_out_refined": "",
+        "runtime_pose_calibration_path": "",
+        "sim_intrinsics_json": "",
+        "mesh_quats": {},
+        "support_height_adjustments": {},
+        "reconstruction_signature": "U3-1:direct",
+        "virtual_scene_built": false,
+        "recovery_pos": [],
+        "condition": "direct"
+      },
+      "recovery_plan": {
+        "condition": "direct",
+        "steps": [
+          {
+            "type": "camera_rgbd_save",
+            "params": {}
+          },
+          {
+            "type": "detect_object_pose",
+            "params": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "type": "detect_object_pose",
+            "params": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "type": "close_gripper",
+            "params": {}
+          },
+          {
+            "type": "lift",
+            "params": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "type": "move_lifted_object_to",
+            "params": {
+              "target": "plate"
+            }
+          },
+          {
+            "type": "open_gripper",
+            "params": {}
+          },
+          {
+            "type": "go_home",
+            "params": {}
+          }
+        ]
+      },
+      "execution_feedback": {
+        "task_success": true,
+        "apple_z_after_recovery": 0.32867271384460345,
+        "execution_deviation": {},
+        "contact_after_close": {
+          "left_contact": true,
+          "right_contact": true
+        },
+        "contact_after_lift": {
+          "left_contact": true,
+          "right_contact": true
+        },
+        "time_costs": {
+          "pre_recovery": 4.463,
+          "recovery": 165.011,
+          "total": 169.513
+        },
+        "failure_reason": "",
+        "observed_pos": null,
+        "task_success_criteria": {
+          "type": "candidate_condition_final_outcome",
+          "condition_id": "U3-1",
+          "scenario_id": "U3",
+          "success": true,
+          "candidate_id": 1,
+          "apple_pos": [
+            0.4025250254264928,
+            0.37718734516904195,
+            0.07888705765508842
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist": 0.022951971023005183,
+          "apple_z": 0.07888705765508842,
+          "on_plate": true,
+          "gripper_open": true,
+          "gripper_action": 0.0,
+          "near_home": true,
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "physical_evidence": {
+            "candidate_final_result": {
+              "candidate_id": 1,
+              "on_plate": true,
+              "xy_dist_to_plate": 0.022951971023005183,
+              "z_after": 0.07888705765508842,
+              "score": 100.0
+            },
+            "final_check": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "plate_pos": [
+                0.4,
+                0.4,
+                0.04
+              ],
+              "xy_dist_to_plate": 0.022951971023005183,
+              "apple_z": 0.07888705765508842,
+              "on_plate": true,
+              "released": true
+            },
+            "open_gripper": {
+              "apple_pos": [
+                0.4023856010401529,
+                0.3772177711306744,
+                0.0788855074018507
+              ],
+              "pinch_pos": [
+                0.40481632377344906,
+                0.37501080172678586,
+                0.059142546395946516
+              ],
+              "tcp_pos": [
+                0.41078247741457735,
+                0.37828531383095054,
+                0.08999999999999994
+              ],
+              "apple_z": 0.0788855074018507,
+              "pinch_distance": 0.020014085945566334,
+              "apple_to_pinch_xy": 0.0032831580765876616,
+              "last_skill_result": {
+                "skill": "open_gripper",
+                "success": true,
+                "reason": "gripper_opened",
+                "contact": {
+                  "left_contact": false,
+                  "right_contact": false
+                },
+                "gripper_action": 0.0,
+                "pinch_distance": 0.020014085945566334,
+                "object_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "extra": {}
+              }
+            },
+            "go_home": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "pinch_pos": [
+                0.4903084377241769,
+                0.138369303821998,
+                0.32537677505565077
+              ],
+              "tcp_pos": [
+                0.492,
+                0.134,
+                0.358
+              ],
+              "apple_z": 0.07888705765508842,
+              "pinch_distance": 0.3542557905407796,
+              "apple_to_pinch_xy": 0.25444053204523764,
+              "last_skill_result": {
+                "skill": "joint_move",
+                "success": true,
+                "reason": "ok"
+              }
+            }
+          }
+        },
+        "virtual_validation_success": true
+      },
+      "sensor_summary": {
+        "joint_positions": [
+          0.26909703401922525,
+          0.32494007146188697,
+          1.296957314102418,
+          -0.01792158085848334,
+          -1.5708262272802993,
+          -1.3017057292627014
+        ],
+        "joint_velocities": [
+          -2.6359825653456103e-05,
+          -0.0010354142918864286,
+          -0.017190781298342738,
+          0.01904049211333518,
+          -3.581074640892586e-05,
+          3.939824311182495e-08
+        ],
+        "end_effector_pose": {
+          "pinch_site_pos": [
+            0.5609819156400359,
+            0.2936890918620252,
+            0.2936852824873435
+          ],
+          "pinch_site_xmat": [
+            [
+              -0.00015897364929391377,
+              0.9994924777843146,
+              -0.03185532263136296
+            ],
+            [
+              0.9999601243088181,
+              -0.00012554505066437693,
+              -0.008929391397589016
+            ],
+            [
+              -0.008928858811175881,
+              -0.03185547191629169,
+              -0.9994526023725779
+            ]
+          ]
+        },
+        "gripper_state": {
+          "driver_joints": {
+            "right_driver_joint": {
+              "position": 0.48437018217590916,
+              "velocity": 0.052315382341252416
+            },
+            "left_driver_joint": {
+              "position": 0.4847510230277811,
+              "velocity": 0.05396933828323518
+            }
+          }
+        },
+        "contact_state": {
+          "contact_after_close": {
+            "left_contact": true,
+            "right_contact": true
+          },
+          "contact_after_lift": {
+            "left_contact": true,
+            "right_contact": true
+          }
+        },
+        "force_torque": {},
+        "timestamps": {
+          "time_costs": {
+            "pre_recovery": 4.463,
+            "recovery": 165.011,
+            "total": 169.513
+          }
+        },
+        "sensor_modalities": [
+          "sim_qpos",
+          "sim_qvel",
+          "sim_site_pose",
+          "sim_contact",
+          "sim_rgb"
+        ],
+        "raw_refs": {
+          "result_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_002/result.json"
+        }
+      },
+      "key_slices": [
+        {
+          "slice_id": "before_anomaly",
+          "stage": "before_anomaly",
+          "description": "提起前的正常抓取状态",
+          "timestamp": 0.0,
+          "data": {
+            "apple_z_before_lift": 0.030458169514898013,
+            "perceived_z_before_lift": 0.02777295426167739
+          }
+        },
+        {
+          "slice_id": "anomaly_detected",
+          "stage": "anomaly_detected",
+          "description": "异常检测完成",
+          "timestamp": 4.463,
+          "data": {
+            "detection_method": "oracle",
+            "perceived_position": null
+          }
+        },
+        {
+          "slice_id": "recovery_finished",
+          "stage": "recovery_finished",
+          "description": "恢复执行结束",
+          "timestamp": 169.513,
+          "data": {
+            "task_success": true,
+            "apple_z_after_recovery": 0.32867271384460345
+          }
+        }
+      ],
+      "keyframes": [
+        {
+          "stage": "before_recovery",
+          "image_path": "keyframes/before_recovery.jpg",
+          "description": "恢复规划前的场景图像",
+          "used_for_retrieval": true
+        },
+        {
+          "stage": "after_recovery",
+          "image_path": "keyframes/after_recovery.jpg",
+          "description": "恢复执行后的场景图像",
+          "used_for_retrieval": false
+        },
+        {
+          "stage": "after_close",
+          "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+          "description": "候选 1 执行后图像: after_close",
+          "used_for_retrieval": false
+        },
+        {
+          "stage": "after_lift",
+          "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+          "description": "候选 1 执行后图像: after_lift",
+          "used_for_retrieval": false
+        },
+        {
+          "stage": "after_move_lifted",
+          "image_path": "sandbox_keyframes/candidate_001_after_move_lifted.jpg",
+          "description": "候选 1 执行后图像: after_move_lifted",
+          "used_for_retrieval": false
+        }
+      ],
+      "anomaly_state": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "available_actions": [
+          "approach_object",
+          "camera_rgbd_save",
+          "close_gripper",
+          "create_fixed_vertical_grasp",
+          "detect_object_pose",
+          "go_home",
+          "lift",
+          "move_lifted_object_to",
+          "move_to_pregrasp",
+          "open_gripper"
+        ],
+        "grasp_orientation_policy": "fixed_downward_no_graspnet"
+      },
+      "retrieval_key": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "task_stage": "gripper_close",
+        "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]",
+        "contact_pattern": "contact_close_and_lift",
+        "task_success": true,
+        "failure_type": "",
+        "gap_type": "",
+        "gap_uncertainty_bucket": "",
+        "critic_status": "pass",
+        "critic_flags": [],
+        "memory_type": "",
+        "memory_role": "",
+        "real_validated": false,
+        "pair_status": ""
+      },
+      "failure_taxonomy": {
+        "failure_diagnostics": {
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "task_success_criteria": {
+            "type": "candidate_condition_final_outcome",
+            "condition_id": "U3-1",
+            "scenario_id": "U3",
+            "success": true,
+            "candidate_id": 1,
+            "apple_pos": [
+              0.4025250254264928,
+              0.37718734516904195,
+              0.07888705765508842
+            ],
+            "plate_pos": [
+              0.4,
+              0.4,
+              0.04
+            ],
+            "xy_dist": 0.022951971023005183,
+            "apple_z": 0.07888705765508842,
+            "on_plate": true,
+            "gripper_open": true,
+            "gripper_action": 0.0,
+            "near_home": true,
+            "failed_predicates": [],
+            "failure_descriptions": {},
+            "physical_evidence": {
+              "candidate_final_result": {
+                "candidate_id": 1,
+                "on_plate": true,
+                "xy_dist_to_plate": 0.022951971023005183,
+                "z_after": 0.07888705765508842,
+                "score": 100.0
+              },
+              "final_check": {
+                "apple_pos": [
+                  0.4025250254264928,
+                  0.37718734516904195,
+                  0.07888705765508842
+                ],
+                "plate_pos": [
+                  0.4,
+                  0.4,
+                  0.04
+                ],
+                "xy_dist_to_plate": 0.022951971023005183,
+                "apple_z": 0.07888705765508842,
+                "on_plate": true,
+                "released": true
+              },
+              "open_gripper": {
+                "apple_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "pinch_pos": [
+                  0.40481632377344906,
+                  0.37501080172678586,
+                  0.059142546395946516
+                ],
+                "tcp_pos": [
+                  0.41078247741457735,
+                  0.37828531383095054,
+                  0.08999999999999994
+                ],
+                "apple_z": 0.0788855074018507,
+                "pinch_distance": 0.020014085945566334,
+                "apple_to_pinch_xy": 0.0032831580765876616,
+                "last_skill_result": {
+                  "skill": "open_gripper",
+                  "success": true,
+                  "reason": "gripper_opened",
+                  "contact": {
+                    "left_contact": false,
+                    "right_contact": false
+                  },
+                  "gripper_action": 0.0,
+                  "pinch_distance": 0.020014085945566334,
+                  "object_pos": [
+                    0.4023856010401529,
+                    0.3772177711306744,
+                    0.0788855074018507
+                  ],
+                  "extra": {}
+                }
+              },
+              "go_home": {
+                "apple_pos": [
+                  0.4025250254264928,
+                  0.37718734516904195,
+                  0.07888705765508842
+                ],
+                "pinch_pos": [
+                  0.4903084377241769,
+                  0.138369303821998,
+                  0.32537677505565077
+                ],
+                "tcp_pos": [
+                  0.492,
+                  0.134,
+                  0.358
+                ],
+                "apple_z": 0.07888705765508842,
+                "pinch_distance": 0.3542557905407796,
+                "apple_to_pinch_xy": 0.25444053204523764,
+                "last_skill_result": {
+                  "skill": "joint_move",
+                  "success": true,
+                  "reason": "ok"
+                }
+              }
+            }
+          },
+          "llm_plan_error": "",
+          "invalid_skill_steps": []
+        },
+        "candidate_failures": {
+          "physical_failure_critics": [
+            {
+              "candidate_id": 2,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "感知前置流程缺失",
+                "root_cause": "恢复步骤未执行camera_rgbd_save技能，直接调用detect_object_pose导致RGB-D观测数据缺失，物体位姿检测失败",
+                "corrective_direction": "在恢复步骤的detect_object_pose前插入camera_rgbd_save技能，确保获取RGB-D数据后再进行位姿检测",
+                "missing_phases": [
+                  "camera_rgbd_save"
+                ],
+                "failed_predicates": [
+                  "苹果未放置到盘子（on_plate为null）",
+                  "提升后z坐标无变化（z_change=0.0，提升或后续流程未完成）"
+                ],
+                "failure_evidence": {
+                  "sandbox_step_error": "perception_failed: camera_rgbd_missing_run_camera_rgbd_save_first",
+                  "recovery_steps": "仅执行detect_object_pose，无camera_rgbd_save",
+                  "retrieved_valid_memory_plan": "包含camera_rgbd_save作为detect_object_pose的前置步骤"
+                },
+                "task_goal": "异常恢复后完成苹果抓取、提升、搬运、放置闭环，机械臂回安全状态并将苹果放至盘子",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "不足以从日志判断具体参数错误。",
+                      "impact": "",
+                      "parameter_lesson": ""
+                    }
+                  ],
+                  "overall_lesson": "恢复流程需严格遵循记忆中有效计划的技能依赖关系，确保前置感知技能（如camera_rgbd_save）执行后再进行位姿检测"
+                }
+              }
+            },
+            {
+              "candidate_id": 3,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "恢复抓取失败（close_gripper无接触）",
+                "root_cause": "异常恢复后执行open_gripper，苹果z轴位置从0.3287m骤降至0.0306m、pinch_distance从0.0351m剧增至0.6312m，close_gripper时机械臂TCP与苹果无接触，无法重新抓取",
+                "corrective_direction": "open_gripper后需先执行detect_object_pose获取苹果当前位姿，再通过move_to_pregrasp/approach_object调整TCP至苹果附近，确保接触后执行close_gripper",
+                "missing_phases": [
+                  "detect_object_pose",
+                  "approach_object"
+                ],
+                "failed_predicates": [
+                  "on_plate（苹果未放置到盘子）",
+                  "apple_z_after_recovery（苹果z轴位置过低，未被提升）",
+                  "contact_after_close（close_gripper无接触）"
+                ],
+                "failure_evidence": {
+                  "apple_z_before_open_gripper": 0.3287071927628408,
+                  "apple_z_after_open_gripper": 0.030574524499451004,
+                  "pinch_distance_after_open_gripper": 0.6312218557274547,
+                  "close_gripper_error": "no_contact_after_close",
+                  "apple_z_after_recovery": 0.0
+                },
+                "task_goal": "异常恢复后抓取苹果，完成提升、搬运、放置到盘子并使机械臂回到安全状态",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "恢复流程未包含带位置参数的动作（如detect_object_pose、move_to_pregrasp），导致open_gripper后苹果位置偏差未被修正，close_gripper时无接触",
+                      "impact": "缺少位置参数调整使机械臂TCP与苹果位置不匹配，直接导致抓取恢复失败",
+                      "parameter_lesson": "异常恢复后需结合物体位置检测，动态调整机械臂位姿参数以确保抓取准确性"
+                    }
+                  ],
+                  "overall_lesson": "恢复流程中需通过参数化动作（如detect_object_pose的target_class、move_to_pregrasp的dx/dy/dz）修正位置偏差，避免无接触抓取"
+                }
+              }
+            }
+          ],
+          "llm_selector": {
+            "selected_candidate_id": 1,
+            "candidate_scores": [
+              {
+                "candidate_id": 1,
+                "score": 100,
+                "task_success": true,
+                "reason": "成功完成抓取、提升、搬运苹果至盘子、释放并返回安全状态，物理执行验证任务闭环成功"
+              },
+              {
+                "candidate_id": 2,
+                "score": 30,
+                "task_success": false,
+                "reason": "感知前置流程缺失，detect_object_pose因未执行camera_rgbd_save失败，任务未完成"
+              },
+              {
+                "candidate_id": 3,
+                "score": 20,
+                "task_success": false,
+                "reason": "close_gripper无接触导致抓取失败，后续流程中断，未完成任务闭环"
+              }
+            ],
+            "ranking_reason": "候选1的物理执行结果（苹果在盘子上、机械臂返回安全状态）验证任务闭环成功，候选2因感知前置流程缺失任务失败，候选3因抓取失败任务失败，故选择任务成功且物理效果最佳的候选1",
+            "selection_confidence": 1.0,
+            "error": ""
+          }
+        }
+      },
+      "validation_status": "simulation_validated",
+      "validation_source": "direct",
+      "metadata": {
+        "condition": "direct",
+        "noise_scale": 0.0,
+        "candidate_rejections": [],
+        "candidate_plan_failure_type": "",
+        "candidate_plan_failure_evidence": {},
+        "sandbox_keyframes": [
+          {
+            "candidate_id": 1,
+            "stage": "after_close",
+            "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+            "description": "候选 1 执行后图像: after_close",
+            "used_for_retrieval": false
+          },
+          {
+            "candidate_id": 1,
+            "stage": "after_lift",
+            "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+            "description": "候选 1 执行后图像: after_lift",
+            "used_for_retrieval": false
+          },
+          {
+            "candidate_id": 1,
+            "stage": "after_move_lifted",
+            "image_path": "sandbox_keyframes/candidate_001_after_move_lifted.jpg",
+            "description": "候选 1 执行后图像: after_move_lifted",
+            "used_for_retrieval": false
+          }
+        ]
+      },
+      "validation_evidence": {
+        "virtual_validation_success": true,
+        "task_success_criteria": {
+          "type": "candidate_condition_final_outcome",
+          "condition_id": "U3-1",
+          "scenario_id": "U3",
+          "success": true,
+          "candidate_id": 1,
+          "apple_pos": [
+            0.4025250254264928,
+            0.37718734516904195,
+            0.07888705765508842
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist": 0.022951971023005183,
+          "apple_z": 0.07888705765508842,
+          "on_plate": true,
+          "gripper_open": true,
+          "gripper_action": 0.0,
+          "near_home": true,
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "physical_evidence": {
+            "candidate_final_result": {
+              "candidate_id": 1,
+              "on_plate": true,
+              "xy_dist_to_plate": 0.022951971023005183,
+              "z_after": 0.07888705765508842,
+              "score": 100.0
+            },
+            "final_check": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "plate_pos": [
+                0.4,
+                0.4,
+                0.04
+              ],
+              "xy_dist_to_plate": 0.022951971023005183,
+              "apple_z": 0.07888705765508842,
+              "on_plate": true,
+              "released": true
+            },
+            "open_gripper": {
+              "apple_pos": [
+                0.4023856010401529,
+                0.3772177711306744,
+                0.0788855074018507
+              ],
+              "pinch_pos": [
+                0.40481632377344906,
+                0.37501080172678586,
+                0.059142546395946516
+              ],
+              "tcp_pos": [
+                0.41078247741457735,
+                0.37828531383095054,
+                0.08999999999999994
+              ],
+              "apple_z": 0.0788855074018507,
+              "pinch_distance": 0.020014085945566334,
+              "apple_to_pinch_xy": 0.0032831580765876616,
+              "last_skill_result": {
+                "skill": "open_gripper",
+                "success": true,
+                "reason": "gripper_opened",
+                "contact": {
+                  "left_contact": false,
+                  "right_contact": false
+                },
+                "gripper_action": 0.0,
+                "pinch_distance": 0.020014085945566334,
+                "object_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "extra": {}
+              }
+            },
+            "go_home": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "pinch_pos": [
+                0.4903084377241769,
+                0.138369303821998,
+                0.32537677505565077
+              ],
+              "tcp_pos": [
+                0.492,
+                0.134,
+                0.358
+              ],
+              "apple_z": 0.07888705765508842,
+              "pinch_distance": 0.3542557905407796,
+              "apple_to_pinch_xy": 0.25444053204523764,
+              "last_skill_result": {
+                "skill": "joint_move",
+                "success": true,
+                "reason": "ok"
+              }
+            }
+          }
+        },
+        "keyframes": [
+          {
+            "stage": "before_recovery",
+            "image_path": "keyframes/before_recovery.jpg",
+            "description": "恢复规划前的场景图像",
+            "used_for_retrieval": true
+          },
+          {
+            "stage": "after_recovery",
+            "image_path": "keyframes/after_recovery.jpg",
+            "description": "恢复执行后的场景图像",
+            "used_for_retrieval": false
+          }
+        ],
+        "result_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_002/result.json"
+      },
+      "promotion_history": [],
+      "memory_tier": "stm",
+      "memory_gate": {
+        "anomaly_score": 0.75,
+        "failure_score": 0.0,
+        "sim_real_gap_score": 0.0,
+        "recovery_utility_score": 1.0,
+        "surprise_score": 0.0,
+        "write_score": 0.3375,
+        "write_decision": "stm_only",
+        "trigger_events": [
+          "anomaly_detected",
+          "virtual_validation_passed",
+          "task_success"
+        ],
+        "explanation": {
+          "weights": {
+            "anomaly": 0.25,
+            "failure": 0.25,
+            "sim_real_gap": 0.25,
+            "recovery_utility": 0.15,
+            "surprise": 0.1
+          },
+          "validation_status": "simulation_validated",
+          "step_count": 8,
+          "has_structured_evidence": true,
+          "task_success": true
+        }
+      },
+      "sim_real_gap": {
+        "gap_id": "",
+        "gap_score": 0.0,
+        "pose_gap": {},
+        "contact_gap": {},
+        "outcome_gap": {},
+        "perception_gap": {},
+        "actuation_gap": {},
+        "robot_state_gap": {},
+        "scene_reconstruction_gap": {},
+        "uncertainty": 0.0,
+        "evidence": {}
+      },
+      "sim_real_pair": {
+        "pair_id": "",
+        "sim_experience_id": "",
+        "real_experience_id": "",
+        "paired_by": "",
+        "pair_score": 0.0,
+        "gap_score": 0.0,
+        "validation_status": "",
+        "created_at": "",
+        "updated_at": ""
+      },
+      "sandbox_calibration": {
+        "calibration_id": "",
+        "source_gap_ids": [],
+        "object_pose_bias": [],
+        "gripper_delay_bias": 0.0,
+        "slip_risk_bias": 0.0,
+        "contact_success_bias": 0.0,
+        "perception_noise_bias": [],
+        "applied_to_candidate": false,
+        "calibration_confidence": 0.0,
+        "details": {}
+      },
+      "critic_result": {
+        "overall_status": "pass",
+        "critic_risk_score": 0.0,
+        "collision": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "joint": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "gripper_contact": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "end_effector_pose": {
+          "status": "pass",
+          "flag_count": 0,
+          "rules": [],
+          "evidence": []
+        },
+        "rule_flags": [],
+        "feedback_for_rewrite": ""
+      },
+      "real_episode_ref": {
+        "raw_episode_id": "",
+        "hdf5_path": "",
+        "video_dir": "",
+        "keyframe_dir": "",
+        "robot_log_path": "",
+        "time_range": [],
+        "sensor_modalities": [],
+        "metadata": {}
+      },
+      "memory_tags": {}
+    }
+  ]
+}

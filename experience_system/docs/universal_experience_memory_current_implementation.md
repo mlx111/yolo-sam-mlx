@@ -46,7 +46,7 @@ experience_core/
 
 experience_adapters/
   r1pro_mujoco.py    # R1Pro task result -> ExperienceEntry
-  wrapper1_ur5e.py   # experiment-sim-wrapper1 MemoryV3+ -> ExperienceEntry
+  wrapper1_ur5e.py   # ur5e_mujoco MemoryV3+ -> ExperienceEntry
   real_episode.py    # real/pseudo-real episode JSON/目录 -> ExperienceEntry
 
 source/
@@ -265,7 +265,7 @@ python source/run_r1pro_task_chain.py \
   --universal-experience-lib results/memory/universal_experience_v1.json
 ```
 
-### 5.2 experiment-sim-wrapper1 UR5e
+### 5.2 ur5e_mujoco UR5e
 
 入口：
 
@@ -276,7 +276,7 @@ source/import_wrapper1_ur5e_memory.py
 作用：
 
 ```text
-读取 ../experiment-sim-wrapper1 的 MemoryV3+ JSON
+读取 ../ur5e_mujoco 的 MemoryV3+ JSON
 转换成通用 ExperienceEntry
 导入同一个 universal experience library
 ```
@@ -293,7 +293,7 @@ source 从原始 entry 继承：simulation / real / pseudo_real
 
 ```bash
 python source/import_wrapper1_ur5e_memory.py \
-  --input ../experiment-sim-wrapper1/acknowledge/sim_memory_weak.json \
+  --input ../ur5e_mujoco/acknowledge/sim_memory_weak.json \
   --universal-experience-lib results/memory/universal_experience_v1.json \
   --limit 3 \
   --report results/memory/wrapper1_ur5e_import_report.json
@@ -415,7 +415,7 @@ experience_core/gating.py
 
 ```text
 metrics
-recovery_success
+task_success
 task_success
 validation_status
 sim_real_gap
@@ -932,7 +932,7 @@ python source/run_r1pro_task_chain.py \
 
 # 2. 导入 wrapper1 UR5e memory
 python source/import_wrapper1_ur5e_memory.py \
-  --input ../experiment-sim-wrapper1/acknowledge/sim_memory_weak.json \
+  --input ../ur5e_mujoco/acknowledge/sim_memory_weak.json \
   --universal-experience-lib results/memory/universal_experience_v1.json \
   --limit 3
 
@@ -1143,7 +1143,7 @@ condition_id
 robot_type
 backend
 skill_sequence
-result.success / recovery_success
+result.success / task_success
 object_class
 empty_skill_name
 duplicate_experience_id
@@ -1153,14 +1153,14 @@ keyframe/log/video/HDF5 ref existence   # 可选
 真实/伪真实 episode 模板：
 
 ```text
-docs/real_episode_template.json
+experience_system/templates/r1pro_real_episode_template.json
 ```
 
 导入前校验：
 
 ```bash
 python source/validate_real_episode.py \
-  --input docs/real_episode_template.json \
+  --input experience_system/templates/r1pro_real_episode_template.json \
   --source real \
   --backend real_robot \
   --strict
@@ -1180,7 +1180,7 @@ python source/validate_real_episode.py \
 当前验证结果：
 
 ```text
-real_episode_template.json:
+r1pro_real_episode_template.json:
   error_count = 0
   warning_count = 0
   passed = true

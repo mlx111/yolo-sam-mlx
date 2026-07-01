@@ -9,10 +9,10 @@ from typing import Any
 
 from experience_adapters import R1ProMujocoAdapter
 from experience_core import ExperienceLibrary, SandboxCalibration, apply_critic, coerce_sandbox_initial_state, compute_group_calibrations
-from source.run_r1pro_task_chain import run_task_chain, run_task_plan_chain
+from source.legacy_r1pro.run_r1pro_task_chain import run_task_chain, run_task_plan_chain
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = Path(__file__).resolve().parents[1]
 GALAXEA_ROOT = REPO_ROOT / "galaxea_mujoco"
 
 
@@ -126,7 +126,7 @@ def calibration_risk(calibration: SandboxCalibration | dict[str, Any] | None) ->
 
 
 def sandbox_score(entry: Any, *, calibration: SandboxCalibration | dict[str, Any] | None = None) -> dict[str, Any]:
-    success = bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    success = bool(entry.result.get("success", entry.result.get("task_success", False)))
     task_success = bool(entry.result.get("task_success", False))
     critic_status = str(entry.critic_result.overall_status or "unknown")
     critic_risk = float(entry.critic_result.critic_risk_score or 0.0)

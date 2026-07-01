@@ -1,0 +1,10 @@
+{
+  "conditions": ["U1-2", "U1-5"],
+  "methods": ["direct_llm_weak"],
+  "trials_per_method": 2,
+  "seed_start": 95000,
+  "output_dir": "results/u1-25_prompt_smoke_v1",
+  "noise_scale": 0.0,
+  "no_viewer": true,
+  "no_inject": false
+}

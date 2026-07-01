@@ -13,6 +13,21 @@ import numpy as np
 DEFAULT_VISUAL_MODEL = os.getenv("VISUAL_RETRIEVAL_MODEL", "openai/clip-vit-base-patch32")
 
 
+def _repo_root() -> Path:
+    return Path(__file__).resolve().parents[2]
+
+
+def _relocate_stale_absolute_path(path: Path) -> Path | None:
+    parts = path.parts
+    for marker in ("galaxea_mujoco", "experience_system"):
+        if marker not in parts:
+            continue
+        relocated = (_repo_root() / Path(*parts[parts.index(marker):])).resolve()
+        if relocated.exists():
+            return relocated
+    return None
+
+
 def detect_visual_device() -> str:
     import torch
 
@@ -40,6 +55,11 @@ def image_paths_from_entry(entry: Any, base_dir: str | Path | None = None) -> li
         if path.is_absolute() and path.exists():
             paths.append(str(path.resolve()))
             continue
+        if path.is_absolute():
+            relocated = _relocate_stale_absolute_path(path)
+            if relocated is not None:
+                paths.append(str(relocated))
+                continue
         if base_dir is not None:
             resolved = Path(base_dir).resolve() / path
             if resolved.exists():
@@ -121,6 +141,20 @@ class VisualRetrievalIndex:
         self._eid_to_ids.setdefault(experience_id, []).extend(int(index) for index in ids)
         self._next_id += int(embedding.shape[0])
         return int(embedding.shape[0])
+
+    def remove(self, experience_id: str) -> None:
+        import faiss
+
+        if self._index is None:
+            return
+        ids = self._eid_to_ids.pop(str(experience_id), [])
+        if not ids:
+            return
+        if hasattr(self._index, "remove_ids"):
+            selector = faiss.IDSelectorArray(np.array(ids, dtype=np.int64))
+            self._index.remove_ids(selector)
+        for index in ids:
+            self._id_to_eid.pop(int(index), None)
 
     def search(self, query_image_paths: list[str], top_k: int = 5) -> list[tuple[str, float]]:
         import faiss

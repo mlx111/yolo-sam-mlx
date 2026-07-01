@@ -16,7 +16,7 @@ def _stable_id(prefix: str, *parts: str) -> str:
 
 
 def _success(entry: ExperienceEntry) -> bool:
-    return bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    return bool(entry.result.get("success", entry.result.get("task_success", False)))
 
 
 def _plan_signature(entry: ExperienceEntry) -> str:

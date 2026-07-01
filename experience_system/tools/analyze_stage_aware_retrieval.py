@@ -16,7 +16,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from experience_core import ExperienceLibrary, RetrievalQuery
-from source.run_r1pro_memory_policy_smoke import candidates_for_scenario, object_class_for_scenario
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import candidates_for_scenario, object_class_for_scenario
 
 
 STAGE_POLICIES = {

@@ -11,6 +11,18 @@ field_runtime_scene_observation_v1
 -> MuJoCo sandbox rollout
 ```
 
+Galaxea 当前桌面实验采用“任务开始即构建 runtime scene”的方式：
+
+```text
+任务开始拍照和识别桌面物体
+-> 生成 initial_runtime_scene.json / initial_runtime_scene.xml
+-> 真机执行原始技能序列
+-> 异常发生后在 initial_runtime_scene 中重放已执行技能前缀
+-> 在重放得到的异常状态中验证恢复计划
+```
+
+因此，当前版本不要求异常发生后从零重新构建场景。异常后相机如果被机械臂或物体遮挡，仍可使用任务开始时的 scene 和已执行 trace 进行 sandbox replay。
+
 模板文件：
 
 ```text
@@ -20,6 +32,13 @@ experience_system/templates/field_runtime_scene_observation_template.json
 ## 1. 为什么需要这个格式
 
 现场物体位置不是固定的，不能直接使用固定 G3/G4 XML。
+
+当前 Galaxea 桌面实验中，桌子参数固定；动态部分主要是桌面物体、障碍物和放置区域：
+
+```text
+固定：机器人模型、桌子、地面、灯光
+动态：apple / red box / green box 等桌面物体
+```
 
 必须先把真实观测整理为结构化 JSON，再生成 MuJoCo runtime XML。
 
@@ -194,7 +213,7 @@ place_zones
 metadata
 ```
 
-转换规则：
+通用转换规则：
 
 ```text
 table.pose -> table_pose
@@ -208,6 +227,37 @@ place_zones -> place_zones
 sensor_refs/calibration/robot_state -> metadata
 ```
 
+Galaxea 桌面实验第一版使用固定桌子策略：
+
+```text
+table_pose/table_size 不从 observation.table 读取
+table_pose = [0.2, 0.0, 0.737]
+table_size = [0.35, 0.35, 0.025]
+objects/obstacles/place_zones 从 observation 读取
+robot_state/sensor_refs/calibration 只写入 metadata
+```
+
+对应工具：
+
+```bash
+PYTHONPATH=experience_system python -B \
+  experience_system/tools/build_tabletop_runtime_scene_from_observation.py \
+  --observation results/field_atomic_real_experiment/initial_observation.json \
+  --save-runtime-scene galaxea_mujoco/scence/initial_runtime_scene.json \
+  --save-report results/field_atomic_real_experiment/initial_runtime_scene_conversion_report.json
+```
+
+再使用已有工具生成 XML：
+
+```bash
+PYTHONPATH=experience_system python -B \
+  experience_system/tools/build_runtime_sandbox_scene.py \
+  --scene galaxea_mujoco/scence/initial_runtime_scene.json \
+  --output galaxea_mujoco/scence/initial_runtime_scene.xml \
+  --base-dir galaxea_mujoco \
+  --report results/field_atomic_real_experiment/initial_runtime_scene_xml_report.json
+```
+
 ## 11. 现场最小可用要求
 
 最小必须有：
@@ -216,9 +266,10 @@ sensor_refs/calibration/robot_state -> metadata
 scene_id
 target object pose
 target object size
-table pose / size
 robot_model_include
 ```
+
+桌面实验中 table pose / size 使用固定默认值，不是最小必填项。
 
 建议同时有：
 
@@ -237,6 +288,7 @@ LiDAR 路径
 
 ```text
 系统定义了现场观测到 runtime sandbox scene 的统一 JSON 格式。
+Galaxea 桌面实验支持任务开始时构建 initial runtime scene，并在异常后通过技能 trace replay 恢复 sandbox 状态。
 ```
 
 不能声称：

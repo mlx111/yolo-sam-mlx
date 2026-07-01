@@ -69,7 +69,7 @@
     "yaw_uncertainty_rad": 0.1
   },
   "runtime_scene": {
-    "robot_model_include": "model.xml",
+    "robot_model_include": "model/model.xml",
     "timestep": 0.005,
     "target_object": "target_object"
   },

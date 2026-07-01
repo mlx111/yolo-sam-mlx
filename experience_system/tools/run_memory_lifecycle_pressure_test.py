@@ -56,7 +56,7 @@ def _arg_value(args: argparse.Namespace, config: dict[str, Any], name: str, defa
 
 
 def _success(entry: ExperienceEntry) -> bool:
-    return bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    return bool(entry.result.get("success", entry.result.get("task_success", False)))
 
 
 def _failure_like(entry: ExperienceEntry) -> bool:

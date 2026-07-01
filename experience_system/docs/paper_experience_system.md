@@ -74,7 +74,7 @@ digital-twin approach, the current sandbox calibration is deliberately
 limited: it shifts initial object state and contributes a risk penalty, but it
 does not claim learned dynamics, friction, or contact calibration.
 
-The legacy UR5e `memory_v2/memory_v3` line under `experiment-sim-wrapper1`
+The legacy UR5e `memory_v2/memory_v3` line under `ur5e_mujoco`
 should be treated as historical background. The current paper line is the
 R1Pro `experience_system` implementation.
 
@@ -246,7 +246,7 @@ The G3/clean smoke produced:
 - `decision=accept`
 
 This verifies that the LLM integration is inside `experience_system`, not
-through `experiment-sim-wrapper1`.
+through `ur5e_mujoco`.
 
 ### 5.6 LLM Multi-Candidate Search Ablation
 

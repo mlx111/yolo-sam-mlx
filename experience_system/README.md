@@ -43,7 +43,7 @@ retrieve experience memory
 ## LLM Settings
 
 Experience-system LLM calls are configured by `experience_system/.env`, not via
-`experiment-sim-wrapper1`. Shell environment variables with the same names take
+`ur5e_mujoco`. Shell environment variables with the same names take
 precedence over `.env` values.
 
 Recommended shared variables:

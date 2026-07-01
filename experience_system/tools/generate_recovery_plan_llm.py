@@ -13,7 +13,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from experience_core import ExperienceLibrary, build_stage_planner_context, normalize_recovery_plan, recovery_plan_prompt, invoke_recovery_plan_llm
-from source.run_r1pro_memory_policy_smoke import CandidatePlan, candidates_for_scenario
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import CandidatePlan, candidates_for_scenario
 from experience_core import run_stage_retrieval
 
 

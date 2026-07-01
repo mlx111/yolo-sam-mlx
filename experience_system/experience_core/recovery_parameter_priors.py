@@ -26,7 +26,7 @@ RECOVERY_PARAMETER_KEYS = {
 
 
 def _success(entry: ExperienceEntry) -> bool:
-    return bool(entry.result.get("task_success", entry.result.get("success", entry.result.get("recovery_success", False))))
+    return bool(entry.result.get("task_success", entry.result.get("success", entry.result.get("task_success", False))))
 
 
 def _failure_diagnosis(entry: ExperienceEntry) -> dict[str, Any]:
@@ -100,19 +100,22 @@ def _summarize_values(items: list[Any]) -> dict[str, Any]:
 def _default_parameter_candidates(primary_reason: str) -> list[dict[str, Any]]:
     if primary_reason in {"joint_limit_violation", "actuator_tracking_error"}:
         return [
-            {"recover_from_joint_limit": {"lateral_offset": -0.04, "forward_offset": -0.04, "height_level": "mid", "safe_pregrasp_distance": 0.04}},
-            {"recover_from_joint_limit": {"lateral_offset": 0.04, "forward_offset": -0.04, "height_level": "mid", "safe_pregrasp_distance": 0.05}},
-            {"slow_cartesian_approach": {"approach_velocity_limit": 0.2, "approach_segment_count": 10, "approach_force_scale": 0.45}},
+            {"reposition_base_for_reach": {"lateral_offset": -0.04, "forward_offset": -0.04}},
+            {"reposition_base_for_reach": {"lateral_offset": 0.04, "forward_offset": -0.04}},
+            {"adjust_torso_for_reach": {"height_level": "mid"}},
+            {"move_to_pregrasp": {"pregrasp_distance": 0.04}},
+            {"approach_object": {"approach_velocity_limit": 0.2, "approach_segment_count": 10}},
         ]
     if primary_reason in {"contact_lost", "slip_risk_high", "object_not_lifted"}:
         return [
-            {"slow_cartesian_approach": {"approach_velocity_limit": 0.18, "approach_segment_count": 12, "approach_force_scale": 0.4}},
-            {"retry_lift_after_grasp_check": {"retry_lift_dz": 0.1, "lift_tolerance": 0.04}},
-            {"retry_pregrasp_with_safer_offset": {"safe_pregrasp_distance": 0.04, "pregrasp_segment_count": 8}},
+            {"approach_object": {"approach_velocity_limit": 0.18, "approach_segment_count": 12}},
+            {"move_to_pregrasp": {"pregrasp_distance": 0.04}},
+            {"left_vertical_lift": {"lift_tolerance": 0.04}},
         ]
     return [
-        {"recover_from_joint_limit": {"lateral_offset": -0.04, "forward_offset": -0.04, "height_level": "mid", "safe_pregrasp_distance": 0.04}},
-        {"slow_cartesian_approach": {"approach_velocity_limit": 0.2, "approach_segment_count": 10}},
+        {"reposition_base_for_reach": {"lateral_offset": -0.04, "forward_offset": -0.04}},
+        {"adjust_torso_for_reach": {"height_level": "mid"}},
+        {"approach_object": {"approach_velocity_limit": 0.2, "approach_segment_count": 10}},
     ]
 
 

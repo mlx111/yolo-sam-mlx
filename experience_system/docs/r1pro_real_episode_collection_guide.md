@@ -51,7 +51,7 @@ PYTHONPATH=experience_system python -B \
 - `robot_type`：填写 `r1pro`。
 - `object_class`：目标物体类别。
 - `skill_sequence`：实际执行的技能序列。
-- `result`：实验结果，至少包含 `success`、`recovery_success`、`task_success`。
+- `result`：实验结果，至少包含 `success`、`task_success`。
 
 建议填写：
 
@@ -229,4 +229,3 @@ PYTHONDONTWRITEBYTECODE=1 python -B galaxea_mujoco/source/build_real_format_evid
 - 腕力日志路径存在，或写明不可用原因。
 - 至少有一张 keyframe 图像。
 - `validate_real_episode.py --check-refs` 的 `error_count=0`。
-

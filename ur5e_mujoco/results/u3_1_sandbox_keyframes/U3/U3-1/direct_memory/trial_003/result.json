@@ -1,0 +1,4494 @@
+{
+  "scenario_id": "U3",
+  "condition_id": "U3-1",
+  "failure_family": "gripper_failure",
+  "task_stage": "gripper_close",
+  "injection_stage": "after_gripper_close",
+  "injection_params": {},
+  "condition_injection": null,
+  "condition": "direct",
+  "noise_scale": 0.0,
+  "object_displaced_dx": 0.06,
+  "object_displaced_dy": 0.04,
+  "anomaly_detected": true,
+  "detection_method": "oracle",
+  "apple_z_before_lift": 0.030458169514898013,
+  "apple_z_after_lift": 0.3247293181092389,
+  "apple_z_after_inject": 0.3247293181092389,
+  "apple_z_after_recovery": 0.32867271384460345,
+  "task_success": true,
+  "perceived_z_before_lift": 0.02777295426167739,
+  "perceived_z_after_inject": null,
+  "perceived_position": null,
+  "observed_pos": null,
+  "contact_after_close": {
+    "left_contact": true,
+    "right_contact": true
+  },
+  "contact_after_lift": {
+    "left_contact": true,
+    "right_contact": true
+  },
+  "time_costs": {
+    "pre_recovery": 4.646,
+    "recovery": 184.365,
+    "total": 189.048
+  },
+  "plan_saved": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_003/plan.json",
+  "reconstruction_artifacts": null,
+  "virtual_validation_success": true,
+  "virtual_validation_z_before": 0.3287071927628408,
+  "virtual_validation_z_after": 0.07888339869957041,
+  "virtual_validation_z_change": -0.24982379406327043,
+  "executed_plan_source": "sandbox_candidate_selected_success",
+  "executed_recovery_steps": [
+    {
+      "action": "camera_rgbd_save",
+      "parameters": {}
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "apple"
+      }
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "plate"
+      }
+    },
+    {
+      "action": "close_gripper",
+      "parameters": {}
+    },
+    {
+      "action": "lift",
+      "parameters": {
+        "lift_height": 0.1
+      }
+    },
+    {
+      "action": "move_lifted_object_to",
+      "parameters": {
+        "target": "plate"
+      }
+    },
+    {
+      "action": "open_gripper",
+      "parameters": {}
+    },
+    {
+      "action": "go_home",
+      "parameters": {}
+    }
+  ],
+  "skill_results": [
+    {
+      "skill": "joint_move",
+      "success": true,
+      "reason": "\u5173\u8282\u8fd0\u52a8\u5230 q1",
+      "phase": "initial",
+      "source": "experiment",
+      "contact": {
+        "left_contact": false,
+        "right_contact": false
+      },
+      "gripper_action": 0.0,
+      "tracked_body": "",
+      "pinch_distance": 0.3532545627092866,
+      "object_pos": [
+        0.5628432770196728,
+        0.29407673359504277,
+        0.03036167156884383
+      ],
+      "target_pos": null,
+      "target_rot": null,
+      "final_pos": null,
+      "final_rot": null,
+      "pos_error": null,
+      "rot_error": null,
+      "extra": {
+        "task_status": "SUCCESS"
+      }
+    },
+    {
+      "skill": "move_to_pregrasp",
+      "success": true,
+      "reason": "\u79fb\u52a8\u5230\u9884\u6293\u53d6\u4f4d\u59ff",
+      "phase": "initial",
+      "source": "experiment",
+      "contact": {
+        "left_contact": false,
+        "right_contact": false
+      },
+      "gripper_action": 0.0,
+      "tracked_body": "",
+      "pinch_distance": 0.09640409058750087,
+      "object_pos": [
+        0.5632823674616447,
+        0.29448473940742764,
+        0.03070968511647103
+      ],
+      "target_pos": null,
+      "target_rot": null,
+      "final_pos": null,
+      "final_rot": null,
+      "pos_error": null,
+      "rot_error": null,
+      "extra": {
+        "task_status": "SUCCESS"
+      }
+    },
+    {
+      "skill": "approach_object",
+      "success": true,
+      "reason": "\u79fb\u52a8\u5230\u6293\u53d6\u4f4d\u59ff",
+      "phase": "initial",
+      "source": "experiment",
+      "contact": {
+        "left_contact": false,
+        "right_contact": false
+      },
+      "gripper_action": 0.0,
+      "tracked_body": "",
+      "pinch_distance": 0.03204694090514208,
+      "object_pos": [
+        0.5631263477948546,
+        0.2944512829994294,
+        0.030458169514898013
+      ],
+      "target_pos": null,
+      "target_rot": null,
+      "final_pos": null,
+      "final_rot": null,
+      "pos_error": null,
+      "rot_error": null,
+      "extra": {
+        "task_status": "SUCCESS"
+      }
+    },
+    {
+      "skill": "gripper_close",
+      "success": true,
+      "reason": "\u5939\u722a\u95ed\u5408",
+      "phase": "initial",
+      "source": "experiment",
+      "contact": {
+        "left_contact": true,
+        "right_contact": true
+      },
+      "gripper_action": 254.1999999999941,
+      "tracked_body": "",
+      "pinch_distance": 0.0356817200100656,
+      "object_pos": [
+        0.5650919956578986,
+        0.29513454303032766,
+        0.044013156394753644
+      ],
+      "target_pos": null,
+      "target_rot": null,
+      "final_pos": null,
+      "final_rot": null,
+      "pos_error": null,
+      "rot_error": null,
+      "extra": {
+        "task_status": "SUCCESS"
+      }
+    },
+    {
+      "skill": "lift",
+      "success": false,
+      "reason": "\u63d0\u8d77\u52a8\u4f5c\u5b8c\u6210\uff0c\u5f85\u68c0\u6d4b\u786e\u8ba4",
+      "phase": "initial",
+      "source": "experiment",
+      "contact": {
+        "left_contact": true,
+        "right_contact": true
+      },
+      "gripper_action": 254.1999999999941,
+      "tracked_body": "",
+      "pinch_distance": 0.03497584244701777,
+      "object_pos": [
+        0.5619851994006008,
+        0.29662493500420173,
+        0.3247293181092389
+      ],
+      "target_pos": null,
+      "target_rot": null,
+      "final_pos": null,
+      "final_rot": null,
+      "pos_error": null,
+      "rot_error": null,
+      "extra": {
+        "task_status": "UNKNOWN"
+      }
+    },
+    {
+      "skill": "anomaly_injected",
+      "success": true,
+      "reason": "\u6761\u4ef6\u5f02\u5e38\u5df2\u6ce8\u5165",
+      "phase": "initial",
+      "source": "experiment",
+      "contact": {
+        "left_contact": true,
+        "right_contact": true
+      },
+      "gripper_action": 254.1999999999941,
+      "tracked_body": "",
+      "pinch_distance": 0.03513556086026875,
+      "object_pos": [
+        0.5618493375852356,
+        0.2967930994579659,
+        0.32867271384460345
+      ],
+      "target_pos": null,
+      "target_rot": null,
+      "final_pos": null,
+      "final_rot": null,
+      "pos_error": null,
+      "rot_error": null,
+      "extra": {
+        "task_status": "SUCCESS"
+      }
+    }
+  ],
+  "method": "direct_memory",
+  "memory_policy": "hierarchical",
+  "trial_id": "U3-1_direct_memory_003",
+  "seed": 4903,
+  "strategy_family": "",
+  "prompt_profile": "task_list",
+  "experience_save_mode": "all",
+  "experience_saved": true,
+  "experience_save_skipped_reason": "",
+  "retrieved_memories": [
+    {
+      "experience_id": "0e16041b",
+      "partition": "validated_memory",
+      "source": "simulation",
+      "status": "success",
+      "validation_status": "simulation_validated",
+      "validation_source": "direct",
+      "score": 1.915,
+      "final_score": 1.815,
+      "structured_similarity": 0.81,
+      "validation_score": 0.75,
+      "gap_uncertainty": 0.0,
+      "critic_risk": 0.0,
+      "real_validation_bonus": 0.0,
+      "risk_penalty": 0.0,
+      "trust_bonus": 0.0,
+      "score_adjustment": 0.0,
+      "dual_source_adjustment": {
+        "gap_uncertainty": 0.0,
+        "critic_risk": 0.0,
+        "real_validation_bonus": 0.0,
+        "real_success_bonus": 0.0,
+        "paired_bonus": 0.0,
+        "gap_score_penalty": 0.0,
+        "gap_uncertainty_penalty": 0.0,
+        "sim_real_failure_penalty": 0.0,
+        "critic_penalty": 0.0,
+        "failure_penalty": 0.0,
+        "risk_penalty": 0.0,
+        "trust_bonus": 0.0,
+        "score_adjustment": 0.0
+      },
+      "action_coverage": 0.7,
+      "anomaly_state_similarity": 1.0,
+      "retrieval_key_similarity": 0.5,
+      "text_summary_similarity": 0.1,
+      "text_score": 0.005000000000000001,
+      "embedding_similarity": null,
+      "embedding_score": null,
+      "perception_similarity": null,
+      "scene_embedding_similarity": null,
+      "task_stage_match": 1.0,
+      "object_class_match": null,
+      "condition_match": null,
+      "text_summary": "\u6761\u4ef6 U3-1 \u4e0b\u5b8c\u6210\u5f02\u5e38\u5904\u7406\u8bc4\u4f30\uff0c\u5b8c\u6574\u4efb\u52a1\u95ed\u73af\u7ed3\u679c\u4e3a \u6210\u529f\u3002; condition_id=U3-1; scenario_id=U3; status=success; validation_status=simulation_validated; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]; criteria=candidate_condition_final_outcome, lift=None, pinch=None",
+      "text_summary_preview": "\u6761\u4ef6 U3-1 \u4e0b\u5b8c\u6210\u5f02\u5e38\u5904\u7406\u8bc4\u4f30\uff0c\u5b8c\u6574\u4efb\u52a1\u95ed\u73af\u7ed3\u679c\u4e3a \u6210\u529f\u3002; condition_id=U3-1; scenario_id=U3; status=success; validation_status=simulation_validated; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action",
+      "used_as": "positive",
+      "result_success": true,
+      "retrieval_key": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "task_stage": "gripper_close",
+        "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]",
+        "contact_pattern": "contact_close_and_lift",
+        "task_success": true,
+        "failure_type": "",
+        "gap_type": "",
+        "gap_uncertainty_bucket": "",
+        "critic_status": "pass",
+        "critic_flags": [],
+        "memory_type": "",
+        "memory_role": "",
+        "real_validated": false,
+        "pair_status": ""
+      },
+      "validation_evidence": {
+        "virtual_validation_success": true,
+        "task_success_criteria": {
+          "type": "candidate_condition_final_outcome",
+          "condition_id": "U3-1",
+          "scenario_id": "U3",
+          "success": true,
+          "candidate_id": 1,
+          "apple_pos": [
+            0.4025250254264928,
+            0.37718734516904195,
+            0.07888705765508842
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist": 0.022951971023005183,
+          "apple_z": 0.07888705765508842,
+          "on_plate": true,
+          "gripper_open": true,
+          "gripper_action": 0.0,
+          "near_home": true,
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "physical_evidence": {
+            "candidate_final_result": {
+              "candidate_id": 1,
+              "on_plate": true,
+              "xy_dist_to_plate": 0.022951971023005183,
+              "z_after": 0.07888705765508842,
+              "score": 100.0
+            },
+            "final_check": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "plate_pos": [
+                0.4,
+                0.4,
+                0.04
+              ],
+              "xy_dist_to_plate": 0.022951971023005183,
+              "apple_z": 0.07888705765508842,
+              "on_plate": true,
+              "released": true
+            },
+            "open_gripper": {
+              "apple_pos": [
+                0.4023856010401529,
+                0.3772177711306744,
+                0.0788855074018507
+              ],
+              "pinch_pos": [
+                0.40481632377344906,
+                0.37501080172678586,
+                0.059142546395946516
+              ],
+              "tcp_pos": [
+                0.41078247741457735,
+                0.37828531383095054,
+                0.08999999999999994
+              ],
+              "apple_z": 0.0788855074018507,
+              "pinch_distance": 0.020014085945566334,
+              "apple_to_pinch_xy": 0.0032831580765876616,
+              "last_skill_result": {
+                "skill": "open_gripper",
+                "success": true,
+                "reason": "gripper_opened",
+                "contact": {
+                  "left_contact": false,
+                  "right_contact": false
+                },
+                "gripper_action": 0.0,
+                "pinch_distance": 0.020014085945566334,
+                "object_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "extra": {}
+              }
+            },
+            "go_home": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "pinch_pos": [
+                0.4903084377241769,
+                0.138369303821998,
+                0.32537677505565077
+              ],
+              "tcp_pos": [
+                0.492,
+                0.134,
+                0.358
+              ],
+              "apple_z": 0.07888705765508842,
+              "pinch_distance": 0.3542557905407796,
+              "apple_to_pinch_xy": 0.25444053204523764,
+              "last_skill_result": {
+                "skill": "joint_move",
+                "success": true,
+                "reason": "ok"
+              }
+            }
+          }
+        },
+        "keyframes": [
+          {
+            "stage": "before_recovery",
+            "image_path": "keyframes/before_recovery.jpg",
+            "description": "\u6062\u590d\u89c4\u5212\u524d\u7684\u573a\u666f\u56fe\u50cf",
+            "used_for_retrieval": true
+          },
+          {
+            "stage": "after_recovery",
+            "image_path": "keyframes/after_recovery.jpg",
+            "description": "\u6062\u590d\u6267\u884c\u540e\u7684\u573a\u666f\u56fe\u50cf",
+            "used_for_retrieval": false
+          }
+        ],
+        "result_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_002/result.json"
+      },
+      "displacement_bucket": "",
+      "displacement_direction": "",
+      "contact_pattern": "contact_close_and_lift",
+      "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]",
+      "anomaly_state": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "available_actions": [
+          "approach_object",
+          "camera_rgbd_save",
+          "close_gripper",
+          "create_fixed_vertical_grasp",
+          "detect_object_pose",
+          "go_home",
+          "lift",
+          "move_lifted_object_to",
+          "move_to_pregrasp",
+          "open_gripper"
+        ],
+        "grasp_orientation_policy": "fixed_downward_no_graspnet"
+      },
+      "failure_taxonomy": {
+        "failure_diagnostics": {
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "task_success_criteria": {
+            "type": "candidate_condition_final_outcome",
+            "condition_id": "U3-1",
+            "scenario_id": "U3",
+            "success": true,
+            "candidate_id": 1,
+            "apple_pos": [
+              0.4025250254264928,
+              0.37718734516904195,
+              0.07888705765508842
+            ],
+            "plate_pos": [
+              0.4,
+              0.4,
+              0.04
+            ],
+            "xy_dist": 0.022951971023005183,
+            "apple_z": 0.07888705765508842,
+            "on_plate": true,
+            "gripper_open": true,
+            "gripper_action": 0.0,
+            "near_home": true,
+            "failed_predicates": [],
+            "failure_descriptions": {},
+            "physical_evidence": {
+              "candidate_final_result": {
+                "candidate_id": 1,
+                "on_plate": true,
+                "xy_dist_to_plate": 0.022951971023005183,
+                "z_after": 0.07888705765508842,
+                "score": 100.0
+              },
+              "final_check": {
+                "apple_pos": [
+                  0.4025250254264928,
+                  0.37718734516904195,
+                  0.07888705765508842
+                ],
+                "plate_pos": [
+                  0.4,
+                  0.4,
+                  0.04
+                ],
+                "xy_dist_to_plate": 0.022951971023005183,
+                "apple_z": 0.07888705765508842,
+                "on_plate": true,
+                "released": true
+              },
+              "open_gripper": {
+                "apple_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "pinch_pos": [
+                  0.40481632377344906,
+                  0.37501080172678586,
+                  0.059142546395946516
+                ],
+                "tcp_pos": [
+                  0.41078247741457735,
+                  0.37828531383095054,
+                  0.08999999999999994
+                ],
+                "apple_z": 0.0788855074018507,
+                "pinch_distance": 0.020014085945566334,
+                "apple_to_pinch_xy": 0.0032831580765876616,
+                "last_skill_result": {
+                  "skill": "open_gripper",
+                  "success": true,
+                  "reason": "gripper_opened",
+                  "contact": {
+                    "left_contact": false,
+                    "right_contact": false
+                  },
+                  "gripper_action": 0.0,
+                  "pinch_distance": 0.020014085945566334,
+                  "object_pos": [
+                    0.4023856010401529,
+                    0.3772177711306744,
+                    0.0788855074018507
+                  ],
+                  "extra": {}
+                }
+              },
+              "go_home": {
+                "apple_pos": [
+                  0.4025250254264928,
+                  0.37718734516904195,
+                  0.07888705765508842
+                ],
+                "pinch_pos": [
+                  0.4903084377241769,
+                  0.138369303821998,
+                  0.32537677505565077
+                ],
+                "tcp_pos": [
+                  0.492,
+                  0.134,
+                  0.358
+                ],
+                "apple_z": 0.07888705765508842,
+                "pinch_distance": 0.3542557905407796,
+                "apple_to_pinch_xy": 0.25444053204523764,
+                "last_skill_result": {
+                  "skill": "joint_move",
+                  "success": true,
+                  "reason": "ok"
+                }
+              }
+            }
+          },
+          "llm_plan_error": "",
+          "invalid_skill_steps": []
+        },
+        "candidate_failures": {
+          "physical_failure_critics": [
+            {
+              "candidate_id": 2,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "\u611f\u77e5\u524d\u7f6e\u6d41\u7a0b\u7f3a\u5931",
+                "root_cause": "\u6062\u590d\u6b65\u9aa4\u672a\u6267\u884ccamera_rgbd_save\u6280\u80fd\uff0c\u76f4\u63a5\u8c03\u7528detect_object_pose\u5bfc\u81f4RGB-D\u89c2\u6d4b\u6570\u636e\u7f3a\u5931\uff0c\u7269\u4f53\u4f4d\u59ff\u68c0\u6d4b\u5931\u8d25",
+                "corrective_direction": "\u5728\u6062\u590d\u6b65\u9aa4\u7684detect_object_pose\u524d\u63d2\u5165camera_rgbd_save\u6280\u80fd\uff0c\u786e\u4fdd\u83b7\u53d6RGB-D\u6570\u636e\u540e\u518d\u8fdb\u884c\u4f4d\u59ff\u68c0\u6d4b",
+                "missing_phases": [
+                  "camera_rgbd_save"
+                ],
+                "failed_predicates": [
+                  "\u82f9\u679c\u672a\u653e\u7f6e\u5230\u76d8\u5b50\uff08on_plate\u4e3anull\uff09",
+                  "\u63d0\u5347\u540ez\u5750\u6807\u65e0\u53d8\u5316\uff08z_change=0.0\uff0c\u63d0\u5347\u6216\u540e\u7eed\u6d41\u7a0b\u672a\u5b8c\u6210\uff09"
+                ],
+                "failure_evidence": {
+                  "sandbox_step_error": "perception_failed: camera_rgbd_missing_run_camera_rgbd_save_first",
+                  "recovery_steps": "\u4ec5\u6267\u884cdetect_object_pose\uff0c\u65e0camera_rgbd_save",
+                  "retrieved_valid_memory_plan": "\u5305\u542bcamera_rgbd_save\u4f5c\u4e3adetect_object_pose\u7684\u524d\u7f6e\u6b65\u9aa4"
+                },
+                "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u5b8c\u6210\u82f9\u679c\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u95ed\u73af\uff0c\u673a\u68b0\u81c2\u56de\u5b89\u5168\u72b6\u6001\u5e76\u5c06\u82f9\u679c\u653e\u81f3\u76d8\u5b50",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "\u4e0d\u8db3\u4ee5\u4ece\u65e5\u5fd7\u5224\u65ad\u5177\u4f53\u53c2\u6570\u9519\u8bef\u3002",
+                      "impact": "",
+                      "parameter_lesson": ""
+                    }
+                  ],
+                  "overall_lesson": "\u6062\u590d\u6d41\u7a0b\u9700\u4e25\u683c\u9075\u5faa\u8bb0\u5fc6\u4e2d\u6709\u6548\u8ba1\u5212\u7684\u6280\u80fd\u4f9d\u8d56\u5173\u7cfb\uff0c\u786e\u4fdd\u524d\u7f6e\u611f\u77e5\u6280\u80fd\uff08\u5982camera_rgbd_save\uff09\u6267\u884c\u540e\u518d\u8fdb\u884c\u4f4d\u59ff\u68c0\u6d4b"
+                }
+              }
+            },
+            {
+              "candidate_id": 3,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "\u6062\u590d\u6293\u53d6\u5931\u8d25\uff08close_gripper\u65e0\u63a5\u89e6\uff09",
+                "root_cause": "\u5f02\u5e38\u6062\u590d\u540e\u6267\u884copen_gripper\uff0c\u82f9\u679cz\u8f74\u4f4d\u7f6e\u4ece0.3287m\u9aa4\u964d\u81f30.0306m\u3001pinch_distance\u4ece0.0351m\u5267\u589e\u81f30.6312m\uff0cclose_gripper\u65f6\u673a\u68b0\u81c2TCP\u4e0e\u82f9\u679c\u65e0\u63a5\u89e6\uff0c\u65e0\u6cd5\u91cd\u65b0\u6293\u53d6",
+                "corrective_direction": "open_gripper\u540e\u9700\u5148\u6267\u884cdetect_object_pose\u83b7\u53d6\u82f9\u679c\u5f53\u524d\u4f4d\u59ff\uff0c\u518d\u901a\u8fc7move_to_pregrasp/approach_object\u8c03\u6574TCP\u81f3\u82f9\u679c\u9644\u8fd1\uff0c\u786e\u4fdd\u63a5\u89e6\u540e\u6267\u884cclose_gripper",
+                "missing_phases": [
+                  "detect_object_pose",
+                  "approach_object"
+                ],
+                "failed_predicates": [
+                  "on_plate\uff08\u82f9\u679c\u672a\u653e\u7f6e\u5230\u76d8\u5b50\uff09",
+                  "apple_z_after_recovery\uff08\u82f9\u679cz\u8f74\u4f4d\u7f6e\u8fc7\u4f4e\uff0c\u672a\u88ab\u63d0\u5347\uff09",
+                  "contact_after_close\uff08close_gripper\u65e0\u63a5\u89e6\uff09"
+                ],
+                "failure_evidence": {
+                  "apple_z_before_open_gripper": 0.3287071927628408,
+                  "apple_z_after_open_gripper": 0.030574524499451004,
+                  "pinch_distance_after_open_gripper": 0.6312218557274547,
+                  "close_gripper_error": "no_contact_after_close",
+                  "apple_z_after_recovery": 0.0
+                },
+                "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u6293\u53d6\u82f9\u679c\uff0c\u5b8c\u6210\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u5230\u76d8\u5b50\u5e76\u4f7f\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "\u6062\u590d\u6d41\u7a0b\u672a\u5305\u542b\u5e26\u4f4d\u7f6e\u53c2\u6570\u7684\u52a8\u4f5c\uff08\u5982detect_object_pose\u3001move_to_pregrasp\uff09\uff0c\u5bfc\u81f4open_gripper\u540e\u82f9\u679c\u4f4d\u7f6e\u504f\u5dee\u672a\u88ab\u4fee\u6b63\uff0cclose_gripper\u65f6\u65e0\u63a5\u89e6",
+                      "impact": "\u7f3a\u5c11\u4f4d\u7f6e\u53c2\u6570\u8c03\u6574\u4f7f\u673a\u68b0\u81c2TCP\u4e0e\u82f9\u679c\u4f4d\u7f6e\u4e0d\u5339\u914d\uff0c\u76f4\u63a5\u5bfc\u81f4\u6293\u53d6\u6062\u590d\u5931\u8d25",
+                      "parameter_lesson": "\u5f02\u5e38\u6062\u590d\u540e\u9700\u7ed3\u5408\u7269\u4f53\u4f4d\u7f6e\u68c0\u6d4b\uff0c\u52a8\u6001\u8c03\u6574\u673a\u68b0\u81c2\u4f4d\u59ff\u53c2\u6570\u4ee5\u786e\u4fdd\u6293\u53d6\u51c6\u786e\u6027"
+                    }
+                  ],
+                  "overall_lesson": "\u6062\u590d\u6d41\u7a0b\u4e2d\u9700\u901a\u8fc7\u53c2\u6570\u5316\u52a8\u4f5c\uff08\u5982detect_object_pose\u7684target_class\u3001move_to_pregrasp\u7684dx/dy/dz\uff09\u4fee\u6b63\u4f4d\u7f6e\u504f\u5dee\uff0c\u907f\u514d\u65e0\u63a5\u89e6\u6293\u53d6"
+                }
+              }
+            }
+          ],
+          "llm_selector": {
+            "selected_candidate_id": 1,
+            "candidate_scores": [
+              {
+                "candidate_id": 1,
+                "score": 100,
+                "task_success": true,
+                "reason": "\u6210\u529f\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u82f9\u679c\u81f3\u76d8\u5b50\u3001\u91ca\u653e\u5e76\u8fd4\u56de\u5b89\u5168\u72b6\u6001\uff0c\u7269\u7406\u6267\u884c\u9a8c\u8bc1\u4efb\u52a1\u95ed\u73af\u6210\u529f"
+              },
+              {
+                "candidate_id": 2,
+                "score": 30,
+                "task_success": false,
+                "reason": "\u611f\u77e5\u524d\u7f6e\u6d41\u7a0b\u7f3a\u5931\uff0cdetect_object_pose\u56e0\u672a\u6267\u884ccamera_rgbd_save\u5931\u8d25\uff0c\u4efb\u52a1\u672a\u5b8c\u6210"
+              },
+              {
+                "candidate_id": 3,
+                "score": 20,
+                "task_success": false,
+                "reason": "close_gripper\u65e0\u63a5\u89e6\u5bfc\u81f4\u6293\u53d6\u5931\u8d25\uff0c\u540e\u7eed\u6d41\u7a0b\u4e2d\u65ad\uff0c\u672a\u5b8c\u6210\u4efb\u52a1\u95ed\u73af"
+              }
+            ],
+            "ranking_reason": "\u5019\u90091\u7684\u7269\u7406\u6267\u884c\u7ed3\u679c\uff08\u82f9\u679c\u5728\u76d8\u5b50\u4e0a\u3001\u673a\u68b0\u81c2\u8fd4\u56de\u5b89\u5168\u72b6\u6001\uff09\u9a8c\u8bc1\u4efb\u52a1\u95ed\u73af\u6210\u529f\uff0c\u5019\u90092\u56e0\u611f\u77e5\u524d\u7f6e\u6d41\u7a0b\u7f3a\u5931\u4efb\u52a1\u5931\u8d25\uff0c\u5019\u90093\u56e0\u6293\u53d6\u5931\u8d25\u4efb\u52a1\u5931\u8d25\uff0c\u6545\u9009\u62e9\u4efb\u52a1\u6210\u529f\u4e14\u7269\u7406\u6548\u679c\u6700\u4f73\u7684\u5019\u90091",
+            "selection_confidence": 1.0,
+            "error": ""
+          }
+        }
+      },
+      "failure_stage": "",
+      "failure_type": ""
+    },
+    {
+      "experience_id": "e7fee17f",
+      "partition": "validated_memory",
+      "source": "simulation",
+      "status": "success",
+      "validation_status": "simulation_validated",
+      "validation_source": "direct",
+      "score": 1.915,
+      "final_score": 1.815,
+      "structured_similarity": 0.81,
+      "validation_score": 0.75,
+      "gap_uncertainty": 0.0,
+      "critic_risk": 0.0,
+      "real_validation_bonus": 0.0,
+      "risk_penalty": 0.0,
+      "trust_bonus": 0.0,
+      "score_adjustment": 0.0,
+      "dual_source_adjustment": {
+        "gap_uncertainty": 0.0,
+        "critic_risk": 0.0,
+        "real_validation_bonus": 0.0,
+        "real_success_bonus": 0.0,
+        "paired_bonus": 0.0,
+        "gap_score_penalty": 0.0,
+        "gap_uncertainty_penalty": 0.0,
+        "sim_real_failure_penalty": 0.0,
+        "critic_penalty": 0.0,
+        "failure_penalty": 0.0,
+        "risk_penalty": 0.0,
+        "trust_bonus": 0.0,
+        "score_adjustment": 0.0
+      },
+      "action_coverage": 0.7,
+      "anomaly_state_similarity": 1.0,
+      "retrieval_key_similarity": 0.5,
+      "text_summary_similarity": 0.1,
+      "text_score": 0.005000000000000001,
+      "embedding_similarity": null,
+      "embedding_score": null,
+      "perception_similarity": null,
+      "scene_embedding_similarity": null,
+      "task_stage_match": 1.0,
+      "object_class_match": null,
+      "condition_match": null,
+      "text_summary": "\u6761\u4ef6 U3-1 \u4e0b\u5b8c\u6210\u5f02\u5e38\u5904\u7406\u8bc4\u4f30\uff0c\u5b8c\u6574\u4efb\u52a1\u95ed\u73af\u7ed3\u679c\u4e3a \u6210\u529f\u3002; condition_id=U3-1; scenario_id=U3; status=success; validation_status=simulation_validated; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]; criteria=candidate_condition_final_outcome, lift=None, pinch=None",
+      "text_summary_preview": "\u6761\u4ef6 U3-1 \u4e0b\u5b8c\u6210\u5f02\u5e38\u5904\u7406\u8bc4\u4f30\uff0c\u5b8c\u6574\u4efb\u52a1\u95ed\u73af\u7ed3\u679c\u4e3a \u6210\u529f\u3002; condition_id=U3-1; scenario_id=U3; status=success; validation_status=simulation_validated; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action",
+      "used_as": "positive",
+      "result_success": true,
+      "retrieval_key": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "task_stage": "gripper_close",
+        "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]",
+        "contact_pattern": "contact_close_and_lift",
+        "task_success": true,
+        "failure_type": "",
+        "gap_type": "",
+        "gap_uncertainty_bucket": "",
+        "critic_status": "pass",
+        "critic_flags": [],
+        "memory_type": "",
+        "memory_role": "",
+        "real_validated": false,
+        "pair_status": ""
+      },
+      "validation_evidence": {
+        "virtual_validation_success": true,
+        "task_success_criteria": {
+          "type": "candidate_condition_final_outcome",
+          "condition_id": "U3-1",
+          "scenario_id": "U3",
+          "success": true,
+          "candidate_id": 1,
+          "apple_pos": [
+            0.4025250254264928,
+            0.37718734516904195,
+            0.07888705765508842
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist": 0.022951971023005183,
+          "apple_z": 0.07888705765508842,
+          "on_plate": true,
+          "gripper_open": true,
+          "gripper_action": 0.0,
+          "near_home": true,
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "physical_evidence": {
+            "candidate_final_result": {
+              "candidate_id": 1,
+              "on_plate": true,
+              "xy_dist_to_plate": 0.022951971023005183,
+              "z_after": 0.07888705765508842,
+              "score": 100.0
+            },
+            "final_check": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "plate_pos": [
+                0.4,
+                0.4,
+                0.04
+              ],
+              "xy_dist_to_plate": 0.022951971023005183,
+              "apple_z": 0.07888705765508842,
+              "on_plate": true,
+              "released": true
+            },
+            "open_gripper": {
+              "apple_pos": [
+                0.4023856010401529,
+                0.3772177711306744,
+                0.0788855074018507
+              ],
+              "pinch_pos": [
+                0.40481632377344906,
+                0.37501080172678586,
+                0.059142546395946516
+              ],
+              "tcp_pos": [
+                0.41078247741457735,
+                0.37828531383095054,
+                0.08999999999999994
+              ],
+              "apple_z": 0.0788855074018507,
+              "pinch_distance": 0.020014085945566334,
+              "apple_to_pinch_xy": 0.0032831580765876616,
+              "last_skill_result": {
+                "skill": "open_gripper",
+                "success": true,
+                "reason": "gripper_opened",
+                "contact": {
+                  "left_contact": false,
+                  "right_contact": false
+                },
+                "gripper_action": 0.0,
+                "pinch_distance": 0.020014085945566334,
+                "object_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "extra": {}
+              }
+            },
+            "go_home": {
+              "apple_pos": [
+                0.4025250254264928,
+                0.37718734516904195,
+                0.07888705765508842
+              ],
+              "pinch_pos": [
+                0.4903084377241769,
+                0.138369303821998,
+                0.32537677505565077
+              ],
+              "tcp_pos": [
+                0.492,
+                0.134,
+                0.358
+              ],
+              "apple_z": 0.07888705765508842,
+              "pinch_distance": 0.3542557905407796,
+              "apple_to_pinch_xy": 0.25444053204523764,
+              "last_skill_result": {
+                "skill": "joint_move",
+                "success": true,
+                "reason": "ok"
+              }
+            }
+          }
+        },
+        "keyframes": [
+          {
+            "stage": "before_recovery",
+            "image_path": "keyframes/before_recovery.jpg",
+            "description": "\u6062\u590d\u89c4\u5212\u524d\u7684\u573a\u666f\u56fe\u50cf",
+            "used_for_retrieval": true
+          },
+          {
+            "stage": "after_recovery",
+            "image_path": "keyframes/after_recovery.jpg",
+            "description": "\u6062\u590d\u6267\u884c\u540e\u7684\u573a\u666f\u56fe\u50cf",
+            "used_for_retrieval": false
+          }
+        ],
+        "result_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_001/result.json"
+      },
+      "displacement_bucket": "",
+      "displacement_direction": "",
+      "contact_pattern": "contact_close_and_lift",
+      "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]",
+      "anomaly_state": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "available_actions": [
+          "approach_object",
+          "camera_rgbd_save",
+          "close_gripper",
+          "create_fixed_vertical_grasp",
+          "detect_object_pose",
+          "go_home",
+          "lift",
+          "move_lifted_object_to",
+          "move_to_pregrasp",
+          "open_gripper"
+        ],
+        "grasp_orientation_policy": "fixed_downward_no_graspnet"
+      },
+      "failure_taxonomy": {
+        "failure_diagnostics": {
+          "failed_predicates": [],
+          "failure_descriptions": {},
+          "task_success_criteria": {
+            "type": "candidate_condition_final_outcome",
+            "condition_id": "U3-1",
+            "scenario_id": "U3",
+            "success": true,
+            "candidate_id": 1,
+            "apple_pos": [
+              0.4025250254264928,
+              0.37718734516904195,
+              0.07888705765508842
+            ],
+            "plate_pos": [
+              0.4,
+              0.4,
+              0.04
+            ],
+            "xy_dist": 0.022951971023005183,
+            "apple_z": 0.07888705765508842,
+            "on_plate": true,
+            "gripper_open": true,
+            "gripper_action": 0.0,
+            "near_home": true,
+            "failed_predicates": [],
+            "failure_descriptions": {},
+            "physical_evidence": {
+              "candidate_final_result": {
+                "candidate_id": 1,
+                "on_plate": true,
+                "xy_dist_to_plate": 0.022951971023005183,
+                "z_after": 0.07888705765508842,
+                "score": 100.0
+              },
+              "final_check": {
+                "apple_pos": [
+                  0.4025250254264928,
+                  0.37718734516904195,
+                  0.07888705765508842
+                ],
+                "plate_pos": [
+                  0.4,
+                  0.4,
+                  0.04
+                ],
+                "xy_dist_to_plate": 0.022951971023005183,
+                "apple_z": 0.07888705765508842,
+                "on_plate": true,
+                "released": true
+              },
+              "open_gripper": {
+                "apple_pos": [
+                  0.4023856010401529,
+                  0.3772177711306744,
+                  0.0788855074018507
+                ],
+                "pinch_pos": [
+                  0.40481632377344906,
+                  0.37501080172678586,
+                  0.059142546395946516
+                ],
+                "tcp_pos": [
+                  0.41078247741457735,
+                  0.37828531383095054,
+                  0.08999999999999994
+                ],
+                "apple_z": 0.0788855074018507,
+                "pinch_distance": 0.020014085945566334,
+                "apple_to_pinch_xy": 0.0032831580765876616,
+                "last_skill_result": {
+                  "skill": "open_gripper",
+                  "success": true,
+                  "reason": "gripper_opened",
+                  "contact": {
+                    "left_contact": false,
+                    "right_contact": false
+                  },
+                  "gripper_action": 0.0,
+                  "pinch_distance": 0.020014085945566334,
+                  "object_pos": [
+                    0.4023856010401529,
+                    0.3772177711306744,
+                    0.0788855074018507
+                  ],
+                  "extra": {}
+                }
+              },
+              "go_home": {
+                "apple_pos": [
+                  0.4025250254264928,
+                  0.37718734516904195,
+                  0.07888705765508842
+                ],
+                "pinch_pos": [
+                  0.4903084377241769,
+                  0.138369303821998,
+                  0.32537677505565077
+                ],
+                "tcp_pos": [
+                  0.492,
+                  0.134,
+                  0.358
+                ],
+                "apple_z": 0.07888705765508842,
+                "pinch_distance": 0.3542557905407796,
+                "apple_to_pinch_xy": 0.25444053204523764,
+                "last_skill_result": {
+                  "skill": "joint_move",
+                  "success": true,
+                  "reason": "ok"
+                }
+              }
+            }
+          },
+          "llm_plan_error": "",
+          "invalid_skill_steps": []
+        },
+        "candidate_failures": {
+          "physical_failure_critics": [
+            {
+              "candidate_id": 2,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "\u6062\u590d\u6d41\u7a0b\u524d\u7f6e\u68c0\u6d4b\u6b65\u9aa4\u7f3a\u5931\u5bfc\u81f4\u6293\u53d6\u4f4d\u59ff\u521b\u5efa\u5931\u8d25",
+                "root_cause": "\u6062\u590d\u6b65\u9aa4\u6267\u884ccreate_fixed_vertical_grasp\u524d\u672a\u6267\u884cdetect_object_pose\uff08\u53ca\u524d\u7f6e\u7684camera_rgbd_save\uff09\uff0c\u65e0\u6cd5\u83b7\u53d6\u76ee\u6807\u7269\u4f53\u4f4d\u59ff\uff0c\u5bfc\u81f4\u4f4d\u59ff\u521b\u5efa\u5931\u8d25\uff0c\u540e\u7eed\u6d41\u7a0b\u65e0\u6cd5\u63a8\u8fdb",
+                "corrective_direction": "\u6062\u590d\u6d41\u7a0b\u4e2d\u5728create_fixed_vertical_grasp\u524d\u8865\u5145\u6267\u884ccamera_rgbd_save\u548cdetect_object_pose\u4ee5\u83b7\u53d6\u7269\u4f53\u4f4d\u59ff\uff1b\u540e\u7eed\u9700\u8865\u5145move_lifted_object_to\uff08\u642c\u8fd0\u82f9\u679c\u5230\u76d8\u5b50\uff09\u3001open_gripper\uff08\u653e\u7f6e\u82f9\u679c\uff09\u3001go_home\uff08\u673a\u68b0\u81c2\u56de\u5b89\u5168\u72b6\u6001\uff09\u7b49\u6d41\u7a0b",
+                "missing_phases": [
+                  "camera_rgbd_save",
+                  "detect_object_pose",
+                  "move_lifted_object_to",
+                  "open_gripper"
+                ],
+                "failed_predicates": [
+                  "on_plate\uff08\u82f9\u679c\u672a\u653e\u7f6e\u5230\u76d8\u5b50\u4e0a\uff09",
+                  "go_home\uff08\u673a\u68b0\u81c2\u672a\u56de\u5230\u5b89\u5168\u72b6\u6001\uff09",
+                  "lift\uff08\u63d0\u5347\u52a8\u4f5c\u672a\u6709\u6548\u5b8c\u6210\uff0cz_change\u4e3a0\uff09"
+                ],
+                "failure_evidence": {
+                  "recovery_step_error": "object_detection_unavailable_run_detect_object_pose_first",
+                  "apple_z_after_recovery": 0.0,
+                  "z_change": 0.0,
+                  "create_fixed_vertical_grasp_status": "exception",
+                  "on_plate": null
+                },
+                "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u5b8c\u6210\u82f9\u679c\u7684\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u95ed\u73af\uff0c\u5c06\u82f9\u679c\u653e\u7f6e\u5230\u76d8\u5b50\u4e0a\u5e76\u4f7f\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "\u672c\u6b21\u5931\u8d25\u7531\u6d41\u7a0b\u7f3a\u5931\u5bfc\u81f4\uff0c\u975e\u53c2\u6570\u914d\u7f6e\u95ee\u9898",
+                      "impact": "\u53c2\u6570\u672a\u5bf9\u5931\u8d25\u8bc1\u636e\u4ea7\u751f\u5f71\u54cd\uff0c\u6d41\u7a0b\u7f3a\u5931\u76f4\u63a5\u5bfc\u81f4\u6062\u590d\u6b65\u9aa4\u6267\u884c\u5931\u8d25",
+                      "parameter_lesson": "\u672c\u6b21\u5931\u8d25\u975e\u53c2\u6570\u95ee\u9898\uff0c\u6d41\u7a0b\u6b65\u9aa4\u5b8c\u6574\u6027\u5bf9\u6062\u590d\u6210\u529f\u66f4\u5173\u952e"
+                    }
+                  ],
+                  "overall_lesson": "\u53c2\u6570\u95ee\u9898\u975e\u672c\u6b21\u5931\u8d25\u4e3b\u56e0\uff0c\u9700\u4f18\u5148\u786e\u4fdd\u6d41\u7a0b\u6b65\u9aa4\u5b8c\u6574\uff0c\u7279\u522b\u662f\u68c0\u6d4b\u548c\u4f4d\u59ff\u521b\u5efa\u7684\u524d\u7f6e\u6b65\u9aa4"
+                }
+              }
+            },
+            {
+              "candidate_id": 3,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "\u6d41\u7a0b\u7f3a\u5931\uff08\u68c0\u6d4b\u4e0e\u95ed\u73af\u9636\u6bb5\u7f3a\u5931\uff09",
+                "root_cause": "\u6062\u590d\u6d41\u7a0b\u672a\u6267\u884cdetect_object_pose\u83b7\u53d6\u76ee\u6807\u4f4d\u59ff\uff0c\u5bfc\u81f4approach_object\u56e0\u7f3a\u5c11\u4f4d\u59ff\u53c2\u8003\u6267\u884c\u5931\u8d25\uff1b\u4e14\u4efb\u52a1\u95ed\u73af\u6240\u9700\u7684move_lifted_object_to\uff08\u642c\u8fd0\uff09\u3001open_gripper\uff08\u653e\u7f6e\uff09\u3001go_home\uff08\u56de\u5b89\u5168\u72b6\u6001\uff09\u9636\u6bb5\u5747\u672a\u6267\u884c\uff0c\u65e0\u6cd5\u6ee1\u8db3\u4efb\u52a1\u76ee\u6807\u3002",
+                "corrective_direction": "\u5728recovery_steps\u4e2d\uff0c\u5148\u6267\u884cdetect_object_pose\uff08target_class=apple\uff09\u83b7\u53d6\u82f9\u679c\u4f4d\u59ff\uff0c\u518d\u6267\u884cdetect_object_pose\uff08target_class=plate\uff09\u83b7\u53d6\u76d8\u5b50\u4f4d\u59ff\uff1b\u5b8c\u6210approach_object\u540e\uff0c\u4f9d\u6b21\u6267\u884clift\uff08lift_height\u9700\u786e\u4fdd\u82f9\u679c\u79bb\u5f00\u521d\u59cb\u4f4d\u7f6e\uff09\u3001move_lifted_object_to\uff08target=plate\uff09",
+                "missing_phases": [
+                  "detect_object_pose",
+                  "lift",
+                  "move_lifted_object_to",
+                  "open_gripper"
+                ],
+                "failed_predicates": [
+                  "on_plate",
+                  "apple_z_change>0",
+                  "go_home_executed"
+                ],
+                "failure_evidence": {
+                  "step_trace_error": "approach_object requires detect_object_pose to create T_wo first",
+                  "z_change": 0.0,
+                  "on_plate": null,
+                  "recovery_steps": [
+                    "approach_object"
+                  ],
+                  "retrieved_memory_failure_type": "\u4efb\u52a1\u6d41\u7a0b\u7f3a\u5931\uff08\u653e\u7f6e\u9636\u6bb5\u672a\u6267\u884c\uff09"
+                },
+                "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u4f7f\u82f9\u679c\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u95ed\u73af\u5e76\u653e\u81f3\u76d8\u5b50\uff0c\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "approach_object",
+                      "bad_keys": [],
+                      "bad_values": {
+                        "dx": 0.0,
+                        "dy": 0.0,
+                        "dz": -0.02
+                      },
+                      "expected_direction": {
+                        "dx": "keep",
+                        "dy": "keep",
+                        "dz": "keep\uff08\u6216\u6839\u636edetect_object_pose\u7ed3\u679c\u8c03\u6574\uff09"
+                      },
+                      "reason": "\u56e0\u6062\u590d\u6d41\u7a0b\u7f3a\u5931detect_object_pose\uff0c\u5bfc\u81f4approach_object\u65e0\u6cd5\u57fa\u4e8e\u76ee\u6807\u4f4d\u59ff\u4f7f\u7528dx/dy/dz\u53c2\u6570\uff0c\u53c2\u6570\u672a\u751f\u6548",
+                      "impact": "z_change\u4e3a0\uff0c\u82f9\u679c\u672a\u88ab\u6709\u6548\u63a5\u8fd1\u6216\u63d0\u5347\uff0c\u4efb\u52a1\u76ee\u6807\u672a\u63a8\u8fdb",
+                      "parameter_lesson": ""
+                    }
+                  ],
+                  "overall_lesson": "\u53c2\u6570\u8c03\u6574\u9700\u4f9d\u8d56\u76ee\u6807\u4f4d\u59ff\u68c0\u6d4b\u7ed3\u679c\uff0c\u6d41\u7a0b\u4e2d\u9700\u786e\u4fdddetect_object_pose\u5148\u4e8eapproach_object\u6267\u884c\u4ee5\u63d0\u4f9b\u4f4d\u59ff\u53c2\u8003\uff0c\u907f\u514d\u53c2\u6570\u65e0\u6548\u5bfc\u81f4\u52a8\u4f5c\u5931\u8d25"
+                }
+              }
+            }
+          ],
+          "llm_selector": {
+            "selected_candidate_id": 1,
+            "candidate_scores": [
+              {
+                "candidate_id": 1,
+                "score": 100,
+                "task_success": true,
+                "reason": "\u5019\u90091\u5b8c\u6210\u4e86\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u82f9\u679c\u5230\u76d8\u5b50\u3001\u91ca\u653e\u82f9\u679c\u3001\u673a\u68b0\u81c2\u56de\u5b89\u5168\u72b6\u6001\u7684\u5b8c\u6574\u4efb\u52a1\u95ed\u73af\uff0c\u7269\u7406\u6267\u884c\u7ed3\u679c\u663e\u793a\u82f9\u679c\u5728\u76d8\u5b50\u4e0a\uff08on_plate=true\uff09\uff0c\u4efb\u52a1\u6210\u529f\u53c2\u6570\u5747\u4e3atrue\uff0c\u52a8\u4f5c\u5e8f\u5217\u6267\u884c\u65e0\u5f02\u5e38\u4e14\u6700\u7ec8\u6548\u679c\u7b26\u5408\u76ee\u6807"
+              },
+              {
+                "candidate_id": 2,
+                "score": 0,
+                "task_success": false,
+                "reason": "\u5019\u90092\u56e0\u6d41\u7a0b\u7f3a\u5931\uff08\u672a\u5148\u6267\u884c\u68c0\u6d4b\u6b65\u9aa4\uff09\u5bfc\u81f4\u6293\u53d6\u4f4d\u59ff\u521b\u5efa\u5931\u8d25\uff0c\u540e\u7eed\u6d41\u7a0b\u65e0\u6cd5\u63a8\u8fdb\uff0c\u4efb\u52a1\u672a\u5b8c\u6210"
+              },
+              {
+                "candidate_id": 3,
+                "score": 0,
+                "task_success": false,
+                "reason": "\u5019\u90093\u56e0\u672a\u5148\u6267\u884c\u68c0\u6d4b\u6b65\u9aa4\u5bfc\u81f4\u63a5\u8fd1\u7269\u4f53\u52a8\u4f5c\u5931\u8d25\uff0c\u4e14\u4efb\u52a1\u95ed\u73af\u6240\u9700\u540e\u7eed\u52a8\u4f5c\u5747\u672a\u6709\u6548\u6267\u884c\uff0c\u4efb\u52a1\u672a\u5b8c\u6210"
+              }
+            ],
+            "ranking_reason": "\u5019\u90091\u662f\u552f\u4e00\u4efb\u52a1\u95ed\u73af\u6210\u529f\uff08task_success=true\uff09\u7684\u5019\u9009\uff0c\u5176\u7269\u7406\u6267\u884c\u7ed3\u679c\u9a8c\u8bc1\u4e86\u82f9\u679c\u88ab\u6210\u529f\u653e\u7f6e\u5230\u76d8\u5b50\u4e14\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001\uff1b\u5019\u90092\u548c3\u56e0\u6d41\u7a0b\u7f3a\u5931\u6216\u52a8\u4f5c\u6267\u884c\u5931\u8d25\u5bfc\u81f4\u4efb\u52a1\u672a\u5b8c\u6210\uff0c\u56e0\u6b64\u4f18\u5148\u9009\u62e9\u5019\u90091",
+            "selection_confidence": 1.0,
+            "error": ""
+          }
+        }
+      },
+      "failure_stage": "",
+      "failure_type": ""
+    },
+    {
+      "experience_id": "0f4a8e32",
+      "partition": "failed_memory",
+      "source": "simulation",
+      "status": "failure",
+      "validation_status": "failed",
+      "validation_source": "direct",
+      "score": 1.2753478260869566,
+      "final_score": 1.5243478260869565,
+      "structured_similarity": 0.52,
+      "validation_score": 0.1,
+      "gap_uncertainty": 0.0,
+      "critic_risk": 0.55,
+      "real_validation_bonus": 0.0,
+      "risk_penalty": 0.349,
+      "trust_bonus": 0.0,
+      "score_adjustment": -0.349,
+      "dual_source_adjustment": {
+        "gap_uncertainty": 0.0,
+        "critic_risk": 0.55,
+        "real_validation_bonus": 0.0,
+        "real_success_bonus": 0.0,
+        "paired_bonus": 0.0,
+        "gap_score_penalty": 0.0,
+        "gap_uncertainty_penalty": 0.0,
+        "sim_real_failure_penalty": 0.0,
+        "critic_penalty": 0.099,
+        "failure_penalty": 0.25,
+        "risk_penalty": 0.349,
+        "trust_bonus": 0.0,
+        "score_adjustment": -0.349
+      },
+      "action_coverage": 0.5,
+      "anomaly_state_similarity": 1.0,
+      "retrieval_key_similarity": 0.5,
+      "text_summary_similarity": 0.08695652173913043,
+      "text_score": 0.004347826086956522,
+      "embedding_similarity": null,
+      "embedding_score": null,
+      "perception_similarity": null,
+      "scene_embedding_similarity": null,
+      "task_stage_match": 1.0,
+      "object_class_match": null,
+      "condition_match": null,
+      "text_summary": "\u6761\u4ef6 U3-1 \u4e0b\u5b8c\u6210\u5f02\u5e38\u5904\u7406\u8bc4\u4f30\uff0c\u5b8c\u6574\u4efb\u52a1\u95ed\u73af\u7ed3\u679c\u4e3a \u5931\u8d25\u3002; condition_id=U3-1; scenario_id=U3; status=failure; validation_status=failed; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"go_home\"}]; failure_reason=\u6700\u7ec8\u72b6\u6001\u672a\u6ee1\u8db3\u95ed\u73af\u8981\u6c42\uff1a\u76ee\u6807 apple \u6700\u7ec8\u6ca1\u6709\u7a33\u5b9a\u4f4d\u4e8e plate \u7684\u5141\u8bb8\u8303\u56f4\u5185\u3002\uff1b\u4efb\u52a1\u7ed3\u675f\u65f6\u5939\u722a\u4ecd\u672a\u6253\u5f00\uff0c\u8bf4\u660e\u76ee\u6807\u6ca1\u6709\u88ab\u91ca\u653e\u5230\u6700\u7ec8\u4f4d\u7f6e\u3002; criteria=condition_final_outcome, lift=0.3312267468711635, pinch=0.034235590166140445",
+      "text_summary_preview": "\u6761\u4ef6 U3-1 \u4e0b\u5b8c\u6210\u5f02\u5e38\u5904\u7406\u8bc4\u4f30\uff0c\u5b8c\u6574\u4efb\u52a1\u95ed\u73af\u7ed3\u679c\u4e3a \u5931\u8d25\u3002; condition_id=U3-1; scenario_id=U3; status=failure; validation_status=failed; skills=[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"actio",
+      "used_as": "negative",
+      "result_success": false,
+      "retrieval_key": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "task_stage": "gripper_close",
+        "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"go_home\"}]",
+        "contact_pattern": "contact_close_and_lift",
+        "task_success": false,
+        "failure_type": "\u4efb\u52a1\u6d41\u7a0b\u7f3a\u5931\uff08\u653e\u7f6e\u9636\u6bb5\u672a\u6267\u884c\uff09",
+        "gap_type": "",
+        "gap_uncertainty_bucket": "",
+        "critic_status": "warn",
+        "critic_flags": [
+          "virtual_validation_failed"
+        ],
+        "memory_type": "",
+        "memory_role": "",
+        "real_validated": false,
+        "pair_status": ""
+      },
+      "validation_evidence": {
+        "virtual_validation_success": false,
+        "task_success_criteria": {
+          "type": "condition_final_outcome",
+          "condition_id": "U3-1",
+          "scenario_id": "U3",
+          "success_criteria": "u3_gripper_recovered_and_lifted",
+          "success": false,
+          "apple_pos": [
+            0.4954983467978256,
+            0.1364169388506139,
+            0.3616849163860615
+          ],
+          "apple_quat": [
+            -0.5998315788813677,
+            0.5301764440010645,
+            -0.4438567293041876,
+            0.4026241660090236
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist": 0.28034971797025016,
+          "apple_z": 0.3616849163860615,
+          "orientation_error": 0.8946154717180256,
+          "orientation_ok": false,
+          "on_plate": false,
+          "gripper_open": false,
+          "gripper_action": 254.1999999999941,
+          "near_home": true,
+          "joint_error": 0.0,
+          "pinch_distance": 0.034235590166140445,
+          "lift_from_table": 0.3312267468711635,
+          "perception_error_to_apple": null,
+          "physical_evidence": {
+            "final_object": {
+              "apple_pos": [
+                0.4954983467978256,
+                0.1364169388506139,
+                0.3616849163860615
+              ],
+              "apple_quat": [
+                -0.5998315788813677,
+                0.5301764440010645,
+                -0.4438567293041876,
+                0.4026241660090236
+              ],
+              "apple_z": 0.3616849163860615,
+              "xy_dist_to_plate": 0.28034971797025016,
+              "on_plate": false,
+              "orientation_error": 0.8946154717180256,
+              "orientation_ok": false,
+              "lift_from_table": 0.3312267468711635
+            },
+            "gripper": {
+              "gripper_open": false,
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.034235590166140445
+            },
+            "robot": {
+              "near_home": true,
+              "joint_error": 0.0
+            },
+            "perception": {
+              "perceived_position": null,
+              "perception_error_to_apple": null,
+              "perception_failure": {}
+            },
+            "contacts": {
+              "contact_after_close": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "contact_after_lift": {
+                "left_contact": true,
+                "right_contact": true
+              }
+            },
+            "condition": {
+              "condition_injection": {},
+              "success_criteria": "u3_gripper_recovered_and_lifted"
+            },
+            "u2_grasp": {
+              "grasp_geometry_failure": {},
+              "grasp_verification": {},
+              "grasp_pose_adjustment": {},
+              "pregrasp_adjustment": {}
+            },
+            "u3_gripper": {
+              "gripper_state_check": {},
+              "gripper_force_adjustment": {},
+              "slip_recovery": {}
+            },
+            "u4_placement": {
+              "placement_verification": {},
+              "place_prepose": {},
+              "place_object_skill": {},
+              "release_object_skill": {}
+            },
+            "u5_path": {
+              "retreat_skill": {},
+              "safe_waypoint": {},
+              "path_replan": {},
+              "obstacle_avoidance": {},
+              "progress_validation": {},
+              "strategy_switch": {}
+            }
+          },
+          "failed_predicates": [
+            "not_on_plate",
+            "gripper_not_open"
+          ],
+          "failure_descriptions": {
+            "not_on_plate": "\u76ee\u6807 apple \u6700\u7ec8\u6ca1\u6709\u7a33\u5b9a\u4f4d\u4e8e plate \u7684\u5141\u8bb8\u8303\u56f4\u5185\u3002",
+            "gripper_not_open": "\u4efb\u52a1\u7ed3\u675f\u65f6\u5939\u722a\u4ecd\u672a\u6253\u5f00\uff0c\u8bf4\u660e\u76ee\u6807\u6ca1\u6709\u88ab\u91ca\u653e\u5230\u6700\u7ec8\u4f4d\u7f6e\u3002"
+          }
+        },
+        "keyframes": [
+          {
+            "stage": "before_recovery",
+            "image_path": "keyframes/before_recovery.jpg",
+            "description": "\u6062\u590d\u89c4\u5212\u524d\u7684\u573a\u666f\u56fe\u50cf",
+            "used_for_retrieval": true
+          },
+          {
+            "stage": "after_recovery",
+            "image_path": "keyframes/after_recovery.jpg",
+            "description": "\u6062\u590d\u6267\u884c\u540e\u7684\u573a\u666f\u56fe\u50cf",
+            "used_for_retrieval": false
+          }
+        ],
+        "result_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_000/result.json"
+      },
+      "displacement_bucket": "",
+      "displacement_direction": "",
+      "contact_pattern": "contact_close_and_lift",
+      "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"go_home\"}]",
+      "anomaly_state": {
+        "condition_id": "U3-1",
+        "scenario_id": "U3",
+        "available_actions": [
+          "approach_object",
+          "camera_rgbd_save",
+          "close_gripper",
+          "create_fixed_vertical_grasp",
+          "detect_object_pose",
+          "go_home",
+          "lift",
+          "move_lifted_object_to",
+          "move_to_pregrasp",
+          "open_gripper"
+        ],
+        "grasp_orientation_policy": "fixed_downward_no_graspnet"
+      },
+      "failure_taxonomy": {
+        "failure_type": "\u4efb\u52a1\u6d41\u7a0b\u7f3a\u5931\uff08\u653e\u7f6e\u9636\u6bb5\u672a\u6267\u884c\uff09",
+        "failure_diagnostics": {
+          "failed_predicates": [
+            "not_on_plate",
+            "gripper_not_open"
+          ],
+          "failure_descriptions": {
+            "not_on_plate": "\u76ee\u6807 apple \u6700\u7ec8\u6ca1\u6709\u7a33\u5b9a\u4f4d\u4e8e plate \u7684\u5141\u8bb8\u8303\u56f4\u5185\u3002",
+            "gripper_not_open": "\u4efb\u52a1\u7ed3\u675f\u65f6\u5939\u722a\u4ecd\u672a\u6253\u5f00\uff0c\u8bf4\u660e\u76ee\u6807\u6ca1\u6709\u88ab\u91ca\u653e\u5230\u6700\u7ec8\u4f4d\u7f6e\u3002"
+          },
+          "task_success_criteria": {
+            "type": "condition_final_outcome",
+            "condition_id": "U3-1",
+            "scenario_id": "U3",
+            "success_criteria": "u3_gripper_recovered_and_lifted",
+            "success": false,
+            "apple_pos": [
+              0.4954983467978256,
+              0.1364169388506139,
+              0.3616849163860615
+            ],
+            "apple_quat": [
+              -0.5998315788813677,
+              0.5301764440010645,
+              -0.4438567293041876,
+              0.4026241660090236
+            ],
+            "plate_pos": [
+              0.4,
+              0.4,
+              0.04
+            ],
+            "xy_dist": 0.28034971797025016,
+            "apple_z": 0.3616849163860615,
+            "orientation_error": 0.8946154717180256,
+            "orientation_ok": false,
+            "on_plate": false,
+            "gripper_open": false,
+            "gripper_action": 254.1999999999941,
+            "near_home": true,
+            "joint_error": 0.0,
+            "pinch_distance": 0.034235590166140445,
+            "lift_from_table": 0.3312267468711635,
+            "perception_error_to_apple": null,
+            "physical_evidence": {
+              "final_object": {
+                "apple_pos": [
+                  0.4954983467978256,
+                  0.1364169388506139,
+                  0.3616849163860615
+                ],
+                "apple_quat": [
+                  -0.5998315788813677,
+                  0.5301764440010645,
+                  -0.4438567293041876,
+                  0.4026241660090236
+                ],
+                "apple_z": 0.3616849163860615,
+                "xy_dist_to_plate": 0.28034971797025016,
+                "on_plate": false,
+                "orientation_error": 0.8946154717180256,
+                "orientation_ok": false,
+                "lift_from_table": 0.3312267468711635
+              },
+              "gripper": {
+                "gripper_open": false,
+                "gripper_action": 254.1999999999941,
+                "pinch_distance": 0.034235590166140445
+              },
+              "robot": {
+                "near_home": true,
+                "joint_error": 0.0
+              },
+              "perception": {
+                "perceived_position": null,
+                "perception_error_to_apple": null,
+                "perception_failure": {}
+              },
+              "contacts": {
+                "contact_after_close": {
+                  "left_contact": true,
+                  "right_contact": true
+                },
+                "contact_after_lift": {
+                  "left_contact": true,
+                  "right_contact": true
+                }
+              },
+              "condition": {
+                "condition_injection": {},
+                "success_criteria": "u3_gripper_recovered_and_lifted"
+              },
+              "u2_grasp": {
+                "grasp_geometry_failure": {},
+                "grasp_verification": {},
+                "grasp_pose_adjustment": {},
+                "pregrasp_adjustment": {}
+              },
+              "u3_gripper": {
+                "gripper_state_check": {},
+                "gripper_force_adjustment": {},
+                "slip_recovery": {}
+              },
+              "u4_placement": {
+                "placement_verification": {},
+                "place_prepose": {},
+                "place_object_skill": {},
+                "release_object_skill": {}
+              },
+              "u5_path": {
+                "retreat_skill": {},
+                "safe_waypoint": {},
+                "path_replan": {},
+                "obstacle_avoidance": {},
+                "progress_validation": {},
+                "strategy_switch": {}
+              }
+            },
+            "failed_predicates": [
+              "not_on_plate",
+              "gripper_not_open"
+            ],
+            "failure_descriptions": {
+              "not_on_plate": "\u76ee\u6807 apple \u6700\u7ec8\u6ca1\u6709\u7a33\u5b9a\u4f4d\u4e8e plate \u7684\u5141\u8bb8\u8303\u56f4\u5185\u3002",
+              "gripper_not_open": "\u4efb\u52a1\u7ed3\u675f\u65f6\u5939\u722a\u4ecd\u672a\u6253\u5f00\uff0c\u8bf4\u660e\u76ee\u6807\u6ca1\u6709\u88ab\u91ca\u653e\u5230\u6700\u7ec8\u4f4d\u7f6e\u3002"
+            }
+          },
+          "llm_plan_error": "",
+          "invalid_skill_steps": []
+        },
+        "candidate_failures": {
+          "physical_failure_critics": [
+            {
+              "candidate_id": 1,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "task_completion",
+                "failure_type": "\u4efb\u52a1\u6d41\u7a0b\u7f3a\u5931\uff08\u653e\u7f6e\u9636\u6bb5\u672a\u6267\u884c\uff09",
+                "root_cause": "\u6062\u590d\u8ba1\u5212\u672a\u5305\u542b\u5c06\u63d0\u5347\u540e\u7684\u82f9\u679c\u79fb\u52a8\u5230\u76d8\u5b50\uff08move_lifted_object_to\uff09\u548c\u6253\u5f00\u5939\u722a\uff08open_gripper\uff09\u7684\u9636\u6bb5\uff0c\u5bfc\u81f4\u82f9\u679c\u672a\u5b8c\u6210\u653e\u7f6e\u95ed\u73af",
+                "corrective_direction": "\u5728\u6062\u590d\u6b65\u9aa4\u7684go_home\u4e4b\u540e\uff0c\u6dfb\u52a0move_lifted_object_to\uff08target\u4e3a\u76d8\u5b50\uff09\u548copen_gripper\u6b65\u9aa4\uff0c\u4ee5\u5b8c\u6210\u653e\u7f6e\u548c\u91ca\u653e\u64cd\u4f5c",
+                "missing_phases": [
+                  "move_lifted_object_to",
+                  "open_gripper"
+                ],
+                "failed_predicates": [
+                  "on_plate\uff08\u82f9\u679c\u672a\u653e\u7f6e\u5230\u76d8\u5b50\u4e0a\uff09"
+                ],
+                "failure_evidence": {
+                  "recovery_steps": [
+                    "camera_rgbd_save",
+                    "detect_object_pose",
+                    "close_gripper",
+                    "lift",
+                    "go_home"
+                  ],
+                  "candidate_sandbox_final_result.on_plate": null,
+                  "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u4f7f\u82f9\u679c\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u95ed\u73af\u5e76\u8ba9\u673a\u68b0\u81c2\u56de\u5b89\u5168\u72b6\u6001"
+                },
+                "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u4f7f\u76ee\u6807\u7269\u4f53\uff08\u82f9\u679c\uff09\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u548c\u653e\u7f6e\u95ed\u73af\uff0c\u5e76\u8ba9\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001\uff0c\u6700\u540e\u628a\u82f9\u679c\u653e\u5230\u76d8\u5b50\u4e0a\u9762",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "\u4e0d\u8db3\u4ee5\u4ece\u65e5\u5fd7\u5224\u65ad\u5177\u4f53\u53c2\u6570\u9519\u8bef\u3002",
+                      "impact": "",
+                      "parameter_lesson": ""
+                    }
+                  ],
+                  "overall_lesson": "\u6062\u590d\u8ba1\u5212\u9700\u786e\u4fdd\u5305\u542b\u5b8c\u6574\u7684\u4efb\u52a1\u95ed\u73af\u6b65\u9aa4\uff08\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u3001\u91ca\u653e\uff09\uff0c\u53c2\u6570\u8bbe\u7f6e\u9700\u914d\u5408\u540e\u7eed\u6b65\u9aa4\u7684\u6267\u884c\u9700\u6c42"
+                }
+              }
+            },
+            {
+              "candidate_id": 2,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "\u6293\u53d6\u6062\u590d\u5931\u8d25\uff08close_gripper\u65e0\u63a5\u89e6\uff09",
+                "root_cause": "\u5f02\u5e38\u6ce8\u5165\u540e\uff0copen_gripper\u64cd\u4f5c\u5bfc\u81f4\u82f9\u679c\u4f4d\u7f6e\uff08z\u8f74\uff09\u548c\u673a\u68b0\u81c2\u6293\u53d6\u4f4d\u59ff\uff08pinch_distance\uff09\u504f\u79bb\uff0cclose_gripper\u65f6\u673a\u68b0\u81c2\u4e0e\u82f9\u679c\u65e0\u63a5\u89e6\uff0c\u65e0\u6cd5\u5b8c\u6210\u6293\u53d6\u6062\u590d\uff0c\u540e\u7eed\u6d41\u7a0b\u4e2d\u65ad",
+                "corrective_direction": "\u6062\u590d\u6d41\u7a0b\u4e2d\uff0copen_gripper\u540e\u5e94\u5148\u6267\u884cdetect_object_pose\u83b7\u53d6\u82f9\u679c\u5f53\u524d\u4f4d\u7f6e\uff0c\u518d\u901a\u8fc7create_fixed_vertical_grasp\u91cd\u65b0\u89c4\u5212\u6293\u53d6\u4f4d\u59ff\uff0c\u8c03\u6574move_to_pregrasp/approach_object\u7684\u4f4d\u7f6e\u53c2\u6570\uff0c\u786e\u4fddclose_gripper\u65f6\u673a\u68b0\u81c2\u4e0e\u82f9\u679c\u63a5\u89e6",
+                "missing_phases": [
+                  "detect_object_pose",
+                  "create_fixed_vertical_grasp",
+                  "move_to_pregrasp",
+                  "approach_object"
+                ],
+                "failed_predicates": [
+                  "contact_after_close\u4e3atrue",
+                  "apple_on_plate\u4e3atrue",
+                  "task_success\u4e3atrue"
+                ],
+                "failure_evidence": {
+                  "open_gripper\u540eapple_z\u53d8\u5316": "0.3287071927628408 \u2192 0.030574524499451004",
+                  "open_gripper\u540epinch_distance\u53d8\u5316": "0.03513331782072465 \u2192 0.6312218557274547",
+                  "close_gripper_error": "no_contact_after_close",
+                  "apple_on_plate": "null",
+                  "task_success": "false"
+                },
+                "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u5b8c\u6210\u82f9\u679c\u7684\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u95ed\u73af\uff0c\u5c06\u82f9\u679c\u653e\u7f6e\u5230\u76d8\u5b50\u4e0a\u5e76\u4f7f\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "unknown",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "\u6062\u590d\u6b65\u9aa4\u672a\u5305\u542b\u4f4d\u7f6e\u8c03\u6574\u53c2\u6570\u8bbe\u7f6e\uff0c\u5bfc\u81f4close_gripper\u65f6\u673a\u68b0\u81c2\u4e0e\u82f9\u679c\u4f4d\u7f6e\u504f\u79bb\uff0c\u65e0\u63a5\u89e6",
+                      "impact": "\u65e0\u6cd5\u5b8c\u6210\u6293\u53d6\u6062\u590d\uff0c\u540e\u7eed\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u6d41\u7a0b\u4e2d\u65ad",
+                      "parameter_lesson": "\u5f02\u5e38\u6062\u590d\u65f6\uff0c\u82e5\u7269\u4f53\u4f4d\u7f6e\u56e0\u64cd\u4f5c\u6539\u53d8\uff0c\u9700\u91cd\u65b0\u68c0\u6d4b\u4f4d\u7f6e\u5e76\u8c03\u6574\u6293\u53d6\u76f8\u5173\u7684\u4f4d\u7f6e\u53c2\u6570\uff08\u5982move_to_pregrasp\u7684dx/dy/dz\uff09\uff0c\u786e\u4fddclose_gripper\u65f6\u6709\u63a5\u89e6"
+                    }
+                  ],
+                  "overall_lesson": "\u5f02\u5e38\u6062\u590d\u6d41\u7a0b\u4e2d\uff0c\u5f53\u7269\u4f53\u4f4d\u7f6e\u56e0\u64cd\u4f5c\uff08\u5982open_gripper\uff09\u53d1\u751f\u53d8\u5316\u65f6\uff0c\u9700\u8865\u5145\u7269\u4f53\u4f4d\u7f6e\u68c0\u6d4b\u548c\u6293\u53d6\u4f4d\u59ff\u53c2\u6570\u8c03\u6574\u6b65\u9aa4\uff0c\u907f\u514d\u76f4\u63a5\u6267\u884cclose_gripper\u5bfc\u81f4\u65e0\u63a5\u89e6\u5931\u8d25"
+                }
+              }
+            },
+            {
+              "candidate_id": 3,
+              "critic": {
+                "enabled": true,
+                "model": "doubao-seed-1-6-vision-250815",
+                "failure_stage": "recovery_execution",
+                "failure_type": "\u6062\u590d\u6d41\u7a0b\u7f3a\u5931\u7269\u4f53\u68c0\u6d4b\u6b65\u9aa4\u5bfc\u81f4\u6293\u53d6\u4f4d\u59ff\u521b\u5efa\u5931\u8d25",
+                "root_cause": "\u6062\u590d\u6d41\u7a0b\u4e2d\u672a\u6267\u884cdetect_object_pose\u83b7\u53d6\u82f9\u679c\u4f4d\u59ff\uff0c\u76f4\u63a5\u6267\u884ccreate_fixed_vertical_grasp\uff0c\u5bfc\u81f4\u8be5\u6280\u80fd\u56e0\u7269\u4f53\u68c0\u6d4b\u4e0d\u53ef\u7528\u800c\u5f02\u5e38\uff0c\u65e0\u6cd5\u5b8c\u6210\u6062\u590d\u6293\u53d6\uff0c\u540e\u7eed\u4efb\u52a1\u65e0\u6cd5\u63a8\u8fdb",
+                "corrective_direction": "\u5728recovery_steps\u4e2d\u6dfb\u52a0detect_object_pose(target_class=\"apple\")\u6b65\u9aa4\uff0c\u786e\u4fddcreate_fixed_vertical_grasp\u80fd\u83b7\u53d6\u5230\u7269\u4f53\u4f4d\u59ff\u540e\u518d\u6267\u884c",
+                "missing_phases": [
+                  "detect_object_pose"
+                ],
+                "failed_predicates": [
+                  "on_plate\uff08\u82f9\u679c\u672a\u653e\u7f6e\u5230\u76d8\u5b50\u4e0a\uff09",
+                  "apple_z_after_recovery\uff08\u6062\u590d\u540e\u82f9\u679cz\u5750\u6807\u65e0\u53d8\u5316\uff0c\u63d0\u5347\u6216\u653e\u7f6e\u672a\u5b8c\u6210\uff09"
+                ],
+                "failure_evidence": {
+                  "virtual_step_error": "object_detection_unavailable_run_detect_object_pose_first",
+                  "recovery_step_missing_detect": true,
+                  "apple_z_after_recovery": 0.0,
+                  "sandbox_z_change": 0.0
+                },
+                "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u4f7f\u82f9\u679c\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u95ed\u73af\uff0c\u673a\u68b0\u81c2\u56de\u5b89\u5168\u72b6\u6001\uff0c\u6700\u7ec8\u5c06\u82f9\u679c\u653e\u5728\u76d8\u5b50\u4e0a",
+                "parameter_failure_summary": {
+                  "items": [
+                    {
+                      "action": "create_fixed_vertical_grasp",
+                      "bad_keys": [],
+                      "bad_values": {},
+                      "expected_direction": {},
+                      "reason": "\u8be5\u6280\u80fd\u9700\u8981\u4f9d\u8d56detect_object_pose\u7684\u8f93\u51fa\uff08\u7269\u4f53\u4f4d\u59ff\uff09\u6765\u521b\u5efa\u6293\u53d6\u4f4d\u59ff\uff0c\u4f46\u6062\u590d\u6d41\u7a0b\u672a\u6267\u884c\u8be5\u68c0\u6d4b\uff0c\u5bfc\u81f4\u6280\u80fd\u56e0\u8f93\u5165\u4e0d\u8db3\u800c\u5931\u8d25",
+                      "impact": "\u6280\u80fd\u6267\u884c\u5931\u8d25\uff0c\u65e0\u6cd5\u5b8c\u6210\u6062\u590d\u6293\u53d6\uff0c\u540e\u7eed\u4efb\u52a1\uff08\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\uff09\u65e0\u6cd5\u63a8\u8fdb",
+                      "parameter_lesson": "\u6062\u590d\u6d41\u7a0b\u4e2d\uff0ccreate_fixed_vertical_grasp\u7684\u6267\u884c\u5fc5\u987b\u786e\u4fdd\u5df2\u901a\u8fc7detect_object_pose\u83b7\u53d6\u76ee\u6807\u7269\u4f53\u4f4d\u59ff\uff0c\u5426\u5219\u4f1a\u56e0\u8f93\u5165\u4e0d\u8db3\u800c\u5931\u8d25"
+                    }
+                  ],
+                  "overall_lesson": "\u6062\u590d\u6d41\u7a0b\u4e2d\u7269\u4f53\u4f4d\u59ff\u76f8\u5173\u6280\u80fd\u7684\u6267\u884c\u987a\u5e8f\u9700\u4e25\u683c\u4fdd\u8bc1\u524d\u5e8f\u68c0\u6d4b\u6b65\u9aa4\u5b8c\u6210\uff0c\u4ee5\u63d0\u4f9b\u5fc5\u8981\u7684\u4f4d\u59ff\u4fe1\u606f\uff0c\u907f\u514d\u56e0\u8f93\u5165\u7f3a\u5931\u5bfc\u81f4\u6280\u80fd\u6267\u884c\u5931\u8d25"
+                }
+              }
+            }
+          ],
+          "llm_selector": {
+            "selected_candidate_id": 1,
+            "candidate_scores": [
+              {
+                "candidate_id": 1,
+                "score": 60,
+                "task_success": false,
+                "reason": "\u5b8c\u6210\u6293\u53d6\uff08\u5939\u722a\u95ed\u5408\u540e\u82f9\u679c\u968f\u673a\u68b0\u81c2\u79fb\u52a8\uff09\u3001\u63d0\u5347\u3001\u79fb\u52a8\uff08go_home\uff09\u6b65\u9aa4\uff0c\u7269\u7406\u4e0a\u82f9\u679c\u4f4d\u7f6e\u548c\u9ad8\u5ea6\u6709\u53d8\u5316\uff0c\u673a\u68b0\u81c2\u52a8\u4f5c\u6709\u6548\uff0c\u4f46\u56e0\u7f3a\u5c11move_lifted_object_to\u548copen_gripper\u6b65\u9aa4\u672a\u5b8c\u6210\u4efb\u52a1\u95ed\u73af"
+              },
+              {
+                "candidate_id": 2,
+                "score": 30,
+                "task_success": false,
+                "reason": "open_gripper\u5bfc\u81f4\u82f9\u679c\u4f4d\u7f6e\u5f02\u5e38\uff08z\u8f74\u5927\u5e45\u4e0b\u964d\uff09\uff0cclose_gripper\u56e0\u65e0\u63a5\u89e6\u6267\u884c\u5f02\u5e38\uff0c\u6293\u53d6\u6062\u590d\u5931\u8d25\uff0c\u540e\u7eed\u6d41\u7a0b\u4e2d\u65ad"
+              },
+              {
+                "candidate_id": 3,
+                "score": 20,
+                "task_success": false,
+                "reason": "\u672a\u6267\u884cdetect_object_pose\u5bfc\u81f4create_fixed_vertical_grasp\u56e0\u7269\u4f53\u4f4d\u59ff\u7f3a\u5931\u800c\u5931\u8d25\uff0c\u6062\u590d\u6d41\u7a0b\u672a\u63a8\u8fdb\uff0c\u7269\u7406\u65e0\u6709\u6548\u52a8\u4f5c"
+              }
+            ],
+            "ranking_reason": "\u5019\u90091\u867d\u672a\u5b8c\u6210\u4efb\u52a1\u95ed\u73af\uff0c\u4f46\u7269\u7406\u6267\u884c\u4e2d\u5b8c\u6210\u4e86\u6293\u53d6\u3001\u63d0\u5347\u3001\u79fb\u52a8\uff08go_home\uff09\u6b65\u9aa4\uff0c\u82f9\u679c\u4f4d\u7f6e\u548c\u9ad8\u5ea6\u6709\u53d8\u5316\uff0c\u673a\u68b0\u81c2\u52a8\u4f5c\u6709\u6548\uff1b\u5019\u90092\u56e0open_gripper\u5bfc\u81f4\u82f9\u679c\u4f4d\u7f6e\u5f02\u5e38\uff0cclose_gripper\u65e0\u63a5\u89e6\u5931\u8d25\uff0c\u6293\u53d6\u6062\u590d\u672a\u5b8c\u6210\uff1b\u5019\u90093\u56e0\u7f3a\u5c11\u7269\u4f53\u68c0\u6d4b\u5bfc\u81f4\u6293\u53d6\u4f4d\u59ff\u521b\u5efa\u5931\u8d25\uff0c\u6062\u590d\u6d41\u7a0b\u672a\u63a8\u8fdb\u3002\u5019\u90091\u7269\u7406\u6548\u679c\u6700\u597d\uff0c\u6700\u6709\u7ee7\u7eed\u6267\u884c\u4ef7\u503c\uff0c\u6545\u9009\u62e9\u3002",
+            "selection_confidence": 0.7,
+            "error": ""
+          }
+        },
+        "llm_critic": {
+          "enabled": true,
+          "model": "doubao-seed-1-6-vision-250815",
+          "failure_stage": "task_completion",
+          "failure_type": "\u4efb\u52a1\u6d41\u7a0b\u7f3a\u5931\uff08\u653e\u7f6e\u9636\u6bb5\u672a\u6267\u884c\uff09",
+          "root_cause": "\u6062\u590d\u8ba1\u5212\u672a\u5305\u542b\u5c06\u63d0\u5347\u540e\u7684\u82f9\u679c\u79fb\u52a8\u5230\u76d8\u5b50\uff08move_lifted_object_to\uff09\u548c\u6253\u5f00\u5939\u722a\uff08open_gripper\uff09\u7684\u9636\u6bb5\uff0c\u5bfc\u81f4\u82f9\u679c\u672a\u5b8c\u6210\u653e\u7f6e\u95ed\u73af\u4e14\u672a\u88ab\u91ca\u653e",
+          "corrective_direction": "\u5728\u6062\u590d\u6b65\u9aa4\u7684go_home\u4e4b\u540e\uff0c\u6dfb\u52a0move_lifted_object_to\uff08target\u53c2\u6570\u8bbe\u4e3a\u76d8\u5b50\u4f4d\u7f6e\uff09\u548copen_gripper\u6b65\u9aa4\uff0c\u4ee5\u5b8c\u6210\u82f9\u679c\u7684\u642c\u8fd0\u653e\u7f6e\u548c\u91ca\u653e\u64cd\u4f5c",
+          "missing_phases": [
+            "move_lifted_object_to",
+            "open_gripper"
+          ],
+          "failed_predicates": [
+            "not_on_plate",
+            "gripper_not_open"
+          ],
+          "failure_evidence": {
+            "recovery_steps": [
+              "camera_rgbd_save",
+              "detect_object_pose",
+              "close_gripper",
+              "lift",
+              "go_home"
+            ],
+            "task_success_criteria.on_plate": false,
+            "task_success_criteria.gripper_open": false,
+            "sandbox_physical_failures.candidate_1.on_plate": null,
+            "sandbox_physical_failures.candidate_1.xy_dist_to_plate": 0.28034971797025016
+          },
+          "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u4f7f\u76ee\u6807\u7269\u4f53\uff08\u82f9\u679c\uff09\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u548c\u653e\u7f6e\u95ed\u73af\uff0c\u5e76\u8ba9\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001\uff0c\u6700\u540e\u5c06\u82f9\u679c\u653e\u7f6e\u5230\u76d8\u5b50\u4e0a\u9762",
+          "parameter_failure_summary": {
+            "items": [
+              {
+                "action": "unknown",
+                "bad_keys": [],
+                "bad_values": {},
+                "expected_direction": {},
+                "reason": "\u4ece\u6267\u884c\u65e5\u5fd7\u548c\u6062\u590d\u7ed3\u679c\u770b\uff0c\u65e0\u660e\u786e\u53c2\u6570\u9519\u8bef\u8bc1\u636e\uff0c\u53c2\u6570\u95ee\u9898\u4e0d\u8db3\u4ee5\u5224\u65ad\u3002",
+                "impact": "\u65e0\u660e\u786e\u53c2\u6570\u5bfc\u81f4\u7684\u5931\u8d25\u5f71\u54cd\uff0c\u5931\u8d25\u4e3b\u56e0\u662f\u6d41\u7a0b\u7f3a\u5931\u3002",
+                "parameter_lesson": "\u6062\u590d\u8ba1\u5212\u7684\u53c2\u6570\u8bbe\u7f6e\u9700\u914d\u5408\u540e\u7eed\u6d41\u7a0b\u7684\u6267\u884c\u9700\u6c42\uff0c\u786e\u4fdd\u5404\u6b65\u9aa4\u53c2\u6570\u80fd\u652f\u6301\u4efb\u52a1\u95ed\u73af\u5b8c\u6210\u3002"
+              }
+            ],
+            "overall_lesson": "\u6062\u590d\u8ba1\u5212\u9700\u786e\u4fdd\u5305\u542b\u5b8c\u6574\u7684\u4efb\u52a1\u95ed\u73af\u6b65\u9aa4\uff08\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u3001\u91ca\u653e\uff09\uff0c\u53c2\u6570\u8bbe\u7f6e\u9700\u4e0e\u540e\u7eed\u6b65\u9aa4\u7684\u6267\u884c\u9700\u6c42\u76f8\u5339\u914d\uff0c\u907f\u514d\u56e0\u6d41\u7a0b\u7f3a\u5931\u5bfc\u81f4\u4efb\u52a1\u5931\u8d25\u3002"
+          }
+        },
+        "failure_stage": "task_completion",
+        "failed_predicates": [
+          "not_on_plate",
+          "gripper_not_open"
+        ],
+        "failure_evidence": {
+          "recovery_steps": [
+            "camera_rgbd_save",
+            "detect_object_pose",
+            "close_gripper",
+            "lift",
+            "go_home"
+          ],
+          "task_success_criteria.on_plate": false,
+          "task_success_criteria.gripper_open": false,
+          "sandbox_physical_failures.candidate_1.on_plate": null,
+          "sandbox_physical_failures.candidate_1.xy_dist_to_plate": 0.28034971797025016
+        },
+        "corrective_direction": "\u5728\u6062\u590d\u6b65\u9aa4\u7684go_home\u4e4b\u540e\uff0c\u6dfb\u52a0move_lifted_object_to\uff08target\u53c2\u6570\u8bbe\u4e3a\u76d8\u5b50\u4f4d\u7f6e\uff09\u548copen_gripper\u6b65\u9aa4\uff0c\u4ee5\u5b8c\u6210\u82f9\u679c\u7684\u642c\u8fd0\u653e\u7f6e\u548c\u91ca\u653e\u64cd\u4f5c",
+        "missing_phases": [
+          "move_lifted_object_to",
+          "open_gripper"
+        ],
+        "rule_critic": {
+          "enabled": true,
+          "rule_flags": [
+            {
+              "rule": "virtual_validation_failed",
+              "stage": "candidate_mujoco_execution",
+              "evidence": "candidate recovery plan failed in MuJoCo execution",
+              "label_cn": "MuJoCo\u5019\u9009\u8bc4\u4f30\u672a\u901a\u8fc7",
+              "description_cn": "\u5019\u9009\u6062\u590d\u65b9\u6848\u5728 MuJoCo \u4e2d\u6267\u884c\u5931\u8d25\uff1b\u8be5\u7ed3\u679c\u4f5c\u4e3a\u672c\u8f6e\u7269\u7406\u6267\u884c\u8bc1\u636e\u3002"
+            }
+          ],
+          "flag_count": 1
+        },
+        "cluster_id": "noise"
+      },
+      "failure_stage": "task_completion",
+      "failure_type": "\u4efb\u52a1\u6d41\u7a0b\u7f3a\u5931\uff08\u653e\u7f6e\u9636\u6bb5\u672a\u6267\u884c\uff09"
+    }
+  ],
+  "invalid_plan_count": 0,
+  "unsafe_gripper_action_count": 0,
+  "repeated_failure_detected": false,
+  "repeated_failure_matches": [],
+  "failed_plan_blocked": false,
+  "failed_plan_blocker_matches": [],
+  "failed_plan_blocker_threshold": 0.8,
+  "failed_plan_rewrite_triggered": false,
+  "failed_plan_rewrite_success": false,
+  "failed_plan_rewrite_error": "",
+  "failed_plan_rewrite_steps": [],
+  "inject_failed_plan_for_test": false,
+  "injected_failed_plan_for_test": false,
+  "injected_failed_experience_id": "",
+  "recovery_candidate_count": 3,
+  "execute_recovery_candidate_validation": true,
+  "failed_memory_hard_block": true,
+  "dedupe_failure_memory": true,
+  "candidate_plans": [
+    {
+      "candidate_id": 1,
+      "steps": [
+        {
+          "action": "camera_rgbd_save",
+          "parameters": {}
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "apple"
+          }
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "plate"
+          }
+        },
+        {
+          "action": "close_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "lift",
+          "parameters": {
+            "lift_height": 0.1
+          }
+        },
+        {
+          "action": "move_lifted_object_to",
+          "parameters": {
+            "target": "plate"
+          }
+        },
+        {
+          "action": "open_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "go_home",
+          "parameters": {}
+        }
+      ]
+    },
+    {
+      "candidate_id": 2,
+      "steps": [
+        {
+          "action": "open_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "close_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "camera_rgbd_save",
+          "parameters": {}
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "apple"
+          }
+        },
+        {
+          "action": "create_fixed_vertical_grasp",
+          "parameters": {}
+        },
+        {
+          "action": "lift",
+          "parameters": {
+            "lift_height": 0.2
+          }
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "plate"
+          }
+        },
+        {
+          "action": "move_lifted_object_to",
+          "parameters": {
+            "target": "plate"
+          }
+        },
+        {
+          "action": "open_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "go_home",
+          "parameters": {}
+        }
+      ]
+    },
+    {
+      "candidate_id": 3,
+      "steps": [
+        {
+          "action": "camera_rgbd_save",
+          "parameters": {}
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "apple"
+          }
+        },
+        {
+          "action": "approach_object",
+          "parameters": {
+            "dx": 0.0,
+            "dy": 0.0,
+            "dz": -0.02
+          }
+        },
+        {
+          "action": "close_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "lift",
+          "parameters": {
+            "lift_height": 0.1
+          }
+        },
+        {
+          "action": "detect_object_pose",
+          "parameters": {
+            "target_class": "plate"
+          }
+        },
+        {
+          "action": "move_lifted_object_to",
+          "parameters": {
+            "target": "plate"
+          }
+        },
+        {
+          "action": "open_gripper",
+          "parameters": {}
+        },
+        {
+          "action": "go_home",
+          "parameters": {}
+        }
+      ]
+    }
+  ],
+  "candidate_rejections": [],
+  "candidate_sandbox_results": [
+    {
+      "candidate_id": 1,
+      "sandbox_success": true,
+      "success": true,
+      "task_success": true,
+      "task_attempted": true,
+      "recovery_only": false,
+      "z_before": 0.3287071927628408,
+      "z_after": 0.07888339869957041,
+      "z_change": -0.24982379406327043,
+      "pinch_distance": 0.35426577731691455,
+      "on_plate": true,
+      "xy_dist_to_plate": 0.022955400863975267,
+      "score": 100.0,
+      "llm_score": 100.0,
+      "target_source": "current_mujoco_state_clone",
+      "step_trace": [
+        {
+          "step": 0,
+          "action": "camera_rgbd_save",
+          "params": {},
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968
+          },
+          "after": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968,
+            "last_skill_result": {
+              "skill": "camera_rgbd_save",
+              "success": true,
+              "reason": "rgbd_saved",
+              "contact": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.03513331782072465,
+              "object_pos": [
+                0.5618343230481251,
+                0.29679604353859457,
+                0.3287071927628408
+              ],
+              "extra": {
+                "stage": "recovery_camera_image",
+                "camera_name": "cam1",
+                "work_dir": "/tmp/wrapper1_detect_apple",
+                "rgb_path": "/tmp/wrapper1_detect_apple/color_img1.jpg",
+                "depth_path": "/tmp/wrapper1_detect_apple/depth.npy",
+                "camera_config": {
+                  "name": "cam1",
+                  "translation_mj": [
+                    1.2,
+                    -0.94,
+                    0.27
+                  ],
+                  "quat_wxyz_mj": [
+                    0.6598597613330566,
+                    0.6727867566574472,
+                    0.23886691360340562,
+                    0.2342769152635779
+                  ],
+                  "rotation_matrix_mj_from_cam": [
+                    [
+                      0.776113849120331,
+                      -0.01223317336868135,
+                      -0.6304741411612025
+                    ],
+                    [
+                      0.6305928109353583,
+                      0.015055385918129605,
+                      0.7759678099969739
+                    ],
+                    [
+                      -5.172416258081292e-07,
+                      -0.9998118247071236,
+                      0.01939884469612796
+                    ]
+                  ],
+                  "rotation_matrix_world_from_cam": [
+                    [
+                      0.776113849120331,
+                      -0.01223317336868135,
+                      -0.6304741411612025
+                    ],
+                    [
+                      0.6305928109353583,
+                      0.015055385918129605,
+                      0.7759678099969739
+                    ],
+                    [
+                      -5.172416258081292e-07,
+                      -0.9998118247071236,
+                      0.01939884469612796
+                    ]
+                  ],
+                  "intrinsics": {
+                    "fx": 772.5483399593904,
+                    "fy": 772.5483399593904,
+                    "cx": 240.0,
+                    "cy": 320.0,
+                    "width": 480,
+                    "height": 640
+                  },
+                  "fovy_deg": 45.0
+                }
+              }
+            }
+          },
+          "keyframe": null
+        },
+        {
+          "step": 1,
+          "action": "detect_object_pose",
+          "params": {
+            "target_class": "apple"
+          },
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968
+          },
+          "after": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968,
+            "last_skill_result": {
+              "skill": "detect_object_pose",
+              "success": true,
+              "reason": "object_pose_detected",
+              "contact": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.03513331782072465,
+              "object_pos": [
+                0.5618343230481251,
+                0.29679604353859457,
+                0.3287071927628408
+              ],
+              "extra": {
+                "target_class": "apple",
+                "detection_ok": true,
+                "confidence": 0.1558,
+                "mask_nonzero": 795,
+                "observed_pos": [
+                  0.5649932793377129,
+                  0.2775252520930513,
+                  0.3241079997738841
+                ],
+                "raw_points": 779,
+                "rgb_path": "/tmp/wrapper1_detect_apple/color_img1.jpg",
+                "depth_path": "/tmp/wrapper1_detect_apple/depth.npy",
+                "mask_path": "/tmp/wrapper1_detect_apple/mask.png",
+                "role": "grasp_target"
+              }
+            }
+          },
+          "keyframe": null
+        },
+        {
+          "step": 2,
+          "action": "detect_object_pose",
+          "params": {
+            "target_class": "plate"
+          },
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968
+          },
+          "after": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968,
+            "last_skill_result": {
+              "skill": "detect_object_pose",
+              "success": true,
+              "reason": "object_pose_detected",
+              "contact": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.03513331782072465,
+              "object_pos": [
+                0.5618343230481251,
+                0.29679604353859457,
+                0.3287071927628408
+              ],
+              "extra": {
+                "target_class": "plate",
+                "detection_ok": true,
+                "confidence": 0.3198,
+                "mask_nonzero": 1599,
+                "observed_pos": [
+                  0.4107394050819409,
+                  0.3783673515867006,
+                  0.042326977583676345
+                ],
+                "raw_points": 1599,
+                "rgb_path": "/tmp/wrapper1_detect_apple/color_img1.jpg",
+                "depth_path": "/tmp/wrapper1_detect_apple/depth.npy",
+                "mask_path": "/tmp/wrapper1_detect_plate/mask.png",
+                "role": "place_target"
+              }
+            }
+          },
+          "keyframe": null
+        },
+        {
+          "step": 3,
+          "action": "close_gripper",
+          "params": {},
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968
+          },
+          "after": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968,
+            "last_skill_result": {
+              "skill": "close_gripper",
+              "success": true,
+              "reason": "physical_contact_detected",
+              "contact": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.03513331782072465,
+              "object_pos": [
+                0.5618343230481251,
+                0.29679604353859457,
+                0.3287071927628408
+              ],
+              "extra": {
+                "contact": {
+                  "left_contact": true,
+                  "right_contact": true
+                }
+              }
+            }
+          },
+          "keyframe": {
+            "candidate_id": 1,
+            "stage": "after_close",
+            "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+            "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_close",
+            "used_for_retrieval": false
+          }
+        },
+        {
+          "step": 4,
+          "action": "lift",
+          "params": {
+            "lift_height": 0.1
+          },
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968
+          },
+          "after": {
+            "apple_pos": [
+              0.5653228753957884,
+              0.2979489175814413,
+              0.4262048107820391
+            ],
+            "pinch_pos": [
+              0.5638026509447243,
+              0.2944562304002546,
+              0.3933012482813904
+            ],
+            "tcp_pos": [
+              0.5624655558558799,
+              0.29411999495442864,
+              0.4305880576043498
+            ],
+            "apple_z": 0.4262048107820391,
+            "pinch_distance": 0.03312332065722478,
+            "apple_to_pinch_xy": 0.0038091923195395848,
+            "last_skill_result": {
+              "skill": "lift",
+              "success": true,
+              "reason": "object_lifted",
+              "contact": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.03312332065722478,
+              "object_pos": [
+                0.5653228753957884,
+                0.2979489175814413,
+                0.4262048107820391
+              ],
+              "extra": {
+                "object_z_before": 0.3287071927628408,
+                "object_z_after": 0.4262048107820391,
+                "object_z_change": 0.09749761801919826,
+                "success_z_change": 0.03,
+                "lift_height": 0.1
+              }
+            }
+          },
+          "keyframe": {
+            "candidate_id": 1,
+            "stage": "after_lift",
+            "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+            "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_lift",
+            "used_for_retrieval": false
+          }
+        },
+        {
+          "step": 5,
+          "action": "move_lifted_object_to",
+          "params": {
+            "target": "plate"
+          },
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.5653228753957884,
+              0.2979489175814413,
+              0.4262048107820391
+            ],
+            "pinch_pos": [
+              0.5638026509447243,
+              0.2944562304002546,
+              0.3933012482813904
+            ],
+            "tcp_pos": [
+              0.5624655558558799,
+              0.29411999495442864,
+              0.4305880576043498
+            ],
+            "apple_z": 0.4262048107820391,
+            "pinch_distance": 0.03312332065722478,
+            "apple_to_pinch_xy": 0.0038091923195395848
+          },
+          "after": {
+            "apple_pos": [
+              0.40912990410765077,
+              0.37768846177338805,
+              0.0965985277798104
+            ],
+            "pinch_pos": [
+              0.4074086339848961,
+              0.37367229675392233,
+              0.06436092358818804
+            ],
+            "tcp_pos": [
+              0.4107394050819408,
+              0.37836735158670054,
+              0.08999999999999983
+            ],
+            "apple_z": 0.0965985277798104,
+            "pinch_distance": 0.032532375817249735,
+            "apple_to_pinch_xy": 0.004369479637104178,
+            "last_skill_result": {
+              "skill": "move_lifted_object_to",
+              "success": true,
+              "reason": "lifted_object_move_executed",
+              "contact": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.032532375817249735,
+              "object_pos": [
+                0.40912990410765077,
+                0.37768846177338805,
+                0.0965985277798104
+              ],
+              "extra": {
+                "target": "plate",
+                "target_pos": [
+                  0.4107394050819409,
+                  0.3783673515867006,
+                  0.04
+                ],
+                "tcp_target_pos": [
+                  0.4107394050819409,
+                  0.3783673515867006,
+                  0.09
+                ],
+                "fixed_place_target_z": 0.04,
+                "fixed_tcp_release_height": 0.09,
+                "motion_result": {
+                  "skill": "cartesian_move",
+                  "success": true,
+                  "reason": "ok",
+                  "target_pos": [
+                    0.4107394050819409,
+                    0.3783673515867006,
+                    0.09
+                  ],
+                  "final_pos": [
+                    0.4107394050819408,
+                    0.37836735158670054,
+                    0.08999999999999983
+                  ],
+                  "pos_error": 2.0770370905276122e-16
+                }
+              }
+            }
+          },
+          "keyframe": {
+            "candidate_id": 1,
+            "stage": "after_move_lifted",
+            "image_path": "sandbox_keyframes/candidate_001_after_move_lifted.jpg",
+            "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_move_lifted",
+            "used_for_retrieval": false
+          }
+        },
+        {
+          "step": 6,
+          "action": "open_gripper",
+          "params": {},
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.40912990410765077,
+              0.37768846177338805,
+              0.0965985277798104
+            ],
+            "pinch_pos": [
+              0.4074086339848961,
+              0.37367229675392233,
+              0.06436092358818804
+            ],
+            "tcp_pos": [
+              0.4107394050819408,
+              0.37836735158670054,
+              0.08999999999999983
+            ],
+            "apple_z": 0.0965985277798104,
+            "pinch_distance": 0.032532375817249735,
+            "apple_to_pinch_xy": 0.004369479637104178
+          },
+          "after": {
+            "apple_pos": [
+              0.402301753458489,
+              0.37720575583287425,
+              0.07888767571006018
+            ],
+            "pinch_pos": [
+              0.4047737049364824,
+              0.3750917640666427,
+              0.059141487141597504
+            ],
+            "tcp_pos": [
+              0.4107394050819408,
+              0.37836735158670054,
+              0.08999999999999983
+            ],
+            "apple_z": 0.07888767571006018,
+            "pinch_distance": 0.02001228293520094,
+            "apple_to_pinch_xy": 0.0032526151474234636,
+            "last_skill_result": {
+              "skill": "open_gripper",
+              "success": true,
+              "reason": "gripper_opened",
+              "contact": {
+                "left_contact": false,
+                "right_contact": false
+              },
+              "gripper_action": 0.0,
+              "pinch_distance": 0.02001228293520094,
+              "object_pos": [
+                0.402301753458489,
+                0.37720575583287425,
+                0.07888767571006018
+              ],
+              "extra": {}
+            }
+          },
+          "keyframe": null
+        },
+        {
+          "step": 7,
+          "action": "go_home",
+          "params": {},
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.402301753458489,
+              0.37720575583287425,
+              0.07888767571006018
+            ],
+            "pinch_pos": [
+              0.4047737049364824,
+              0.3750917640666427,
+              0.059141487141597504
+            ],
+            "tcp_pos": [
+              0.4107394050819408,
+              0.37836735158670054,
+              0.08999999999999983
+            ],
+            "apple_z": 0.07888767571006018,
+            "pinch_distance": 0.02001228293520094,
+            "apple_to_pinch_xy": 0.0032526151474234636
+          },
+          "after": {
+            "apple_pos": [
+              0.40246340804483555,
+              0.3771771594749813,
+              0.07888339869957041
+            ],
+            "pinch_pos": [
+              0.4903084540613584,
+              0.13837079298199384,
+              0.3253768229338278
+            ],
+            "tcp_pos": [
+              0.492,
+              0.134,
+              0.358
+            ],
+            "apple_z": 0.07888339869957041,
+            "pinch_distance": 0.35426577731691455,
+            "apple_to_pinch_xy": 0.2544508455227219,
+            "last_skill_result": {
+              "skill": "joint_move",
+              "success": true,
+              "reason": "ok"
+            }
+          },
+          "keyframe": null
+        },
+        {
+          "step": 8,
+          "action": "_sandbox_task_success_check",
+          "params": {},
+          "status": "ok",
+          "before": {},
+          "after": {
+            "apple_pos": [
+              0.40246340804483555,
+              0.3771771594749813,
+              0.07888339869957041
+            ],
+            "plate_pos": [
+              0.4,
+              0.4,
+              0.04
+            ],
+            "xy_dist_to_plate": 0.022955400863975267,
+            "apple_z": 0.07888339869957041,
+            "on_plate": true,
+            "released": true
+          },
+          "keyframe": null
+        }
+      ],
+      "keyframes": [
+        {
+          "candidate_id": 1,
+          "stage": "after_close",
+          "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+          "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_close",
+          "used_for_retrieval": false
+        },
+        {
+          "candidate_id": 1,
+          "stage": "after_lift",
+          "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+          "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_lift",
+          "used_for_retrieval": false
+        },
+        {
+          "candidate_id": 1,
+          "stage": "after_move_lifted",
+          "image_path": "sandbox_keyframes/candidate_001_after_move_lifted.jpg",
+          "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_move_lifted",
+          "used_for_retrieval": false
+        }
+      ],
+      "llm_selector_reason": "\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u81f3\u76d8\u5b50\u3001\u91ca\u653e\u3001\u673a\u68b0\u81c2\u56de\u5bb6\uff0c\u7269\u7406\u6267\u884c\u7ed3\u679c\u663e\u793a\u82f9\u679c\u5728\u76d8\u5b50\u4e0a\uff08on_plate=true\uff09\uff0c\u4efb\u52a1\u95ed\u73af\u6210\u529f",
+      "llm_task_success": true,
+      "selected_for_output": true
+    },
+    {
+      "candidate_id": 2,
+      "sandbox_success": false,
+      "success": false,
+      "task_success": false,
+      "task_attempted": true,
+      "recovery_only": false,
+      "z_before": 0.3287071927628408,
+      "z_after": 0.030696336525697265,
+      "z_change": -0.2980108562371436,
+      "pinch_distance": 0.6192810890992684,
+      "on_plate": null,
+      "xy_dist_to_plate": null,
+      "score": 30.0,
+      "llm_score": 30.0,
+      "target_source": "current_mujoco_state_clone",
+      "step_trace": [
+        {
+          "step": 0,
+          "action": "open_gripper",
+          "params": {},
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968
+          },
+          "after": {
+            "apple_pos": [
+              0.562657434612086,
+              0.2941606172430044,
+              0.030574524499451004
+            ],
+            "pinch_pos": [
+              -0.0362757881087508,
+              0.12516115544700177,
+              0.13621167602250975
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.030574524499451004,
+            "pinch_distance": 0.6312218557274547,
+            "apple_to_pinch_xy": 0.6223197115358841,
+            "last_skill_result": {
+              "skill": "open_gripper",
+              "success": true,
+              "reason": "gripper_opened",
+              "contact": {
+                "left_contact": false,
+                "right_contact": false
+              },
+              "gripper_action": 0.0,
+              "pinch_distance": 0.6312218557274547,
+              "object_pos": [
+                0.562657434612086,
+                0.2941606172430044,
+                0.030574524499451004
+              ],
+              "extra": {}
+            }
+          },
+          "keyframe": null
+        },
+        {
+          "apple_pos": [
+            0.562657434612086,
+            0.2941606172430044,
+            0.030574524499451004
+          ],
+          "pinch_pos": [
+            -0.0362757881087508,
+            0.12516115544700177,
+            0.13621167602250975
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.030574524499451004,
+          "pinch_distance": 0.6312218557274547,
+          "apple_to_pinch_xy": 0.6223197115358841,
+          "action": "close_gripper",
+          "status": "exception",
+          "error": "no_contact_after_close",
+          "params": {}
+        }
+      ],
+      "keyframes": [],
+      "candidate_failure_critic": {
+        "enabled": true,
+        "model": "doubao-seed-1-6-vision-250815",
+        "failure_stage": "recovery_execution",
+        "failure_type": "\u6062\u590d\u6267\u884c\u65f6\u6293\u53d6\u63a5\u89e6\u5931\u8d25",
+        "root_cause": "\u5f02\u5e38\u6062\u590d\u540eopen_gripper\u5bfc\u81f4\u82f9\u679c\u4f4d\u7f6e\u5927\u5e45\u53d8\u5316\uff08z\u4ece0.3287\u964d\u81f30.0305\u3001xy\u504f\u79fb\uff09\uff0cclose_gripper\u65f6\u5939\u722a\u4f4d\u7f6e\u4e0e\u82f9\u679c\u4f4d\u7f6e\u4e0d\u5339\u914d\uff0c\u65e0\u63a5\u89e6\u5bfc\u81f4\u6293\u53d6\u5931\u8d25\uff0c\u540e\u7eed\u4efb\u52a1\u65e0\u6cd5\u63a8\u8fdb",
+        "corrective_direction": "\u6062\u590d\u6d41\u7a0b\u4e2d\u52a0\u5165detect_object_pose\u91cd\u65b0\u5b9a\u4f4d\u82f9\u679c\uff0c\u518d\u901a\u8fc7move_to_pregrasp/approach_object\u8c03\u6574\u5939\u722a\u4f4d\u7f6e\u81f3\u82f9\u679c\u9644\u8fd1\uff0c\u786e\u4fddclose_gripper\u65f6\u63a5\u89e6\uff1b\u6062\u590d\u540e\u9700\u6267\u884clift\u3001move_lifted_object_to\uff08\u653e\u7f6e\u5230\u76d8\u5b50\uff09\u3001open_gripper\u3001go_home\u5b8c\u6210\u4efb\u52a1\u95ed\u73af",
+        "missing_phases": [
+          "detect_object_pose",
+          "move_to_pregrasp",
+          "approach_object",
+          "lift"
+        ],
+        "failed_predicates": [
+          "\u82f9\u679c\u88ab\u6210\u529f\u6293\u53d6\uff08close_gripper\u6709\u63a5\u89e6\uff09",
+          "\u82f9\u679c\u88ab\u63d0\u5347\uff08lift\u6210\u529f\uff09",
+          "\u82f9\u679c\u88ab\u653e\u7f6e\u5230\u76d8\u5b50\uff08on_plate\u4e3atrue\uff09",
+          "\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001\uff08go_home\u6210\u529f\uff09"
+        ],
+        "failure_evidence": {
+          "open_gripper\u540eapple_z\u53d8\u5316": "0.3287\u21920.0305\uff08z_change=-0.298\uff09",
+          "open_gripper\u540epinch_distance\u53d8\u5316": "0.0351\u21920.6312",
+          "close_gripper\u9519\u8bef\u7c7b\u578b": "no_contact_after_close",
+          "sandbox_physical_failures_z_change": "-0.298"
+        },
+        "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u5b8c\u6210\u82f9\u679c\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u81f3\u76d8\u5b50\u3001\u653e\u7f6e\u3001\u673a\u68b0\u81c2\u56de\u5b89\u5168\u72b6\u6001\u7684\u95ed\u73af\u4efb\u52a1",
+        "parameter_failure_summary": {
+          "items": [
+            {
+              "action": "unknown",
+              "bad_keys": [],
+              "bad_values": {},
+              "expected_direction": {},
+              "reason": "\u6062\u590d\u6b65\u9aa4\u4ec5\u5305\u542bopen/close\uff0c\u7f3a\u5c11\u4f4d\u7f6e\u8c03\u6574\u52a8\u4f5c\uff0c\u5bfc\u81f4\u5939\u722a\u4f4d\u7f6e\u4e0e\u82f9\u679c\u4f4d\u7f6e\u4e0d\u5339\u914d",
+              "impact": "close_gripper\u65f6\u65e0\u63a5\u89e6\uff0c\u76f4\u63a5\u5bfc\u81f4\u6293\u53d6\u5931\u8d25\uff0c\u540e\u7eed\u4efb\u52a1\u65e0\u6cd5\u63a8\u8fdb",
+              "parameter_lesson": "\u5f02\u5e38\u6062\u590d\u540e\u7269\u4f53\u4f4d\u7f6e\u53ef\u80fd\u7a81\u53d8\uff0c\u6062\u590d\u6d41\u7a0b\u9700\u5305\u542b\u4f4d\u7f6e\u68c0\u6d4b\u4e0e\u4f4d\u59ff\u8c03\u6574\u6b65\u9aa4"
+            }
+          ],
+          "overall_lesson": "\u5f02\u5e38\u6062\u590d\u540e\u9700\u4f18\u5148\u68c0\u6d4b\u7269\u4f53\u4f4d\u7f6e\u5e76\u8c03\u6574\u6267\u884c\u5668\u4f4d\u59ff\uff0c\u907f\u514d\u4f9d\u8d56\u9ed8\u8ba4\u4f4d\u59ff\u6267\u884c\u6293\u53d6\u7c7b\u52a8\u4f5c"
+        }
+      },
+      "llm_selector_reason": "open_gripper\u5bfc\u81f4\u82f9\u679c\u4f4d\u7f6e\u7a81\u53d8\uff0cclose_gripper\u65e0\u63a5\u89e6\u6293\u53d6\u5931\u8d25\uff0c\u540e\u7eed\u4efb\u52a1\u672a\u63a8\u8fdb\uff0c\u4efb\u52a1\u672a\u5b8c\u6210",
+      "llm_task_success": false
+    },
+    {
+      "candidate_id": 3,
+      "sandbox_success": false,
+      "success": false,
+      "task_success": false,
+      "task_attempted": true,
+      "recovery_only": false,
+      "z_before": 0.3287071927628408,
+      "z_after": 0.3287071927628408,
+      "z_change": 0.0,
+      "pinch_distance": 0.03513331782072465,
+      "on_plate": null,
+      "xy_dist_to_plate": null,
+      "score": 20.0,
+      "llm_score": 20.0,
+      "target_source": "current_mujoco_state_clone",
+      "step_trace": [
+        {
+          "step": 0,
+          "action": "camera_rgbd_save",
+          "params": {},
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968
+          },
+          "after": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968,
+            "last_skill_result": {
+              "skill": "camera_rgbd_save",
+              "success": true,
+              "reason": "rgbd_saved",
+              "contact": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.03513331782072465,
+              "object_pos": [
+                0.5618343230481251,
+                0.29679604353859457,
+                0.3287071927628408
+              ],
+              "extra": {
+                "stage": "recovery_camera_image",
+                "camera_name": "cam1",
+                "work_dir": "/tmp/wrapper1_detect_apple",
+                "rgb_path": "/tmp/wrapper1_detect_apple/color_img1.jpg",
+                "depth_path": "/tmp/wrapper1_detect_apple/depth.npy",
+                "camera_config": {
+                  "name": "cam1",
+                  "translation_mj": [
+                    1.2,
+                    -0.94,
+                    0.27
+                  ],
+                  "quat_wxyz_mj": [
+                    0.6598597613330566,
+                    0.6727867566574472,
+                    0.23886691360340562,
+                    0.2342769152635779
+                  ],
+                  "rotation_matrix_mj_from_cam": [
+                    [
+                      0.776113849120331,
+                      -0.01223317336868135,
+                      -0.6304741411612025
+                    ],
+                    [
+                      0.6305928109353583,
+                      0.015055385918129605,
+                      0.7759678099969739
+                    ],
+                    [
+                      -5.172416258081292e-07,
+                      -0.9998118247071236,
+                      0.01939884469612796
+                    ]
+                  ],
+                  "rotation_matrix_world_from_cam": [
+                    [
+                      0.776113849120331,
+                      -0.01223317336868135,
+                      -0.6304741411612025
+                    ],
+                    [
+                      0.6305928109353583,
+                      0.015055385918129605,
+                      0.7759678099969739
+                    ],
+                    [
+                      -5.172416258081292e-07,
+                      -0.9998118247071236,
+                      0.01939884469612796
+                    ]
+                  ],
+                  "intrinsics": {
+                    "fx": 772.5483399593904,
+                    "fy": 772.5483399593904,
+                    "cx": 240.0,
+                    "cy": 320.0,
+                    "width": 480,
+                    "height": 640
+                  },
+                  "fovy_deg": 45.0
+                }
+              }
+            }
+          },
+          "keyframe": null
+        },
+        {
+          "step": 1,
+          "action": "detect_object_pose",
+          "params": {
+            "target_class": "apple"
+          },
+          "status": "ok",
+          "before": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968
+          },
+          "after": {
+            "apple_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "pinch_pos": [
+              0.5609842373258043,
+              0.29368906994066996,
+              0.29372185168377524
+            ],
+            "tcp_pos": [
+              0.5624655558558801,
+              0.29411999495442875,
+              0.3305880576043497
+            ],
+            "apple_z": 0.3287071927628408,
+            "pinch_distance": 0.03513331782072465,
+            "apple_to_pinch_xy": 0.003221169146985968,
+            "last_skill_result": {
+              "skill": "detect_object_pose",
+              "success": true,
+              "reason": "object_pose_detected",
+              "contact": {
+                "left_contact": true,
+                "right_contact": true
+              },
+              "gripper_action": 254.1999999999941,
+              "pinch_distance": 0.03513331782072465,
+              "object_pos": [
+                0.5618343230481251,
+                0.29679604353859457,
+                0.3287071927628408
+              ],
+              "extra": {
+                "target_class": "apple",
+                "detection_ok": true,
+                "confidence": 0.1558,
+                "mask_nonzero": 795,
+                "observed_pos": [
+                  0.5649932793377129,
+                  0.2775252520930513,
+                  0.3241079997738841
+                ],
+                "raw_points": 779,
+                "rgb_path": "/tmp/wrapper1_detect_apple/color_img1.jpg",
+                "depth_path": "/tmp/wrapper1_detect_apple/depth.npy",
+                "mask_path": "/tmp/wrapper1_detect_apple/mask.png",
+                "role": "grasp_target"
+              }
+            }
+          },
+          "keyframe": null
+        },
+        {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968,
+          "action": "approach_object",
+          "status": "exception",
+          "error": "approach_object requires detect_object_pose to create T_wo first",
+          "params": {
+            "dx": 0.0,
+            "dy": 0.0,
+            "dz": -0.02
+          }
+        }
+      ],
+      "keyframes": [],
+      "candidate_failure_critic": {
+        "enabled": true,
+        "model": "doubao-seed-1-6-vision-250815",
+        "failure_stage": "recovery_execution",
+        "failure_type": "\u6280\u80fd\u4f9d\u8d56\u7f3a\u5931\u5bfc\u81f4\u6267\u884c\u5f02\u5e38",
+        "root_cause": "\u6062\u590d\u6d41\u7a0b\u4e2d\u672a\u6267\u884ccreate_fixed_vertical_grasp\u6280\u80fd\uff0c\u5bfc\u81f4approach_object\u56e0\u7f3a\u5c11\u76ee\u6807\u4f4d\u59ff\uff08T_wo\uff09\u800c\u6267\u884c\u5f02\u5e38\uff0c\u540e\u7eed\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u7b49\u73af\u8282\u5747\u672a\u6267\u884c\uff0c\u65e0\u6cd5\u5b8c\u6210\u4efb\u52a1\u95ed\u73af\u3002",
+        "corrective_direction": "\u5728detect_object_pose\u4e4b\u540e\u63d2\u5165create_fixed_vertical_grasp\u6280\u80fd\u4ee5\u751f\u6210\u6293\u53d6\u4f4d\u59ff\uff1b\u5b8c\u6210approach_object\u540e\uff0c\u4f9d\u6b21\u6267\u884cclose_gripper\u3001lift\u3001move_lifted_object_to\uff08\u76ee\u6807\u4e3a\u76d8\u5b50\uff09\u3001open_gripper\u3001go_home\uff0c\u786e\u4fdd\u5404\u73af\u8282\u6267\u884c\u4ee5\u5b8c\u6210\u4efb\u52a1\u95ed\u73af\u3002",
+        "missing_phases": [
+          "create_fixed_vertical_grasp",
+          "close_gripper",
+          "lift",
+          "move_lifted_object_to"
+        ],
+        "failed_predicates": [
+          "on_plate\uff08\u82f9\u679c\u672a\u653e\u7f6e\u5230\u76d8\u5b50\u4e0a\uff09",
+          "apple_z_after_recovery\uff08\u82f9\u679cz\u5750\u6807\u65e0\u53d8\u5316\uff0c\u672a\u5b8c\u6210\u63d0\u5347\uff09",
+          "task_success\uff08\u4efb\u52a1\u672a\u6210\u529f\uff09"
+        ],
+        "failure_evidence": {
+          "step_trace_error": "approach_object requires detect_object_pose to create T_wo first",
+          "z_change": 0.0,
+          "pinch_distance": 0.03513331782072465,
+          "recovery_steps": [
+            "camera_rgbd_save",
+            "detect_object_pose",
+            "approach_object\uff08\u5f02\u5e38\uff09"
+          ],
+          "task_goal_unmet": "\u82f9\u679c\u672a\u653e\u7f6e\u5230\u76d8\u5b50\uff0c\u673a\u68b0\u81c2\u672a\u56de\u5b89\u5168\u72b6\u6001"
+        },
+        "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u5b8c\u6210\u82f9\u679c\u7684\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u95ed\u73af\uff0c\u5e76\u5c06\u82f9\u679c\u653e\u5230\u76d8\u5b50\u4e0a\uff0c\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001",
+        "parameter_failure_summary": {
+          "items": [
+            {
+              "action": "unknown",
+              "bad_keys": [],
+              "bad_values": {},
+              "expected_direction": {},
+              "reason": "\u53c2\u6570\u8c03\u6574\u8bc1\u636e\u4e0d\u8db3\uff0c\u5931\u8d25\u6839\u56e0\u662f\u6280\u80fd\u4f9d\u8d56\u7f3a\u5931\u800c\u975e\u53c2\u6570\u9519\u8bef",
+              "impact": "\u53c2\u6570\u8c03\u6574\u65e0\u6cd5\u89e3\u51b3\u6280\u80fd\u4f9d\u8d56\u7f3a\u5931\u95ee\u9898\uff0c\u5bfc\u81f4\u6267\u884c\u5f02\u5e38",
+              "parameter_lesson": "\u53c2\u6570\u8c03\u6574\u9700\u5728\u6280\u80fd\u4f9d\u8d56\u5173\u7cfb\u6b63\u786e\u7684\u524d\u63d0\u4e0b\u8fdb\u884c\uff0c\u5426\u5219\u65e0\u6548"
+            }
+          ],
+          "overall_lesson": "\u53c2\u6570\u8c03\u6574\u4e0d\u80fd\u66ff\u4ee3\u6280\u80fd\u4f9d\u8d56\u5173\u7cfb\u7684\u6b63\u786e\u6027\uff0c\u9700\u4f18\u5148\u786e\u4fdd\u6280\u80fd\u6267\u884c\u987a\u5e8f\u548c\u4f9d\u8d56\u6ee1\u8db3"
+        }
+      },
+      "llm_selector_reason": "approach_object\u56e0\u7f3a\u5c11\u6280\u80fd\u4f9d\u8d56\u6267\u884c\u5f02\u5e38\uff0c\u540e\u7eed\u4efb\u52a1\u672a\u6267\u884c\uff0c\u4efb\u52a1\u672a\u5b8c\u6210",
+      "llm_task_success": false
+    }
+  ],
+  "selected_candidate_id": 1,
+  "executed_plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]",
+  "retrieved_positive_count": 2,
+  "retrieved_failed_count": 1,
+  "memory_action_overlap_mean": 1.0,
+  "memory_action_overlap_max": 1.0,
+  "useful_memory_ratio": 1.0,
+  "avoided_failed_plan": true,
+  "memory_usefulness": [
+    {
+      "experience_id": "0e16041b",
+      "partition": "validated_memory",
+      "score": 1.915,
+      "used_as": "positive",
+      "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]",
+      "action_overlap": 1.0,
+      "exact_signature_match": true,
+      "useful_memory": true
+    },
+    {
+      "experience_id": "e7fee17f",
+      "partition": "validated_memory",
+      "score": 1.915,
+      "used_as": "positive",
+      "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"move_lifted_object_to\"}, {\"action\": \"open_gripper\"}, {\"action\": \"go_home\"}]",
+      "action_overlap": 1.0,
+      "exact_signature_match": true,
+      "useful_memory": true
+    },
+    {
+      "experience_id": "0f4a8e32",
+      "partition": "failed_memory",
+      "score": 1.2753478260869566,
+      "used_as": "negative",
+      "plan_signature": "[{\"action\": \"camera_rgbd_save\"}, {\"action\": \"detect_object_pose\"}, {\"action\": \"close_gripper\"}, {\"action\": \"lift\"}, {\"action\": \"go_home\"}]",
+      "action_overlap": 0.625,
+      "exact_signature_match": false,
+      "useful_memory": true
+    }
+  ],
+  "prompt_memory_keyframes": [
+    "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_002/keyframes/before_recovery.jpg",
+    "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_001/keyframes/before_recovery.jpg"
+  ],
+  "prompt_keyframe_count": 2,
+  "confidence": 0.2212,
+  "mask_nonzero": 1106,
+  "apple_pos_after_inject": [
+    0.5619851994006008,
+    0.29662493500420173,
+    0.3247293181092389
+  ],
+  "anomaly_displacement_from_initial": 0.0025505816938661153,
+  "detection_tier": "oracle",
+  "keyframes": [
+    {
+      "stage": "before_recovery",
+      "image_path": "keyframes/before_recovery.jpg",
+      "description": "\u6062\u590d\u89c4\u5212\u524d\u7684\u573a\u666f\u56fe\u50cf",
+      "used_for_retrieval": true
+    },
+    {
+      "stage": "after_recovery",
+      "image_path": "keyframes/after_recovery.jpg",
+      "description": "\u6062\u590d\u6267\u884c\u540e\u7684\u573a\u666f\u56fe\u50cf",
+      "used_for_retrieval": false
+    }
+  ],
+  "memory_query_condition_id": "U3-1",
+  "support_retrieved_memories": [],
+  "risk_retrieved_memories": [],
+  "dual_source_support_count": 0,
+  "dual_source_risk_count": 0,
+  "candidate_failure_critics": [
+    {
+      "candidate_id": 2,
+      "critic": {
+        "enabled": true,
+        "model": "doubao-seed-1-6-vision-250815",
+        "failure_stage": "recovery_execution",
+        "failure_type": "\u6062\u590d\u6267\u884c\u65f6\u6293\u53d6\u63a5\u89e6\u5931\u8d25",
+        "root_cause": "\u5f02\u5e38\u6062\u590d\u540eopen_gripper\u5bfc\u81f4\u82f9\u679c\u4f4d\u7f6e\u5927\u5e45\u53d8\u5316\uff08z\u4ece0.3287\u964d\u81f30.0305\u3001xy\u504f\u79fb\uff09\uff0cclose_gripper\u65f6\u5939\u722a\u4f4d\u7f6e\u4e0e\u82f9\u679c\u4f4d\u7f6e\u4e0d\u5339\u914d\uff0c\u65e0\u63a5\u89e6\u5bfc\u81f4\u6293\u53d6\u5931\u8d25\uff0c\u540e\u7eed\u4efb\u52a1\u65e0\u6cd5\u63a8\u8fdb",
+        "corrective_direction": "\u6062\u590d\u6d41\u7a0b\u4e2d\u52a0\u5165detect_object_pose\u91cd\u65b0\u5b9a\u4f4d\u82f9\u679c\uff0c\u518d\u901a\u8fc7move_to_pregrasp/approach_object\u8c03\u6574\u5939\u722a\u4f4d\u7f6e\u81f3\u82f9\u679c\u9644\u8fd1\uff0c\u786e\u4fddclose_gripper\u65f6\u63a5\u89e6\uff1b\u6062\u590d\u540e\u9700\u6267\u884clift\u3001move_lifted_object_to\uff08\u653e\u7f6e\u5230\u76d8\u5b50\uff09\u3001open_gripper\u3001go_home\u5b8c\u6210\u4efb\u52a1\u95ed\u73af",
+        "missing_phases": [
+          "detect_object_pose",
+          "move_to_pregrasp",
+          "approach_object",
+          "lift"
+        ],
+        "failed_predicates": [
+          "\u82f9\u679c\u88ab\u6210\u529f\u6293\u53d6\uff08close_gripper\u6709\u63a5\u89e6\uff09",
+          "\u82f9\u679c\u88ab\u63d0\u5347\uff08lift\u6210\u529f\uff09",
+          "\u82f9\u679c\u88ab\u653e\u7f6e\u5230\u76d8\u5b50\uff08on_plate\u4e3atrue\uff09",
+          "\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001\uff08go_home\u6210\u529f\uff09"
+        ],
+        "failure_evidence": {
+          "open_gripper\u540eapple_z\u53d8\u5316": "0.3287\u21920.0305\uff08z_change=-0.298\uff09",
+          "open_gripper\u540epinch_distance\u53d8\u5316": "0.0351\u21920.6312",
+          "close_gripper\u9519\u8bef\u7c7b\u578b": "no_contact_after_close",
+          "sandbox_physical_failures_z_change": "-0.298"
+        },
+        "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u5b8c\u6210\u82f9\u679c\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u81f3\u76d8\u5b50\u3001\u653e\u7f6e\u3001\u673a\u68b0\u81c2\u56de\u5b89\u5168\u72b6\u6001\u7684\u95ed\u73af\u4efb\u52a1",
+        "parameter_failure_summary": {
+          "items": [
+            {
+              "action": "unknown",
+              "bad_keys": [],
+              "bad_values": {},
+              "expected_direction": {},
+              "reason": "\u6062\u590d\u6b65\u9aa4\u4ec5\u5305\u542bopen/close\uff0c\u7f3a\u5c11\u4f4d\u7f6e\u8c03\u6574\u52a8\u4f5c\uff0c\u5bfc\u81f4\u5939\u722a\u4f4d\u7f6e\u4e0e\u82f9\u679c\u4f4d\u7f6e\u4e0d\u5339\u914d",
+              "impact": "close_gripper\u65f6\u65e0\u63a5\u89e6\uff0c\u76f4\u63a5\u5bfc\u81f4\u6293\u53d6\u5931\u8d25\uff0c\u540e\u7eed\u4efb\u52a1\u65e0\u6cd5\u63a8\u8fdb",
+              "parameter_lesson": "\u5f02\u5e38\u6062\u590d\u540e\u7269\u4f53\u4f4d\u7f6e\u53ef\u80fd\u7a81\u53d8\uff0c\u6062\u590d\u6d41\u7a0b\u9700\u5305\u542b\u4f4d\u7f6e\u68c0\u6d4b\u4e0e\u4f4d\u59ff\u8c03\u6574\u6b65\u9aa4"
+            }
+          ],
+          "overall_lesson": "\u5f02\u5e38\u6062\u590d\u540e\u9700\u4f18\u5148\u68c0\u6d4b\u7269\u4f53\u4f4d\u7f6e\u5e76\u8c03\u6574\u6267\u884c\u5668\u4f4d\u59ff\uff0c\u907f\u514d\u4f9d\u8d56\u9ed8\u8ba4\u4f4d\u59ff\u6267\u884c\u6293\u53d6\u7c7b\u52a8\u4f5c"
+        }
+      }
+    },
+    {
+      "candidate_id": 3,
+      "critic": {
+        "enabled": true,
+        "model": "doubao-seed-1-6-vision-250815",
+        "failure_stage": "recovery_execution",
+        "failure_type": "\u6280\u80fd\u4f9d\u8d56\u7f3a\u5931\u5bfc\u81f4\u6267\u884c\u5f02\u5e38",
+        "root_cause": "\u6062\u590d\u6d41\u7a0b\u4e2d\u672a\u6267\u884ccreate_fixed_vertical_grasp\u6280\u80fd\uff0c\u5bfc\u81f4approach_object\u56e0\u7f3a\u5c11\u76ee\u6807\u4f4d\u59ff\uff08T_wo\uff09\u800c\u6267\u884c\u5f02\u5e38\uff0c\u540e\u7eed\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u7b49\u73af\u8282\u5747\u672a\u6267\u884c\uff0c\u65e0\u6cd5\u5b8c\u6210\u4efb\u52a1\u95ed\u73af\u3002",
+        "corrective_direction": "\u5728detect_object_pose\u4e4b\u540e\u63d2\u5165create_fixed_vertical_grasp\u6280\u80fd\u4ee5\u751f\u6210\u6293\u53d6\u4f4d\u59ff\uff1b\u5b8c\u6210approach_object\u540e\uff0c\u4f9d\u6b21\u6267\u884cclose_gripper\u3001lift\u3001move_lifted_object_to\uff08\u76ee\u6807\u4e3a\u76d8\u5b50\uff09\u3001open_gripper\u3001go_home\uff0c\u786e\u4fdd\u5404\u73af\u8282\u6267\u884c\u4ee5\u5b8c\u6210\u4efb\u52a1\u95ed\u73af\u3002",
+        "missing_phases": [
+          "create_fixed_vertical_grasp",
+          "close_gripper",
+          "lift",
+          "move_lifted_object_to"
+        ],
+        "failed_predicates": [
+          "on_plate\uff08\u82f9\u679c\u672a\u653e\u7f6e\u5230\u76d8\u5b50\u4e0a\uff09",
+          "apple_z_after_recovery\uff08\u82f9\u679cz\u5750\u6807\u65e0\u53d8\u5316\uff0c\u672a\u5b8c\u6210\u63d0\u5347\uff09",
+          "task_success\uff08\u4efb\u52a1\u672a\u6210\u529f\uff09"
+        ],
+        "failure_evidence": {
+          "step_trace_error": "approach_object requires detect_object_pose to create T_wo first",
+          "z_change": 0.0,
+          "pinch_distance": 0.03513331782072465,
+          "recovery_steps": [
+            "camera_rgbd_save",
+            "detect_object_pose",
+            "approach_object\uff08\u5f02\u5e38\uff09"
+          ],
+          "task_goal_unmet": "\u82f9\u679c\u672a\u653e\u7f6e\u5230\u76d8\u5b50\uff0c\u673a\u68b0\u81c2\u672a\u56de\u5b89\u5168\u72b6\u6001"
+        },
+        "task_goal": "\u5f02\u5e38\u6062\u590d\u540e\u5b8c\u6210\u82f9\u679c\u7684\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u3001\u653e\u7f6e\u95ed\u73af\uff0c\u5e76\u5c06\u82f9\u679c\u653e\u5230\u76d8\u5b50\u4e0a\uff0c\u673a\u68b0\u81c2\u56de\u5230\u5b89\u5168\u72b6\u6001",
+        "parameter_failure_summary": {
+          "items": [
+            {
+              "action": "unknown",
+              "bad_keys": [],
+              "bad_values": {},
+              "expected_direction": {},
+              "reason": "\u53c2\u6570\u8c03\u6574\u8bc1\u636e\u4e0d\u8db3\uff0c\u5931\u8d25\u6839\u56e0\u662f\u6280\u80fd\u4f9d\u8d56\u7f3a\u5931\u800c\u975e\u53c2\u6570\u9519\u8bef",
+              "impact": "\u53c2\u6570\u8c03\u6574\u65e0\u6cd5\u89e3\u51b3\u6280\u80fd\u4f9d\u8d56\u7f3a\u5931\u95ee\u9898\uff0c\u5bfc\u81f4\u6267\u884c\u5f02\u5e38",
+              "parameter_lesson": "\u53c2\u6570\u8c03\u6574\u9700\u5728\u6280\u80fd\u4f9d\u8d56\u5173\u7cfb\u6b63\u786e\u7684\u524d\u63d0\u4e0b\u8fdb\u884c\uff0c\u5426\u5219\u65e0\u6548"
+            }
+          ],
+          "overall_lesson": "\u53c2\u6570\u8c03\u6574\u4e0d\u80fd\u66ff\u4ee3\u6280\u80fd\u4f9d\u8d56\u5173\u7cfb\u7684\u6b63\u786e\u6027\uff0c\u9700\u4f18\u5148\u786e\u4fdd\u6280\u80fd\u6267\u884c\u987a\u5e8f\u548c\u4f9d\u8d56\u6ee1\u8db3"
+        }
+      }
+    }
+  ],
+  "llm_candidate_selector_result": {
+    "enabled": true,
+    "provider": "doubao",
+    "model": "doubao-seed-1-6-vision-250815",
+    "attempts": 1,
+    "selected_candidate_id": 1,
+    "candidate_scores": [
+      {
+        "candidate_id": 1,
+        "score": 100,
+        "task_success": true,
+        "reason": "\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u81f3\u76d8\u5b50\u3001\u91ca\u653e\u3001\u673a\u68b0\u81c2\u56de\u5bb6\uff0c\u7269\u7406\u6267\u884c\u7ed3\u679c\u663e\u793a\u82f9\u679c\u5728\u76d8\u5b50\u4e0a\uff08on_plate=true\uff09\uff0c\u4efb\u52a1\u95ed\u73af\u6210\u529f"
+      },
+      {
+        "candidate_id": 2,
+        "score": 30,
+        "task_success": false,
+        "reason": "open_gripper\u5bfc\u81f4\u82f9\u679c\u4f4d\u7f6e\u7a81\u53d8\uff0cclose_gripper\u65e0\u63a5\u89e6\u6293\u53d6\u5931\u8d25\uff0c\u540e\u7eed\u4efb\u52a1\u672a\u63a8\u8fdb\uff0c\u4efb\u52a1\u672a\u5b8c\u6210"
+      },
+      {
+        "candidate_id": 3,
+        "score": 20,
+        "task_success": false,
+        "reason": "approach_object\u56e0\u7f3a\u5c11\u6280\u80fd\u4f9d\u8d56\u6267\u884c\u5f02\u5e38\uff0c\u540e\u7eed\u4efb\u52a1\u672a\u6267\u884c\uff0c\u4efb\u52a1\u672a\u5b8c\u6210"
+      }
+    ],
+    "ranking_reason": "\u5019\u90091\u662f\u552f\u4e00\u4efb\u52a1\u95ed\u73af\u6210\u529f\u7684\u5019\u9009\uff08physical_execution\u4e2dtask_success=true\uff0c\u82f9\u679c\u6210\u529f\u653e\u7f6e\u5728\u76d8\u5b50\u4e0a\u5e76\u5b8c\u6210\u673a\u68b0\u81c2\u56de\u5bb6\uff09\uff1b\u5019\u90092\u6293\u53d6\u5931\u8d25\u3001\u5019\u90093\u6280\u80fd\u4f9d\u8d56\u7f3a\u5931\u5bfc\u81f4\u4efb\u52a1\u672a\u63a8\u8fdb\uff0c\u56e0\u6b64\u9009\u62e9\u5019\u90091",
+    "selection_confidence": 1.0,
+    "critic_summary_used": true,
+    "raw_response": "{\n  \"selected_candidate_id\": 1,\n  \"candidate_scores\": [\n    {\n      \"candidate_id\": 1,\n      \"score\": 100,\n      \"task_success\": true,\n      \"reason\": \"\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u81f3\u76d8\u5b50\u3001\u91ca\u653e\u3001\u673a\u68b0\u81c2\u56de\u5bb6\uff0c\u7269\u7406\u6267\u884c\u7ed3\u679c\u663e\u793a\u82f9\u679c\u5728\u76d8\u5b50\u4e0a\uff08on_plate=true\uff09\uff0c\u4efb\u52a1\u95ed\u73af\u6210\u529f\"\n    },\n    {\n      \"candidate_id\": 2,\n      \"score\": 30,\n      \"task_success\": false,\n      \"reason\": \"open_gripper\u5bfc\u81f4\u82f9\u679c\u4f4d\u7f6e\u7a81\u53d8\uff0cclose_gripper\u65e0\u63a5\u89e6\u6293\u53d6\u5931\u8d25\uff0c\u540e\u7eed\u4efb\u52a1\u672a\u63a8\u8fdb\uff0c\u4efb\u52a1\u672a\u5b8c\u6210\"\n    },\n    {\n      \"candidate_id\": 3,\n      \"score\": 20,\n      \"task_success\": false,\n      \"reason\": \"approach_object\u56e0\u7f3a\u5c11\u6280\u80fd\u4f9d\u8d56\u6267\u884c\u5f02\u5e38\uff0c\u540e\u7eed\u4efb\u52a1\u672a\u6267\u884c\uff0c\u4efb\u52a1\u672a\u5b8c\u6210\"\n    }\n  ],\n  \"ranking_reason\": \"\u5019\u90091\u662f\u552f\u4e00\u4efb\u52a1\u95ed\u73af\u6210\u529f\u7684\u5019\u9009\uff08physical_execution\u4e2dtask_success=true\uff0c\u82f9\u679c\u6210\u529f\u653e\u7f6e\u5728\u76d8\u5b50\u4e0a\u5e76\u5b8c\u6210\u673a\u68b0\u81c2\u56de\u5bb6\uff09\uff1b\u5019\u90092\u6293\u53d6\u5931\u8d25\u3001\u5019\u90093\u6280\u80fd\u4f9d\u8d56\u7f3a\u5931\u5bfc\u81f4\u4efb\u52a1\u672a\u63a8\u8fdb\uff0c\u56e0\u6b64\u9009\u62e9\u5019\u90091\",\n  \"selection_confidence\": 1.0,\n  \"critic_summary_used\": true\n}"
+  },
+  "candidate_selection_reason": "llm_selector",
+  "candidate_selection_ranking_reason": "\u5019\u90091\u662f\u552f\u4e00\u4efb\u52a1\u95ed\u73af\u6210\u529f\u7684\u5019\u9009\uff08physical_execution\u4e2dtask_success=true\uff0c\u82f9\u679c\u6210\u529f\u653e\u7f6e\u5728\u76d8\u5b50\u4e0a\u5e76\u5b8c\u6210\u673a\u68b0\u81c2\u56de\u5bb6\uff09\uff1b\u5019\u90092\u6293\u53d6\u5931\u8d25\u3001\u5019\u90093\u6280\u80fd\u4f9d\u8d56\u7f3a\u5931\u5bfc\u81f4\u4efb\u52a1\u672a\u63a8\u8fdb\uff0c\u56e0\u6b64\u9009\u62e9\u5019\u90091",
+  "candidate_sandbox_final_execution": true,
+  "candidate_sandbox_final_success": true,
+  "candidate_sandbox_final_result": {
+    "candidate_id": 1,
+    "sandbox_success": true,
+    "success": true,
+    "task_success": true,
+    "task_attempted": true,
+    "recovery_only": false,
+    "z_before": 0.3287071927628408,
+    "z_after": 0.07888339869957041,
+    "z_change": -0.24982379406327043,
+    "pinch_distance": 0.35426577731691455,
+    "on_plate": true,
+    "xy_dist_to_plate": 0.022955400863975267,
+    "score": 100.0,
+    "llm_score": 100.0,
+    "target_source": "current_mujoco_state_clone",
+    "step_trace": [
+      {
+        "step": 0,
+        "action": "camera_rgbd_save",
+        "params": {},
+        "status": "ok",
+        "before": {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968
+        },
+        "after": {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968,
+          "last_skill_result": {
+            "skill": "camera_rgbd_save",
+            "success": true,
+            "reason": "rgbd_saved",
+            "contact": {
+              "left_contact": true,
+              "right_contact": true
+            },
+            "gripper_action": 254.1999999999941,
+            "pinch_distance": 0.03513331782072465,
+            "object_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "extra": {
+              "stage": "recovery_camera_image",
+              "camera_name": "cam1",
+              "work_dir": "/tmp/wrapper1_detect_apple",
+              "rgb_path": "/tmp/wrapper1_detect_apple/color_img1.jpg",
+              "depth_path": "/tmp/wrapper1_detect_apple/depth.npy",
+              "camera_config": {
+                "name": "cam1",
+                "translation_mj": [
+                  1.2,
+                  -0.94,
+                  0.27
+                ],
+                "quat_wxyz_mj": [
+                  0.6598597613330566,
+                  0.6727867566574472,
+                  0.23886691360340562,
+                  0.2342769152635779
+                ],
+                "rotation_matrix_mj_from_cam": [
+                  [
+                    0.776113849120331,
+                    -0.01223317336868135,
+                    -0.6304741411612025
+                  ],
+                  [
+                    0.6305928109353583,
+                    0.015055385918129605,
+                    0.7759678099969739
+                  ],
+                  [
+                    -5.172416258081292e-07,
+                    -0.9998118247071236,
+                    0.01939884469612796
+                  ]
+                ],
+                "rotation_matrix_world_from_cam": [
+                  [
+                    0.776113849120331,
+                    -0.01223317336868135,
+                    -0.6304741411612025
+                  ],
+                  [
+                    0.6305928109353583,
+                    0.015055385918129605,
+                    0.7759678099969739
+                  ],
+                  [
+                    -5.172416258081292e-07,
+                    -0.9998118247071236,
+                    0.01939884469612796
+                  ]
+                ],
+                "intrinsics": {
+                  "fx": 772.5483399593904,
+                  "fy": 772.5483399593904,
+                  "cx": 240.0,
+                  "cy": 320.0,
+                  "width": 480,
+                  "height": 640
+                },
+                "fovy_deg": 45.0
+              }
+            }
+          }
+        },
+        "keyframe": null
+      },
+      {
+        "step": 1,
+        "action": "detect_object_pose",
+        "params": {
+          "target_class": "apple"
+        },
+        "status": "ok",
+        "before": {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968
+        },
+        "after": {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968,
+          "last_skill_result": {
+            "skill": "detect_object_pose",
+            "success": true,
+            "reason": "object_pose_detected",
+            "contact": {
+              "left_contact": true,
+              "right_contact": true
+            },
+            "gripper_action": 254.1999999999941,
+            "pinch_distance": 0.03513331782072465,
+            "object_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "extra": {
+              "target_class": "apple",
+              "detection_ok": true,
+              "confidence": 0.1558,
+              "mask_nonzero": 795,
+              "observed_pos": [
+                0.5649932793377129,
+                0.2775252520930513,
+                0.3241079997738841
+              ],
+              "raw_points": 779,
+              "rgb_path": "/tmp/wrapper1_detect_apple/color_img1.jpg",
+              "depth_path": "/tmp/wrapper1_detect_apple/depth.npy",
+              "mask_path": "/tmp/wrapper1_detect_apple/mask.png",
+              "role": "grasp_target"
+            }
+          }
+        },
+        "keyframe": null
+      },
+      {
+        "step": 2,
+        "action": "detect_object_pose",
+        "params": {
+          "target_class": "plate"
+        },
+        "status": "ok",
+        "before": {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968
+        },
+        "after": {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968,
+          "last_skill_result": {
+            "skill": "detect_object_pose",
+            "success": true,
+            "reason": "object_pose_detected",
+            "contact": {
+              "left_contact": true,
+              "right_contact": true
+            },
+            "gripper_action": 254.1999999999941,
+            "pinch_distance": 0.03513331782072465,
+            "object_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "extra": {
+              "target_class": "plate",
+              "detection_ok": true,
+              "confidence": 0.3198,
+              "mask_nonzero": 1599,
+              "observed_pos": [
+                0.4107394050819409,
+                0.3783673515867006,
+                0.042326977583676345
+              ],
+              "raw_points": 1599,
+              "rgb_path": "/tmp/wrapper1_detect_apple/color_img1.jpg",
+              "depth_path": "/tmp/wrapper1_detect_apple/depth.npy",
+              "mask_path": "/tmp/wrapper1_detect_plate/mask.png",
+              "role": "place_target"
+            }
+          }
+        },
+        "keyframe": null
+      },
+      {
+        "step": 3,
+        "action": "close_gripper",
+        "params": {},
+        "status": "ok",
+        "before": {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968
+        },
+        "after": {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968,
+          "last_skill_result": {
+            "skill": "close_gripper",
+            "success": true,
+            "reason": "physical_contact_detected",
+            "contact": {
+              "left_contact": true,
+              "right_contact": true
+            },
+            "gripper_action": 254.1999999999941,
+            "pinch_distance": 0.03513331782072465,
+            "object_pos": [
+              0.5618343230481251,
+              0.29679604353859457,
+              0.3287071927628408
+            ],
+            "extra": {
+              "contact": {
+                "left_contact": true,
+                "right_contact": true
+              }
+            }
+          }
+        },
+        "keyframe": {
+          "candidate_id": 1,
+          "stage": "after_close",
+          "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+          "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_close",
+          "used_for_retrieval": false
+        }
+      },
+      {
+        "step": 4,
+        "action": "lift",
+        "params": {
+          "lift_height": 0.1
+        },
+        "status": "ok",
+        "before": {
+          "apple_pos": [
+            0.5618343230481251,
+            0.29679604353859457,
+            0.3287071927628408
+          ],
+          "pinch_pos": [
+            0.5609842373258043,
+            0.29368906994066996,
+            0.29372185168377524
+          ],
+          "tcp_pos": [
+            0.5624655558558801,
+            0.29411999495442875,
+            0.3305880576043497
+          ],
+          "apple_z": 0.3287071927628408,
+          "pinch_distance": 0.03513331782072465,
+          "apple_to_pinch_xy": 0.003221169146985968
+        },
+        "after": {
+          "apple_pos": [
+            0.5653228753957884,
+            0.2979489175814413,
+            0.4262048107820391
+          ],
+          "pinch_pos": [
+            0.5638026509447243,
+            0.2944562304002546,
+            0.3933012482813904
+          ],
+          "tcp_pos": [
+            0.5624655558558799,
+            0.29411999495442864,
+            0.4305880576043498
+          ],
+          "apple_z": 0.4262048107820391,
+          "pinch_distance": 0.03312332065722478,
+          "apple_to_pinch_xy": 0.0038091923195395848,
+          "last_skill_result": {
+            "skill": "lift",
+            "success": true,
+            "reason": "object_lifted",
+            "contact": {
+              "left_contact": true,
+              "right_contact": true
+            },
+            "gripper_action": 254.1999999999941,
+            "pinch_distance": 0.03312332065722478,
+            "object_pos": [
+              0.5653228753957884,
+              0.2979489175814413,
+              0.4262048107820391
+            ],
+            "extra": {
+              "object_z_before": 0.3287071927628408,
+              "object_z_after": 0.4262048107820391,
+              "object_z_change": 0.09749761801919826,
+              "success_z_change": 0.03,
+              "lift_height": 0.1
+            }
+          }
+        },
+        "keyframe": {
+          "candidate_id": 1,
+          "stage": "after_lift",
+          "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+          "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_lift",
+          "used_for_retrieval": false
+        }
+      },
+      {
+        "step": 5,
+        "action": "move_lifted_object_to",
+        "params": {
+          "target": "plate"
+        },
+        "status": "ok",
+        "before": {
+          "apple_pos": [
+            0.5653228753957884,
+            0.2979489175814413,
+            0.4262048107820391
+          ],
+          "pinch_pos": [
+            0.5638026509447243,
+            0.2944562304002546,
+            0.3933012482813904
+          ],
+          "tcp_pos": [
+            0.5624655558558799,
+            0.29411999495442864,
+            0.4305880576043498
+          ],
+          "apple_z": 0.4262048107820391,
+          "pinch_distance": 0.03312332065722478,
+          "apple_to_pinch_xy": 0.0038091923195395848
+        },
+        "after": {
+          "apple_pos": [
+            0.40912990410765077,
+            0.37768846177338805,
+            0.0965985277798104
+          ],
+          "pinch_pos": [
+            0.4074086339848961,
+            0.37367229675392233,
+            0.06436092358818804
+          ],
+          "tcp_pos": [
+            0.4107394050819408,
+            0.37836735158670054,
+            0.08999999999999983
+          ],
+          "apple_z": 0.0965985277798104,
+          "pinch_distance": 0.032532375817249735,
+          "apple_to_pinch_xy": 0.004369479637104178,
+          "last_skill_result": {
+            "skill": "move_lifted_object_to",
+            "success": true,
+            "reason": "lifted_object_move_executed",
+            "contact": {
+              "left_contact": true,
+              "right_contact": true
+            },
+            "gripper_action": 254.1999999999941,
+            "pinch_distance": 0.032532375817249735,
+            "object_pos": [
+              0.40912990410765077,
+              0.37768846177338805,
+              0.0965985277798104
+            ],
+            "extra": {
+              "target": "plate",
+              "target_pos": [
+                0.4107394050819409,
+                0.3783673515867006,
+                0.04
+              ],
+              "tcp_target_pos": [
+                0.4107394050819409,
+                0.3783673515867006,
+                0.09
+              ],
+              "fixed_place_target_z": 0.04,
+              "fixed_tcp_release_height": 0.09,
+              "motion_result": {
+                "skill": "cartesian_move",
+                "success": true,
+                "reason": "ok",
+                "target_pos": [
+                  0.4107394050819409,
+                  0.3783673515867006,
+                  0.09
+                ],
+                "final_pos": [
+                  0.4107394050819408,
+                  0.37836735158670054,
+                  0.08999999999999983
+                ],
+                "pos_error": 2.0770370905276122e-16
+              }
+            }
+          }
+        },
+        "keyframe": {
+          "candidate_id": 1,
+          "stage": "after_move_lifted",
+          "image_path": "sandbox_keyframes/candidate_001_after_move_lifted.jpg",
+          "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_move_lifted",
+          "used_for_retrieval": false
+        }
+      },
+      {
+        "step": 6,
+        "action": "open_gripper",
+        "params": {},
+        "status": "ok",
+        "before": {
+          "apple_pos": [
+            0.40912990410765077,
+            0.37768846177338805,
+            0.0965985277798104
+          ],
+          "pinch_pos": [
+            0.4074086339848961,
+            0.37367229675392233,
+            0.06436092358818804
+          ],
+          "tcp_pos": [
+            0.4107394050819408,
+            0.37836735158670054,
+            0.08999999999999983
+          ],
+          "apple_z": 0.0965985277798104,
+          "pinch_distance": 0.032532375817249735,
+          "apple_to_pinch_xy": 0.004369479637104178
+        },
+        "after": {
+          "apple_pos": [
+            0.402301753458489,
+            0.37720575583287425,
+            0.07888767571006018
+          ],
+          "pinch_pos": [
+            0.4047737049364824,
+            0.3750917640666427,
+            0.059141487141597504
+          ],
+          "tcp_pos": [
+            0.4107394050819408,
+            0.37836735158670054,
+            0.08999999999999983
+          ],
+          "apple_z": 0.07888767571006018,
+          "pinch_distance": 0.02001228293520094,
+          "apple_to_pinch_xy": 0.0032526151474234636,
+          "last_skill_result": {
+            "skill": "open_gripper",
+            "success": true,
+            "reason": "gripper_opened",
+            "contact": {
+              "left_contact": false,
+              "right_contact": false
+            },
+            "gripper_action": 0.0,
+            "pinch_distance": 0.02001228293520094,
+            "object_pos": [
+              0.402301753458489,
+              0.37720575583287425,
+              0.07888767571006018
+            ],
+            "extra": {}
+          }
+        },
+        "keyframe": null
+      },
+      {
+        "step": 7,
+        "action": "go_home",
+        "params": {},
+        "status": "ok",
+        "before": {
+          "apple_pos": [
+            0.402301753458489,
+            0.37720575583287425,
+            0.07888767571006018
+          ],
+          "pinch_pos": [
+            0.4047737049364824,
+            0.3750917640666427,
+            0.059141487141597504
+          ],
+          "tcp_pos": [
+            0.4107394050819408,
+            0.37836735158670054,
+            0.08999999999999983
+          ],
+          "apple_z": 0.07888767571006018,
+          "pinch_distance": 0.02001228293520094,
+          "apple_to_pinch_xy": 0.0032526151474234636
+        },
+        "after": {
+          "apple_pos": [
+            0.40246340804483555,
+            0.3771771594749813,
+            0.07888339869957041
+          ],
+          "pinch_pos": [
+            0.4903084540613584,
+            0.13837079298199384,
+            0.3253768229338278
+          ],
+          "tcp_pos": [
+            0.492,
+            0.134,
+            0.358
+          ],
+          "apple_z": 0.07888339869957041,
+          "pinch_distance": 0.35426577731691455,
+          "apple_to_pinch_xy": 0.2544508455227219,
+          "last_skill_result": {
+            "skill": "joint_move",
+            "success": true,
+            "reason": "ok"
+          }
+        },
+        "keyframe": null
+      },
+      {
+        "step": 8,
+        "action": "_sandbox_task_success_check",
+        "params": {},
+        "status": "ok",
+        "before": {},
+        "after": {
+          "apple_pos": [
+            0.40246340804483555,
+            0.3771771594749813,
+            0.07888339869957041
+          ],
+          "plate_pos": [
+            0.4,
+            0.4,
+            0.04
+          ],
+          "xy_dist_to_plate": 0.022955400863975267,
+          "apple_z": 0.07888339869957041,
+          "on_plate": true,
+          "released": true
+        },
+        "keyframe": null
+      }
+    ],
+    "keyframes": [
+      {
+        "candidate_id": 1,
+        "stage": "after_close",
+        "image_path": "sandbox_keyframes/candidate_001_after_close.jpg",
+        "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_close",
+        "used_for_retrieval": false
+      },
+      {
+        "candidate_id": 1,
+        "stage": "after_lift",
+        "image_path": "sandbox_keyframes/candidate_001_after_lift.jpg",
+        "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_lift",
+        "used_for_retrieval": false
+      },
+      {
+        "candidate_id": 1,
+        "stage": "after_move_lifted",
+        "image_path": "sandbox_keyframes/candidate_001_after_move_lifted.jpg",
+        "description": "\u5019\u9009 1 \u6267\u884c\u540e\u56fe\u50cf: after_move_lifted",
+        "used_for_retrieval": false
+      }
+    ],
+    "llm_selector_reason": "\u5b8c\u6210\u6293\u53d6\u3001\u63d0\u5347\u3001\u642c\u8fd0\u81f3\u76d8\u5b50\u3001\u91ca\u653e\u3001\u673a\u68b0\u81c2\u56de\u5bb6\uff0c\u7269\u7406\u6267\u884c\u7ed3\u679c\u663e\u793a\u82f9\u679c\u5728\u76d8\u5b50\u4e0a\uff08on_plate=true\uff09\uff0c\u4efb\u52a1\u95ed\u73af\u6210\u529f",
+    "llm_task_success": true,
+    "selected_for_output": true
+  },
+  "candidate_score": {
+    "candidate_score": 0.6,
+    "decision": "allow",
+    "support_score": 1.0,
+    "real_success_prior": 0.5,
+    "real_evidence_count": 0,
+    "failure_overlap_risk": 0.625,
+    "gap_uncertainty": 0.0,
+    "critic_risk": 0.3438,
+    "candidate_actions": [
+      "camera_rgbd_save",
+      "detect_object_pose",
+      "detect_object_pose",
+      "close_gripper",
+      "lift",
+      "move_lifted_object_to",
+      "open_gripper",
+      "go_home"
+    ],
+    "evidence": [
+      {
+        "experience_id": "0e16041b",
+        "success": true,
+        "score": 1.915,
+        "action_overlap": 1.0,
+        "gap_uncertainty": 0.0,
+        "critic_risk": 0.0,
+        "real_validation_bonus": 0.0
+      },
+      {
+        "experience_id": "e7fee17f",
+        "success": true,
+        "score": 1.915,
+        "action_overlap": 1.0,
+        "gap_uncertainty": 0.0,
+        "critic_risk": 0.0,
+        "real_validation_bonus": 0.0
+      },
+      {
+        "experience_id": "0f4a8e32",
+        "success": false,
+        "score": 1.2753478260869566,
+        "action_overlap": 0.625,
+        "gap_uncertainty": 0.0,
+        "critic_risk": 0.55,
+        "real_validation_bonus": 0.0
+      }
+    ]
+  },
+  "dual_source_decision": "allow",
+  "dual_source_rewrite_recommended": false,
+  "candidate_score_history": [
+    {
+      "stage": "llm_generated",
+      "candidate_score": 0.6,
+      "decision": "allow",
+      "support_score": 1.0,
+      "real_success_prior": 0.5,
+      "real_evidence_count": 0,
+      "failure_overlap_risk": 0.625,
+      "gap_uncertainty": 0.0,
+      "critic_risk": 0.3438,
+      "candidate_actions": [
+        "camera_rgbd_save",
+        "detect_object_pose",
+        "detect_object_pose",
+        "close_gripper",
+        "lift",
+        "move_lifted_object_to",
+        "open_gripper",
+        "go_home"
+      ],
+      "evidence": [
+        {
+          "experience_id": "0e16041b",
+          "success": true,
+          "score": 1.915,
+          "action_overlap": 1.0,
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.0,
+          "real_validation_bonus": 0.0
+        },
+        {
+          "experience_id": "e7fee17f",
+          "success": true,
+          "score": 1.915,
+          "action_overlap": 1.0,
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.0,
+          "real_validation_bonus": 0.0
+        },
+        {
+          "experience_id": "0f4a8e32",
+          "success": false,
+          "score": 1.2753478260869566,
+          "action_overlap": 0.625,
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.55,
+          "real_validation_bonus": 0.0
+        }
+      ]
+    },
+    {
+      "stage": "executed_selected",
+      "candidate_score": 0.6,
+      "decision": "allow",
+      "support_score": 1.0,
+      "real_success_prior": 0.5,
+      "real_evidence_count": 0,
+      "failure_overlap_risk": 0.625,
+      "gap_uncertainty": 0.0,
+      "critic_risk": 0.3438,
+      "candidate_actions": [
+        "camera_rgbd_save",
+        "detect_object_pose",
+        "detect_object_pose",
+        "close_gripper",
+        "lift",
+        "move_lifted_object_to",
+        "open_gripper",
+        "go_home"
+      ],
+      "evidence": [
+        {
+          "experience_id": "0e16041b",
+          "success": true,
+          "score": 1.915,
+          "action_overlap": 1.0,
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.0,
+          "real_validation_bonus": 0.0
+        },
+        {
+          "experience_id": "e7fee17f",
+          "success": true,
+          "score": 1.915,
+          "action_overlap": 1.0,
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.0,
+          "real_validation_bonus": 0.0
+        },
+        {
+          "experience_id": "0f4a8e32",
+          "success": false,
+          "score": 1.2753478260869566,
+          "action_overlap": 0.625,
+          "gap_uncertainty": 0.0,
+          "critic_risk": 0.55,
+          "real_validation_bonus": 0.0
+        }
+      ]
+    }
+  ],
+  "invalid_skill_steps": [],
+  "task_success_criteria": {
+    "type": "candidate_condition_final_outcome",
+    "condition_id": "U3-1",
+    "scenario_id": "U3",
+    "success": true,
+    "candidate_id": 1,
+    "apple_pos": [
+      0.40246340804483555,
+      0.3771771594749813,
+      0.07888339869957041
+    ],
+    "plate_pos": [
+      0.4,
+      0.4,
+      0.04
+    ],
+    "xy_dist": 0.022955400863975267,
+    "apple_z": 0.07888339869957041,
+    "on_plate": true,
+    "gripper_open": true,
+    "gripper_action": 0.0,
+    "near_home": true,
+    "failed_predicates": [],
+    "failure_descriptions": {},
+    "physical_evidence": {
+      "candidate_final_result": {
+        "candidate_id": 1,
+        "on_plate": true,
+        "xy_dist_to_plate": 0.022955400863975267,
+        "z_after": 0.07888339869957041,
+        "score": 100.0
+      },
+      "final_check": {
+        "apple_pos": [
+          0.40246340804483555,
+          0.3771771594749813,
+          0.07888339869957041
+        ],
+        "plate_pos": [
+          0.4,
+          0.4,
+          0.04
+        ],
+        "xy_dist_to_plate": 0.022955400863975267,
+        "apple_z": 0.07888339869957041,
+        "on_plate": true,
+        "released": true
+      },
+      "open_gripper": {
+        "apple_pos": [
+          0.402301753458489,
+          0.37720575583287425,
+          0.07888767571006018
+        ],
+        "pinch_pos": [
+          0.4047737049364824,
+          0.3750917640666427,
+          0.059141487141597504
+        ],
+        "tcp_pos": [
+          0.4107394050819408,
+          0.37836735158670054,
+          0.08999999999999983
+        ],
+        "apple_z": 0.07888767571006018,
+        "pinch_distance": 0.02001228293520094,
+        "apple_to_pinch_xy": 0.0032526151474234636,
+        "last_skill_result": {
+          "skill": "open_gripper",
+          "success": true,
+          "reason": "gripper_opened",
+          "contact": {
+            "left_contact": false,
+            "right_contact": false
+          },
+          "gripper_action": 0.0,
+          "pinch_distance": 0.02001228293520094,
+          "object_pos": [
+            0.402301753458489,
+            0.37720575583287425,
+            0.07888767571006018
+          ],
+          "extra": {}
+        }
+      },
+      "go_home": {
+        "apple_pos": [
+          0.40246340804483555,
+          0.3771771594749813,
+          0.07888339869957041
+        ],
+        "pinch_pos": [
+          0.4903084540613584,
+          0.13837079298199384,
+          0.3253768229338278
+        ],
+        "tcp_pos": [
+          0.492,
+          0.134,
+          0.358
+        ],
+        "apple_z": 0.07888339869957041,
+        "pinch_distance": 0.35426577731691455,
+        "apple_to_pinch_xy": 0.2544508455227219,
+        "last_skill_result": {
+          "skill": "joint_move",
+          "success": true,
+          "reason": "ok"
+        }
+      }
+    }
+  },
+  "sandbox_task_success_criteria": {
+    "type": "sandbox_condition_final_outcome",
+    "success": true,
+    "candidate_id": 1,
+    "on_plate": true,
+    "xy_dist_to_plate": 0.022955400863975267,
+    "apple_z": 0.07888339869957041,
+    "score": 100.0
+  },
+  "selected_candidate_score": {
+    "candidate_score": 0.6,
+    "decision": "allow",
+    "support_score": 1.0,
+    "real_success_prior": 0.5,
+    "real_evidence_count": 0,
+    "failure_overlap_risk": 0.625,
+    "gap_uncertainty": 0.0,
+    "critic_risk": 0.3438,
+    "candidate_actions": [
+      "camera_rgbd_save",
+      "detect_object_pose",
+      "detect_object_pose",
+      "close_gripper",
+      "lift",
+      "move_lifted_object_to",
+      "open_gripper",
+      "go_home"
+    ],
+    "evidence": [
+      {
+        "experience_id": "0e16041b",
+        "success": true,
+        "score": 1.915,
+        "action_overlap": 1.0,
+        "gap_uncertainty": 0.0,
+        "critic_risk": 0.0,
+        "real_validation_bonus": 0.0
+      },
+      {
+        "experience_id": "e7fee17f",
+        "success": true,
+        "score": 1.915,
+        "action_overlap": 1.0,
+        "gap_uncertainty": 0.0,
+        "critic_risk": 0.0,
+        "real_validation_bonus": 0.0
+      },
+      {
+        "experience_id": "0f4a8e32",
+        "success": false,
+        "score": 1.2753478260869566,
+        "action_overlap": 0.625,
+        "gap_uncertainty": 0.0,
+        "critic_risk": 0.55,
+        "real_validation_bonus": 0.0
+      }
+    ]
+  },
+  "llm_recovery_steps": [
+    {
+      "action": "camera_rgbd_save",
+      "parameters": {}
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "apple"
+      }
+    },
+    {
+      "action": "detect_object_pose",
+      "parameters": {
+        "target_class": "plate"
+      }
+    },
+    {
+      "action": "close_gripper",
+      "parameters": {}
+    },
+    {
+      "action": "lift",
+      "parameters": {
+        "lift_height": 0.1
+      }
+    },
+    {
+      "action": "move_lifted_object_to",
+      "parameters": {
+        "target": "plate"
+      }
+    },
+    {
+      "action": "open_gripper",
+      "parameters": {}
+    },
+    {
+      "action": "go_home",
+      "parameters": {}
+    }
+  ],
+  "llm_score": {
+    "status": "skipped",
+    "reason": "disabled"
+  },
+  "memory_gate": {
+    "anomaly_score": 0.75,
+    "failure_score": 0.0,
+    "sim_real_gap_score": 0.0,
+    "recovery_utility_score": 1.0,
+    "surprise_score": 0.0,
+    "write_score": 0.3375,
+    "write_decision": "stm_only",
+    "trigger_events": [
+      "anomaly_detected",
+      "virtual_validation_passed",
+      "task_success"
+    ],
+    "explanation": {
+      "weights": {
+        "anomaly": 0.25,
+        "failure": 0.25,
+        "sim_real_gap": 0.25,
+        "recovery_utility": 0.15,
+        "surprise": 0.1
+      },
+      "validation_status": "simulation_validated",
+      "step_count": 8,
+      "has_structured_evidence": true,
+      "task_success": true
+    }
+  },
+  "critic_result": {
+    "overall_status": "pass",
+    "critic_risk_score": 0.0,
+    "collision": {
+      "status": "pass",
+      "flag_count": 0,
+      "rules": [],
+      "evidence": []
+    },
+    "joint": {
+      "status": "pass",
+      "flag_count": 0,
+      "rules": [],
+      "evidence": []
+    },
+    "gripper_contact": {
+      "status": "pass",
+      "flag_count": 0,
+      "rules": [],
+      "evidence": []
+    },
+    "end_effector_pose": {
+      "status": "pass",
+      "flag_count": 0,
+      "rules": [],
+      "evidence": []
+    },
+    "rule_flags": [],
+    "feedback_for_rewrite": ""
+  }
+}

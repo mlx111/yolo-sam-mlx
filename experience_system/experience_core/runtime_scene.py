@@ -82,7 +82,7 @@ class RuntimePlaceZoneSpec:
 class RuntimeSandboxScene:
     schema_version: str = "runtime_sandbox_scene_v1"
     scene_id: str = "runtime_scene"
-    robot_model_include: str = "model.xml"
+    robot_model_include: str = "model/model.xml"
     timestep: float = 0.005
     table_pose: list[float] = field(default_factory=lambda: [0.2, 0.0, 0.737])
     table_size: list[float] = field(default_factory=lambda: [0.35, 0.35, 0.025])
@@ -111,7 +111,7 @@ class RuntimeSandboxScene:
         ]
         return cls(
             scene_id=_safe_name(str(payload.get("scene_id") or "runtime_scene"), "runtime_scene"),
-            robot_model_include=str(payload.get("robot_model_include") or "model.xml"),
+            robot_model_include=str(payload.get("robot_model_include") or "model/model.xml"),
             timestep=float(payload.get("timestep") or 0.005),
             table_pose=_vec(payload.get("table_pose"), default=[0.2, 0.0, 0.737]),
             table_size=_vec(payload.get("table_size"), default=[0.35, 0.35, 0.025]),
@@ -156,6 +156,7 @@ def render_runtime_scene_xml(scene: RuntimeSandboxScene) -> str:
     lines = [
         f'<mujoco model="{html.escape(scene.scene_id)}">',
         f'  <include file="{html.escape(scene.robot_model_include)}"/>',
+        '  <compiler angle="radian" autolimits="true" meshdir="../model/meshes"/>',
         f'  <option timestep="{scene.timestep:.6g}" impratio="10" integrator="implicitfast" cone="elliptic" solver="PGS"/>',
         "",
         "  <worldbody>",

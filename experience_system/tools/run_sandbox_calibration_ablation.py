@@ -14,7 +14,7 @@ if str(ROOT) not in sys.path:
 
 from experience_adapters import R1ProMujocoAdapter
 from experience_core import ExperienceLibrary, apply_critic
-from source.candidate_sandbox import (
+from source.legacy_r1pro.candidate_sandbox import (
     DEFAULT_CRITIC_THRESHOLDS,
     _calibration_dict,
     _galaxea_workdir,
@@ -22,8 +22,8 @@ from source.candidate_sandbox import (
     sandbox_score,
     select_sandbox_calibration,
 )
-from source.run_r1pro_memory_policy_smoke import candidates_for_scenario, object_class_for_scenario
-from source.run_r1pro_task_chain import run_task_chain
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import candidates_for_scenario, object_class_for_scenario
+from source.legacy_r1pro.run_r1pro_task_chain import run_task_chain
 
 
 VARIANTS = [

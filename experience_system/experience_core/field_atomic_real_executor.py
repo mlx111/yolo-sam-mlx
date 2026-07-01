@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from typing import Any, Protocol
 
 from .robot_plan_executor import RobotPlanExecutionReport, SkillExecutor, execute_validated_robot_plan
-from .schema import utc_now
+from .schema import GALAXEA_R1PRO_TORSO_SKILLS, canonical_skill_action, utc_now
 
 
 class FieldAtomicRobotAdapter(Protocol):
@@ -31,23 +31,18 @@ class NotConfiguredFieldAtomicRobotAdapter:
     adapter_name: str = "not_configured_field_atomic_robot_adapter"
 
     def can_execute(self, action: str) -> bool:
-        return action in {
-            "base_lidar_scan",
-            "base_move_to_pose",
-            "head_camera_capture",
-            "left_arm_move_to_position",
-            "left_gripper_set",
-            "right_arm_move_to_position",
-            "right_gripper_set",
-            "torso_move_to_posture",
-        }
+        return canonical_skill_action(action) in GALAXEA_R1PRO_TORSO_SKILLS
 
     def execute(self, action: str, parameters: dict[str, Any]) -> dict[str, Any]:
         return {
             "success": False,
             "status": "real_adapter_not_configured",
-            "message": "No real robot SDK adapter is configured; hardware command was not sent.",
+            "message": (
+                "No real robot SDK adapter is configured; hardware command was not sent. "
+                "This boundary only accepts Galaxea R1Pro torso atomic skills."
+            ),
             "action": action,
+            "canonical_action": canonical_skill_action(action),
             "parameters": dict(parameters),
         }
 

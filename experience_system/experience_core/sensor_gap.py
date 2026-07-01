@@ -145,7 +145,7 @@ def derive_sensor_sim_real_gap(entry: ExperienceEntry) -> SimRealGap:
     contact_score = 0.0
     if "wrist_force" in modalities:
         contact_score = _clamp01(max_force / 8.0)
-        if not bool(entry.result.get("success", entry.result.get("recovery_success", False))) and max_force >= 2.0:
+        if not bool(entry.result.get("success", entry.result.get("task_success", False))) and max_force >= 2.0:
             contact_score = max(contact_score, 0.55)
     contact_gap: dict[str, Any] = {}
     if "wrist_force" in modalities:

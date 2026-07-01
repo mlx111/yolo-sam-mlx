@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    "U3-1"
+  ],
+  "methods": [
+    "direct_llm_weak",
+    "direct_memory",
+    "hierarchical_no_failed"
+  ],
+  "trials_per_method": 5,
+  "seed_start": 3100,
+  "output_dir": "results/ur5e_direct_memory_batch_5trials_v1",
+  "experience_read": "results/memory/field_atomic_smoke_experience.json",
+  "rolling_memory": true,
+  "rolling_memory_scope": "scenario",
+  "rolling_memory_save_modes": {
+    "direct_llm_weak": "all",
+    "direct_memory": "all",
+    "hierarchical_no_failed": "success_only"
+  },
+  "noise_scale": 0.0,
+  "no_viewer": true,
+  "no_inject": false,
+  "use_memory_keyframes": true,
+  "memory_keyframe_top_k": 2,
+  "enable_failed_plan_rewrite": true,
+  "resume": false,
+  "stop_on_failure": false
+}

@@ -27,7 +27,7 @@ real-robot collection / future evidence line
 
 ```text
 1. 当前主 claim 只引用 experience_system/docs 和 results/memory/universal_pipeline_calibration_v1。
-2. experiment-sim-wrapper1 文档全部视为 legacy UR5e 线。
+2. ur5e_mujoco 文档全部视为 legacy UR5e 线。
 3. 经验库/ 目录中的论文阅读材料全部视为 research background。
 4. 真机采集文档不等于真机验证结果。
 5. 旧 U1-U5 成功率不得和当前 R1Pro G3/G4 evidence 混成同一实验表。
@@ -96,8 +96,7 @@ paper_implementation_alignment.md
 | 文档 | 状态 | 用途 |
 |---|---|---|
 | `experience_system/docs/r1pro_real_episode_collection_guide.md` | real-robot collection | R1Pro 真机 episode 采集说明。 |
-| `galaxea_mujoco/docs/real_episode_import_format.md` | real-format import | 真实 episode 导入格式说明。 |
-| `galaxea_mujoco/docs/real_episode_template.json` | real-format import | episode JSON 模板。 |
+| `experience_system/templates/r1pro_real_episode_template.json` | real-format import | episode JSON 模板。 |
 
 使用限制：
 
@@ -125,16 +124,16 @@ paper_implementation_alignment.md
 
 | 文档 | 状态 | 用途 |
 |---|---|---|
-| `experiment-sim-wrapper1/Sim-Real双源经验库开发基线设计文档.md` | legacy UR5e | 旧 UR5e 双源经验库设计基线，可作为历史启发。 |
-| `experiment-sim-wrapper1/Sim-Real双源经验库系统说明.md` | legacy UR5e | 旧系统说明。 |
-| `experiment-sim-wrapper1/Sim-Real双源经验库实验报告.md` | legacy UR5e | 旧实验报告。 |
-| `experiment-sim-wrapper1/docs/双源经验库设计与使用说明.md` | legacy UR5e | 旧使用说明。 |
-| `experiment-sim-wrapper1/U3_MEMORY_EXPERIMENT_SUMMARY.md` | legacy UR5e | U1-U5 / memory_v3 总结。 |
-| `experiment-sim-wrapper1/MEMORY_V3_UPGRADE_PLAN.md` | legacy UR5e | memory_v3 升级计划。 |
-| `experiment-sim-wrapper1/PLAN_BASELINE_IMPROVEMENT.md` | legacy UR5e | 旧 baseline prompt/skill 改进。 |
-| `experiment-sim-wrapper1/EXPERIMENT_NOTES.md` | legacy UR5e | 旧实验记录。 |
-| `experiment-sim-wrapper1/论文方法章节草稿.md` | legacy UR5e | 旧方法章节草稿。 |
-| `experiment-sim-wrapper1/plans/experience_improvement_plan.md` | legacy UR5e | 旧优化计划。 |
+| `ur5e_mujoco/Sim-Real双源经验库开发基线设计文档.md` | legacy UR5e | 旧 UR5e 双源经验库设计基线，可作为历史启发。 |
+| `ur5e_mujoco/Sim-Real双源经验库系统说明.md` | legacy UR5e | 旧系统说明。 |
+| `ur5e_mujoco/Sim-Real双源经验库实验报告.md` | legacy UR5e | 旧实验报告。 |
+| `ur5e_mujoco/docs/双源经验库设计与使用说明.md` | legacy UR5e | 旧使用说明。 |
+| `ur5e_mujoco/U3_MEMORY_EXPERIMENT_SUMMARY.md` | legacy UR5e | U1-U5 / memory_v3 总结。 |
+| `ur5e_mujoco/MEMORY_V3_UPGRADE_PLAN.md` | legacy UR5e | memory_v3 升级计划。 |
+| `ur5e_mujoco/PLAN_BASELINE_IMPROVEMENT.md` | legacy UR5e | 旧 baseline prompt/skill 改进。 |
+| `ur5e_mujoco/EXPERIMENT_NOTES.md` | legacy UR5e | 旧实验记录。 |
+| `ur5e_mujoco/论文方法章节草稿.md` | legacy UR5e | 旧方法章节草稿。 |
+| `ur5e_mujoco/plans/experience_improvement_plan.md` | legacy UR5e | 旧优化计划。 |
 
 这些文档可以用于 Related Work / Historical Baseline 说明，但必须加限定：
 

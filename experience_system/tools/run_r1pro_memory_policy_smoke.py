@@ -37,8 +37,8 @@ from experience_core import (
     score_candidate_plan,
     summarize_stage_retrieval,
 )
-from source.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration, summarize_sandbox_fusion
-from source.run_r1pro_task_chain import run_task_chain
+from source.legacy_r1pro.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration, summarize_sandbox_fusion
+from source.legacy_r1pro.run_r1pro_task_chain import run_task_chain
 
 
 @dataclass(frozen=True)
@@ -98,10 +98,13 @@ G3_CAUTIOUS_PLACE = [
 G3_REACH_RECOVERY = [
     "detect_multiple_objects",
     "select_correct_object",
-    "recover_from_joint_limit",
-    "slow_cartesian_approach",
+    "reposition_base_for_reach",
+    "adjust_torso_for_reach",
+    "move_to_pregrasp",
+    "approach_object",
     "left_gripper_close",
-    "retry_lift_after_grasp_check",
+    "verify_grasp",
+    "left_vertical_lift",
     "detect_place_occupancy",
     "choose_alternate_place",
     "place_object",

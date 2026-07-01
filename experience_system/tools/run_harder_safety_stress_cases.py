@@ -16,8 +16,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from experience_core import ExperienceLibrary, load_policy_risk_calibration
-from source.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration
-from source.run_r1pro_memory_policy_smoke import candidates_for_scenario, evaluate_candidate, object_class_for_scenario, sandbox_selection_rank, selection_rank
+from source.legacy_r1pro.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import candidates_for_scenario, evaluate_candidate, object_class_for_scenario, sandbox_selection_rank, selection_rank
 
 
 STRESS_CASES = {

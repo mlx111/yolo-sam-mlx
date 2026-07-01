@@ -1,0 +1,10 @@
+{
+  "name": "go_home",
+  "description": "Return UR5e to safe home posture.",
+  "parameters": {
+    "q": "optional list[float]",
+    "duration": "optional float"
+  },
+  "preconditions": [],
+  "effects": []
+}

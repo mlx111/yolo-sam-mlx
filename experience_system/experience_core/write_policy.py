@@ -74,7 +74,7 @@ def apply_write_decision(
 
 def _force_write_reason(entry: ExperienceEntry) -> str:
     if entry.source in {"real", "pseudo_real"}:
-        if not bool(entry.result.get("success", entry.result.get("recovery_success", False))):
+        if not bool(entry.result.get("success", entry.result.get("task_success", False))):
             return "preserve_real_or_pseudo_real_failure"
         return "preserve_real_or_pseudo_real"
     if entry.memory_tags.get("memory_role") == "sim_real_gap_memory":
@@ -91,7 +91,7 @@ def _force_write_reason(entry: ExperienceEntry) -> str:
         return "preserve_blocked_critic"
     if is_actionable_failure_type(entry.failure_taxonomy.get("failure_type")):
         return "preserve_failure_taxonomy"
-    if not bool(entry.result.get("success", entry.result.get("recovery_success", False))):
+    if not bool(entry.result.get("success", entry.result.get("task_success", False))):
         return "preserve_failure"
     return ""
 
@@ -154,7 +154,7 @@ def _decision(entry: ExperienceEntry, decision: str, reason: str, *, write: bool
         "robot_type": entry.robot.robot_type,
         "scenario_id": entry.scenario_id,
         "condition_id": entry.condition_id,
-        "success": bool(entry.result.get("success", entry.result.get("recovery_success", False))),
+        "success": bool(entry.result.get("success", entry.result.get("task_success", False))),
         "write_score": float(entry.memory_gate.write_score or 0.0),
     }
     payload.update({key: value for key, value in extra.items() if value not in ("", None, [], {})})

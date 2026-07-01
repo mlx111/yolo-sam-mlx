@@ -18,7 +18,7 @@ if str(GALAXEA_ROOT) not in sys.path:
 
 os.environ.setdefault("MUJOCO_GL", "osmesa")
 
-from source.run_r1pro_task_chain import run_task_chain
+from source.legacy_r1pro.run_r1pro_task_chain import run_task_chain
 
 
 DEFAULT_VARIANTS: tuple[dict[str, Any], ...] = (

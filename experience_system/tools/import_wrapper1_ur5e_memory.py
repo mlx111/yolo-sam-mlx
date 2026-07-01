@@ -1,4 +1,4 @@
-"""Import experiment-sim-wrapper1 MemoryV3+ entries into universal memory."""
+"""Import ur5e_mujoco MemoryV3+ entries into universal memory."""
 
 from __future__ import annotations
 
@@ -12,7 +12,10 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from experience_adapters import Wrapper1UR5eAdapter
+try:
+    from experience_system.ur5e_core import Wrapper1UR5eAdapter
+except ModuleNotFoundError:  # pragma: no cover - script-root fallback
+    from ur5e_core import Wrapper1UR5eAdapter
 from experience_core import ExperienceLibrary
 
 

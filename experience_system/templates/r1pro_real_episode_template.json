@@ -54,7 +54,6 @@
   ],
   "result": {
     "success": true,
-    "recovery_success": true,
     "task_success": true,
     "failure_reason": "",
     "attempt_count": 1

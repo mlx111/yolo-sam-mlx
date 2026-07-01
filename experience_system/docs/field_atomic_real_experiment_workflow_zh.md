@@ -211,11 +211,12 @@ field_atomic_plan.json
 
 ```json
 {
-  "action": "base_move_to_pose",
+  "action": "base_move",
   "parameters": {
-    "base_x": 0.08,
-    "base_y": -0.03,
-    "base_yaw": 0.0
+    "x": 0.08,
+    "y": -0.03,
+    "yaw": 0.0,
+    "frame": "world"
   }
 }
 ```
@@ -284,9 +285,9 @@ MuJoCo field_atomic 经验
 例如某次失败记录：
 
 ```text
-action = base_move_to_pose
-base_x = 0.25
-base_y = 0.15
+action = base_move
+x = 0.25
+y = 0.15
 status = failed
 reason = actuator_tracking_error
 ```
@@ -295,7 +296,7 @@ reason = actuator_tracking_error
 
 ```text
 类似状态下不要一次移动这么大。
-优先生成更小的 base_x/base_y。
+优先生成更小的 x/y。
 必要时先调整 torso，再移动手臂。
 ```
 

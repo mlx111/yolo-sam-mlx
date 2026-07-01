@@ -29,8 +29,8 @@ from experience_core import (
     validate_recovery_plan_semantics,
     writeback_sandbox_reports,
 )
-from source.candidate_sandbox import evaluate_candidate_in_sandbox, evaluate_plan_in_sandbox, select_sandbox_calibration
-from source.run_r1pro_memory_policy_smoke import CandidatePlan, candidates_for_scenario, object_class_for_scenario
+from source.legacy_r1pro.candidate_sandbox import evaluate_candidate_in_sandbox, evaluate_plan_in_sandbox, select_sandbox_calibration
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import CandidatePlan, candidates_for_scenario, object_class_for_scenario
 
 
 def parse_args() -> argparse.Namespace:

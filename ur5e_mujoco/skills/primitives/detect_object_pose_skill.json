@@ -1,0 +1,13 @@
+{
+  "name": "detect_object_pose",
+  "description": "Detect and segment the target object from the latest saved RGB-D observation and record its pose.",
+  "parameters": {
+    "target_class": "required str, e.g. apple, pear, or plate"
+  },
+  "preconditions": [
+    "camera_rgbd_save"
+  ],
+  "effects": [
+    "object_pose_known"
+  ]
+}

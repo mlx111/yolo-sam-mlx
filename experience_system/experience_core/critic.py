@@ -10,6 +10,27 @@ from .failure_taxonomy import standardize_failure_taxonomy
 from .schema import CriticResult, ExperienceEntry, build_retrieval_key
 
 
+_COLLISION_RULES = {"unsafe_collision", "obstacle_collision", "collision_risk", "transport_collision"}
+_JOINT_RULES = {"joint_limit", "unsafe_joint", "joint_limit_risk", "actuation_limit"}
+_GRIPPER_CONTACT_RULES = {
+    "no_contact_detected",
+    "contact_lost_during_lift",
+    "contact_gained_during_lift_unexpected",
+    "pinch_too_wide",
+    "grasp_not_secured",
+    "grasp_miss",
+    "object_not_lifted",
+}
+_END_EFFECTOR_RULES = {
+    "object_not_lifted",
+    "insufficient_z_change",
+    "perception_pos_inconsistency",
+    "perception_offset_exceeds_grasp_range",
+    "end_effector_pose_error_high",
+    "target_pose_reached",
+}
+
+
 def _clamp01(value: Any) -> float:
     try:
         numeric = float(value)
@@ -52,6 +73,23 @@ def _rule(rule: str, stage: str, severity: str, evidence: str, **extra: Any) -> 
         "severity": severity,
         "evidence": evidence,
         **{key: value for key, value in extra.items() if value not in (None, "", [], {})},
+    }
+
+
+def _flag_summary(rule_flags: list[dict[str, Any]], wanted: set[str]) -> dict[str, Any]:
+    matched = [
+        flag
+        for flag in rule_flags
+        if isinstance(flag, dict) and str(flag.get("rule") or "") in wanted
+    ]
+    return {
+        "status": "warn" if matched else "pass",
+        "flag_count": len(matched),
+        "rules": [str(flag.get("rule") or "") for flag in matched],
+        "evidence": [
+            str(flag.get("evidence") or flag.get("description_cn") or "")[:200]
+            for flag in matched[:3]
+        ],
     }
 
 
@@ -112,6 +150,12 @@ def build_critic_result(
             "rule_count": len(rule_flags),
             "external_rule_enabled": bool(rule_result.get("enabled", bool(rule_flags))),
             "llm_enabled": bool(llm_result.get("enabled")),
+            "wrapper1_summaries": {
+                "collision": _flag_summary(rule_flags, _COLLISION_RULES),
+                "joint": _flag_summary(rule_flags, _JOINT_RULES),
+                "gripper_contact": _flag_summary(rule_flags, _GRIPPER_CONTACT_RULES),
+                "end_effector_pose": _flag_summary(rule_flags, _END_EFFECTOR_RULES),
+            },
         },
     }
 
@@ -121,7 +165,7 @@ def critique_experience(entry: ExperienceEntry, *, thresholds: dict[str, float] 
 
     thresholds = thresholds or {}
     flags: list[dict[str, Any]] = []
-    result_success = bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    result_success = bool(entry.result.get("success", entry.result.get("task_success", False)))
     metrics = entry.execution_feedback.get("metrics") if isinstance(entry.execution_feedback.get("metrics"), dict) else {}
 
     flags.extend(_object_lift_flags(entry, metrics, thresholds))

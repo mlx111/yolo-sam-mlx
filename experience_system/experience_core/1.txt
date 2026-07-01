@@ -1,0 +1,3 @@
+- 如果最终失败是 move_to_pregrasp/approach_object，但证据显示 target_torso x 过大、final_error 过大、或底盘/腰部没有充分改变可达性，则 action 应该指向 move_base_relative 或 set_torso_posture，而不是自动指向 move_to_pregrasp。
+- 只有当 pregrasp_offset_x/y/z 或 topdown_mode 本身明显导致错误预抓取位姿/姿态时，才把 action 写为 move_to_pregrasp 或 plan_cartesian_trajectory。
+- 如果底盘/腰部移动后已经重新感知且 target_torso 明显变好，但仍不可达，可以把 action 指向 move_base_relative 或 set_torso_posture，并说明需要进一步调整空间关系；不要随意乱改 pregrasp_offset。

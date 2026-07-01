@@ -25,6 +25,27 @@ RECOVERY_PARAMETER_KEYS = {
     "lift_tolerance",
 }
 
+INTERNAL_CONTROL_PARAMETER_KEYS = {
+    "steps",
+    "settle_steps",
+    "max_joint_step",
+    "fail_threshold",
+    "success_threshold",
+    "pregrasp_success_threshold",
+    "direct_qpos",
+    "stabilize",
+    "lock_posture",
+    "orientation_threshold",
+}
+
+
+def _public_parameters(params: dict[str, Any]) -> dict[str, Any]:
+    return {
+        str(key): value
+        for key, value in params.items()
+        if not str(key).startswith("_") and str(key) not in INTERNAL_CONTROL_PARAMETER_KEYS
+    }
+
 
 def extract_plan_recovery_parameters(plan: dict[str, Any]) -> list[dict[str, Any]]:
     """Return parameterized plan steps that should become future priors."""
@@ -86,7 +107,6 @@ def writeback_sandbox_rollout(
     entry.result.update({
         "success": bool(sandbox_report.get("success", False)),
         "task_success": task_success,
-        "recovery_success": accepted,
         "sandbox_decision": decision,
         "sandbox_critic_status": critic_status,
         "sandbox_score": float(sandbox_report.get("sandbox_score") or 0.0),
@@ -232,7 +252,7 @@ def writeback_semantic_plan_failure(
                 name=str(step.get("action") or ""),
                 primitive_type="llm_recovery_plan_step",
                 phase="semantic_validation",
-                inputs={"parameters": step.get("parameters") if isinstance(step.get("parameters"), dict) else {}},
+                inputs={"parameters": _public_parameters(step.get("parameters") if isinstance(step.get("parameters"), dict) else {})},
                 outputs={"semantic_validation": semantic_validation},
                 success=False,
                 message=str(step.get("reason") or ""),
@@ -243,7 +263,6 @@ def writeback_semantic_plan_failure(
         result={
             "success": False,
             "task_success": False,
-            "recovery_success": False,
             "sandbox_skipped": True,
             "semantic_validation_status": str(semantic_validation.get("status") or ""),
             "semantic_fatal_count": int(semantic_validation.get("fatal_count") or 0),
@@ -254,10 +273,25 @@ def writeback_semantic_plan_failure(
         execution_feedback={
             "recovery_plan": _compact_plan(recovery_plan),
             "semantic_validation": semantic_validation,
+            "llm_critic": {
+                "failure_type": failure_type,
+                "failure_stage": "semantic_validation",
+                "root_cause": str(primary_issue.get("message") or "pre-sandbox semantic validation failed"),
+                "corrective_direction": "补齐前置条件后再进入 sandbox rollout。",
+                "missing_phases": ["precondition repair", "sandbox rerun"],
+                "failed_predicates": [str(primary_issue.get("message") or "")] if primary_issue.get("message") else [],
+                "memory_lesson": str(primary_issue.get("message") or ""),
+                "failure_evidence": {
+                    "semantic_validation": semantic_validation,
+                    "sandbox_skipped": True,
+                },
+            },
             "semantic_failure": {
                 "failure_type": failure_type,
                 "failed_action": failed_action,
                 "missing_requires": missing_requires,
+                "failed_action_parameters": primary_issue.get("parameters") if isinstance(primary_issue.get("parameters"), dict) else {},
+                "memory_lesson": str(primary_issue.get("message") or ""),
                 "issues": issues,
             },
             "sandbox_writeback": {
@@ -311,6 +345,7 @@ def writeback_semantic_plan_failure(
             "failed_action": failed_action,
             "missing_requires": missing_requires,
             "failure_stage": "semantic_validation",
+            "failure_reason": str(primary_issue.get("message") or "pre-sandbox semantic validation failed"),
         },
         metadata={
             "semantic_plan_failure_writeback": True,
@@ -341,7 +376,7 @@ def _append_plan_parameter_trace(entry: ExperienceEntry, parameter_steps: list[d
     existing = {(item.name, json.dumps(item.raw.get("parameters", {}), sort_keys=True, ensure_ascii=False)) for item in entry.skill_sequence}
     for step in parameter_steps:
         action = str(step.get("action") or "")
-        params = step.get("parameters") if isinstance(step.get("parameters"), dict) else {}
+        params = _public_parameters(step.get("parameters") if isinstance(step.get("parameters"), dict) else {})
         key = (action, json.dumps(params, sort_keys=True, ensure_ascii=False))
         if not action or key in existing:
             continue
@@ -351,7 +386,7 @@ def _append_plan_parameter_trace(entry: ExperienceEntry, parameter_steps: list[d
             phase="sandbox_plan_parameter",
             inputs={"parameters": params},
             outputs={"parameters": params},
-            success=bool(entry.result.get("recovery_success", False)),
+            success=bool(entry.result.get("success", entry.result.get("task_success", False))),
             message="LLM-proposed recovery parameters evaluated by sandbox",
             raw={"parameters": params, "plan_step_index": step.get("step_index")},
         ))

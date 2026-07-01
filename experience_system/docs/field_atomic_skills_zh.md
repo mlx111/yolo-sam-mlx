@@ -35,9 +35,8 @@ right_arm_move_to_position
 left_gripper_set
 right_gripper_set
 torso_move_to_posture
-base_move_to_pose
+base_move
 head_camera_capture
-base_lidar_scan
 ```
 
 这些动作目前放在：
@@ -143,17 +142,25 @@ right_gripper_set
 
 ```json
 {
-  "action": "base_move_to_pose",
+  "action": "base_move",
   "parameters": {
-    "base_x": 0.08,
-    "base_y": -0.03,
-    "base_yaw": 0.0,
+    "x": 0.08,
+    "y": -0.03,
+    "yaw": 0.0,
+    "frame": "world",
     "steps": 400,
     "settle_steps": 80,
     "max_joint_step": 0.004,
     "direct_qpos": false
   }
 }
+```
+
+说明：
+
+```text
+frame = world  -> 绝对运动，x/y/yaw 直接表示世界坐标目标位姿
+frame = base   -> 相对运动，x/y 表示机器人当前 base 坐标系下的位移，yaw 表示相对当前朝向的转角
 ```
 
 ### 4.5 获取头部相机图像
@@ -170,19 +177,6 @@ right_gripper_set
 ```
 
 注意：这里默认是现场外接 RGB-D 相机，不依赖机器人自带头部相机是否有深度。
-
-### 4.6 获取底盘激光雷达
-
-```json
-{
-  "action": "base_lidar_scan",
-  "parameters": {
-    "ray_count": 181,
-    "horizontal_fov_deg": 360.0,
-    "max_range": 5.0
-  }
-}
-```
 
 ## 5. LLM 生成方式
 
@@ -226,36 +220,32 @@ EXPERIENCE_LLM_MODEL
 
 ## 6. 输出计划格式
 
-LLM 输出的是：
+LLM 输出给执行器的是最简执行 JSON：
 
 ```text
-field_atomic_plan_v1
+field_atomic_execution_steps_v1
 ```
 
 结构示例：
 
 ```json
 {
-  "schema_version": "field_atomic_plan_v1",
-  "plan_id": "field_atomic_plan_xxx",
-  "goal": "align robot and inspect scene",
   "steps": [
     {
-      "action": "head_camera_capture",
+      "action": "head_camera_rgbd_save",
+      "parameters": {}
+    },
+    {
+      "action": "head_camera_grounded_sam2_pose",
       "parameters": {
-        "width": 80,
-        "height": 60,
-        "include_depth": true
-      },
-      "reason": "observe the scene before movement"
+        "target_class": "apple"
+      }
     }
-  ],
-  "constraints": [],
-  "risk_notes": [],
-  "evidence_ids": [],
-  "confidence": 0.5
+  ]
 }
 ```
+
+`goal`、`reason`、`constraints`、`risk_notes`、`evidence_ids`、`confidence` 等信息只进入 report 或经验库 metadata，不写入执行 JSON。
 
 ## 7. 经验库写回
 
@@ -316,16 +306,25 @@ field_atomic 经验：记录底层动作参数和单步执行成败。
   "target_x": 0.32,
   "target_y": 0.12,
   "target_z": 0.90,
-  "control_frame": "pinch",
+  "control_frame": "grasp_tool",
   "target_quat_wxyz": [1.0, 0.0, 0.0, 0.0],
   "orientation_weight": 0.35,
   "orientation_threshold": 0.15
 }
 ```
 
-`control_frame` 可以是 `tcp` 或 `pinch`。默认使用 `pinch`，也就是夹爪中心；只有明确需要手腕 TCP 参考点时才使用 `tcp`。
+`control_frame` 目前支持：
+
+```text
+grasp_tool
+hand_tcp
+```
+
+默认推荐使用 `grasp_tool`，也就是抓取规划和抓取执行对外统一暴露的工具坐标系；只有在需要兼容底层手腕参考点时才使用 `hand_tcp`。
 
 `target_quat_wxyz` 是当前对外支持的末端朝向参数。不需要控制朝向时可以省略。
+
+当前仿真模型中，`grasp_tool` 与 `hand_tcp` 先按相同几何位置定义，目的是先把接口和 IK frame 选择打通；如果后续拿到真机标定值，再把 `grasp_tool` 相对 `hand_tcp` 的固定偏移补进模型即可。
 
 还没有完成：
 

@@ -17,7 +17,7 @@
 
 ### 2.1 本地实现依据
 
-`../experiment-sim-wrapper1` 已经实现了一套 UR5e 异常恢复经验库，关键模块包括：
+`../ur5e_mujoco` 已经实现了一套 UR5e 异常恢复经验库，关键模块包括：
 
 ```text
 memory/v3.py
@@ -424,7 +424,7 @@ sim_real_gap_high
 repeated_failure
 ```
 
-这对应 `experiment-sim-wrapper1/memory/gating.py` 的现有做法，也符合 surprise-gated memory 的研究方向。
+这对应 `experience_system/memory/gating.py` 的现有做法，也符合 surprise-gated memory 的研究方向。
 
 ## 10. 检索
 
@@ -478,7 +478,7 @@ sim_success_real_fail_penalty
 failure_overlap_penalty
 ```
 
-这对应 `experiment-sim-wrapper1/memory/scoring.py` 的现有设计。
+这对应 `experience_system/memory/scoring.py` 的现有设计。
 
 ## 11. Critic
 
@@ -695,7 +695,7 @@ execution_feedback = object lift / final place error / selected recovery branch
 输入：
 
 ```text
-experiment-sim-wrapper1 MemoryV3Entry or result.json
+ur5e_mujoco MemoryV3Entry or result.json
 ```
 
 输出：
@@ -790,7 +790,7 @@ galaxea_mujoco/
     build_sim_real_pairs.py
 ```
 
-等接口稳定后，可以把 `experience_core/` 移到上一级，供 `experiment-sim-wrapper1` 和 `galaxea_mujoco` 共同 import。
+等接口稳定后，可以把 `experience_core/` 移到上一级，供 `ur5e_mujoco` 和 `galaxea_mujoco` 共同 import。
 
 ## 18. 与当前代码的关系
 
@@ -812,7 +812,7 @@ experience_adapters/r1pro_mujoco.py
 
 `memory/v1.py` 可以暂时作为兼容层，后面逐步迁移。
 
-`experiment-sim-wrapper1` 的 `MemoryV3Entry` 不需要立刻改动。可以先写 `wrapper1_ur5e.py` adapter，把旧条目读进通用 `ExperienceEntry`。
+`ur5e_mujoco` 的 `MemoryV3Entry` 不需要立刻改动。可以先写 `wrapper1_ur5e.py` adapter，把旧条目读进通用 `ExperienceEntry`。
 
 ## 19. MVP 实现顺序
 
@@ -857,7 +857,7 @@ experience_adapters/wrapper1_ur5e.py
 验收：
 
 ```text
-能读取 experiment-sim-wrapper1 的 MemoryV3+ JSON
+能读取 ur5e_mujoco 的 MemoryV3+ JSON
 能转换成通用 ExperienceEntry
 ```
 
@@ -955,7 +955,7 @@ critic/risk-aware recovery planning
 4. Episodic Memory Verbalization using Hierarchical Representations of Life-Long Robot Experience, arXiv:2409.17702.
 5. Worth Remembering: Surprise-Gated Robot Episodic Memory, arXiv:2606.03787.
 6. Robotic Sim-to-Real Transfer for Long-Horizon Pick-and-Place Tasks in the Robotic Sim2Real Competition, arXiv:2503.11012.
-7. `../experiment-sim-wrapper1/docs/双源经验库设计与使用说明.md`.
-8. `../experiment-sim-wrapper1/Sim-Real双源经验库系统说明.md`.
+7. `../ur5e_mujoco/docs/双源经验库设计与使用说明.md`.
+8. `../ur5e_mujoco/Sim-Real双源经验库系统说明.md`.
 9. `../经验库/机器人记忆与评测论文对Sim-Real双源经验库的综合启发.md`.
 10. `../经验库/双源经验库与沙盒推演研究方案.md`.

@@ -17,8 +17,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from experience_core import ExperienceLibrary, load_lesson_library, load_policy_risk_calibration, retrieval_count
-from source.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration, summarize_sandbox_fusion
-from source.run_r1pro_memory_policy_smoke import (
+from source.legacy_r1pro.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration, summarize_sandbox_fusion
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import (
     adjust_candidate_with_lessons,
     candidates_for_scenario,
     evaluate_candidate,

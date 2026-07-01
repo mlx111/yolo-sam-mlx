@@ -104,7 +104,7 @@ def should_promote_to_ltm(
 ) -> tuple[bool, str]:
     if memory_tier(entry) == LTM:
         return False, "already_ltm"
-    success = bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    success = bool(entry.result.get("success", entry.result.get("task_success", False)))
     failure_type = str(entry.failure_taxonomy.get("failure_type") or "")
     if promote_real and entry.source in {"real", "pseudo_real"}:
         return True, "real_or_pseudo_real_source"
@@ -182,7 +182,7 @@ def consolidate_memory_lifecycle(
 
 
 def _eviction_key(entry: ExperienceEntry) -> tuple[int, int, float, str]:
-    success = bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    success = bool(entry.result.get("success", entry.result.get("task_success", False)))
     write_score = float(entry.memory_gate.write_score or 0.0)
     protected_failure = 1 if not success or is_actionable_failure_type(entry.failure_taxonomy.get("failure_type")) else 0
     return (protected_failure, retrieval_count(entry), write_score, entry.created_at)

@@ -1,0 +1,60 @@
+{
+  "anomalies": [
+    "grasp_miss"
+  ],
+  "conditions": [
+    "U3-1"
+  ],
+  "methods": [
+    "direct_memory"
+  ],
+  "trials_per_method": 5,
+  "seed_start": 4900,
+  "experience_read": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/memory/field_atomic_smoke_experience.json",
+  "output_dir": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes",
+  "scene_xml": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml",
+  "auto_build_runtime_scene": false,
+  "runtime_scene_report": null,
+  "runtime_scene": {
+    "enabled": false,
+    "color": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/inputs/cleft001.png",
+    "depth": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/inputs/dleft001.png",
+    "objects": [
+      "apple"
+    ],
+    "template": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/assets/scenes/scene2.xml",
+    "camera": "cam1",
+    "downsample_scale": 1.0
+  },
+  "noise_scale": 0.0,
+  "object_displaced_dx": null,
+  "object_displaced_dy": null,
+  "no_viewer": false,
+  "no_inject": false,
+  "resume": false,
+  "skip_existing": false,
+  "stop_on_failure": false,
+  "use_memory_keyframes": true,
+  "memory_keyframe_top_k": 2,
+  "enable_failed_plan_rewrite": true,
+  "inject_failed_plan_for_test": false,
+  "recovery_candidate_count": 3,
+  "execute_recovery_candidate_validation": true,
+  "failed_memory_hard_block": true,
+  "dedupe_failure_memory": true,
+  "memory_index_dir": null,
+  "strategy_families": [
+    ""
+  ],
+  "rolling_memory": true,
+  "rolling_memory_scope": "scenario",
+  "rolling_memory_save_modes": {
+    "direct_llm_weak": "all",
+    "direct_memory": "all",
+    "hierarchical_memory_weak": "all",
+    "hierarchical_no_failed": "success_only",
+    "dual_source_gap_memory": "all",
+    "dual_source_gap_critic": "all"
+  },
+  "created_at": "2026-07-01 14:00:08"
+}

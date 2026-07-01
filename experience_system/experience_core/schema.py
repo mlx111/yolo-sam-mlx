@@ -60,6 +60,17 @@ class SkillTraceItem:
 
 
 @dataclass
+class SkillCatalog:
+    namespace: str = ""
+    robot_type: str = ""
+    backend: str = ""
+    version: str = "v1"
+    allowed_skills: dict[str, Any] = field(default_factory=dict)
+    debug_skills: dict[str, Any] = field(default_factory=dict)
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+
+@dataclass
 class SensorSummary:
     joint_positions: list[float] = field(default_factory=list)
     joint_velocities: list[float] = field(default_factory=list)
@@ -144,6 +155,8 @@ class ExperienceEntry:
     backend: str = ""
     validation_status: str = ""
     memory_partition: str = ""
+    skill_namespace: str = ""
+    skill_catalog_version: str = ""
     robot: RobotState = field(default_factory=RobotState)
     embodiment: dict[str, Any] = field(default_factory=dict)
     scenario: dict[str, Any] = field(default_factory=dict)
@@ -191,6 +204,13 @@ class ExperienceEntry:
         self.sim_real_gap = coerce_dataclass(SimRealGap, self.sim_real_gap)
         self.sandbox_calibration = coerce_dataclass(SandboxCalibration, self.sandbox_calibration)
         self.skill_sequence = [coerce_dataclass(SkillTraceItem, item) for item in self.skill_sequence]
+        if not self.skill_namespace:
+            self.skill_namespace = infer_skill_namespace(self)
+        if not self.skill_catalog_version and self.skill_namespace in {"galaxea_r1pro_torso", "wrapper1_ur5e"}:
+            self.skill_catalog_version = "v1"
+        self.metadata.setdefault("skill_namespace", self.skill_namespace)
+        if self.skill_catalog_version:
+            self.metadata.setdefault("skill_catalog_version", self.skill_catalog_version)
         if not self.memory_partition:
             self.memory_partition = infer_memory_partition(self)
         if not self.retrieval_key:
@@ -227,6 +247,96 @@ def infer_memory_partition(entry: ExperienceEntry) -> str:
     return "simulation_memory"
 
 
+GALAXEA_R1PRO_TORSO_NAMESPACE = "galaxea_r1pro_torso"
+WRAPPER1_UR5E_NAMESPACE = "wrapper1_ur5e"
+UNKNOWN_SKILL_NAMESPACE = "unknown"
+
+GALAXEA_R1PRO_TORSO_SKILLS = {
+    "move_base_relative",
+    "set_torso_posture",
+    "head_camera_rgbd_save",
+    "head_camera_grounded_sam2_pose",
+    "plan_cartesian_trajectory",
+    "move_to_pregrasp",
+    "approach_object",
+    "close_gripper",
+    "open_gripper",
+    "lift",
+    "lower_held_object",
+    "transport_to_detected_target",
+}
+
+GALAXEA_R1PRO_TORSO_DEBUG_SKILLS: set[str] = set()
+
+WRAPPER1_UR5E_SKILLS = {
+    "camera_rgbd_save",
+    "detect_object_pose",
+    "move_to_pregrasp",
+    "approach_object",
+    "close_gripper",
+    "open_gripper",
+    "lift",
+    "move_lifted_object_to",
+    "place_object",
+    "go_home",
+}
+
+
+def canonical_skill_action(action: str) -> str:
+    text = str(action or "")
+    return text[len("torso_frame_"):] if text.startswith("torso_frame_") else text
+
+
+def default_skill_catalogs() -> dict[str, SkillCatalog]:
+    return {
+        GALAXEA_R1PRO_TORSO_NAMESPACE: SkillCatalog(
+            namespace=GALAXEA_R1PRO_TORSO_NAMESPACE,
+            robot_type="mobile_dual_arm",
+            backend="mujoco",
+            version="v1",
+            allowed_skills={name: {} for name in sorted(GALAXEA_R1PRO_TORSO_SKILLS)},
+            debug_skills={name: {"debug_only": True} for name in sorted(GALAXEA_R1PRO_TORSO_DEBUG_SKILLS)},
+        ),
+        WRAPPER1_UR5E_NAMESPACE: SkillCatalog(
+            namespace=WRAPPER1_UR5E_NAMESPACE,
+            robot_type="fixed_single_arm",
+            backend="mujoco",
+            version="v1",
+            allowed_skills={name: {} for name in sorted(WRAPPER1_UR5E_SKILLS)},
+        ),
+    }
+
+
+def coerce_skill_catalogs(value: Any) -> dict[str, SkillCatalog]:
+    catalogs = default_skill_catalogs()
+    if not isinstance(value, dict):
+        return catalogs
+    for namespace, payload in value.items():
+        if isinstance(payload, SkillCatalog):
+            catalogs[str(namespace)] = payload
+        elif isinstance(payload, dict):
+            catalogs[str(namespace)] = SkillCatalog(**{key: val for key, val in payload.items() if key in SkillCatalog.__dataclass_fields__})
+    return catalogs
+
+
+def infer_skill_namespace(entry: ExperienceEntry) -> str:
+    metadata_namespace = entry.metadata.get("skill_namespace") if isinstance(entry.metadata, dict) else ""
+    if metadata_namespace:
+        return str(metadata_namespace)
+    actions = {canonical_skill_action(item.name) for item in entry.skill_sequence if item.name}
+    feedback = entry.execution_feedback if isinstance(entry.execution_feedback, dict) else {}
+    feedback_action = canonical_skill_action(str(feedback.get("field_atomic_action") or ""))
+    if feedback_action:
+        actions.add(feedback_action)
+    if actions and actions <= (GALAXEA_R1PRO_TORSO_SKILLS | GALAXEA_R1PRO_TORSO_DEBUG_SKILLS):
+        return GALAXEA_R1PRO_TORSO_NAMESPACE
+    if actions and actions <= WRAPPER1_UR5E_SKILLS:
+        return WRAPPER1_UR5E_NAMESPACE
+    if entry.robot.robot_type == "fixed_single_arm":
+        return WRAPPER1_UR5E_NAMESPACE
+    return UNKNOWN_SKILL_NAMESPACE
+
+
 def build_retrieval_key(entry: ExperienceEntry) -> dict[str, Any]:
     action_names = [item.name for item in entry.skill_sequence if item.name]
     return {
@@ -235,6 +345,8 @@ def build_retrieval_key(entry: ExperienceEntry) -> dict[str, Any]:
         "robot_id": entry.robot.robot_id,
         "robot_type": entry.robot.robot_type,
         "embodiment_tags": list(entry.robot.embodiment_tags),
+        "skill_namespace": entry.skill_namespace,
+        "skill_catalog_version": entry.skill_catalog_version,
         "scenario_id": entry.scenario_id,
         "condition_id": entry.condition_id,
         "task_stage": str(entry.task.get("stage") or ""),

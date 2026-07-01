@@ -16,6 +16,7 @@ class RetrievalQuery:
     condition_id: str = ""
     robot_type: str = ""
     backend: str = ""
+    skill_namespace: str = ""
     task_stage: str = ""
     source: str = ""
     memory_role: str = ""
@@ -89,6 +90,7 @@ def score_entry(entry: ExperienceEntry, query: RetrievalQuery) -> RetrievalMatch
     score += _record_exact(explanation, "condition_id", entry.condition_id, query.condition_id, 0.18)
     score += _record_exact(explanation, "robot_type", entry.robot.robot_type, query.robot_type, 0.10, mismatch_penalty=-0.05)
     score += _record_exact(explanation, "backend", entry.backend, query.backend, 0.06)
+    score += _record_exact(explanation, "skill_namespace", entry.skill_namespace, query.skill_namespace, 0.12)
     score += _record_exact(explanation, "task_stage", str(entry.task.get("stage") or ""), query.task_stage, 0.06)
     score += _record_exact(explanation, "source", entry.source, query.source, 0.08)
     score += _record_exact(explanation, "memory_role", str(entry.memory_tags.get("memory_role") or ""), query.memory_role, 0.08)
@@ -149,6 +151,7 @@ def score_entry(entry: ExperienceEntry, query: RetrievalQuery) -> RetrievalMatch
 def _passes_hard_filters(entry: ExperienceEntry, query: RetrievalQuery) -> bool:
     filters = {
         "source": entry.source,
+        "skill_namespace": entry.skill_namespace,
         "memory_role": str(entry.memory_tags.get("memory_role") or ""),
         "memory_type": str(entry.memory_tags.get("memory_type") or ""),
         "memory_partition": entry.memory_partition,

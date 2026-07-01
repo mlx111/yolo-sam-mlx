@@ -24,8 +24,8 @@ from experience_core import (
     robust_sandbox_summary,
     sandbox_perturbation_from_dict,
 )
-from source.candidate_sandbox import evaluate_candidate_in_sandbox, select_sandbox_calibration
-from source.run_r1pro_memory_policy_smoke import candidates_for_scenario, object_class_for_scenario
+from source.legacy_r1pro.candidate_sandbox import evaluate_candidate_in_sandbox, select_sandbox_calibration
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import candidates_for_scenario, object_class_for_scenario
 
 
 def parse_args() -> argparse.Namespace:

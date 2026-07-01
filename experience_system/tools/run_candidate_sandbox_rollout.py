@@ -27,8 +27,8 @@ from experience_core import (
     run_stage_retrieval,
     summarize_stage_retrieval,
 )
-from source.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration, summarize_sandbox_fusion
-from source.run_r1pro_memory_policy_smoke import (
+from source.legacy_r1pro.candidate_sandbox import evaluate_candidate_in_sandbox, fuse_memory_and_sandbox, select_sandbox_calibration, summarize_sandbox_fusion
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import (
     candidates_for_scenario,
     derive_candidates_from_planner_input,
     evaluate_candidate,

@@ -1,0 +1,11 @@
+{
+  "conditions": ["U4-3", "U4-4", "U4-5"],
+  "methods": ["direct_llm_weak"],
+  "trials_per_method": 5,
+  "seed_start": 4600,
+  "output_dir": "results/u4_3condition_direct_5trials_v2",
+  "noise_scale": 0.0,
+  "no_viewer": true,
+  "no_inject": false,
+  "rolling_memory": false
+}

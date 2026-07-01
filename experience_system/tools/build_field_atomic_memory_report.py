@@ -25,7 +25,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--universal-experience-lib",
         type=Path,
-        default=Path("results/memory/universal_pipeline_calibration_v1/universal_experience_library.json"),
+        default=Path("results/memory/galaxea_field_atomic_experience_library.json"),
     )
     parser.add_argument("--scenario-id", default="")
     parser.add_argument("--condition-id", default="")

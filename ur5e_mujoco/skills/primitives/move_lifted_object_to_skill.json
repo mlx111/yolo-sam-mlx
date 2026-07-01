@@ -1,0 +1,9 @@
+{
+  "name": "move_lifted_object_to",
+  "description": "Move the lifted object to a previously detected placement target without opening the gripper.",
+  "parameters": {
+    "target": "required detected placement target class/name, for example plate. The executor reads x/y from the previous detect_object_pose result and uses fixed z/height internally."
+  },
+  "preconditions": [],
+  "effects": []
+}

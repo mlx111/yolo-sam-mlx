@@ -20,7 +20,7 @@ def consolidation_key(entry: ExperienceEntry) -> tuple[str, str, str, str, str, 
         entry.condition_id,
         entry.object_state.object_class,
         plan_signature(entry),
-        bool(entry.result.get("success", entry.result.get("recovery_success", False))),
+        bool(entry.result.get("success", entry.result.get("task_success", False))),
         str(entry.failure_taxonomy.get("failure_type") or ""),
         entry.source,
     )
@@ -29,7 +29,7 @@ def consolidation_key(entry: ExperienceEntry) -> tuple[str, str, str, str, str, 
 def should_consolidate(entry: ExperienceEntry) -> tuple[bool, str]:
     if entry.source in {"real", "pseudo_real"}:
         return False, "preserve_real_or_pseudo_real"
-    if not bool(entry.result.get("success", entry.result.get("recovery_success", False))):
+    if not bool(entry.result.get("success", entry.result.get("task_success", False))):
         return False, "preserve_failure"
     if entry.memory_tags.get("memory_role") == "sim_real_gap_memory":
         return False, "preserve_gap_memory"

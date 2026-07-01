@@ -1,0 +1,7 @@
+{
+  "name": "open_gripper",
+  "description": "Open UR5e gripper and release the physically held target.",
+  "parameters": {},
+  "preconditions": [],
+  "effects": []
+}

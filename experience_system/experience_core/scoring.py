@@ -18,7 +18,7 @@ def _clamp01(value: Any) -> float:
 
 
 def _success(entry: ExperienceEntry) -> bool:
-    return bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    return bool(entry.result.get("success", entry.result.get("task_success", False)))
 
 
 def _actions_from_candidate(candidate_steps: list[dict[str, Any]] | list[str]) -> list[str]:

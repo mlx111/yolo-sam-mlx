@@ -42,7 +42,7 @@ def _audit_entries(entries: list[ExperienceEntry], *, merge_duplicates: bool) ->
             "backend": entry.backend,
             "scenario_id": entry.scenario_id,
             "condition_id": entry.condition_id,
-            "success": bool(entry.result.get("success", entry.result.get("recovery_success", False))),
+            "success": bool(entry.result.get("success", entry.result.get("task_success", False))),
             "memory_role": _entry_role(entry),
             "critic_status": entry.critic_result.overall_status,
             "write_score": float(entry.memory_gate.write_score or 0.0),

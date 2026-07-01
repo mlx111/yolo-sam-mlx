@@ -1,5 +1,5 @@
 {
-  "input": "results/memory/universal_pipeline_calibration_v1/universal_experience_library.json",
+  "input": "results/memory/galaxea_field_atomic_experience_library.json",
   "output_dir": "results/memory/lifecycle_pressure_test_v1",
   "low_value_copies": 6,
   "hot_success_copies": 2,

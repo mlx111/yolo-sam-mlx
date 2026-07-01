@@ -7,13 +7,14 @@ from pathlib import Path
 from typing import Any
 
 from .retrieval import RetrievalMatch, RetrievalQuery, matches_to_tuples, retrieve_experiences
-from .schema import ExperienceEntry, utc_now
+from .schema import ExperienceEntry, SkillCatalog, coerce_skill_catalogs, utc_now
 from .write_policy import apply_write_decision, should_write_entry
 
 
 class ExperienceLibrary:
-    def __init__(self, entries: list[ExperienceEntry] | None = None) -> None:
+    def __init__(self, entries: list[ExperienceEntry] | None = None, skill_catalogs: dict[str, SkillCatalog] | None = None) -> None:
         self.entries = entries or []
+        self.skill_catalogs = coerce_skill_catalogs(skill_catalogs)
 
     def __len__(self) -> int:
         return len(self.entries)
@@ -51,6 +52,7 @@ class ExperienceLibrary:
         condition_id: str = "",
         robot_type: str = "",
         backend: str = "",
+        skill_namespace: str = "",
         task_stage: str = "",
         top_k: int = 5,
         include_failed: bool = True,
@@ -61,6 +63,7 @@ class ExperienceLibrary:
                 condition_id=condition_id,
                 robot_type=robot_type,
                 backend=backend,
+                skill_namespace=skill_namespace,
                 task_stage=task_stage,
                 top_k=top_k,
                 include_failed=include_failed,
@@ -73,9 +76,10 @@ class ExperienceLibrary:
 
     def to_dict(self) -> dict[str, Any]:
         return {
-            "schema_version": "universal_experience_library_v1",
+            "schema_version": "universal_experience_library_v2",
             "updated_at": utc_now(),
             "entry_count": len(self.entries),
+            "skill_catalogs": {key: catalog.__dict__ for key, catalog in self.skill_catalogs.items()},
             "entries": [entry.to_dict() for entry in self.entries],
         }
 
@@ -92,4 +96,5 @@ class ExperienceLibrary:
         payload = json.loads(source.read_text(encoding="utf-8"))
         raw_entries = payload.get("entries", []) if isinstance(payload, dict) else payload
         entries = [ExperienceEntry(**item) for item in raw_entries if isinstance(item, dict)]
-        return cls(entries)
+        skill_catalogs = payload.get("skill_catalogs", {}) if isinstance(payload, dict) else {}
+        return cls(entries, skill_catalogs=skill_catalogs)

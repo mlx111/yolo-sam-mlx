@@ -89,7 +89,6 @@ class RealEpisodeAdapter:
         metrics.update(raw_episode.get("metrics") or {})
         memory_gate = compute_memory_gate(
             metrics,
-            recovery_success=bool(result.get("recovery_success", result.get("success", False))),
             task_success=bool(result.get("task_success", False)),
             validation_status=validation_status,
             sim_real_gap=raw_episode.get("sim_real_gap") if isinstance(raw_episode.get("sim_real_gap"), dict) else None,
@@ -244,16 +243,14 @@ class RealEpisodeAdapter:
     @staticmethod
     def _result(raw: dict[str, Any]) -> dict[str, Any]:
         value = raw.get("result") if isinstance(raw.get("result"), dict) else {}
-        success = bool(value.get("success", raw.get("success", raw.get("recovery_success", False))))
-        recovery_success = bool(value.get("recovery_success", success))
-        task_success = bool(value.get("task_success", raw.get("task_success", recovery_success)))
+        task_success = bool(value.get("task_success", raw.get("task_success", value.get("success", raw.get("success", False)))))
+        success = bool(value.get("success", raw.get("success", task_success)))
         return {
             "success": success,
-            "recovery_success": recovery_success,
             "task_success": task_success,
             "failure_reason": str(value.get("failure_reason") or raw.get("failure_reason") or ""),
             "attempt_count": value.get("attempt_count", raw.get("attempt_count", raw.get("attempts", 1))),
-            **{k: v for k, v in value.items() if k not in {"success", "recovery_success", "task_success", "failure_reason"}},
+            **{k: v for k, v in value.items() if k not in {"success", "task_success", "failure_reason"}},
         }
 
     @staticmethod

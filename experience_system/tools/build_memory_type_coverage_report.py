@@ -26,7 +26,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--input",
         type=Path,
-        default=Path("results/memory/universal_pipeline_calibration_v1/universal_experience_library.json"),
+        default=Path("results/memory/galaxea_field_atomic_experience_library.json"),
         help="Universal experience library JSON.",
     )
     parser.add_argument("--save-json", type=Path, required=True)

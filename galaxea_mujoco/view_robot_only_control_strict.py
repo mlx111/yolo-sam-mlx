@@ -121,12 +121,46 @@ def main():
     left_arm = load_left_arm()
     left_start = tcp_pos(model, data, "left")
     left_target = left_start + np.array([0.01, -0.005, 0.008], dtype=np.float64)
+    left_direct_result = left_arm.move_to_position(
+        model,
+        data,
+        left_target,
+        steps=1,
+        settle_steps=0,
+        direct_qpos=True,
+        fail_threshold=0.03,
+    )
+    results.append(
+        check(
+            "left_arm_tcp_move_direct_qpos",
+            left_direct_result.final_error,
+            0.03,
+            f"target={np.round(left_target, 6).tolist()}",
+        )
+    )
     left_result = left_arm.move_to_position(model, data, left_target, steps=2500, settle_steps=1500, fail_threshold=0.03)
     results.append(check("left_arm_tcp_move", left_result.final_error, 0.03, f"target={np.round(left_target, 6).tolist()}"))
 
     right_arm = load_right_arm()
     right_start = tcp_pos(model, data, "right")
     right_target = right_start + np.array([0.01, 0.005, 0.008], dtype=np.float64)
+    right_direct_result = right_arm.move_to_position(
+        model,
+        data,
+        right_target,
+        steps=1,
+        settle_steps=0,
+        direct_qpos=True,
+        fail_threshold=0.03,
+    )
+    results.append(
+        check(
+            "right_arm_tcp_move_direct_qpos",
+            right_direct_result.final_error,
+            0.03,
+            f"target={np.round(right_target, 6).tolist()}",
+        )
+    )
     right_result = right_arm.move_to_position(model, data, right_target, steps=2500, settle_steps=1500, fail_threshold=0.03)
     results.append(check("right_arm_tcp_move", right_result.final_error, 0.03, f"target={np.round(right_target, 6).tolist()}"))
 

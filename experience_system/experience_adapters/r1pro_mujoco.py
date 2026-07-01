@@ -15,6 +15,7 @@ from experience_core import (
     compute_memory_gate,
     standardize_failure_taxonomy,
 )
+from experience_core.schema import UNKNOWN_SKILL_NAMESPACE
 
 
 class R1ProMujocoAdapter:
@@ -38,7 +39,6 @@ class R1ProMujocoAdapter:
         metrics["selected_alternate_place"] = result.get("selected_place_site") == "alternate_place_zone_site"
         memory_gate = compute_memory_gate(
             metrics,
-            recovery_success=bool(result.get("success")),
             task_success=bool(result.get("task_success")),
             validation_status="simulation_validated",
         )
@@ -56,6 +56,7 @@ class R1ProMujocoAdapter:
             source="simulation",
             domain="r1pro_anomaly_recovery",
             backend=self.backend,
+            skill_namespace=UNKNOWN_SKILL_NAMESPACE,
             validation_status="simulation_validated",
             robot=self._robot_state(result),
             embodiment={
@@ -119,7 +120,6 @@ class R1ProMujocoAdapter:
             ),
             result={
                 "success": bool(result.get("success")),
-                "recovery_success": bool(result.get("success")),
                 "task_success": bool(result.get("task_success")),
                 "failure_reason": failure_reason,
             },

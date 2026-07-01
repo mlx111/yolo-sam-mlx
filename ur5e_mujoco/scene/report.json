@@ -1,0 +1,233 @@
+{
+  "status": "success",
+  "color_image_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/inputs/cleft001.png",
+  "depth_image_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/inputs/dleft001.png",
+  "scene_out": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml",
+  "scene_template": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/assets/scenes/scene2.xml",
+  "objects": [
+    "apple"
+  ],
+  "object_positions_m": {
+    "apple": [
+      0.5601256525397542,
+      0.2996331530642463,
+      0.32137230975198916
+    ]
+  },
+  "object_quats_wxyz": {
+    "apple": [
+      -0.6871320924606065,
+      0.6871320924606065,
+      0.16688165720266743,
+      -0.16688165720266743
+    ]
+  },
+  "color_shape": [
+    1080,
+    1920
+  ],
+  "depth_shape": [
+    1080,
+    1920
+  ],
+  "alignment_mode": "aligned_depth_uses_color_intrinsics",
+  "color_intrinsics": {
+    "fx": 1129.8136,
+    "fy": 1128.6075,
+    "cx": 961.0022,
+    "cy": 546.8298,
+    "width": 1920,
+    "height": 1080,
+    "distortion_model": "radial-tangential",
+    "distortion": {
+      "k1": 0.0,
+      "k2": 0.0,
+      "k3": 0.0,
+      "k4": 0.0,
+      "k5": 0.0,
+      "k6": 0.0,
+      "p1": 0.0,
+      "p2": 0.0
+    }
+  },
+  "depth_intrinsics": {
+    "fx": 504.793,
+    "fy": 504.7819,
+    "cx": 324.9653,
+    "cy": 337.3727,
+    "width": 640,
+    "height": 576,
+    "distortion_model": "radial-tangential",
+    "distortion": {
+      "k1": 0.0,
+      "k2": 0.0,
+      "k3": 0.0,
+      "k4": 0.0,
+      "k5": 0.0,
+      "k6": 0.0,
+      "p1": 0.0,
+      "p2": 0.0
+    }
+  },
+  "camera_intrinsics": {
+    "fx": 1129.8136,
+    "fy": 1128.6075,
+    "cx": 961.0022,
+    "cy": 546.8298
+  },
+  "scene_camera": {
+    "template_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/assets/scenes/scene2.xml",
+    "camera_name": "cam1",
+    "camera_xpos_world": [
+      1.2,
+      -0.94,
+      0.27
+    ],
+    "rotation_world_from_cv": [
+      [
+        0.7761140001162653,
+        -0.01223299165354741,
+        -0.630473958810936
+      ],
+      [
+        0.630592625094466,
+        0.015055989727443188,
+        0.7759679493057671
+      ],
+      [
+        1.6653345369377348e-16,
+        -0.9998118178380028,
+        0.019399198732644465
+      ]
+    ],
+    "fovy_deg": 45.0
+  },
+  "grounded_sam2_root": "/home/lt/malanxuan/yolo-sam-mlx/Grounded-SAM-2",
+  "target_coordinate_system": "mujoco_world_from_scene_camera",
+  "downsample_scale": 1.0,
+  "object_reports": {
+    "apple": {
+      "mask_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/artifacts/masks/cleft001_apple_mask.png",
+      "annotated_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/artifacts/annotated/cleft001_apple_annotated.png",
+      "point_cloud_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/artifacts/point_clouds/cleft001_apple_camera.npy",
+      "world_point_cloud_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/artifacts/point_clouds/cleft001_apple_world.npy",
+      "candidate": {
+        "detector": "grounding_dino",
+        "prompt": "fruit apple.",
+        "label": "fruit apple",
+        "score": 0.8004836440086365,
+        "xyxy": [
+          1160.8154296875,
+          489.6196594238281,
+          1231.9453125,
+          560.7274169921875
+        ],
+        "mask_score": 1.5050370846563434,
+        "mask_stats": {
+          "area": 4080,
+          "foreground_iou": 0.010517245544666081,
+          "bbox_fill": 0.8093632215830192,
+          "component_count": 1
+        }
+      },
+      "candidate_count": 5,
+      "rgb_mask_shape": [
+        1080,
+        1920
+      ],
+      "pcd_mask_shape": [
+        1080,
+        1920
+      ],
+      "color_shape": [
+        1080,
+        1920
+      ],
+      "depth_shape": [
+        1080,
+        1920
+      ],
+      "alignment_mode": "aligned_depth_uses_color_intrinsics",
+      "point_cloud_info": {
+        "state": "success",
+        "info": "point cloud generated: 4062 points",
+        "x": 286.71188415505,
+        "y": -24.86227630066251,
+        "z": 1356.5,
+        "x_min": 244.08360954408764,
+        "y_min": -66.79999468371419,
+        "z_min": 1335.0,
+        "x_max": 329.34015876601234,
+        "y_max": 17.075442082389166,
+        "z_max": 1378.0,
+        "point_count": 4062
+      },
+      "world_bounds_m": {
+        "min": [
+          0.5236624912703598,
+          0.26771820205281815,
+          0.279283297130299
+        ],
+        "max": [
+          0.5965888138091486,
+          0.3315481040756745,
+          0.3634613223736794
+        ],
+        "center": [
+          0.5601256525397542,
+          0.2996331530642463,
+          0.32137230975198916
+        ]
+      },
+      "object_quat_wxyz": [
+        -0.6871320924606065,
+        0.6871320924606065,
+        0.16688165720266743,
+        -0.16688165720266743
+      ],
+      "orientation": {
+        "status": "success",
+        "method": "root_style_3d_pca_mesh_frame_mask_candidate_camera_facing",
+        "base_quat_wxyz": [
+          -0.26350652745983344,
+          -0.18560468607150984,
+          0.9059295349911882,
+          -0.27460314660434165
+        ],
+        "selected_candidate": "roll_180",
+        "selected_score": 0.6215877482362413,
+        "candidates": [
+          {
+            "candidate": "identity",
+            "score": 0.6095262942751679,
+            "quat_wxyz": [
+              0.27460314660434165,
+              0.9059295349911882,
+              0.18560468607150982,
+              -0.26350652745983344
+            ],
+            "iou": 0.6961887477313975,
+            "angle_error_deg": 77.99620811060662
+          },
+          {
+            "candidate": "roll_180",
+            "score": 0.6215877482362413,
+            "quat_wxyz": [
+              -0.26350652745983344,
+              -0.18560468607150984,
+              0.9059295349911882,
+              -0.27460314660434165
+            ],
+            "iou": 0.6710480196284613,
+            "angle_error_deg": 44.514244252997926
+          }
+        ],
+        "camera_facing": {
+          "top_constraint_applied": true,
+          "top_upright_delta_deg": 150.98128644781497,
+          "method": "camera_facing_top_upright_constraint"
+        }
+      }
+    }
+  }
+}

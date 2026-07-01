@@ -20,6 +20,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--scene", type=Path, required=True, help="runtime_sandbox_scene_v1 JSON")
     parser.add_argument("--output", type=Path, required=True, help="output MuJoCo XML")
     parser.add_argument("--report", type=Path, default=None)
+    parser.add_argument("--base-dir", type=Path, default=None, help="base directory for resolving relative robot_model_include")
     return parser.parse_args()
 
 
@@ -32,7 +33,7 @@ def main() -> None:
     args = parse_args()
     payload = json.loads(args.scene.read_text(encoding="utf-8"))
     scene = RuntimeSandboxScene.from_dict(payload)
-    report = write_runtime_scene(scene, args.output)
+    report = write_runtime_scene(scene, args.output, base_dir=args.base_dir)
     report.update({
         "input": str(args.scene),
         "schema_version": scene.schema_version,

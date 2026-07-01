@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from experience_adapters import R1ProMujocoAdapter, RealEpisodeAdapter, Wrapper1UR5eAdapter
+from experience_adapters import R1ProMujocoAdapter, RealEpisodeAdapter
 from experience_core import (
     ExperienceLibrary,
     TextSemanticRetrievalIndex,
@@ -32,12 +32,16 @@ from experience_core import (
     summarize_stage_retrieval,
     validate_experience_library,
 )
+try:
+    from experience_system.ur5e_core import Wrapper1UR5eAdapter
+except ModuleNotFoundError:  # pragma: no cover - script-root fallback
+    from ur5e_core import Wrapper1UR5eAdapter
 from source.import_wrapper1_ur5e_memory import _load_entries as load_wrapper1_entries
 from source.build_visual_keyframe_index import build_visual_index
 from source.compare_policy_baseline import build_policy_comparison
 from source.evaluate_visual_retrieval import evaluate_visual_retrieval
-from source.run_r1pro_memory_policy_smoke import evaluate_candidate, candidates_for_scenario, load_visual_scores, object_class_for_scenario, select_candidate, selection_rank
-from source.run_r1pro_task_chain import run_task_chain
+from source.legacy_r1pro.run_r1pro_memory_policy_smoke import evaluate_candidate, candidates_for_scenario, load_visual_scores, object_class_for_scenario, select_candidate, selection_rank
+from source.legacy_r1pro.run_r1pro_task_chain import run_task_chain
 from source.summarize_universal_experience import build_summary
 
 

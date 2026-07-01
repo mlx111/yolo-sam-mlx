@@ -52,7 +52,7 @@ STAGE_POLICIES: dict[str, dict[str, Any]] = {
 
 
 def _success(entry: ExperienceEntry) -> bool:
-    return bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    return bool(entry.result.get("success", entry.result.get("task_success", False)))
 
 
 def _entry_actions(entry: ExperienceEntry) -> list[str]:

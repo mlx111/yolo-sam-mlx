@@ -1,0 +1,756 @@
+{
+  "cells": [
+    {
+      "cell": "gripper_fail::direct_memory",
+      "n": 5,
+      "runs": 5,
+      "success_rate": 0.8,
+      "retrieved_count_mean": 1.8,
+      "recovery_time_mean": 165.3032
+    }
+  ],
+  "records": [
+    {
+      "anomaly": "gripper_fail",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "method": "direct_memory",
+      "strategy_family": "",
+      "trial_index": 0,
+      "seed": 4900,
+      "returncode": 0,
+      "elapsed": 283.095,
+      "trial_dir": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_000",
+      "log_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_000/stdout.log",
+      "summary": {
+        "result_exists": true,
+        "result_readable": true,
+        "method": "direct_memory",
+        "memory_policy": "hierarchical",
+        "trial_id": "U3-1_direct_memory_000",
+        "seed": 4900,
+        "anomaly_detected": true,
+        "task_success": false,
+        "virtual_validation_success": false,
+        "virtual_validation_z_change": 0.03307999654344368,
+        "executed_plan_source": "sandbox_candidates_selected_failed",
+        "candidate_count": 3,
+        "candidate_rejection_count": 0,
+        "candidate_sandbox_count": 3,
+        "selected_candidate_id": 1,
+        "retrieved_count": 0,
+        "retrieved_positive_count": 0,
+        "retrieved_failed_count": 0,
+        "experience_save_mode": "all",
+        "experience_saved": true,
+        "experience_save_skipped_reason": "",
+        "invalid_plan_count": 0,
+        "unsafe_gripper_action_count": 0,
+        "recovery_time": 229.397,
+        "total_time": 233.98,
+        "prompt_keyframe_count": 0,
+        "strategy_family": ""
+      },
+      "rolling_memory": true,
+      "rolling_memory_scope": "scenario",
+      "rolling_memory_read": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_write": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_000/experience_after.json",
+      "experience_save_mode": "all",
+      "scene_xml": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml",
+      "runtime_scene_report": null,
+      "skill_sequence": {
+        "result_exists": true,
+        "result_readable": true,
+        "executed_plan_source": "sandbox_candidates_selected_failed",
+        "executed": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 4,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "index": 5,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ],
+        "llm_plan": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 4,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "index": 5,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ]
+      },
+      "rolling_memory_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_entry_count": 1
+    },
+    {
+      "anomaly": "gripper_fail",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "method": "direct_memory",
+      "strategy_family": "",
+      "trial_index": 1,
+      "seed": 4901,
+      "returncode": 0,
+      "elapsed": 193.47,
+      "trial_dir": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_001",
+      "log_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_001/stdout.log",
+      "summary": {
+        "result_exists": true,
+        "result_readable": true,
+        "method": "direct_memory",
+        "memory_policy": "hierarchical",
+        "trial_id": "U3-1_direct_memory_001",
+        "seed": 4901,
+        "anomaly_detected": true,
+        "task_success": true,
+        "virtual_validation_success": true,
+        "virtual_validation_z_change": -0.24982013510775242,
+        "executed_plan_source": "sandbox_candidate_selected_success",
+        "candidate_count": 3,
+        "candidate_rejection_count": 0,
+        "candidate_sandbox_count": 3,
+        "selected_candidate_id": 1,
+        "retrieved_count": 1,
+        "retrieved_positive_count": 0,
+        "retrieved_failed_count": 1,
+        "experience_save_mode": "all",
+        "experience_saved": true,
+        "experience_save_skipped_reason": "",
+        "invalid_plan_count": 0,
+        "unsafe_gripper_action_count": 0,
+        "recovery_time": 186.437,
+        "total_time": 191.043,
+        "prompt_keyframe_count": 1,
+        "strategy_family": ""
+      },
+      "rolling_memory": true,
+      "rolling_memory_scope": "scenario",
+      "rolling_memory_read": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_write": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_001/experience_after.json",
+      "experience_save_mode": "all",
+      "scene_xml": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml",
+      "runtime_scene_report": null,
+      "skill_sequence": {
+        "result_exists": true,
+        "result_readable": true,
+        "executed_plan_source": "sandbox_candidate_selected_success",
+        "executed": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "index": 4,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 5,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "index": 6,
+            "action": "move_lifted_object_to",
+            "parameters": {
+              "target": "plate"
+            }
+          },
+          {
+            "index": 7,
+            "action": "open_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 8,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ],
+        "llm_plan": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "index": 4,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 5,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "index": 6,
+            "action": "move_lifted_object_to",
+            "parameters": {
+              "target": "plate"
+            }
+          },
+          {
+            "index": 7,
+            "action": "open_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 8,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ]
+      },
+      "rolling_memory_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_entry_count": 2
+    },
+    {
+      "anomaly": "gripper_fail",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "method": "direct_memory",
+      "strategy_family": "",
+      "trial_index": 2,
+      "seed": 4902,
+      "returncode": 0,
+      "elapsed": 172.045,
+      "trial_dir": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_002",
+      "log_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_002/stdout.log",
+      "summary": {
+        "result_exists": true,
+        "result_readable": true,
+        "method": "direct_memory",
+        "memory_policy": "hierarchical",
+        "trial_id": "U3-1_direct_memory_002",
+        "seed": 4902,
+        "anomaly_detected": true,
+        "task_success": true,
+        "virtual_validation_success": true,
+        "virtual_validation_z_change": -0.24982013510775242,
+        "executed_plan_source": "sandbox_candidate_selected_success",
+        "candidate_count": 3,
+        "candidate_rejection_count": 0,
+        "candidate_sandbox_count": 3,
+        "selected_candidate_id": 1,
+        "retrieved_count": 2,
+        "retrieved_positive_count": 1,
+        "retrieved_failed_count": 1,
+        "experience_save_mode": "all",
+        "experience_saved": true,
+        "experience_save_skipped_reason": "",
+        "invalid_plan_count": 0,
+        "unsafe_gripper_action_count": 0,
+        "recovery_time": 165.011,
+        "total_time": 169.513,
+        "prompt_keyframe_count": 2,
+        "strategy_family": ""
+      },
+      "rolling_memory": true,
+      "rolling_memory_scope": "scenario",
+      "rolling_memory_read": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_write": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_002/experience_after.json",
+      "experience_save_mode": "all",
+      "scene_xml": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml",
+      "runtime_scene_report": null,
+      "skill_sequence": {
+        "result_exists": true,
+        "result_readable": true,
+        "executed_plan_source": "sandbox_candidate_selected_success",
+        "executed": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "index": 4,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 5,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "index": 6,
+            "action": "move_lifted_object_to",
+            "parameters": {
+              "target": "plate"
+            }
+          },
+          {
+            "index": 7,
+            "action": "open_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 8,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ],
+        "llm_plan": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "index": 4,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 5,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "index": 6,
+            "action": "move_lifted_object_to",
+            "parameters": {
+              "target": "plate"
+            }
+          },
+          {
+            "index": 7,
+            "action": "open_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 8,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ]
+      },
+      "rolling_memory_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_entry_count": 3
+    },
+    {
+      "anomaly": "gripper_fail",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "method": "direct_memory",
+      "strategy_family": "",
+      "trial_index": 3,
+      "seed": 4903,
+      "returncode": 0,
+      "elapsed": 191.567,
+      "trial_dir": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_003",
+      "log_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_003/stdout.log",
+      "summary": {
+        "result_exists": true,
+        "result_readable": true,
+        "method": "direct_memory",
+        "memory_policy": "hierarchical",
+        "trial_id": "U3-1_direct_memory_003",
+        "seed": 4903,
+        "anomaly_detected": true,
+        "task_success": true,
+        "virtual_validation_success": true,
+        "virtual_validation_z_change": -0.24982379406327043,
+        "executed_plan_source": "sandbox_candidate_selected_success",
+        "candidate_count": 3,
+        "candidate_rejection_count": 0,
+        "candidate_sandbox_count": 3,
+        "selected_candidate_id": 1,
+        "retrieved_count": 3,
+        "retrieved_positive_count": 2,
+        "retrieved_failed_count": 1,
+        "experience_save_mode": "all",
+        "experience_saved": true,
+        "experience_save_skipped_reason": "",
+        "invalid_plan_count": 0,
+        "unsafe_gripper_action_count": 0,
+        "recovery_time": 184.365,
+        "total_time": 189.048,
+        "prompt_keyframe_count": 2,
+        "strategy_family": ""
+      },
+      "rolling_memory": true,
+      "rolling_memory_scope": "scenario",
+      "rolling_memory_read": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_write": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_003/experience_after.json",
+      "experience_save_mode": "all",
+      "scene_xml": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml",
+      "runtime_scene_report": null,
+      "skill_sequence": {
+        "result_exists": true,
+        "result_readable": true,
+        "executed_plan_source": "sandbox_candidate_selected_success",
+        "executed": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "index": 4,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 5,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "index": 6,
+            "action": "move_lifted_object_to",
+            "parameters": {
+              "target": "plate"
+            }
+          },
+          {
+            "index": 7,
+            "action": "open_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 8,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ],
+        "llm_plan": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "index": 4,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 5,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.1
+            }
+          },
+          {
+            "index": 6,
+            "action": "move_lifted_object_to",
+            "parameters": {
+              "target": "plate"
+            }
+          },
+          {
+            "index": 7,
+            "action": "open_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 8,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ]
+      },
+      "rolling_memory_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_entry_count": 4
+    },
+    {
+      "anomaly": "gripper_fail",
+      "scenario_id": "U3",
+      "condition_id": "U3-1",
+      "method": "direct_memory",
+      "strategy_family": "",
+      "trial_index": 4,
+      "seed": 4904,
+      "returncode": 0,
+      "elapsed": 68.201,
+      "trial_dir": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_004",
+      "log_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_004/stdout.log",
+      "summary": {
+        "result_exists": true,
+        "result_readable": true,
+        "method": "direct_memory",
+        "memory_policy": "hierarchical",
+        "trial_id": "U3-1_direct_memory_004",
+        "seed": 4904,
+        "anomaly_detected": true,
+        "task_success": true,
+        "virtual_validation_success": true,
+        "virtual_validation_z_change": -0.24982694725528076,
+        "executed_plan_source": "sandbox_candidate_selected_success",
+        "candidate_count": 3,
+        "candidate_rejection_count": 0,
+        "candidate_sandbox_count": 3,
+        "selected_candidate_id": 3,
+        "retrieved_count": 3,
+        "retrieved_positive_count": 2,
+        "retrieved_failed_count": 1,
+        "experience_save_mode": "all",
+        "experience_saved": true,
+        "experience_save_skipped_reason": "",
+        "invalid_plan_count": 0,
+        "unsafe_gripper_action_count": 0,
+        "recovery_time": 61.306,
+        "total_time": 65.753,
+        "prompt_keyframe_count": 2,
+        "strategy_family": ""
+      },
+      "rolling_memory": true,
+      "rolling_memory_scope": "scenario",
+      "rolling_memory_read": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_write": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/U3/U3-1/direct_memory/trial_004/experience_after.json",
+      "experience_save_mode": "all",
+      "scene_xml": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/scene/scene.xml",
+      "runtime_scene_report": null,
+      "skill_sequence": {
+        "result_exists": true,
+        "result_readable": true,
+        "executed_plan_source": "sandbox_candidate_selected_success",
+        "executed": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "index": 4,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 5,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.2
+            }
+          },
+          {
+            "index": 6,
+            "action": "move_lifted_object_to",
+            "parameters": {
+              "target": "plate"
+            }
+          },
+          {
+            "index": 7,
+            "action": "open_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 8,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ],
+        "llm_plan": [
+          {
+            "index": 1,
+            "action": "camera_rgbd_save",
+            "parameters": {}
+          },
+          {
+            "index": 2,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "apple"
+            }
+          },
+          {
+            "index": 3,
+            "action": "detect_object_pose",
+            "parameters": {
+              "target_class": "plate"
+            }
+          },
+          {
+            "index": 4,
+            "action": "close_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 5,
+            "action": "lift",
+            "parameters": {
+              "lift_height": 0.2
+            }
+          },
+          {
+            "index": 6,
+            "action": "move_lifted_object_to",
+            "parameters": {
+              "target": "plate"
+            }
+          },
+          {
+            "index": 7,
+            "action": "open_gripper",
+            "parameters": {}
+          },
+          {
+            "index": 8,
+            "action": "go_home",
+            "parameters": {}
+          }
+        ]
+      },
+      "rolling_memory_path": "/home/lt/malanxuan/yolo-sam-mlx/ur5e_mujoco/results/u3_1_sandbox_keyframes/memory/U3/direct_memory/rolling_memory.json",
+      "rolling_memory_entry_count": 5
+    }
+  ]
+}

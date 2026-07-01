@@ -1,0 +1,7 @@
+{
+  "name": "close_gripper",
+  "description": "Close UR5e gripper and rely on MuJoCo contact/friction to hold the target.",
+  "parameters": {},
+  "preconditions": [],
+  "effects": []
+}

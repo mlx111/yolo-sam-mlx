@@ -164,7 +164,7 @@
                           <geom pos="-0.0295 0 -0.084" quat="1 0 0 0" type="mesh" rgba="1 1 1 1" mesh="L_hand_base_link"/>
                           <geom pos="-0.0290145 -0.02096 -0.166692" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 1 1 1" mesh="L_hand_palm_link"/>
                           <geom pos="-0.0290145 -0.02096 -0.166692" quat="1 0 0 0" type="mesh" rgba="1 1 1 1" mesh="L_hand_palm_link"/>
-                          <site name="left_hand_tcp" pos="-0.0290145 -0.02096 -0.166692" quat="1 0 0 0" size="0.006" rgba="1 0.2 0.2 1"/>
+                          <site name="left_hand_tcp" pos="-0.0295 0 -0.145" quat="0.70710678 0.70710678 0 0" size="0.006" rgba="1 0.2 0.2 1"/>
                           <body name="L_thumb_proximal_base" pos="-0.00905 -0.01696 -0.1446">
                             <inertial pos="0.00357733 -0.00251129 -0.00066932" quat="0.60383 0.732097 0.236844 0.208154" mass="0.00171905" diaginertia="7.57932e-08 6.06626e-08 4.40659e-08"/>
                             <joint name="L_thumb_MCP_joint1" pos="0 0 0" axis="0 0 -1" range="0 1.1" actuatorfrcrange="-50 50"/>
@@ -283,7 +283,7 @@
                           <geom pos="-0.0295 0 -0.084" quat="1 0 0 0" type="mesh" rgba="0.89804 0.91373 0.92549 1" mesh="R_hand_base_link"/>
                           <geom pos="-0.0290132 0.020961 -0.166692" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="R_hand_palm_link"/>
                           <geom pos="-0.0290132 0.020961 -0.166692" quat="1 0 0 0" type="mesh" rgba="0.79216 0.81961 0.93333 1" mesh="R_hand_palm_link"/>
-                          <site name="right_hand_tcp" pos="-0.0290132 0.020961 -0.166692" quat="1 0 0 0" size="0.006" rgba="1 0.2 0.2 1"/>
+                          <site name="right_hand_tcp" pos="-0.0295 0 -0.145" quat="0.70710678 0.70710678 0 0" size="0.006" rgba="1 0.2 0.2 1"/>
                           <body name="R_thumb_proximal_base" pos="-0.00905 0.016961 -0.1446">
                             <inertial pos="0.0035776 0.0025114 -0.00066949" quat="0.732083 0.603839 -0.208171 -0.236852" mass="0.001719" diaginertia="7.57985e-08 6.06699e-08 4.40616e-08"/>
                             <joint name="R_thumb_MCP_joint1" pos="0 0 0" axis="0 0 1" range="0 1.1" actuatorfrcrange="-50 50"/>

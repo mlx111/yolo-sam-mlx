@@ -1,0 +1,9 @@
+{
+  "name": "camera_rgbd_save",
+  "description": "Render and save current UR5e cam1 RGB-D observation.",
+  "parameters": {
+    "stage": "optional str"
+  },
+  "preconditions": [],
+  "effects": []
+}

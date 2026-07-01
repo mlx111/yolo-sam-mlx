@@ -46,7 +46,7 @@ def validate_experience_entry(entry: ExperienceEntry, *, check_refs: bool = Fals
     for index, skill in enumerate(entry.skill_sequence):
         if not skill.name:
             issues.append({"severity": "error", "code": "empty_skill_name", "index": index})
-    if "success" not in entry.result and "recovery_success" not in entry.result:
+    if "success" not in entry.result and "task_success" not in entry.result:
         issues.append({"severity": "error", "code": "missing_result_success"})
     if check_refs:
         for ref_name, ref_value in _iter_path_refs(entry.raw_refs):
@@ -109,7 +109,7 @@ def validate_raw_real_episode(raw_episode: dict[str, Any], *, root: str | Path |
         issues.append({"severity": "error", "code": "missing_required_field", "field": "skill_sequence"})
     elif not all(_skill_name(item) for item in skills if isinstance(item, dict)):
         issues.append({"severity": "error", "code": "empty_skill_name"})
-    if not isinstance(result, dict) or not any(key in result for key in ("success", "recovery_success", "task_success")):
+    if not isinstance(result, dict) or not any(key in result for key in ("success", "task_success")):
         issues.append({"severity": "error", "code": "missing_result_success"})
 
     if check_refs:

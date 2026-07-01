@@ -1,17 +1,33 @@
 """Universal robot experience memory core."""
 
-from .calibration import apply_calibration_to_position, apply_sandbox_calibration, compute_group_calibrations, compute_sandbox_calibration, group_gap_entries
+from .calibration import apply_calibration_to_position, apply_sandbox_calibration, calibrated_attach_distance, compute_group_calibrations, compute_sandbox_calibration, group_gap_entries
 from .consolidation import consolidate_experiences, consolidation_key, should_consolidate
 from .critic import apply_critic, build_critic_result, critique_experience
 from .failure_taxonomy import STANDARD_FAILURE_TYPES, infer_standard_failure_type, is_actionable_failure_type, normalize_failure_type, standardize_failure_taxonomy
-from .field_atomic_plan import FIELD_ATOMIC_PARAMETER_GUIDANCE, field_atomic_plan_prompt, invoke_field_atomic_plan_llm, normalize_field_atomic_plan, sanitize_field_atomic_parameters
-from .field_atomic_memory import build_field_atomic_parameter_priors, build_field_atomic_planner_input, field_atomic_action, field_atomic_parameters, field_atomic_success, is_field_atomic_entry
+from .field_atomic_plan import FIELD_ATOMIC_PARAMETER_GUIDANCE, field_atomic_recovery_prompt, invoke_field_atomic_recovery_vlm, sanitize_field_atomic_parameters
+from .field_atomic_critic import critique_field_atomic_failure, field_atomic_memory_lesson, looks_like_recovery_instruction, score_field_atomic_recovery_quality, verify_field_atomic_anomaly
+from .field_atomic_memory import build_field_atomic_parameter_priors, build_field_atomic_planner_input, build_galaxea_recovery_rules, field_atomic_action, field_atomic_experience_brief, field_atomic_llm_failure_brief, field_atomic_parameters, field_atomic_success, is_field_atomic_entry, query_field_atomic_experiences, query_field_atomic_experience_matches, score_field_atomic_candidate_plan, update_galaxea_failure_rule_entries
+from .failure_cluster import FailureClusterer
+from .galaxea_wrapper_memory_bridge import (
+    canonical_action_signature_from_entry as galaxea_canonical_action_signature_from_entry,
+    canonical_action_signature_from_steps as galaxea_canonical_action_signature_from_steps,
+    count_plan_quality_issues_wrapper1_style,
+    critic_prefilter_wrapper1_style,
+    deterministic_rule_critic_wrapper1_style,
+    failed_plan_blocker_matches_wrapper1_style,
+    mmr_select_wrapper1_style,
+    memory_usefulness_wrapper1_style,
+    repeated_failure_wrapper1_style,
+    score_candidate_plan_wrapper1_style,
+    signature_actions_from_entry as galaxea_signature_actions_from_entry,
+    signature_actions_from_steps as galaxea_signature_actions_from_steps,
+)
 from .field_atomic_real_executor import FieldAtomicRobotAdapter, NotConfiguredFieldAtomicRobotAdapter, execute_field_atomic_validated_plan_on_robot
 from .gating import compute_memory_gate
 from .library import ExperienceLibrary
 from .lifecycle import consolidate_memory_lifecycle, increment_retrieval_count, initialize_memory_lifecycle, memory_tier, retrieval_count, set_memory_tier, should_promote_to_ltm
 from .lessons import adjust_candidate_with_lessons, load_lesson_library, normalize_lesson
-from .llm_provider import JSON_ONLY_LINE, invoke_llm, parse_json_payload, provider_config
+from .llm_provider import JSON_ONLY_LINE, build_image_block, encode_image_data_url, invoke_llm, invoke_multimodal_llm, parse_json_payload, provider_config
 from .policy_calibration import build_policy_risk_calibration, find_policy_group, load_policy_risk_calibration
 from .quality import missing_entry_fields, validate_experience_entry, validate_experience_library, validate_raw_real_episode
 from .recovery_plan import build_validated_robot_plan, invoke_recovery_plan_llm, normalize_recovery_plan, planner_input_evidence_ids, recovery_plan_prompt, recovery_plan_to_candidate, stable_plan_id, validate_recovery_plan_semantics
@@ -22,7 +38,7 @@ from .runtime_scene import RuntimeObjectSpec, RuntimePlaceZoneSpec, RuntimeSandb
 from .sandbox_parameter_profile import SandboxParameterProfile, build_group_sandbox_parameter_profiles, build_sandbox_parameter_profile
 from .sandbox_state import SandboxInitialState, build_sandbox_initial_state, choose_sandbox_state_entry, coerce_sandbox_initial_state
 from .sandbox_uncertainty import SandboxPerturbation, apply_perturbation_to_state, generate_sandbox_perturbations, robust_sandbox_summary, sandbox_perturbation_from_dict
-from .sandbox_writeback import extract_plan_recovery_parameters, writeback_sandbox_reports, writeback_sandbox_rollout
+from .sandbox_writeback import extract_plan_recovery_parameters, writeback_sandbox_reports, writeback_sandbox_rollout, writeback_semantic_plan_failure
 from .dual_source import apply_pair_and_gap, compute_sim_real_gap, pair_score, pair_sim_real_experiences
 from .scoring import entry_risk_adjustment, score_candidate_plan, sensor_evidence_bonus
 from .sensor_quality import enrich_memory_gate_with_sensor_quality, sensor_quality_report
@@ -32,6 +48,7 @@ from .write_policy import apply_write_decision, should_write_entry
 from .schema import (
     CriticResult,
     ExperienceEntry,
+    GALAXEA_R1PRO_TORSO_NAMESPACE,
     MemoryGate,
     ObjectState,
     RobotState,
@@ -39,9 +56,14 @@ from .schema import (
     SensorEvidence,
     SensorSummary,
     SimRealGap,
+    SkillCatalog,
     SkillTraceItem,
+    UNKNOWN_SKILL_NAMESPACE,
+    WRAPPER1_UR5E_NAMESPACE,
+    canonical_skill_action,
+    default_skill_catalogs,
 )
-from .skill_semantics import SkillSemantics, default_r1pro_skill_semantics, validate_skill_semantic_plan
+from .skill_semantics import SkillSemantics, default_galaxea_field_atomic_skill_semantics, default_r1pro_skill_semantics, validate_skill_semantic_plan
 from .stage_retrieval import apply_stage_score_adjustment, run_stage_retrieval, summarize_stage_retrieval
 from .stage_prompt import apply_stage_planner_guidance, build_stage_planner_context, build_structured_planner_input, render_stage_prompt_text, summarize_stage_planner_contexts
 from .text_semantic_retrieval import TextSemanticRetrievalIndex, build_semantic_scores, semantic_query_text, semantic_summary
@@ -53,6 +75,7 @@ __all__ = [
     "ExperienceLibrary",
     "FIELD_ATOMIC_PARAMETER_GUIDANCE",
     "FieldAtomicRobotAdapter",
+    "GALAXEA_R1PRO_TORSO_NAMESPACE",
     "JSON_ONLY_LINE",
     "MemoryGate",
     "NotConfiguredFieldAtomicRobotAdapter",
@@ -72,14 +95,18 @@ __all__ = [
     "SensorSummary",
     "SimRealGap",
     "SkillTraceItem",
+    "SkillCatalog",
     "SkillExecutor",
     "SkillSemantics",
     "STANDARD_FAILURE_TYPES",
     "VisualRetrievalIndex",
     "TextSemanticRetrievalIndex",
+    "UNKNOWN_SKILL_NAMESPACE",
+    "WRAPPER1_UR5E_NAMESPACE",
     "apply_calibration_to_position",
     "apply_pair_and_gap",
     "apply_sandbox_calibration",
+    "calibrated_attach_distance",
     "apply_critic",
     "apply_write_decision",
     "apply_stage_score_adjustment",
@@ -94,6 +121,7 @@ __all__ = [
     "build_sandbox_initial_state",
     "build_sandbox_parameter_profile",
     "build_group_sandbox_parameter_profiles",
+    "build_image_block",
     "build_field_atomic_parameter_priors",
     "build_field_atomic_planner_input",
     "build_recovery_parameter_priors",
@@ -110,6 +138,9 @@ __all__ = [
     "detect_visual_device",
     "default_r1pro_skill_registry",
     "default_r1pro_skill_semantics",
+    "default_galaxea_field_atomic_skill_semantics",
+    "default_skill_catalogs",
+    "encode_image_data_url",
     "entry_risk_adjustment",
     "execute_validated_robot_plan",
     "execute_field_atomic_validated_plan_on_robot",
@@ -118,8 +149,15 @@ __all__ = [
     "generate_sandbox_perturbations",
     "find_policy_group",
     "field_atomic_action",
+    "critique_field_atomic_failure",
+    "field_atomic_experience_brief",
+    "field_atomic_llm_failure_brief",
+    "field_atomic_memory_lesson",
+    "score_field_atomic_recovery_quality",
+    "verify_field_atomic_anomaly",
+    "FailureClusterer",
     "field_atomic_parameters",
-    "field_atomic_plan_prompt",
+    "field_atomic_recovery_prompt",
     "field_atomic_success",
     "infer_standard_failure_type",
     "is_field_atomic_entry",
@@ -129,25 +167,31 @@ __all__ = [
     "initialize_memory_lifecycle",
     "load_policy_risk_calibration",
     "load_lesson_library",
+    "looks_like_recovery_instruction",
     "matches_to_tuples",
     "memory_tier",
     "missing_entry_fields",
-    "normalize_field_atomic_plan",
     "normalize_failure_type",
     "normalize_lesson",
     "normalize_recovery_plan",
     "planner_input_evidence_ids",
     "build_validated_robot_plan",
+    "canonical_skill_action",
     "recovery_plan_prompt",
     "recovery_plan_to_candidate",
     "stable_plan_id",
     "invoke_recovery_plan_llm",
     "invoke_llm",
-    "invoke_field_atomic_plan_llm",
+    "invoke_multimodal_llm",
+    "invoke_field_atomic_recovery_vlm",
     "pair_score",
     "pair_sim_real_experiences",
     "parse_json_payload",
     "provider_config",
+    "query_field_atomic_experiences",
+    "query_field_atomic_experience_matches",
+    "build_galaxea_recovery_rules",
+    "update_galaxea_failure_rule_entries",
     "retrieve_experiences",
     "render_runtime_scene_xml",
     "semantic_query_text",
@@ -159,6 +203,19 @@ __all__ = [
     "sandbox_perturbation_from_dict",
     "sanitize_field_atomic_parameters",
     "score_candidate_plan",
+    "score_field_atomic_candidate_plan",
+    "score_candidate_plan_wrapper1_style",
+    "failed_plan_blocker_matches_wrapper1_style",
+    "memory_usefulness_wrapper1_style",
+    "critic_prefilter_wrapper1_style",
+    "mmr_select_wrapper1_style",
+    "count_plan_quality_issues_wrapper1_style",
+    "repeated_failure_wrapper1_style",
+    "deterministic_rule_critic_wrapper1_style",
+    "galaxea_canonical_action_signature_from_steps",
+    "galaxea_canonical_action_signature_from_entry",
+    "galaxea_signature_actions_from_steps",
+    "galaxea_signature_actions_from_entry",
     "sensor_evidence_bonus",
     "apply_sensor_sim_real_gaps",
     "attach_sensor_sim_real_gap",
@@ -180,5 +237,6 @@ __all__ = [
     "validate_skill_semantic_plan",
     "writeback_sandbox_reports",
     "writeback_sandbox_rollout",
+    "writeback_semantic_plan_failure",
     "write_runtime_scene",
 ]

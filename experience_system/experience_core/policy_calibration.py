@@ -24,7 +24,7 @@ DEFAULT_POLICY_RISK_CALIBRATION = {
 
 
 def _success(entry: ExperienceEntry) -> bool:
-    return bool(entry.result.get("success", entry.result.get("recovery_success", False)))
+    return bool(entry.result.get("success", entry.result.get("task_success", False)))
 
 
 def _outcome_type(entry: ExperienceEntry) -> str:
